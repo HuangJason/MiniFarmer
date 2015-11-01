@@ -15,19 +15,21 @@
 @interface QuestionCell()
 {
     UILabel *_contentLable;
-    UIImageView *_categoryImgView;
-    UILabel *_categoryLabel;
     UIImageView *_contentImgView1;
     UIImageView *_contentImgView2;
     UIImageView *_contentImgView3;
     
+    //中间view
+    UIView *_middleView;
+    UIImageView *_plantImgView;
+    UILabel *_plantNameLabel;
+    UILabel *_dateLable;
+    
+    //底部view
     UIView *_bottomView;
     UIImageView *_userIcon;
     UILabel *_nameLabel;
     UILabel *_locationLabel;
-//    UIImageView *_hdImgView;
-//    UILabel *_hdLabel;
-//    UIImageView *_wlhdImgView;
     AnswersButton *_ansBtn;
     AnswersButton *_myAnsBtn;
     
@@ -51,14 +53,6 @@
         _contentLable.textColor = [UIColor blackColor];
         _contentLable.numberOfLines = 0;
         
-        //问题类型图片
-        _categoryImgView = [UIImageView new];
-        [self.contentView addSubview:_categoryImgView];
-        
-        //问题类型
-        _categoryLabel = [UILabel new];
-        [self.contentView addSubview:_categoryLabel];
-        
         //内容图片
         _contentImgView1 = [UIImageView new];
         [self.contentView addSubview:_contentImgView1];
@@ -69,14 +63,74 @@
         _contentImgView3 = [UIImageView new];
         [self.contentView addSubview:_contentImgView3];
         
+        //
+        [self middleViewInit];
+        
         //底部view
         [self bottemViewInit];
+        
         
         //[self addViewConstraint];
     }
     
     return self;
 }
+
+- (void)middleViewInit
+{
+    _middleView = [UIView new];
+    //_middleView.backgroundColor = [UIColor greenColor];
+    [self.contentView addSubview:_middleView];
+    [_middleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_contentLable.mas_bottom).offset(5);
+        make.left.equalTo(_contentLable);
+        make.right.equalTo(self.contentView.mas_right).offset(-kRightSpace);
+        make.height.mas_equalTo(kMiddleViewHeight);
+    }];
+    
+    _plantImgView = [UIImageView new];
+    [_middleView addSubview:_plantImgView];
+    _plantImgView.image = [UIImage imageNamed:@"home_icon_plant"];
+    [_plantImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_middleView);
+        make.left.equalTo(_middleView);
+        make.size.mas_equalTo(CGSizeMake(26, 26));
+    }];
+    
+    _plantNameLabel = [UILabel new];
+    [_middleView addSubview:_plantNameLabel];
+    _plantNameLabel.backgroundColor = [UIColor blueColor];
+    _plantNameLabel.textColor = kTextLightBlackColor;
+    _plantNameLabel.font = kTextFont12;
+    [_plantNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_middleView);
+        make.left.equalTo(_plantImgView.mas_right).offset(5);
+        make.height.mas_equalTo(kMiddleViewHeight);
+    }];
+    
+    //分隔符
+    UILabel *lineLabel = [UILabel new];
+    [_middleView addSubview:lineLabel];
+    lineLabel.backgroundColor = RGBCOLOR(238, 238, 238);
+    [lineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_plantNameLabel.mas_right).offset(12);
+        make.centerY.equalTo(_middleView.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(0.5, 16));
+    }];
+    
+    //日期
+    _dateLable = [UILabel new];
+    [_middleView addSubview:_dateLable];
+    _dateLable.backgroundColor = [UIColor yellowColor];
+    _dateLable.textColor = kTextLightBlackColor;
+    _dateLable.font = kTextFont12;
+    [_dateLable mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_middleView);
+        make.left.equalTo(lineLabel.mas_right).offset(12);
+        make.height.mas_equalTo(kMiddleViewHeight);
+    }];
+}
+
 
 - (void)bottemViewInit
 {
@@ -118,7 +172,7 @@
 - (void)updateBottemView
 {
     [_bottomView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_contentLable.mas_bottom);
+        make.top.equalTo(_middleView.mas_bottom);
         make.left.equalTo(self.contentView).offset(kLeftSpace);
         //make.size.mas_equalTo(CGSizeMake(kMaxContentWidth, kBottemViewHeight));
         make.right.equalTo(self.contentView).offset(-kRightSpace);
@@ -181,6 +235,37 @@
     
     [self updateBottemView];
 }
+//TODO:时间描述规则
+- (NSString *)describeWithTwsj:(NSString *)twsj
+{
+    if (!twsj) {
+        return @"";
+    }
+    
+    long long curTimeMSec = (long long)([NSDate date].timeIntervalSince1970*1000);
+    long long passTimeSec = (curTimeMSec - [twsj longLongValue])/1000;
+    if (passTimeSec < 0) {
+        return @"1小时前";
+    }
+    //换算成小时
+    NSUInteger hours = passTimeSec/3600;
+    if (!hours) {
+        return @"1小时前";
+    }
+    
+    NSUInteger days = hours/24;
+    if (!days) {
+        return [NSString stringWithFormat:@"%ld小时前",hours];
+    }
+    
+    NSUInteger years = days/365;
+    if (!years) {
+        return [NSString stringWithFormat:@"%ld天前",days];
+    }
+    else{
+        return [NSString stringWithFormat:@"%ld年前",years];
+    }
+}
 
 - (void)refreshWithQuestionCellSource:(QuestionCellSource *)source
 {
@@ -188,7 +273,8 @@
     QuestionInfo *info = _qSource.qInfo;
     
     _contentLable.text = info.wtms;
-    
+    _plantNameLabel.text = info.zwmc;
+    _dateLable.text = [self describeWithTwsj:info.twsj];
     [self updateViewConstraint];
 }
 

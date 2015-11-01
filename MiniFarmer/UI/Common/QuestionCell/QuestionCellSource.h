@@ -17,6 +17,7 @@
 #define kContentImgWidth  ((kMaxContentWidth-6)/3.0)
 #define kContentImgHeight (kContentImgWidth/1.1)
 #define kBottemViewHeight   36
+#define kMiddleViewHeight   26
 
 @interface QuestionCellSource : NSObject
 
