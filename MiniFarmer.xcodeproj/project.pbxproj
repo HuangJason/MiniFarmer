@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31EC66321BECEBE100B8E1BC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC662C1BECEBE100B8E1BC /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		31EC66331BECEBE100B8E1BC /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC662F1BECEBE100B8E1BC /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		31EC66341BECEBE100B8E1BC /* YHSMSCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66311BECEBE100B8E1BC /* YHSMSCodeButton.m */; settings = {ASSET_TAGS = (); }; };
+		31EC66391BECEC6F00B8E1BC /* BaseViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66361BECEC6F00B8E1BC /* BaseViewController+Navigation.m */; settings = {ASSET_TAGS = (); }; };
+		31EC663A1BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66381BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.m */; settings = {ASSET_TAGS = (); }; };
+		31EC663E1BECECC400B8E1BC /* MiniAppEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC663D1BECECC400B8E1BC /* MiniAppEngine.m */; settings = {ASSET_TAGS = (); }; };
+		31EC66411BECF43700B8E1BC /* JudgeTextIsRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66401BECF43700B8E1BC /* JudgeTextIsRight.m */; settings = {ASSET_TAGS = (); }; };
+		31EC66441BECF52200B8E1BC /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66431BECF52200B8E1BC /* UIView+Toast.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626761BCA7A0E00943F99 /* AskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266C1BCA7A0E00943F99 /* AskViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626771BCA7A0E00943F99 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266F1BCA7A0E00943F99 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626781BCA7A0E00943F99 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC626721BCA7A0E00943F99 /* MineViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -118,6 +126,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31EC662B1BECEBE100B8E1BC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		31EC662C1BECEBE100B8E1BC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		31EC662E1BECEBE100B8E1BC /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		31EC662F1BECEBE100B8E1BC /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		31EC66301BECEBE100B8E1BC /* YHSMSCodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHSMSCodeButton.h; sourceTree = "<group>"; };
+		31EC66311BECEBE100B8E1BC /* YHSMSCodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHSMSCodeButton.m; sourceTree = "<group>"; };
+		31EC66351BECEC6F00B8E1BC /* BaseViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseViewController+Navigation.h"; sourceTree = "<group>"; };
+		31EC66361BECEC6F00B8E1BC /* BaseViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseViewController+Navigation.m"; sourceTree = "<group>"; };
+		31EC66371BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+LGKeyboard.h"; sourceTree = "<group>"; };
+		31EC66381BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+LGKeyboard.m"; sourceTree = "<group>"; };
+		31EC663C1BECECC400B8E1BC /* MiniAppEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiniAppEngine.h; sourceTree = "<group>"; };
+		31EC663D1BECECC400B8E1BC /* MiniAppEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiniAppEngine.m; sourceTree = "<group>"; };
+		31EC663F1BECF43700B8E1BC /* JudgeTextIsRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JudgeTextIsRight.h; sourceTree = "<group>"; };
+		31EC66401BECF43700B8E1BC /* JudgeTextIsRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JudgeTextIsRight.m; sourceTree = "<group>"; };
+		31EC66421BECF52200B8E1BC /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		31EC66431BECF52200B8E1BC /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		FCC626681BCA686600943F99 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FCC6266B1BCA7A0E00943F99 /* AskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskViewController.h; sourceTree = "<group>"; };
 		FCC6266C1BCA7A0E00943F99 /* AskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskViewController.m; sourceTree = "<group>"; };
@@ -339,9 +363,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31EC662A1BECEBE100B8E1BC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				31EC662B1BECEBE100B8E1BC /* LoginViewController.h */,
+				31EC662C1BECEBE100B8E1BC /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		31EC662D1BECEBE100B8E1BC /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				31EC662E1BECEBE100B8E1BC /* RegisterViewController.h */,
+				31EC662F1BECEBE100B8E1BC /* RegisterViewController.m */,
+				31EC66301BECEBE100B8E1BC /* YHSMSCodeButton.h */,
+				31EC66311BECEBE100B8E1BC /* YHSMSCodeButton.m */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		31EC663B1BECECC400B8E1BC /* MiniAppEngine */ = {
+			isa = PBXGroup;
+			children = (
+				31EC663C1BECECC400B8E1BC /* MiniAppEngine.h */,
+				31EC663D1BECECC400B8E1BC /* MiniAppEngine.m */,
+			);
+			path = MiniAppEngine;
+			sourceTree = "<group>";
+		};
 		FCC626691BCA7A0E00943F99 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				31EC662A1BECEBE100B8E1BC /* Login */,
+				31EC662D1BECEBE100B8E1BC /* Register */,
 				FCCA8FA51BDD255E00B1CCF4 /* Base */,
 				FCC90DAC1BD3AE2600D341DD /* Common */,
 				FCC6266A1BCA7A0E00943F99 /* Ask */,
@@ -738,6 +793,7 @@
 		FCC884B31BC3EBB900A1200B /* MiniFarmer */ = {
 			isa = PBXGroup;
 			children = (
+				31EC663B1BECECC400B8E1BC /* MiniAppEngine */,
 				FCC64BFC1BCFE6D300BF56C4 /* Utility */,
 				FCC64BF21BCFE4FE00BF56C4 /* Network */,
 				FCC6267B1BCAA89D00943F99 /* Config */,
@@ -783,6 +839,8 @@
 		FCC90DAC1BD3AE2600D341DD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				31EC663F1BECF43700B8E1BC /* JudgeTextIsRight.h */,
+				31EC66401BECF43700B8E1BC /* JudgeTextIsRight.m */,
 				FCCA8FB01BDD2BED00B1CCF4 /* UIViewAdditions.h */,
 				FCCA8FB11BDD2BED00B1CCF4 /* UIViewAdditions.m */,
 				FCC90DAD1BD3AE2600D341DD /* QuestionCell */,
@@ -818,6 +876,12 @@
 		FCCA8FA81BDD255E00B1CCF4 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				31EC66421BECF52200B8E1BC /* UIView+Toast.h */,
+				31EC66431BECF52200B8E1BC /* UIView+Toast.m */,
+				31EC66351BECEC6F00B8E1BC /* BaseViewController+Navigation.h */,
+				31EC66361BECEC6F00B8E1BC /* BaseViewController+Navigation.m */,
+				31EC66371BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.h */,
+				31EC66381BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.m */,
 				FCCA8FA91BDD255E00B1CCF4 /* UIColor+Expanded.h */,
 				FCCA8FAA1BDD255E00B1CCF4 /* UIColor+Expanded.m */,
 			);
@@ -982,6 +1046,8 @@
 				FCC752C11BC4E01500DE4B27 /* SDWebImageDownloader.m in Sources */,
 				FCC752BD1BC4E01500DE4B27 /* NSData+ImageContentType.m in Sources */,
 				FCC7528E1BC4E01500DE4B27 /* AFNetworkReachabilityManager.m in Sources */,
+				31EC66411BECF43700B8E1BC /* JudgeTextIsRight.m in Sources */,
+				31EC66341BECEBE100B8E1BC /* YHSMSCodeButton.m in Sources */,
 				FCC752B61BC4E01500DE4B27 /* MJRefreshStateHeader.m in Sources */,
 				FCC752AC1BC4E01500DE4B27 /* MJRefreshFooter.m in Sources */,
 				FCC884B91BC3EBB900A1200B /* AppDelegate.m in Sources */,
@@ -996,8 +1062,11 @@
 				FCC752A61BC4E01500DE4B27 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				FCC7528D1BC4E01500DE4B27 /* AFHTTPSessionManager.m in Sources */,
 				FCC752C01BC4E01500DE4B27 /* SDWebImageDecoder.m in Sources */,
+				31EC66321BECEBE100B8E1BC /* LoginViewController.m in Sources */,
 				FCC626791BCA7A0E00943F99 /* RootTabBarViewController.m in Sources */,
 				FCC752C31BC4E01500DE4B27 /* SDWebImageManager.m in Sources */,
+				31EC66331BECEBE100B8E1BC /* RegisterViewController.m in Sources */,
+				31EC66391BECEC6F00B8E1BC /* BaseViewController+Navigation.m in Sources */,
 				FCC752B21BC4E01500DE4B27 /* MJRefreshBackNormalFooter.m in Sources */,
 				FCC752A21BC4E01500DE4B27 /* MASLayoutConstraint.m in Sources */,
 				FCC752911BC4E01500DE4B27 /* AFURLRequestSerialization.m in Sources */,
@@ -1018,6 +1087,8 @@
 				FCC752BB1BC4E01500DE4B27 /* UIView+MJExtension.m in Sources */,
 				FCC752C61BC4E01500DE4B27 /* UIImage+GIF.m in Sources */,
 				FCC626761BCA7A0E00943F99 /* AskViewController.m in Sources */,
+				31EC663E1BECECC400B8E1BC /* MiniAppEngine.m in Sources */,
+				31EC66441BECF52200B8E1BC /* UIView+Toast.m in Sources */,
 				FCC752C81BC4E01500DE4B27 /* UIImage+WebP.m in Sources */,
 				FCC752B11BC4E01500DE4B27 /* MJRefreshBackGifFooter.m in Sources */,
 				FCC752AB1BC4E01500DE4B27 /* MJRefreshComponent.m in Sources */,
@@ -1035,6 +1106,7 @@
 				FCCA8FB21BDD2BED00B1CCF4 /* UIViewAdditions.m in Sources */,
 				FCC7528F1BC4E01500DE4B27 /* AFSecurityPolicy.m in Sources */,
 				FCC752A51BC4E01500DE4B27 /* NSArray+MASAdditions.m in Sources */,
+				31EC663A1BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.m in Sources */,
 				FCC752AD1BC4E01500DE4B27 /* MJRefreshHeader.m in Sources */,
 				FCC752B31BC4E01500DE4B27 /* MJRefreshBackStateFooter.m in Sources */,
 				FCC752B51BC4E01500DE4B27 /* MJRefreshNormalHeader.m in Sources */,

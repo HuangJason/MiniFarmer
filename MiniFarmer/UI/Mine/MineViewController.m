@@ -7,6 +7,7 @@
 //
 
 #import "MineViewController.h"
+#import "LoginViewController.h"
 
 #define kSection
 
@@ -148,6 +149,16 @@
     cell.detailTextLabel.text = item.subTitle;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        LoginViewController *vc = [[LoginViewController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
+
 }
 
 @end
