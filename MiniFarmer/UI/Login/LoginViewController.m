@@ -143,7 +143,9 @@
         return;
     }
     
-    //请求登录的接口
+//    //请求登录的接口
+//    NSDictionary *dic = @{@"c":@"user",@"m":@"userlogin",@"mobile":[APPHelper safeString:self.usernameTF.text]};
+//    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:<#(NSDictionary *)#> prepareExecute:<#^(void)prepareRequest#> success:<#^(NSURLSessionDataTask *task, id responseObject)success#> failure:<#^(NSURLSessionDataTask *task, NSError *error)failure#>];
 }
 
 /// 忘记密码
@@ -309,7 +311,6 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
-    
     
     return YES;
 }
