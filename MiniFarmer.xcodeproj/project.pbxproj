@@ -15,6 +15,7 @@
 		31EC663E1BECECC400B8E1BC /* MiniAppEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC663D1BECECC400B8E1BC /* MiniAppEngine.m */; settings = {ASSET_TAGS = (); }; };
 		31EC66411BECF43700B8E1BC /* JudgeTextIsRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66401BECF43700B8E1BC /* JudgeTextIsRight.m */; settings = {ASSET_TAGS = (); }; };
 		31EC66441BECF52200B8E1BC /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66431BECF52200B8E1BC /* UIView+Toast.m */; settings = {ASSET_TAGS = (); }; };
+		31EC66481BEF7A8000B8E1BC /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66471BEF7A8000B8E1BC /* LoginModel.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626761BCA7A0E00943F99 /* AskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266C1BCA7A0E00943F99 /* AskViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626771BCA7A0E00943F99 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266F1BCA7A0E00943F99 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626781BCA7A0E00943F99 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC626721BCA7A0E00943F99 /* MineViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -141,6 +142,8 @@
 		31EC66401BECF43700B8E1BC /* JudgeTextIsRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JudgeTextIsRight.m; sourceTree = "<group>"; };
 		31EC66421BECF52200B8E1BC /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		31EC66431BECF52200B8E1BC /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		31EC66461BEF7A8000B8E1BC /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		31EC66471BEF7A8000B8E1BC /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		FCC626681BCA686600943F99 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FCC6266B1BCA7A0E00943F99 /* AskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskViewController.h; sourceTree = "<group>"; };
 		FCC6266C1BCA7A0E00943F99 /* AskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskViewController.m; sourceTree = "<group>"; };
@@ -389,6 +392,15 @@
 			path = MiniAppEngine;
 			sourceTree = "<group>";
 		};
+		31EC66451BEF7A6F00B8E1BC /* LoginInfo */ = {
+			isa = PBXGroup;
+			children = (
+				31EC66461BEF7A8000B8E1BC /* LoginModel.h */,
+				31EC66471BEF7A8000B8E1BC /* LoginModel.m */,
+			);
+			path = LoginInfo;
+			sourceTree = "<group>";
+		};
 		FCC626691BCA7A0E00943F99 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +455,7 @@
 		FCC6267A1BCA7A8A00943F99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				31EC66451BEF7A6F00B8E1BC /* LoginInfo */,
 				FCC74FF31BD27DAF008446ED /* QuestionInfo */,
 			);
 			path = Model;
@@ -1103,6 +1116,7 @@
 				31EC663A1BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.m in Sources */,
 				FCC752AD1BC4E01500DE4B27 /* MJRefreshHeader.m in Sources */,
 				FCC752B31BC4E01500DE4B27 /* MJRefreshBackStateFooter.m in Sources */,
+				31EC66481BEF7A8000B8E1BC /* LoginModel.m in Sources */,
 				FCC752B51BC4E01500DE4B27 /* MJRefreshNormalHeader.m in Sources */,
 				FCC752C41BC4E01500DE4B27 /* SDWebImagePrefetcher.m in Sources */,
 				FCC752921BC4E01500DE4B27 /* AFURLResponseSerialization.m in Sources */,

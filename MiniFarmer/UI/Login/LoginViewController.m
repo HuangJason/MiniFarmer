@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "BaseViewController+Navigation.h"
 #import "RegisterViewController.h"
+#import "LoginModel.h"
 
 #define kLoginDispaceToLeft 16
 
@@ -143,9 +144,27 @@
         return;
     }
     
-//    //请求登录的接口
-//    NSDictionary *dic = @{@"c":@"user",@"m":@"userlogin",@"mobile":[APPHelper safeString:self.usernameTF.text]};
-//    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:<#(NSDictionary *)#> prepareExecute:<#^(void)prepareRequest#> success:<#^(NSURLSessionDataTask *task, id responseObject)success#> failure:<#^(NSURLSessionDataTask *task, NSError *error)failure#>];
+    //请求登录的接口
+    NSDictionary *dic = @{@"c":@"user",@"m":@"userlogin",@"mobile":[APPHelper safeString:self.usernameTF.text],@"password":[APPHelper safeString:self.passwordTF.text]};
+    [self.view showLoadingWihtText:@"登录中"];
+    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.view dismissLoading];
+        LoginModel *loginModel = [[LoginModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
+        if ([loginModel.msg isEqualToString:@"sucess"])
+        {
+            [self.view showWeakPromptViewWithMessage:@"登录成功"];
+        }
+        else
+        {
+            [self.view showWeakPromptViewWithMessage:@"登录失败"];
+        }
+            
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.view dismissLoading];
+        [self.view showWeakPromptViewWithMessage:@"登录失败"];
+
+    }];
 }
 
 /// 忘记密码

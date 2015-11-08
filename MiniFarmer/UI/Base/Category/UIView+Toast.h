@@ -10,36 +10,18 @@
 
 @interface UIView ()
 
-@property (nonatomic, strong) CommonToastView *orderToastView;
 
 @end
 
 @interface UIView (Toast)
 
-- (void)showToastView:(NSInteger)status;
-
-- (void)showOrderResultWithType:(NSInteger)status suceess:(BOOL)suceess;
-
-- (void)showFoucsResultWithType:(NSInteger)status success:(BOOL)success;
-//直播的toast
-- (void)showLivingToastWithType:(NSInteger)status suceess:(BOOL)suceess;
-
-//手动控制toas 显示 消失
-- (void)showToastViewManual:(NSInteger)status;
-
-- (void)dismissOrderResult;
-
-- (void)showAlter;
-
-- (void)showReplayWithSuccess:(BOOL)success;
 
 - (void)showWeakPromptViewWithMessage:(NSString *)message;
 
-- (void)showDeleteLoading;
+- (void)showLoadingWihtText:(NSString *)text;
 
-- (void)dismissDeleteLoading;
+- (void)dismissLoading;
 
-- (void)showListLoadFailureToast;
 
 
 @end
