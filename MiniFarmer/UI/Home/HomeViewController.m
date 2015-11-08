@@ -10,6 +10,7 @@
 #import "QuestionInfo.h"
 #import "SimpleImageTitleButton.h"
 #import "QuestionCell.h"
+#import "MJRefresh.h"
 
 #define kPageSize   @"10"
 
@@ -41,7 +42,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self requestHomeData];
+    [self requestHomeDataWithId:@"0"];
 }
 
 #pragma mark- private
@@ -59,6 +60,22 @@
     _homeTableView.delegate = self;
     _homeTableView.tableHeaderView = _headView;
     [self.view addSubview:_homeTableView];
+    
+    _homeTableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        DLOG(@"home refresh!");
+        [self requestHomeDataWithId:@"0"];
+    }];
+    
+    _homeTableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        if (_sourceArr.count == 0) {
+            return ;
+        }
+        DLOG(@"home load more!");
+        
+        QuestionCellSource *lastSource = [_sourceArr lastObject];
+        [self requestHomeDataWithId:lastSource.qInfo.qid];
+//        [_homeTableView.footer endRefreshing];
+    }];
 }
 
 - (void)headViewInit
@@ -104,17 +121,19 @@
     return button;
 }
 
-- (void)requestHomeData
+- (void)requestHomeDataWithId:(NSString *)lastId
 {
     NSDictionary *dicPar =@{
                             @"c":@"tw",
                             @"m":@"gettwlist",
-                            @"id":@"0",
+                            @"id":lastId,
                             @"pagesize":kPageSize,
                             };
     __weak HomeViewController *wself = self;
     
     [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dicPar prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [_homeTableView.header endRefreshing];
+        [_homeTableView.footer endRefreshing];
         if (!responseObject) {
             DLOG(@"responseObject is nil");
             return ;
@@ -132,6 +151,11 @@
             else{
                 //加载数据成功
                 NSMutableArray *curQuestions = [QuestionInfo arrayOfModelsFromDictionaries:[dicResult objectForKey:@"list"]];
+                //如果是刷新数据
+                if ([lastId isEqualToString:@"0"]) {
+                    [_sourceArr removeAllObjects];
+                }
+                
                 for (int i =0; i<curQuestions.count; i++) {
                     QuestionInfo *info = [curQuestions objectAtIndex:i];
                     QuestionCellSource *item = [[QuestionCellSource alloc] initWithQuestionInfo:info];
@@ -142,14 +166,16 @@
             }
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+        [_homeTableView.header endRefreshing];
+        [_homeTableView.footer endRefreshing];
     }];
 }
 
 #pragma mark- UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    QuestionCellSource *curSource = [_sourceArr objectAtIndex:indexPath.row];
+    return curSource.cellTotalHeight;
 }
 
 
