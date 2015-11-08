@@ -41,6 +41,12 @@
     self.nameLabelWidth = [APPHelper getStringWordWrappingSize:_qInfo.xm andConstrainToSize:CGSizeMake(80, kBottemViewHeight) andFont:kTextFont14].width;
     
     self.locationLabelWidth = [APPHelper getStringWordWrappingSize:_qInfo.location andConstrainToSize:CGSizeMake(120, kBottemViewHeight) andFont:kTextFont12].width;
+    
+    self.cellTotalHeight = kOutputViewTopPadding + kContentTopPadding+ _contentLabelSize.height + kMiddleViewTopPadding + kMiddleViewHeight + kBottemViewHeight;
+    if (_qInfo.images.count > 0)
+    {
+        self.cellTotalHeight += kPicViewTopPadding + kPicImgHeight;
+    }
 }
 
 @end

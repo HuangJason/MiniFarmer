@@ -10,14 +10,19 @@
 #import "QuestionInfo.h"
 
 
-#define kLeftSpace  12
-#define kRightSpace  12
-#define kMaxContentWidth (kScreenSizeWidth-kLeftSpace-kRightSpace)
-#define kMaxContentLabelHeight 20000
-#define kContentImgWidth  ((kMaxContentWidth-6)/3.0)
-#define kContentImgHeight (kContentImgWidth/1.1)
-#define kBottemViewHeight   36
-#define kMiddleViewHeight   26
+#define kLeftSpace              12
+#define kRightSpace             12
+#define kOutputViewTopPadding   10
+#define kContentTopPadding      12
+#define kMaxContentWidth        (kScreenSizeWidth-kLeftSpace-kRightSpace)
+#define kMaxContentLabelHeight  20000
+#define kMiddleViewHeight       26
+#define kMiddleViewTopPadding   5
+#define kPicPadding             3
+#define kPicImgWidth            ((kMaxContentWidth-2*kPicPadding)/3.0)
+#define kPicImgHeight           (kPicImgWidth/1.1)
+#define kPicViewTopPadding      12
+#define kBottemViewHeight       36
 
 @interface QuestionCellSource : NSObject
 
