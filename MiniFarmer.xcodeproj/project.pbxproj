@@ -87,6 +87,7 @@
 		FCC884CF1BC3EBB900A1200B /* MiniFarmerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC884CE1BC3EBB900A1200B /* MiniFarmerTests.m */; };
 		FCC884DA1BC3EBBA00A1200B /* MiniFarmerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC884D91BC3EBBA00A1200B /* MiniFarmerUITests.m */; };
 		FCC90DB01BD3AE5B00D341DD /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC90DAF1BD3AE5B00D341DD /* QuestionCell.m */; settings = {ASSET_TAGS = (); }; };
+		FCCA178A1BEF116400BAE15C /* HomeMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA17891BEF116400BAE15C /* HomeMenuButton.m */; settings = {ASSET_TAGS = (); }; };
 		FCCA8FAD1BDD255E00B1CCF4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FA71BDD255E00B1CCF4 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCCA8FAE1BDD255E00B1CCF4 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FAA1BDD255E00B1CCF4 /* UIColor+Expanded.m */; settings = {ASSET_TAGS = (); }; };
 		FCCA8FAF1BDD255E00B1CCF4 /* SimpleImageTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FAC1BDD255E00B1CCF4 /* SimpleImageTitleButton.m */; settings = {ASSET_TAGS = (); }; };
@@ -289,6 +290,8 @@
 		FCC884DB1BC3EBBA00A1200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC90DAE1BD3AE5B00D341DD /* QuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCell.h; sourceTree = "<group>"; };
 		FCC90DAF1BD3AE5B00D341DD /* QuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCell.m; sourceTree = "<group>"; };
+		FCCA17881BEF116400BAE15C /* HomeMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMenuButton.h; sourceTree = "<group>"; };
+		FCCA17891BEF116400BAE15C /* HomeMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMenuButton.m; sourceTree = "<group>"; };
 		FCCA8FA61BDD255E00B1CCF4 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		FCCA8FA71BDD255E00B1CCF4 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		FCCA8FA91BDD255E00B1CCF4 /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
@@ -363,6 +366,8 @@
 			children = (
 				FCC6266E1BCA7A0E00943F99 /* HomeViewController.h */,
 				FCC6266F1BCA7A0E00943F99 /* HomeViewController.m */,
+				FCCA17881BEF116400BAE15C /* HomeMenuButton.h */,
+				FCCA17891BEF116400BAE15C /* HomeMenuButton.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -983,6 +988,7 @@
 				FCC752C91BC4E01500DE4B27 /* UIImageView+HighlightedWebCache.m in Sources */,
 				FCC752B41BC4E01500DE4B27 /* MJRefreshGifHeader.m in Sources */,
 				FCCA8FB51BDD2F9E00B1CCF4 /* QuestionCellSource.m in Sources */,
+				FCCA178A1BEF116400BAE15C /* HomeMenuButton.m in Sources */,
 				FCC752901BC4E01500DE4B27 /* AFURLConnectionOperation.m in Sources */,
 				FCC752951BC4E01500DE4B27 /* JSONModelArray.m in Sources */,
 				FCC752BC1BC4E01500DE4B27 /* MKAnnotationView+WebCache.m in Sources */,

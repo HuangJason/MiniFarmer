@@ -11,8 +11,9 @@
 #import "SimpleImageTitleButton.h"
 #import "QuestionCell.h"
 #import "MJRefresh.h"
+#import "HomeMenuButton.h"
 
-#define kPageSize   @"10"
+#define kPageSize   @"10"   //一次请求数据数
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -30,6 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.hidden = YES;
     [self commonInit];
     [self addSubviews];
     
@@ -61,10 +63,13 @@
     _homeTableView.tableHeaderView = _headView;
     [self.view addSubview:_homeTableView];
     
-    _homeTableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    MJRefreshNormalHeader *mjHeader= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         DLOG(@"home refresh!");
         [self requestHomeDataWithId:@"0"];
     }];
+    _homeTableView.header = mjHeader;
+    mjHeader.lastUpdatedTimeLabel.hidden = YES;
+    //[mjHeader setTitle:@"" forState:MJRefreshStateIdle];
     
     _homeTableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         if (_sourceArr.count == 0) {
@@ -81,44 +86,65 @@
 - (void)headViewInit
 {
     _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 270)];
-    _headView.backgroundColor = [UIColor yellowColor];
-    UIImageView *hImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_headView.bounds), 170)];
+    //_headView.backgroundColor = [UIColor yellowColor];
+    CGFloat bannerHeight = 170;
+    UIImageView *hImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_headView.bounds), bannerHeight)];
     [_headView addSubview:hImage];
-    UIView *funView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(hImage.bounds), CGRectGetWidth(_headView.bounds), 100)];
+    hImage.image = [UIImage imageNamed:@"home_banner"];
+    
+    //菜单选项
+    CGFloat funHeight = 86;
+    CGFloat sideSpadding = 20;
+    CGFloat menuSpadding = (CGRectGetWidth(_headView.bounds)- sideSpadding*2 - kMenuBtnImgWidth*4)/3;
+    UIView *funView = [[UIView alloc] initWithFrame:CGRectMake(0, bannerHeight+14, CGRectGetWidth(_headView.bounds), funHeight)];
     [_headView addSubview:funView];
     
-    //
-    SimpleImageTitleButton *buyBtn = [self buttonWithNormalName:@"home_btn_buy_nm" andSelectName:nil andTitle:@"买农药"];
+    HomeMenuButton *buyBtn = [self menuButtonWithTitle:@"买农药" normalImgName:@"home_btn_buy_nm"];
     [funView addSubview:buyBtn];
-//    [buyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(funView).offset(14);
-//        make.left.equalTo(funView).offset(30);
-//        make.size.mas_equalTo(CGSizeMake(70, 86));
-//    }];
-//    [buyBtn setTopImageSize:CGSizeMake(51, 51) imageTopHeight:0 titleBottomHeight:0];
+    //buyBtn.frame = CGRectMake(sideSpadding, 0, kMenuBtnImgWidth, funHeight);
+    [buyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(funView);
+        make.left.equalTo(funView).offset(sideSpadding);
+        make.size.mas_equalTo(CGSizeMake(kMenuBtnImgWidth,funHeight));
+    }];
+    
+    HomeMenuButton *studyBtn = [self menuButtonWithTitle:@"学技术" normalImgName:@"home_btn_study_nm"];
+    [funView addSubview:studyBtn];
+    [studyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(buyBtn);
+        make.left.equalTo(buyBtn.mas_right).offset(menuSpadding);
+        make.size.mas_equalTo(buyBtn);
+    }];
+    
+    HomeMenuButton *askBtn = [self menuButtonWithTitle:@"问专家" normalImgName:@"home_btn_ask_nm"];
+    [funView addSubview:askBtn];
+    [askBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(buyBtn);
+        make.left.equalTo(studyBtn.mas_right).offset(menuSpadding);
+        make.size.mas_equalTo(buyBtn);
+    }];
+    
+    HomeMenuButton *methodBtn = [self menuButtonWithTitle:@"找配方" normalImgName:@"home_btn_method_nm"];
+    [funView addSubview:methodBtn];
+    [methodBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(buyBtn);
+        make.left.equalTo(askBtn.mas_right).offset(menuSpadding);
+        make.size.mas_equalTo(buyBtn);
+    }];
 }
 
-//创建一个按钮
-- (SimpleImageTitleButton *)buttonWithNormalName:(NSString *)normal andSelectName:(NSString *)selected andTitle:(NSString *)title
+//创建一个菜单按钮
+- (HomeMenuButton *)menuButtonWithTitle:(NSString *)title normalImgName:(NSString *)nmName
 {
-    CGFloat buttonW = 70;
-    CGFloat buttonH = 86;
+    HomeMenuButton *tmpBtn = [HomeMenuButton buttonWithType:UIButtonTypeCustom];
+    //tmpBtn.backgroundColor = [UIColor redColor];
+    [tmpBtn setTitle:title forState:UIControlStateNormal];
+    [tmpBtn setTitleColor:RGBCOLOR(61, 61, 61) forState:UIControlStateNormal];
+    tmpBtn.titleLabel.font = kTextFont14;
+    tmpBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [tmpBtn setImage:[UIImage imageNamed:nmName] forState:UIControlStateNormal];
     
-    SimpleImageTitleButton *button = [SimpleImageTitleButton buttonWithType:UIButtonTypeCustom];
-    button.backgroundColor = [UIColor greenColor];
-    button.frame = CGRectMake(0, 0, buttonW, buttonH);
-    [button setImage:[UIImage imageNamed:normal] forState:UIControlStateNormal];
-    [button setImage:[[UIImage imageNamed:selected] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateDisabled];
-    [button setTitle:title forState:UIControlStateNormal];
-    //[button addTarget:self action:@selector(changeViewController:) forControlEvents:UIControlEventTouchUpInside];
- 
-    button.titleLabel.font = [UIFont systemFontOfSize:14]; // 设置标题的字体大小
-    [button setTitleColor:RGBCOLOR(61, 61, 61) forState:UIControlStateNormal];
-    
-//    [button setTitleEdgeInsets:UIEdgeInsetsMake(button.imageView.frame.size.height+6,-button.imageView.frame.size.width, 0.0,0.0)];//文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
-//    [button setImageEdgeInsets:UIEdgeInsetsMake(-15, 0.0,0.0, -button.titleLabel.bounds.size.width)];//图片距离右边框距离减少图片的宽度，其它不变
-    [button setTopImageSize:CGSizeMake(51, 51) imageTopHeight:0 titleBottomHeight:0];
-    return button;
+    return tmpBtn;
 }
 
 - (void)requestHomeDataWithId:(NSString *)lastId

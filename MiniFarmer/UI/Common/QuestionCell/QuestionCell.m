@@ -47,7 +47,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.contentView.backgroundColor = [UIColor lightGrayColor];
+        self.contentView.backgroundColor = RGBCOLOR(238, 238, 238);
         
         _outputView = [UIView new];
         [self.contentView addSubview:_outputView];
