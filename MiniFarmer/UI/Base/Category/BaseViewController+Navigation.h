@@ -29,5 +29,12 @@
 
 - (void)setBarTitle:(NSString *)title;
 
+//添加手势 回收键盘
+- (void)addGestureWithTarget:(id)target action:(SEL)action;
+
+- (void)addGesture;
+
+- (void)setStatusBarColor:(UIColor *)color;
+
 
 @end

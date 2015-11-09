@@ -6,7 +6,7 @@
 //  Copyright © 2015年 enbs. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "ResetPasswordViewController.h"
 #import "YHSMSCodeButton.h"
 #import "BaseViewController+Navigation.h"
 #import "UIScrollView+LGKeyboard.h"
@@ -14,7 +14,7 @@
 
 #define kDispaceToLeft 16
 #define kDispaceToButtons 8
-@interface RegisterViewController ()<UITextFieldDelegate,UIScrollViewDelegate>
+@interface ResetPasswordViewController ()<UITextFieldDelegate,UIScrollViewDelegate>
 @property (strong, nonatomic) UIScrollView *scrollView;
 @property (strong, nonatomic) UITextField *phoneTF;
 @property (strong, nonatomic) UITextField *passwordTF;
@@ -22,12 +22,11 @@
 @property (strong, nonatomic) UITextField *verificationCodeTF;
 
 @property (strong, nonatomic) YHSMSCodeButton *getSMSCodeBtn;
-@property (strong, nonatomic) UIButton *registerButton;
-@property (strong, nonatomic) UIButton *protocalBtn;
+@property (strong, nonatomic) UIButton *commitButton;
 
 @end
 
-@implementation RegisterViewController
+@implementation ResetPasswordViewController
 
 
 - (void)viewDidLoad {
@@ -37,7 +36,7 @@
     [self initSubViews];
     
     [self setBarLeftDefualtButtonWithTarget:self action:@selector(dismissRegisterVCAction)];
-    [self setBarTitle:@"用户注册"];
+    [self setBarTitle:@"修改密码"];
     
     [self setLayerWithView:self.phoneTF];
     [self setLayerWithView:self.passwordTF];
@@ -55,26 +54,26 @@
     [self.getSMSCodeBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];
     [self.getSMSCodeBtn setTitle:btnTitle forState:UIControlStateNormal];
     [self.getSMSCodeBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    __weak RegisterViewController *weakself = self;
+    __weak ResetPasswordViewController *weakself = self;
     [self.getSMSCodeBtn addTouchedBlock:^(YHSMSCodeButton *sender) {
         //发送请求
         if (!weakself.phoneTF.text.length) {
             [weakself.view showWeakPromptViewWithMessage:@"手机号码不能为空"];
         }
         NSDictionary *dic = @{@"c":@"user",@"m":@"sendvcode",@"mobile":[APPHelper safeString:weakself.phoneTF.text]};
-        [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject)
-        {
-            RegisterModel *model = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
-            [weakself.view showWeakPromptViewWithMessage:model.msg];
-            
-            //TODO:发送成功的时候 要不要显示验证码
-            if (model.code.intValue == 1)
-            {
-                weakself.verificationCodeTF.text = model.vcode;
-            }
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            
-        }];
+        [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject)
+         {
+             RegisterModel *model = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
+             [weakself.view showWeakPromptViewWithMessage:model.msg];
+             
+             //TODO:发送成功的时候 要不要显示验证码
+             if (model.code.intValue == 1)
+             {
+                 weakself.verificationCodeTF.text = model.vcode;
+             }
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             
+         }];
         sender.userInteractionEnabled = NO;
         [sender startWithSecond:60];
         /// 获取过程（倒计时）
@@ -90,12 +89,13 @@
         }];
     }];
     
+    /// 给 self.view 添加手势，取消键盘
     [self addGestureWithTarget:self action:@selector(backKeyboard)];
     
     /// 给 textField 设置代理，按 return 键取消键盘
     self.passwordTF.delegate = self;
     self.againPasswordTF.delegate = self;
-
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -108,7 +108,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
+    
 }
 
 
@@ -127,9 +127,11 @@
     [self.scrollView addSubview:self.againPasswordTF];
     [self.scrollView addSubview:self.verificationCodeTF];
     [self.scrollView addSubview:self.getSMSCodeBtn];
-    [self.scrollView addSubview:self.registerButton];
-    [self.scrollView addSubview:self.protocalBtn];
+    [self.scrollView addSubview:self.commitButton];
     
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
     CGRect totalRect = self.view.bounds;
     totalRect.origin.y = kStatusBarHeight + kNavigationBarHeight + kLineWidth;
     [self.scrollView setFrame:totalRect];
@@ -137,79 +139,76 @@
     CGRect subRect = totalRect;
     //用户名
     subRect.origin.x = kDispaceToLeft;
-    subRect.origin.y = 16;
+    subRect.origin.y = 80;
     subRect.size.width = CGRectGetWidth(totalRect) - 2 * 16;
     subRect.size.height = 48;
     self.phoneTF.frame = subRect;
     
     subRect.origin.y = CGRectGetMaxY(self.phoneTF.frame) + kDispaceToButtons;
-    self.passwordTF.frame = subRect;
-    
-    subRect.origin.y = CGRectGetMaxY(self.passwordTF.frame) + kDispaceToButtons;
-    self.againPasswordTF.frame = subRect;
-    
-    subRect.origin.y = CGRectGetMaxY(self.againPasswordTF.frame) + kDispaceToButtons;
     subRect.size.width = 170;
     self.verificationCodeTF.frame = subRect;
     
     subRect.origin.x = CGRectGetMaxX(self.verificationCodeTF.frame) + 16;
     subRect.size.width = CGRectGetWidth(self.phoneTF.frame) - 16 - CGRectGetWidth(self.verificationCodeTF.frame);
     self.getSMSCodeBtn.frame = subRect;
+
+    subRect.origin.x = kDispaceToLeft;
+    subRect.origin.y = CGRectGetMaxY(self.verificationCodeTF.frame) + kDispaceToButtons;
+    subRect.size.width = CGRectGetWidth(self.phoneTF.frame);
+    self.passwordTF.frame = subRect;
     
-    subRect.origin.y = CGRectGetMaxY(self.getSMSCodeBtn.frame) + 16;
+    subRect.origin.y = CGRectGetMaxY(self.passwordTF.frame) + kDispaceToButtons;
+    self.againPasswordTF.frame = subRect;
+    
+    
+    subRect.origin.y = CGRectGetMaxY(self.againPasswordTF.frame) + 16;
     subRect.size.width = CGRectGetWidth(self.phoneTF.frame);
     subRect.size.height = 50;
     subRect.origin.x = kDispaceToLeft;
-
-    self.registerButton.frame = subRect;
     
-    subRect.origin.y = CGRectGetMaxY(self.registerButton.frame) + 30;
-    subRect.size.height = 16;
-    self.protocalBtn.frame = subRect;
+    self.commitButton.frame = subRect;
     
-//    
-//    [self.phoneTF mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.view.mas_leading).offset(16);
-//        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
-//        make.top.equalTo(self.view.mas_top).offset(80);
-//        make.height.equalTo(@(48));
-//    }];
-//    [self.passwordTF mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.view.mas_leading).offset(16);
-//        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
-//        make.top.equalTo(self.phoneTF.mas_bottom).offset(8);
-//        make.height.equalTo(@(48));
-//    }];
-//    [self.againPasswordTF mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.view.mas_leading).offset(16);
-//        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
-//        make.top.equalTo(self.passwordTF.mas_bottom).offset(8);
-//        make.height.equalTo(@(48));
-//    }];
-//    [self.verificationCodeTF mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.view.mas_leading).offset(16);
-//        make.top.equalTo(self.againPasswordTF.mas_bottom).offset(8);
-//        make.width.equalTo(@(170));
-//        make.height.equalTo(@(48));
-//    }];
-//    [self.getSMSCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.verificationCodeTF.mas_trailing).offset(16);
-//        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
-//        make.top.equalTo(self.againPasswordTF.mas_bottom).offset(8);
-//        make.height.equalTo(@(48));
-//    }];
-//    [self.registerButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.view.mas_leading).offset(16);
-//        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
-//        make.top.equalTo(self.verificationCodeTF.mas_bottom).offset(16);
-//        make.height.equalTo(@(50));
-//    }];
-//    [self.protocalBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.registerButton.mas_bottom).offset(25);
-//        make.centerX.equalTo(self.view.mas_centerX);
-//    }];
-//    [self.protocalBtn setBackgroundColor:[UIColor redColor]];
-//
+    
+    
+    //
+    //    [self.phoneTF mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.leading.equalTo(self.view.mas_leading).offset(16);
+    //        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
+    //        make.top.equalTo(self.view.mas_top).offset(80);
+    //        make.height.equalTo(@(48));
+    //    }];
+    //    [self.passwordTF mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.leading.equalTo(self.view.mas_leading).offset(16);
+    //        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
+    //        make.top.equalTo(self.phoneTF.mas_bottom).offset(8);
+    //        make.height.equalTo(@(48));
+    //    }];
+    //    [self.againPasswordTF mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.leading.equalTo(self.view.mas_leading).offset(16);
+    //        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
+    //        make.top.equalTo(self.passwordTF.mas_bottom).offset(8);
+    //        make.height.equalTo(@(48));
+    //    }];
+    //    [self.verificationCodeTF mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.leading.equalTo(self.view.mas_leading).offset(16);
+    //        make.top.equalTo(self.againPasswordTF.mas_bottom).offset(8);
+    //        make.width.equalTo(@(170));
+    //        make.height.equalTo(@(48));
+    //    }];
+    //    [self.getSMSCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.leading.equalTo(self.verificationCodeTF.mas_trailing).offset(16);
+    //        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
+    //        make.top.equalTo(self.againPasswordTF.mas_bottom).offset(8);
+    //        make.height.equalTo(@(48));
+    //    }];
+    //    [self.registerButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.leading.equalTo(self.view.mas_leading).offset(16);
+    //        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
+    //        make.top.equalTo(self.verificationCodeTF.mas_bottom).offset(16);
+    //        make.height.equalTo(@(50));
+    //    }];
+    
+    //
     
 }
 
@@ -283,36 +282,24 @@
     return _getSMSCodeBtn;
 }
 
--(UIButton *)registerButton
+-(UIButton *)commitButton
 {
-    if (!_registerButton) {
-        _registerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self setLayerWithView:_registerButton];
-        [_registerButton setTitle:@"注册" forState:UIControlStateNormal];
-        [_registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_registerButton setBackgroundColor:RGBACOLOR(234, 85, 6, 1.0f)];
-        [_registerButton.titleLabel setFont:[UIFont systemFontOfSize:16]];
-        [_registerButton addTarget:self action:@selector(registerBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    if (!_commitButton) {
+        _commitButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self setLayerWithView:_commitButton];
+        [_commitButton setTitle:@"提交" forState:UIControlStateNormal];
+        [_commitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_commitButton setBackgroundColor:RGBACOLOR(234, 85, 6, 1.0f)];
+        [_commitButton.titleLabel setFont:[UIFont systemFontOfSize:16]];
+        [_commitButton addTarget:self action:@selector(commitButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _registerButton;
+    return _commitButton;
 }
 
--(UIButton *)protocalBtn
-{
-    if (!_protocalBtn) {
-        _protocalBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_protocalBtn setTitle:@"点击查看《用户协议》" forState:UIControlStateNormal];
-        _protocalBtn.contentHorizontalAlignment=UIControlContentHorizontalAlignmentCenter;
-        [_protocalBtn setTitleColor:RGBACOLOR(74, 74, 74, 1.0f) forState:UIControlStateNormal];
-        [_protocalBtn setBackgroundColor:[UIColor clearColor]];
-        [_protocalBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];
-    }
-    return _protocalBtn;
-}
 
 #pragma mark - click events
 /// 注册
-- (void)registerBtnClick:(UIButton *)sender
+- (void)commitButtonClick:(UIButton *)sender
 {
     //判断输入的手机号码 是否正确
     //判断是否为空
@@ -335,11 +322,11 @@
         return;
     }
     //开始注册
-    NSDictionary *dic = @{@"c":@"user",@"m":@"register",@"mobile":[APPHelper safeString:self.phoneTF.text],@"vzm":[APPHelper safeString:self.verificationCodeTF.text],@"password":[APPHelper safeString:self.passwordTF.text]};
+    NSDictionary *dic = @{@"c":@"user",@"m":@"passwordcz",@"mobile":[APPHelper safeString:self.phoneTF.text],@"vzm":[APPHelper safeString:self.verificationCodeTF.text],@"password":[APPHelper safeString:self.passwordTF.text],@"repassword":[APPHelper safeString:self.againPasswordTF.text]};
     [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         RegisterModel *registerModel = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
         [self.view showWeakPromptViewWithMessage:registerModel.msg];
-
+        
         if (registerModel.code.intValue == 1)
         {
             //这里要做特殊的处理
@@ -348,7 +335,7 @@
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [self.view showWeakPromptViewWithMessage:@"注册失败"];
-
+        
     }];
     
 }

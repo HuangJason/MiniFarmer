@@ -10,6 +10,7 @@
 #import "BaseViewController+Navigation.h"
 #import "RegisterViewController.h"
 #import "LoginModel.h"
+#import "ResetPasswordViewController.h"
 
 #define kLoginDispaceToLeft 16
 
@@ -37,9 +38,7 @@
     [self initSubviews];
     
     /// 给 self.view 添加手势，取消键盘
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                          action:@selector(backKeyboard)];
-    [self.view addGestureRecognizer:tap];
+    [self addGestureWithTarget:self action:@selector(backKeyboard)];
     
     /// 给 textField 设置代理，按 return 键取消键盘
     self.passwordTF.delegate = self;
@@ -138,9 +137,10 @@
     [self backKeyboard];
     
     //判断用户名和密码是否为空
-    if (!self.usernameTF.text || !self.passwordTF.text)
+    DLOG(@"---- %@",self.usernameTF.text);
+    if (!self.usernameTF.text.length || !self.passwordTF.text.length)
     {
-        [self.view showWeakPromptViewWithMessage:@"用户名或者密码为空"];
+        [self.view showWeakPromptViewWithMessage:@"用户名和密码不能为空"];
         return;
     }
     
@@ -150,9 +150,13 @@
     [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         [self.view dismissLoading];
         LoginModel *loginModel = [[LoginModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
+        
         if ([loginModel.msg isEqualToString:@"sucess"])
         {
-            [self.view showWeakPromptViewWithMessage:@"登录成功"];
+            //登陆成功保存电话号码 保存用户userid
+            [[MiniAppEngine shareMiniAppEngine] saveUserId:loginModel.rows.userId];
+            [[MiniAppEngine shareMiniAppEngine] saveUserLoginNumber:loginModel.rows.mobile];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
         else
         {
@@ -171,6 +175,9 @@
 - (void)forgetPasswordBtnClick:(UIButton *)sender
 {
     [self backKeyboard];
+    ResetPasswordViewController *resetVC = [[ResetPasswordViewController alloc] init];
+    [self.navigationController pushViewController:resetVC animated:YES];
+    
 }
 
 /// 记住账号
@@ -179,14 +186,7 @@
     [self backKeyboard];
     
     sender.selected = !sender.selected;
-    if (sender.selected)
-    {
-        [[MiniAppEngine shareMiniAppEngine] saveUserLoginNumber:self.usernameTF.text];
-    }
-    else
-    {
-        [[MiniAppEngine shareMiniAppEngine] clearUserLoginNumber];
-    }
+    [[MiniAppEngine shareMiniAppEngine] setSaveNumber:sender.selected];
 }
 
 /// 取消登录
@@ -232,6 +232,7 @@
         _passwordTF = [[UITextField alloc] init];;
         _passwordTF.backgroundColor = [UIColor whiteColor];
         _passwordTF.font = [UIFont systemFontOfSize:16];
+        _passwordTF.secureTextEntry = YES;
         _passwordTF.placeholder = @"请输入密码";
         UIView *horldView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, 48)];
         _passwordTF.leftView = horldView;
@@ -334,11 +335,11 @@
     return YES;
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    if ([[MiniAppEngine shareMiniAppEngine] isHasSaveUserLoginNumber]) {
-        [[MiniAppEngine shareMiniAppEngine] saveUserLoginNumber:self.usernameTF.text];
-    }
-}
+//- (void)textFieldDidEndEditing:(UITextField *)textField
+//{
+//    if ([[MiniAppEngine shareMiniAppEngine] isHasSaveUserLoginNumber]) {
+//        [[MiniAppEngine shareMiniAppEngine] saveUserLoginNumber:self.usernameTF.text];
+//    }
+//}
 
 @end

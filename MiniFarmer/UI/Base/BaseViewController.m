@@ -29,8 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initBackButton];
+//    [self initBackButton];
     _backBtn.hidden = YES;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)initBackButton

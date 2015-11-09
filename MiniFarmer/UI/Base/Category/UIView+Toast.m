@@ -13,8 +13,11 @@
 
 - (void)showWeakPromptViewWithMessage:(NSString *)message
 {
+    UIView *view = [[UIApplication sharedApplication].delegate window];
+
     MBProgressHUD *hud;
-    hud = [[MBProgressHUD alloc] initWithView:self];
+    hud = [[MBProgressHUD alloc] initWithView:view];
+    hud.yOffset = CGRectGetHeight(view.frame)/2 - 60;
     [self addSubview:hud];
     hud.labelText = message;
     hud.mode = MBProgressHUDModeText;
@@ -24,7 +27,7 @@
     //hud.opacity = 0.6f;
     hud.color = [UIColor blackColor];
     [hud showAnimated:YES whileExecutingBlock:^{
-        sleep(1.0f);
+        sleep(2.0f);
     } completionBlock:^{
         [hud removeFromSuperview];
     }];

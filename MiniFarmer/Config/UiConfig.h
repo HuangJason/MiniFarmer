@@ -18,6 +18,8 @@
 #define kTextFont16         [UIFont systemFontOfSize:16]
 #define kTextFont14         [UIFont systemFontOfSize:14]
 #define kTextFont12         [UIFont systemFontOfSize:12]
+#define kTextFont(A)        [UIFont systemFontOfSize:A]
+
 
 #pragma mark - 线的宽度
 

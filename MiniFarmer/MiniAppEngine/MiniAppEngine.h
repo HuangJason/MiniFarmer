@@ -12,12 +12,31 @@
 
 + (MiniAppEngine *)shareMiniAppEngine;
 
+#pragma mark - 设置
+- (void)saveUserId:(NSString *)userId;
+
 //保存密码
 - (void)saveUserLoginNumber:(NSString *)number;
 
+///清除用户信息
 - (void)clearUserLoginNumber;
 
-- (NSString *)userLoginNumber;
 
+
+//是否保存用户名
+- (void)setSaveNumber:(BOOL)saveNumber;
+
+#pragma mark - 获取
+
+///是否登陆
+- (BOOL)isLogin;
+
+///获取用户的用户名
+- (NSString *)userLoginNumber;
+//是否保存了用户名
 - (BOOL)isHasSaveUserLoginNumber;
+
+- (NSString *)userId;
+
+
 @end

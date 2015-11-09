@@ -11,6 +11,8 @@
 #define kUserLoginNumber @"userLoginNumber"
 #define kIsSaveUserLoginNumber @"isSaveUserLoginNumber"
 
+#define kUserId @"userId"
+
 static MiniAppEngine *miniAppEngine;
 
 @implementation MiniAppEngine
@@ -24,16 +26,29 @@ static MiniAppEngine *miniAppEngine;
     return miniAppEngine;
 }
 
+- (void)saveUserId:(NSString *)userId
+{
+ [[NSUserDefaults standardUserDefaults] setObject:userId forKey:kUserLoginNumber];
+
+}
+
 - (void)saveUserLoginNumber:(NSString *)number
 {
     [[NSUserDefaults standardUserDefaults] setObject:number forKey:kUserLoginNumber];
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kIsSaveUserLoginNumber];
 }
 
-- (void)clearUserLoginNumber
+- (void)clearUserLoginInfos
 {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserLoginNumber];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserId];
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kIsSaveUserLoginNumber];
+}
+
+
+
+- (void)setSaveNumber:(BOOL)saveNumber
+{
+    [[NSUserDefaults standardUserDefaults] setBool:saveNumber forKey:kIsSaveUserLoginNumber];
 }
 
 - (NSString *)userLoginNumber
@@ -41,9 +56,23 @@ static MiniAppEngine *miniAppEngine;
     return [[NSUserDefaults standardUserDefaults] objectForKey:kUserLoginNumber];
 }
 
+- (NSString *)userId
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kUserId];
+}
+
 - (BOOL)isHasSaveUserLoginNumber
 {
     return [[NSUserDefaults standardUserDefaults] boolForKey:kIsSaveUserLoginNumber];
+}
+
+- (BOOL)isLogin
+{
+    if (![self userId])
+    {
+        return NO;
+    }
+    return YES;
 }
 
 @end

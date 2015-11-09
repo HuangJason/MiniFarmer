@@ -10,6 +10,14 @@
 
 @implementation BaseViewController (Navigation)
 
+- (void)setStatusBarColor:(UIColor *)color
+{
+    UIView *statusView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, 20)];
+    [statusView setBackgroundColor:color];
+    [self.view addSubview:statusView];
+    
+}
+
 - (void)setNavigationBarIsHidden:(BOOL)hidden
 {
     [self.navigationController.navigationBar setHidden:YES];
@@ -17,6 +25,7 @@
 
 - (void)setBarLeftDefualtButtonWithTarget:(id)target action:(SEL)action
 {
+    [self setBarView];
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton setFrame:CGRectMake(0,kStatusBarHeight,44, 44)];
     [backButton setBackgroundImage:[UIImage imageNamed:@"login_btn_back"] forState:UIControlStateNormal];
@@ -52,6 +61,14 @@
     
 }
 
+- (void)setBarView
+{
+    UIView *barView = [[UIView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight, kScreenSizeWidth, kNavigationBarHeight)];
+    barView.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
+
+    [self.view addSubview:barView];
+}
+
 - (void)setLineToBarBottomWithColor:(UIColor *)color heigth:(CGFloat)heigth
 {
     UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight + 44, kScreenSizeWidth, heigth)];
@@ -83,6 +100,25 @@
     [rigthButton addTarget:target action:action
           forControlEvents:UIControlEventTouchUpInside];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:rigthButton]];
+}
+
+- (void)addGesture
+{
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dimissKeyBoard)];
+    [self.view addGestureRecognizer:tap];
+    
+}
+
+- (void)addGestureWithTarget:(id)target action:(SEL)aciton
+{
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:target action:aciton];
+    [self.view addGestureRecognizer:tap];
+}
+
+#pragma mark - event
+- (void)dimissKeyBoard
+{
+    [self.view endEditing:YES];
 }
 
 @end

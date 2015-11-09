@@ -16,6 +16,12 @@
 		31EC66411BECF43700B8E1BC /* JudgeTextIsRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66401BECF43700B8E1BC /* JudgeTextIsRight.m */; settings = {ASSET_TAGS = (); }; };
 		31EC66441BECF52200B8E1BC /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66431BECF52200B8E1BC /* UIView+Toast.m */; settings = {ASSET_TAGS = (); }; };
 		31EC66481BEF7A8000B8E1BC /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66471BEF7A8000B8E1BC /* LoginModel.m */; settings = {ASSET_TAGS = (); }; };
+		31EC664C1BEF839900B8E1BC /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC664B1BEF839900B8E1BC /* RegisterModel.m */; settings = {ASSET_TAGS = (); }; };
+		31EC66501BEF974B00B8E1BC /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC664F1BEF974B00B8E1BC /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		31EC66561BF0416F00B8E1BC /* BaseTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66551BF0416F00B8E1BC /* BaseTextView.m */; settings = {ASSET_TAGS = (); }; };
+		31EC66591BF04ABB00B8E1BC /* GCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66581BF04ABB00B8E1BC /* GCPlaceholderTextView.m */; settings = {ASSET_TAGS = (); }; };
+		31EC66C21BF0710F00B8E1BC /* AskCropNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66C11BF0710F00B8E1BC /* AskCropNameView.m */; settings = {ASSET_TAGS = (); }; };
+		31EC66C81BF0B8B600B8E1BC /* AskSendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC66C71BF0B8B600B8E1BC /* AskSendModel.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626761BCA7A0E00943F99 /* AskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266C1BCA7A0E00943F99 /* AskViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626771BCA7A0E00943F99 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266F1BCA7A0E00943F99 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626781BCA7A0E00943F99 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC626721BCA7A0E00943F99 /* MineViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -145,6 +151,18 @@
 		31EC66431BECF52200B8E1BC /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		31EC66461BEF7A8000B8E1BC /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		31EC66471BEF7A8000B8E1BC /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		31EC664A1BEF839900B8E1BC /* RegisterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
+		31EC664B1BEF839900B8E1BC /* RegisterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
+		31EC664E1BEF974B00B8E1BC /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		31EC664F1BEF974B00B8E1BC /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		31EC66541BF0416F00B8E1BC /* BaseTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextView.h; sourceTree = "<group>"; };
+		31EC66551BF0416F00B8E1BC /* BaseTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextView.m; sourceTree = "<group>"; };
+		31EC66571BF04ABB00B8E1BC /* GCPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPlaceholderTextView.h; sourceTree = "<group>"; };
+		31EC66581BF04ABB00B8E1BC /* GCPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPlaceholderTextView.m; sourceTree = "<group>"; };
+		31EC66C01BF0710F00B8E1BC /* AskCropNameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskCropNameView.h; sourceTree = "<group>"; };
+		31EC66C11BF0710F00B8E1BC /* AskCropNameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskCropNameView.m; sourceTree = "<group>"; };
+		31EC66C61BF0B8B600B8E1BC /* AskSendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskSendModel.h; sourceTree = "<group>"; };
+		31EC66C71BF0B8B600B8E1BC /* AskSendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskSendModel.m; sourceTree = "<group>"; };
 		FCC626681BCA686600943F99 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FCC6266B1BCA7A0E00943F99 /* AskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskViewController.h; sourceTree = "<group>"; };
 		FCC6266C1BCA7A0E00943F99 /* AskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskViewController.m; sourceTree = "<group>"; };
@@ -404,9 +422,37 @@
 			path = LoginInfo;
 			sourceTree = "<group>";
 		};
+		31EC66491BEF838B00B8E1BC /* RegisterModel */ = {
+			isa = PBXGroup;
+			children = (
+				31EC664A1BEF839900B8E1BC /* RegisterModel.h */,
+				31EC664B1BEF839900B8E1BC /* RegisterModel.m */,
+			);
+			path = RegisterModel;
+			sourceTree = "<group>";
+		};
+		31EC664D1BEF973900B8E1BC /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				31EC664E1BEF974B00B8E1BC /* ResetPasswordViewController.h */,
+				31EC664F1BEF974B00B8E1BC /* ResetPasswordViewController.m */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		31EC66C51BF0B89500B8E1BC /* AskModel */ = {
+			isa = PBXGroup;
+			children = (
+				31EC66C61BF0B8B600B8E1BC /* AskSendModel.h */,
+				31EC66C71BF0B8B600B8E1BC /* AskSendModel.m */,
+			);
+			path = AskModel;
+			sourceTree = "<group>";
+		};
 		FCC626691BCA7A0E00943F99 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				31EC664D1BEF973900B8E1BC /* ResetPassword */,
 				31EC662A1BECEBE100B8E1BC /* Login */,
 				31EC662D1BECEBE100B8E1BC /* Register */,
 				FCCA8FA51BDD255E00B1CCF4 /* Base */,
@@ -424,6 +470,8 @@
 			children = (
 				FCC6266B1BCA7A0E00943F99 /* AskViewController.h */,
 				FCC6266C1BCA7A0E00943F99 /* AskViewController.m */,
+				31EC66C01BF0710F00B8E1BC /* AskCropNameView.h */,
+				31EC66C11BF0710F00B8E1BC /* AskCropNameView.m */,
 			);
 			path = Ask;
 			sourceTree = "<group>";
@@ -460,6 +508,8 @@
 		FCC6267A1BCA7A8A00943F99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				31EC66C51BF0B89500B8E1BC /* AskModel */,
+				31EC66491BEF838B00B8E1BC /* RegisterModel */,
 				31EC66451BEF7A6F00B8E1BC /* LoginInfo */,
 				FCC74FF31BD27DAF008446ED /* QuestionInfo */,
 			);
@@ -852,11 +902,15 @@
 		FCC90DAC1BD3AE2600D341DD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				31EC66571BF04ABB00B8E1BC /* GCPlaceholderTextView.h */,
+				31EC66581BF04ABB00B8E1BC /* GCPlaceholderTextView.m */,
 				31EC663F1BECF43700B8E1BC /* JudgeTextIsRight.h */,
 				31EC66401BECF43700B8E1BC /* JudgeTextIsRight.m */,
 				FCCA8FB01BDD2BED00B1CCF4 /* UIViewAdditions.h */,
 				FCCA8FB11BDD2BED00B1CCF4 /* UIViewAdditions.m */,
 				FCC90DAD1BD3AE2600D341DD /* QuestionCell */,
+				31EC66541BF0416F00B8E1BC /* BaseTextView.h */,
+				31EC66551BF0416F00B8E1BC /* BaseTextView.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1075,7 +1129,9 @@
 				FCC752A61BC4E01500DE4B27 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				FCC7528D1BC4E01500DE4B27 /* AFHTTPSessionManager.m in Sources */,
 				FCC752C01BC4E01500DE4B27 /* SDWebImageDecoder.m in Sources */,
+				31EC66591BF04ABB00B8E1BC /* GCPlaceholderTextView.m in Sources */,
 				31EC66321BECEBE100B8E1BC /* LoginViewController.m in Sources */,
+				31EC66561BF0416F00B8E1BC /* BaseTextView.m in Sources */,
 				FCC626791BCA7A0E00943F99 /* RootTabBarViewController.m in Sources */,
 				FCC752C31BC4E01500DE4B27 /* SDWebImageManager.m in Sources */,
 				31EC66331BECEBE100B8E1BC /* RegisterViewController.m in Sources */,
@@ -1103,6 +1159,7 @@
 				31EC663E1BECECC400B8E1BC /* MiniAppEngine.m in Sources */,
 				31EC66441BECF52200B8E1BC /* UIView+Toast.m in Sources */,
 				FCC752C81BC4E01500DE4B27 /* UIImage+WebP.m in Sources */,
+				31EC66C81BF0B8B600B8E1BC /* AskSendModel.m in Sources */,
 				FCC752B11BC4E01500DE4B27 /* MJRefreshBackGifFooter.m in Sources */,
 				FCC752AB1BC4E01500DE4B27 /* MJRefreshComponent.m in Sources */,
 				FCCA8FAF1BDD255E00B1CCF4 /* SimpleImageTitleButton.m in Sources */,
@@ -1121,13 +1178,16 @@
 				FCC752A51BC4E01500DE4B27 /* NSArray+MASAdditions.m in Sources */,
 				31EC663A1BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.m in Sources */,
 				FCC752AD1BC4E01500DE4B27 /* MJRefreshHeader.m in Sources */,
+				31EC66501BEF974B00B8E1BC /* ResetPasswordViewController.m in Sources */,
 				FCC752B31BC4E01500DE4B27 /* MJRefreshBackStateFooter.m in Sources */,
+				31EC66C21BF0710F00B8E1BC /* AskCropNameView.m in Sources */,
 				31EC66481BEF7A8000B8E1BC /* LoginModel.m in Sources */,
 				FCC752B51BC4E01500DE4B27 /* MJRefreshNormalHeader.m in Sources */,
 				FCC752C41BC4E01500DE4B27 /* SDWebImagePrefetcher.m in Sources */,
 				FCC752921BC4E01500DE4B27 /* AFURLResponseSerialization.m in Sources */,
 				FCC7529A1BC4E01500DE4B27 /* JSONHTTPClient.m in Sources */,
 				FCC626781BCA7A0E00943F99 /* MineViewController.m in Sources */,
+				31EC664C1BEF839900B8E1BC /* RegisterModel.m in Sources */,
 				FCC64BFF1BCFE6D300BF56C4 /* LeJSONUtil.m in Sources */,
 				FCC752A91BC4E01500DE4B27 /* MJRefreshAutoFooter.m in Sources */,
 				FCC752B01BC4E01500DE4B27 /* MJRefreshAutoStateFooter.m in Sources */,
