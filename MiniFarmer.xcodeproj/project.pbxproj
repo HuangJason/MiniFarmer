@@ -54,6 +54,8 @@
 		FCC626771BCA7A0E00943F99 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266F1BCA7A0E00943F99 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626781BCA7A0E00943F99 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC626721BCA7A0E00943F99 /* MineViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626791BCA7A0E00943F99 /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC626751BCA7A0E00943F99 /* RootTabBarViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FCC630BA1BF4D70000A2B08C /* QuCommonView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC630B71BF4D70000A2B08C /* QuCommonView.m */; settings = {ASSET_TAGS = (); }; };
+		FCC630BB1BF4D70000A2B08C /* QuestionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC630B91BF4D70000A2B08C /* QuestionDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC64BF91BCFE4FE00BF56C4 /* LeHttpService.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64BF41BCFE4FE00BF56C4 /* LeHttpService.m */; settings = {ASSET_TAGS = (); }; };
 		FCC64BFA1BCFE4FE00BF56C4 /* SHHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64BF61BCFE4FE00BF56C4 /* SHHttpClient.m */; settings = {ASSET_TAGS = (); }; };
 		FCC64BFB1BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64BF81BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m */; settings = {ASSET_TAGS = (); }; };
@@ -262,6 +264,10 @@
 		FCC626751BCA7A0E00943F99 /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
 		FCC6267C1BCAB38800943F99 /* UiConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UiConfig.h; sourceTree = "<group>"; };
 		FCC6267D1BCAB41300943F99 /* APPConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPConfig.h; sourceTree = "<group>"; };
+		FCC630B61BF4D70000A2B08C /* QuCommonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuCommonView.h; sourceTree = "<group>"; };
+		FCC630B71BF4D70000A2B08C /* QuCommonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuCommonView.m; sourceTree = "<group>"; };
+		FCC630B81BF4D70000A2B08C /* QuestionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetailViewController.h; sourceTree = "<group>"; };
+		FCC630B91BF4D70000A2B08C /* QuestionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailViewController.m; sourceTree = "<group>"; };
 		FCC64BF31BCFE4FE00BF56C4 /* LeHttpService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeHttpService.h; sourceTree = "<group>"; };
 		FCC64BF41BCFE4FE00BF56C4 /* LeHttpService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeHttpService.m; sourceTree = "<group>"; };
 		FCC64BF51BCFE4FE00BF56C4 /* SHHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHHttpClient.h; sourceTree = "<group>"; };
@@ -661,6 +667,7 @@
 		FCC626691BCA7A0E00943F99 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FCC630B51BF4D70000A2B08C /* QuestionDetail */,
 				31EC664D1BEF973900B8E1BC /* ResetPassword */,
 				31EC662A1BECEBE100B8E1BC /* Login */,
 				31EC662D1BECEBE100B8E1BC /* Register */,
@@ -732,6 +739,17 @@
 				FCC6267C1BCAB38800943F99 /* UiConfig.h */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		FCC630B51BF4D70000A2B08C /* QuestionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FCC630B61BF4D70000A2B08C /* QuCommonView.h */,
+				FCC630B71BF4D70000A2B08C /* QuCommonView.m */,
+				FCC630B81BF4D70000A2B08C /* QuestionDetailViewController.h */,
+				FCC630B91BF4D70000A2B08C /* QuestionDetailViewController.m */,
+			);
+			path = QuestionDetail;
 			sourceTree = "<group>";
 		};
 		FCC64BF21BCFE4FE00BF56C4 /* Network */ = {
@@ -1353,9 +1371,11 @@
 				FCC752C01BC4E01500DE4B27 /* SDWebImageDecoder.m in Sources */,
 				31EC66591BF04ABB00B8E1BC /* GCPlaceholderTextView.m in Sources */,
 				31EC66321BECEBE100B8E1BC /* LoginViewController.m in Sources */,
+				FCC630BB1BF4D70000A2B08C /* QuestionDetailViewController.m in Sources */,
 				31EC66561BF0416F00B8E1BC /* BaseTextView.m in Sources */,
 				31EC67981BF0E4A700B8E1BC /* PSTCollectionViewCell.m in Sources */,
 				FCC626791BCA7A0E00943F99 /* RootTabBarViewController.m in Sources */,
+				FCC630BA1BF4D70000A2B08C /* QuCommonView.m in Sources */,
 				FCC752C31BC4E01500DE4B27 /* SDWebImageManager.m in Sources */,
 				31EC679E1BF0E4A700B8E1BC /* PSTCollectionViewUpdateItem.m in Sources */,
 				31EC66331BECEBE100B8E1BC /* RegisterViewController.m in Sources */,

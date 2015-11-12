@@ -12,6 +12,7 @@
 #import "QuestionCell.h"
 #import "MJRefresh.h"
 #import "HomeMenuButton.h"
+#import "QuestionDetailViewController.h"
 
 #define kPageSize   @"10"   //一次请求数据数
 
@@ -202,6 +203,17 @@
 {
     QuestionCellSource *curSource = [_sourceArr objectAtIndex:indexPath.row];
     return curSource.cellTotalHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSUInteger row = indexPath.row;
+    QuestionCellSource *tmpSou = [_sourceArr objectAtIndex:row];
+    NSString *uid = tmpSou.qInfo.userid;
+    NSString *wtid = tmpSou.qInfo.qid;
+    //QuestionDetailViewController *quVC = [[QuestionDetailViewController alloc] initWithWtid:wtid];
+    QuestionDetailViewController *quVC = [[QuestionDetailViewController alloc] initWithUid:uid wtid:wtid];
+    [self.navigationController pushViewController:quVC animated:YES];
 }
 
 
