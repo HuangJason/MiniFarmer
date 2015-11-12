@@ -11,4 +11,6 @@
 
 @interface AskViewController : BaseViewController
 
+- (void)changeSelectedVC:(NSInteger)selectedIndex;
+
 @end

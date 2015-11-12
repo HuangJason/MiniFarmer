@@ -28,7 +28,7 @@ static MiniAppEngine *miniAppEngine;
 
 - (void)saveUserId:(NSString *)userId
 {
- [[NSUserDefaults standardUserDefaults] setObject:userId forKey:kUserLoginNumber];
+ [[NSUserDefaults standardUserDefaults] setObject:userId forKey:kUserId];
 
 }
 
@@ -37,9 +37,13 @@ static MiniAppEngine *miniAppEngine;
     [[NSUserDefaults standardUserDefaults] setObject:number forKey:kUserLoginNumber];
 }
 
-- (void)clearUserLoginInfos
+- (void)clearUserNumber
 {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserLoginNumber];
+}
+
+- (void)clearUserLoginInfos
+{
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserId];
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kIsSaveUserLoginNumber];
 }
@@ -49,7 +53,12 @@ static MiniAppEngine *miniAppEngine;
 - (void)setSaveNumber:(BOOL)saveNumber
 {
     [[NSUserDefaults standardUserDefaults] setBool:saveNumber forKey:kIsSaveUserLoginNumber];
+    if (!saveNumber)
+    {
+        [self clearUserNumber];
+    }
 }
+
 
 - (NSString *)userLoginNumber
 {

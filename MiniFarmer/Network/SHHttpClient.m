@@ -25,7 +25,7 @@
 {
     if (self = [super init]){
         self.manager = [AFHTTPSessionManager manager];
-
+        self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
         //响应结果序列化类型
         self.manager.responseSerializer = [SHJSONResponseSerializerData serializer];//[AFImageResponseSerializer serializer];//[SHJSONResponseSerializerData serializer];
 
@@ -171,7 +171,7 @@
     }
     [dicPar setObject:kCommApiKey forKey:@"apikey"];
     
-    [self requestWithPath:kCommServerUrl method:SHHttpRequestGet parameters:dicPar prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self requestWithPath:kCommServerUrl method:method parameters:dicPar prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         DLOG(@"requestWithMethod return response = %@",responseObject);
         success(task,responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {

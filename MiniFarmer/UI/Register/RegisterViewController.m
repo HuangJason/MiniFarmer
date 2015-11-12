@@ -316,12 +316,24 @@
 {
     //判断输入的手机号码 是否正确
     //判断是否为空
-    if (!self.phoneTF.text.length
-        || !self.passwordTF.text.length
-        || !self.againPasswordTF.text.length
-        || !self.verificationCodeTF.text.length)
+    if (!self.phoneTF.text.length)
     {
-        [self.view showWeakPromptViewWithMessage:@"注册信息填写不完整"];
+        [self.view showWeakPromptViewWithMessage:@"手机号码不能为空"];
+        return;
+    }
+    else if (!self.passwordTF.text.length)
+    {
+        [self.view showWeakPromptViewWithMessage:@"密码不能为空"];
+        return;
+    }
+    else if (![self.passwordTF.text isEqualToString:self.againPasswordTF.text])
+    {
+        [self.view showWeakPromptViewWithMessage:@"密码和重复密码不一致"];
+        return;
+    }
+    else if (!self.verificationCodeTF.text.length)
+    {
+        [self.view showWeakPromptViewWithMessage:@"验证码不能为空"];
         return;
     }
     if (![JudgeTextIsRight isMobileNumber:self.phoneTF.text])
@@ -329,13 +341,8 @@
         [self.view showWeakPromptViewWithMessage:@"用户名为不正确的手机号码"];
         return;
     }
-    if (![self.passwordTF.text isEqualToString:self.againPasswordTF.text])
-    {
-        [self.view showWeakPromptViewWithMessage:@"密码和重复密码不一致"];
-        return;
-    }
     //开始注册
-    NSDictionary *dic = @{@"c":@"user",@"m":@"register",@"mobile":[APPHelper safeString:self.phoneTF.text],@"vzm":[APPHelper safeString:self.verificationCodeTF.text],@"password":[APPHelper safeString:self.passwordTF.text]};
+    NSDictionary *dic = @{@"c":@"user",@"m":@"register",@"mobile":[APPHelper safeString:self.phoneTF.text],@"yzm":[APPHelper safeString:self.verificationCodeTF.text],@"password":[APPHelper safeString:self.passwordTF.text]};
     [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         RegisterModel *registerModel = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
         [self.view showWeakPromptViewWithMessage:registerModel.msg];

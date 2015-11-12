@@ -10,6 +10,7 @@
 #import "HomeViewController.h"
 #import "MineViewController.h"
 #import "AskViewController.h"
+#import "LoginViewController.h"
 
 #define kBaseTabBarButtonTag    5000
 #define kTabBarItemCount    3
@@ -100,19 +101,45 @@
 //按钮被点击时调用
 - (void)changeViewController:(UIButton *)sender
 {
+#if 1
+    //如果选中的是1 并且没有登录的情况下 就在原来的页面弹出一个登录的页面
+    if (sender.tag - kBaseTabBarButtonTag == 1
+        && ![[MiniAppEngine shareMiniAppEngine] isLogin])
+    {
+        [self presentLogin];
+        return;
+    }
+#else
     self.selectedIndex = sender.tag-kBaseTabBarButtonTag; //切换不同控制器的界面
-    
     self.tabBarController.selectedViewController=[self.tabBarController.viewControllers objectAtIndex:self.selectedIndex];
     sender.enabled = NO;
     if (_previousBtn != sender) {
-        
         _previousBtn.enabled = YES;
         
     }
-    
     _previousBtn = sender;
-    NSLog(@"self.selectedIndex%ld",self.selectedIndex);
+    
+    NSLog(@"self.selectedIndex%ld",(unsigned long)self.selectedIndex);
+#endif
 }
+
+- (void)presentLogin
+{
+    LoginViewController *vc = [[LoginViewController alloc] init];
+    vc.loginBackBlock = ^(){
+        [self changeIndexToSelected:0];
+    };
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
+- (void)changeIndexToSelected:(NSInteger)selectedIndex
+{
+    UIButton *btn = [_tabBarView.subviews objectAtIndex:selectedIndex];
+    [self changeViewController:btn];
+    
+}
+
 
 
 

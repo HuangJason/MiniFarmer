@@ -8,5 +8,10 @@
 
 #import "BaseViewController.h"
 
+typedef void(^LoginBackBlock)();
+
 @interface LoginViewController : BaseViewController
+
+@property (nonatomic, copy) LoginBackBlock loginBackBlock;
+
 @end

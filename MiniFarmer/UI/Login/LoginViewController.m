@@ -147,26 +147,33 @@
     //请求登录的接口
     NSDictionary *dic = @{@"c":@"user",@"m":@"userlogin",@"mobile":[APPHelper safeString:self.usernameTF.text],@"password":[APPHelper safeString:self.passwordTF.text]};
     [self.view showLoadingWihtText:@"登录中"];
-    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    __weak __typeof(self)weakSelf = self;
+    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+
         [self.view dismissLoading];
         LoginModel *loginModel = [[LoginModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
         
-        if ([loginModel.msg isEqualToString:@"sucess"])
+        if ([loginModel.msg isEqualToString:@"success"])
         {
             //登陆成功保存电话号码 保存用户userid
             [[MiniAppEngine shareMiniAppEngine] saveUserId:loginModel.rows.userId];
             [[MiniAppEngine shareMiniAppEngine] saveUserLoginNumber:loginModel.rows.mobile];
-            [self dismissViewControllerAnimated:YES completion:nil];
+            strongSelf.loginBackBlock();
+            [strongSelf dismissViewControllerAnimated:YES completion:nil];
+            
         }
         else
         {
-            [self.view showWeakPromptViewWithMessage:@"登录失败"];
+            [strongSelf.view showWeakPromptViewWithMessage:@"登录失败"];
         }
             
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        [self.view dismissLoading];
-        [self.view showWeakPromptViewWithMessage:@"登录失败"];
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+
+        [strongSelf.view dismissLoading];
+        [strongSelf.view showWeakPromptViewWithMessage:@"登录失败"];
 
     }];
 }
@@ -187,6 +194,7 @@
     
     sender.selected = !sender.selected;
     [[MiniAppEngine shareMiniAppEngine] setSaveNumber:sender.selected];
+    
 }
 
 /// 取消登录

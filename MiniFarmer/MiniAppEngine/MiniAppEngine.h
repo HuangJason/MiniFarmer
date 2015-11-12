@@ -18,10 +18,9 @@
 //保存密码
 - (void)saveUserLoginNumber:(NSString *)number;
 
-///清除用户信息
-- (void)clearUserLoginNumber;
 
-
+//清除用户信息
+- (void)clearUserLoginInfos;
 
 //是否保存用户名
 - (void)setSaveNumber:(BOOL)saveNumber;

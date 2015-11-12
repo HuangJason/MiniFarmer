@@ -124,7 +124,7 @@
         _cropNameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _cropNameLabel.textColor = [UIColor blackColor];
         _cropNameLabel.font = kTextFont(13);
-        _cropNameLabel.text = @"作物名称";
+        _cropNameLabel.text = @"请写出有问题的作物";
         
     }
     return _cropNameLabel;

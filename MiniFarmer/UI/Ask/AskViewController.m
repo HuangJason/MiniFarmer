@@ -11,11 +11,16 @@
 #import "GCPlaceholderTextView.h"
 #import "AskCropNameView.h"
 #import "AskSendModel.h"
+#import "XDPhotoSelect.h"
+#import "RootTabBarViewController.h"
+#import "MTAssetsPickerController.h"
+#import "MTPickerInfo.h"
 
 #define kPlaceHolderText @"请描述作物的异常情况和您的问题, 越详细专家越好给您准确的回答哟! (必填)"
+#define kCountOfNumber 3
+#define kImagesCount 6
 
-
-@interface AskViewController ()
+@interface AskViewController ()<XDPhotoSelectDelegate,MTAssetsPickerControllerDelegate,UINavigationControllerDelegate,UITextViewDelegate>
 
 @property (nonatomic, strong) UIButton *sendButton;
 @property (nonatomic, strong) GCPlaceholderTextView *askTextView;
@@ -23,6 +28,9 @@
 @property (nonatomic, strong) UIScrollView *askScrollview;
 @property (nonatomic, strong) AskCropNameView *askCropNameView;
 @property (nonatomic, strong) UIButton *addImageButton;
+@property (nonatomic, strong) XDPhotoSelect *photoSelect;
+
+@property (nonatomic, strong) NSMutableArray *arrayPhotos;
 @end
 
 @implementation AskViewController
@@ -30,12 +38,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.photoSelect = [[XDPhotoSelect alloc] initWithController:self delegate:self];
     [self setStatusBarColor:[UIColor colorWithHexString:@"f8f8f8"]];
     [self setBarLeftDefualtButtonWithTarget:self action:@selector(dismissAskVC:)];
     [self setBarTitle:@"我的问题"];
     [self setLineToBarBottomWithColor:[UIColor colorWithHexString:@"a3a3a3"] heigth:kLineWidth];
     [self addSubviews];
     [self addGesture];
+    
+    self.arrayPhotos = [NSMutableArray array];
     
 
 }
@@ -62,11 +73,10 @@
 }
 
 
-
 #pragma mark - event
 - (void)dismissAskVC:(UIButton *)btn
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self changeSelectedVC:0];
 }
 
 - (void)sendAsk:(UIButton *)btn
@@ -82,12 +92,13 @@
         [self.view showWeakPromptViewWithMessage:@"作物名称不能为空"];
         return;
     }
-    NSDictionary *dic = @{@"c":@"tw",@"m":@"savetw",@"useid":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userId]],@"mobile":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userLoginNumber]],@"zjid":@"",@"wtzw":self.askCropNameView.text,@"wtms":self.askTextView.text};
+    NSDictionary *dic = @{@"c":@"tw",@"m":@"savetw",@"userid":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userId]],@"mobile":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userLoginNumber]],@"zjid":@"",@"wtzw":self.askCropNameView.text,@"wtms":self.askTextView.text};
     [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         AskSendModel *sendModel = [[AskSendModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
         if ([sendModel.msg isEqualToString:@"success"])
         {
             [self.view showWeakPromptViewWithMessage:@"发送成功"];
+            [self dismissAskVC:nil];
         }
         else
         {
@@ -99,18 +110,57 @@
         [self.view showWeakPromptViewWithMessage:@"发送失败"];
 
     }];
-    
-    
-    
 }
 
 
 - (void)addImages:(UIButton *)btn
 {
     //添加图片 进入相册进行选择
+//    [self.photoSelect startPhotoSelect:XDPhotoSelectFromLibrary];
+    
+    /// 另一套逻辑 mTime
+    MTAssetsPickerController *picker = [[MTAssetsPickerController alloc] init];
+    picker.assetsFilter = [ALAssetsFilter allPhotos];
+    picker.delegate = self;
+    [MTAssetsPickerController selections:self.arrayPhotos withMaximNum:3];
+    [self presentViewController:picker animated:YES completion:nil];
 }
 
+#pragma mark - 选择照片后的回调
+//选择完成后的回调
+- (void)photoSelect:(XDPhotoSelect *)photoSelect didFinishedWithImageArray:(NSArray *)imageArray
+{
+    
+}
 
+//照片选择取消后的回调
+- (void)photoSelectDidCancelled:(XDPhotoSelect *)photoSelect
+{
+    
+}
+
+#pragma mark -
+- (void)mt_AssetsPickerController:(MTAssetsPickerController *)picker didFinishPickingAssets:(NSArray *)assets
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.arrayPhotos removeAllObjects];
+        
+        for (ALAsset *asset in assets) {
+            MTPickerInfo *pictureInfo =[MTPickerInfo new];
+            pictureInfo.image =[UIImage imageWithCGImage:asset.thumbnail];
+            pictureInfo.photoType = album;
+            [pictureInfo bind:asset];
+            [self.arrayPhotos insertObject:pictureInfo atIndex:0];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //TODO: 更新UI
+            //显示图片
+            
+        });
+    });
+    
+}
 
 #pragma mark - subviews
 - (void)addSubviews
@@ -143,7 +193,8 @@
     self.askCropNameView.frame = subRect;
     
     subRect.origin.y = CGRectGetMaxY(self.askCropNameView.frame) + 18;
-    subRect.size = CGSizeMake(112, 112);
+    CGFloat dwidth = (kScreenSizeWidth - 12 * 2 - (kCountOfNumber - 1) * 5.0) / kCountOfNumber;
+    subRect.size = CGSizeMake(dwidth, dwidth);
     self.addImageButton.frame = subRect;
     
 }
@@ -163,7 +214,13 @@
     if (!_sendButton)
     {
         _sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_sendButton setBackgroundColor:[UIColor orangeColor]];
+        [_sendButton setBackgroundImage:[UIImage imageNamed:@"ask_send_btn_no_enable_nm"] forState:UIControlStateDisabled];
+        [_sendButton setBackgroundImage:[UIImage imageNamed:@"ask_send_btn_hl"] forState:UIControlStateHighlighted];
+        [_sendButton setBackgroundImage:[UIImage imageNamed:@"ask_send_btn_enable_nm"] forState:UIControlStateNormal];
+        [_sendButton setTitle:@"发送" forState:UIControlStateNormal];
+        [_sendButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [_sendButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+        [_sendButton setEnabled:NO];
         [_sendButton addTarget:self action:@selector(sendAsk:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _sendButton;
@@ -177,6 +234,7 @@
         _askTextView.textColor = [UIColor colorWithHexString:@"a3a3a3"];
         _askTextView.font = kTextFont(14);
         _askTextView.placeholderColor = _askTextView.textColor;
+        _askTextView.delegate = self;
         _askTextView.placeholder = kPlaceHolderText;
         
     }
@@ -188,7 +246,6 @@
     if (!_askCropNameView)
     {
         _askCropNameView = [[AskCropNameView alloc] initWithFrame:CGRectZero];
-        
     }
     return _askCropNameView;
 }
@@ -202,6 +259,66 @@
         [_addImageButton addTarget:self action:@selector(addImages:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _addImageButton;
+}
+
+#pragma mark - textdelegate
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ((!textView.text.length
+         || [textView.text isEqualToString:@""]))
+    {
+        [self changeSendButtonStateToEnable:NO];
+    }
+
+}
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    if ((textView.text.length
+         || ![textView.text isEqualToString:@""])
+        && !self.sendButton.enabled)
+    {
+        [self changeSendButtonStateToEnable:YES];
+    }
+    
+    if ((!textView.text.length
+         || [textView.text isEqualToString:@""]) && self.sendButton.enabled)
+    {
+        [self changeSendButtonStateToEnable:NO];
+    }
+}
+
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ((!textView.text.length
+         || [textView.text isEqualToString:@""]))
+    {
+        [self changeSendButtonStateToEnable:NO];
+    }
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString*)text
+{
+    if ([text isEqualToString:@"\n"])
+    {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
+#pragma mark - other
+- (void)changeSelectedVC:(NSInteger)selectedIndex
+{
+    [self.navigationController.tabBarController setSelectedIndex:selectedIndex];
+    [(RootTabBarViewController *)(self.navigationController.tabBarController) changeIndexToSelected:selectedIndex];
+}
+
+- (void)changeSendButtonStateToEnable:(BOOL)enable
+{
+    [self.sendButton setEnabled:enable];
 }
 
 @end
