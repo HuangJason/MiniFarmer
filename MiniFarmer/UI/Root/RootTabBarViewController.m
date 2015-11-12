@@ -101,7 +101,7 @@
 //按钮被点击时调用
 - (void)changeViewController:(UIButton *)sender
 {
-#if 1
+#if 0
     //如果选中的是1 并且没有登录的情况下 就在原来的页面弹出一个登录的页面
     if (sender.tag - kBaseTabBarButtonTag == 1
         && ![[MiniAppEngine shareMiniAppEngine] isLogin])

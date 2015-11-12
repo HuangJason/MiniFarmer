@@ -30,6 +30,7 @@
 @property (nonatomic, strong) UIButton *addImageButton;
 @property (nonatomic, strong) XDPhotoSelect *photoSelect;
 
+/// 存放的对象是 MTPickerInfo 类型
 @property (nonatomic, strong) NSMutableArray *arrayPhotos;
 @end
 

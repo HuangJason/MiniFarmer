@@ -512,7 +512,7 @@ static CGFloat CELL_LINE_MARGIN = 2;
     [self.sureButton setTitleColor:[UIColor colorWithHexString:@"0x0075C4"] forState:UIControlStateNormal];
     self.sureButton.enabled = YES;
     self.sureButton.titleLabel.font = [UIFont systemFontOfSize:18];
-    self.sureButton.frame = CGRectMake(self.view.bounds.size.width - 51, self.view.bounds.size.height - 18.5 - 44.0f-17.75f, 36, 18.5);
+    self.sureButton.frame = CGRectMake(self.view.bounds.size.width - 51, self.view.bounds.size.height - 18.5 - 44.0f-17.75f - 10, 36, 18.5);
     [self.sureButton setTitle:@"确定" forState:UIControlStateNormal];
     [self.sureButton addTarget:self action:@selector(finishPickingAssets:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.sureButton];
@@ -521,7 +521,7 @@ static CGFloat CELL_LINE_MARGIN = 2;
     self.countLabel.textColor = [UIColor whiteColor];
     self.countLabel.textAlignment = NSTextAlignmentCenter;
     self.countLabel.font = [UIFont systemFontOfSize:14];
-    self.countLabel.frame = CGRectMake(self.view.bounds.size.width - 51 - 20 -5, self.view.bounds.size.height - 20 - 44.0f-17.f, 20, 20);
+    self.countLabel.frame = CGRectMake(self.view.bounds.size.width - 51 - 20 -5, self.view.bounds.size.height - 20 - 44.0f-17.f - 10, 20, 20);
     self.countLabel.hidden = YES;
     self.countLabel.layer.cornerRadius = self.countLabel.frame.size.height / 2.0;
     self.countLabel.clipsToBounds = YES;
@@ -672,7 +672,6 @@ static CGFloat CELL_LINE_MARGIN = 2;
         
         self.checkMarkButton = [[UIButton alloc] initWithFrame:self.bounds];
         [self.checkMarkButton setImageEdgeInsets:UIEdgeInsetsMake(0.0, frame.size.width - 24.0f,frame.size.height - 24.0f, 0)];
-        
         [self addSubview:self.checkMarkButton];
         
         [self.checkMarkButton addTarget:self action:@selector(tapCheckMark) forControlEvents:UIControlEventTouchUpInside];
@@ -763,7 +762,7 @@ static CGFloat CELL_LINE_MARGIN = 2;
     [super setSelected:selected];
     
     if (self.selected) {
-        [self.checkMarkButton mt_setImageWithAnimation:[UIImage imageNamed:@"picture_checkmark"] forState:UIControlStateNormal];
+        [self.checkMarkButton mt_setImageWithAnimation:[UIImage imageNamed:@"ask_picture_checkmark"] forState:UIControlStateNormal];
         
     } else {
         [self.checkMarkButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
