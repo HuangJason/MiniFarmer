@@ -34,7 +34,10 @@ static MiniAppEngine *miniAppEngine;
 
 - (void)saveUserLoginNumber:(NSString *)number
 {
-    [[NSUserDefaults standardUserDefaults] setObject:number forKey:kUserLoginNumber];
+    if ([self isHasSaveUserLoginNumber])
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:number forKey:kUserLoginNumber];
+    }
 }
 
 - (void)clearUserNumber

@@ -43,6 +43,15 @@
     /// 给 textField 设置代理，按 return 键取消键盘
     self.passwordTF.delegate = self;
 }
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if ([[MiniAppEngine shareMiniAppEngine] isHasSaveUserLoginNumber] && [JudgeTextIsRight isMobileNumber:self.usernameTF.text])
+    {
+        
+        [[MiniAppEngine shareMiniAppEngine] saveUserLoginNumber:self.usernameTF.text];
+    }
+}
 
 /// 初始化子视图
 - (void)initSubviews
@@ -163,7 +172,6 @@
         {
             //登陆成功保存电话号码 保存用户userid
             [[MiniAppEngine shareMiniAppEngine] saveUserId:loginModel.rows.userId];
-            [[MiniAppEngine shareMiniAppEngine] saveUserLoginNumber:loginModel.rows.mobile];
             strongSelf.loginBackBlock();
             [strongSelf dismissViewControllerAnimated:YES completion:nil];
             
@@ -199,7 +207,6 @@
     
     sender.selected = !sender.selected;
     [[MiniAppEngine shareMiniAppEngine] setSaveNumber:sender.selected];
-    
 }
 
 /// 取消登录
@@ -348,11 +355,5 @@
     return YES;
 }
 
-//- (void)textFieldDidEndEditing:(UITextField *)textField
-//{
-//    if ([[MiniAppEngine shareMiniAppEngine] isHasSaveUserLoginNumber]) {
-//        [[MiniAppEngine shareMiniAppEngine] saveUserLoginNumber:self.usernameTF.text];
-//    }
-//}
 
 @end
