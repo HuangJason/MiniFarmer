@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31399E7A1BF56E470052A4EB /* ImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E791BF56E470052A4EB /* ImagesView.m */; settings = {ASSET_TAGS = (); }; };
+		31399E811BF63D210052A4EB /* ZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E801BF63D210052A4EB /* ZoomScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		31399E841BF63F2A0052A4EB /* AskScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E831BF63F2A0052A4EB /* AskScrollView.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC21BF3A5320081F64F /* MTAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC11BF3A5320081F64F /* MTAssetsPickerController.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC91BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC81BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDCC1BF3A9550081F64F /* MTPickerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDCB1BF3A9550081F64F /* MTPickerInfo.m */; settings = {ASSET_TAGS = (); }; };
@@ -163,6 +166,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31399E781BF56E470052A4EB /* ImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesView.h; sourceTree = "<group>"; };
+		31399E791BF56E470052A4EB /* ImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesView.m; sourceTree = "<group>"; };
+		31399E7F1BF63D210052A4EB /* ZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomScrollView.h; sourceTree = "<group>"; };
+		31399E801BF63D210052A4EB /* ZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomScrollView.m; sourceTree = "<group>"; };
+		31399E821BF63F2A0052A4EB /* AskScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskScrollView.h; sourceTree = "<group>"; };
+		31399E831BF63F2A0052A4EB /* AskScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskScrollView.m; sourceTree = "<group>"; };
 		31D4FDC01BF3A5320081F64F /* MTAssetsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAssetsPickerController.h; sourceTree = "<group>"; };
 		31D4FDC11BF3A5320081F64F /* MTAssetsPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAssetsPickerController.m; sourceTree = "<group>"; };
 		31D4FDC71BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MTButtonCheckMarkAnimation.h"; sourceTree = "<group>"; };
@@ -688,6 +697,10 @@
 				FCC6266C1BCA7A0E00943F99 /* AskViewController.m */,
 				31EC66C01BF0710F00B8E1BC /* AskCropNameView.h */,
 				31EC66C11BF0710F00B8E1BC /* AskCropNameView.m */,
+				31399E781BF56E470052A4EB /* ImagesView.h */,
+				31399E791BF56E470052A4EB /* ImagesView.m */,
+				31399E821BF63F2A0052A4EB /* AskScrollView.h */,
+				31399E831BF63F2A0052A4EB /* AskScrollView.m */,
 			);
 			path = Ask;
 			sourceTree = "<group>";
@@ -1132,6 +1145,8 @@
 		FCC90DAC1BD3AE2600D341DD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				31399E7F1BF63D210052A4EB /* ZoomScrollView.h */,
+				31399E801BF63D210052A4EB /* ZoomScrollView.m */,
 				31EC66571BF04ABB00B8E1BC /* GCPlaceholderTextView.h */,
 				31EC66581BF04ABB00B8E1BC /* GCPlaceholderTextView.m */,
 				31EC663F1BECF43700B8E1BC /* JudgeTextIsRight.h */,
@@ -1390,8 +1405,10 @@
 				FCC626771BCA7A0E00943F99 /* HomeViewController.m in Sources */,
 				FCC7529B1BC4E01500DE4B27 /* JSONModel+networking.m in Sources */,
 				FCC752B81BC4E01500DE4B27 /* MJRefreshConst.m in Sources */,
+				31399E841BF63F2A0052A4EB /* AskScrollView.m in Sources */,
 				FCC64BFA1BCFE4FE00BF56C4 /* SHHttpClient.m in Sources */,
 				FCCBA0301BDF4727009AF469 /* APPHelper.m in Sources */,
+				31399E7A1BF56E470052A4EB /* ImagesView.m in Sources */,
 				FCC64BF91BCFE4FE00BF56C4 /* LeHttpService.m in Sources */,
 				31EC67A11BF0E4A700B8E1BC /* PSTGridLayoutRow.m in Sources */,
 				FCC752AE1BC4E01500DE4B27 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1430,6 +1447,7 @@
 				FCC752A41BC4E01500DE4B27 /* MASViewConstraint.m in Sources */,
 				FCC752C71BC4E01500DE4B27 /* UIImage+MultiFormat.m in Sources */,
 				FCCA8FB21BDD2BED00B1CCF4 /* UIViewAdditions.m in Sources */,
+				31399E811BF63D210052A4EB /* ZoomScrollView.m in Sources */,
 				31EC67951BF0E4A700B8E1BC /* DACircularProgressView.m in Sources */,
 				FCC7528F1BC4E01500DE4B27 /* AFSecurityPolicy.m in Sources */,
 				FCC752A51BC4E01500DE4B27 /* NSArray+MASAdditions.m in Sources */,
