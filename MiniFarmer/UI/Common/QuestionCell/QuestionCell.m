@@ -342,22 +342,22 @@
         return @"1小时前";
     }
     //换算成小时
-    NSUInteger hours = passTimeSec/3600;
+    NSUInteger hours = (NSUInteger)(passTimeSec/3600);
     if (!hours) {
         return @"1小时前";
     }
     
     NSUInteger days = hours/24;
     if (!days) {
-        return [NSString stringWithFormat:@"%ld小时前",hours];
+        return [NSString stringWithFormat:@"%lu小时前",hours];
     }
     
     NSUInteger years = days/365;
     if (!years) {
-        return [NSString stringWithFormat:@"%ld天前",days];
+        return [NSString stringWithFormat:@"%lu天前",days];
     }
     else{
-        return [NSString stringWithFormat:@"%ld年前",years];
+        return [NSString stringWithFormat:@"%lu年前",years];
     }
 }
 
