@@ -25,6 +25,7 @@ typedef enum
 
 @property(nonatomic,assign) NSInteger photoType;
 @property(nonatomic, strong) NSString *url;
+@property (nonatomic, assign) BOOL isSelectImage;
 - (void)bind:(ALAsset *)asset;
 
 @end
