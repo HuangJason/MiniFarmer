@@ -25,7 +25,7 @@
 {
     if (self = [super init]){
         self.manager = [AFHTTPSessionManager manager];
-        self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
+
         //响应结果序列化类型
         self.manager.responseSerializer = [SHJSONResponseSerializerData serializer];//[AFImageResponseSerializer serializer];//[SHJSONResponseSerializerData serializer];
 
@@ -46,12 +46,6 @@
         instance = [[self alloc] init];
     });
     return instance;
-}
-
-- (NSString *)UrlEncodedString:(NSString *)sourceText
-{
-    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)sourceText ,NULL ,CFSTR("!*'();:@&=+$,/?%#[]") ,kCFStringEncodingUTF8));
-        return result;
 }
 
 - (void)requestWithPath:(NSString *)url

@@ -149,7 +149,7 @@
     [self.view showLoadingWihtText:@"登录中"];
     __weak __typeof(self)weakSelf = self;
     [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost
-                                             subUrl:@"?c=tw&m=gettwlist"
+                                             subUrl:@"?c=user&m=userlogin"
                                          parameters:dic
                                      prepareExecute:nil
                                             success:^(NSURLSessionDataTask *task, id responseObject)
