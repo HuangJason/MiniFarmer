@@ -48,6 +48,11 @@
     return instance;
 }
 
+- (NSString *)UrlEncodedString:(NSString *)sourceText
+{
+    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)sourceText ,NULL ,CFSTR("!*'();:@&=+$,/?%#[]") ,kCFStringEncodingUTF8));
+        return result;
+}
 
 - (void)requestWithPath:(NSString *)url
                  method:(SHHttpRequestType)method
@@ -160,6 +165,7 @@
 }
 
 - (void)requestWithMethod:(SHHttpRequestType)method
+                   subUrl:(NSString *)url
              parameters:(NSDictionary *)parameters
          prepareExecute:(PrepareRequestBlock)prepareRequest
                 success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
@@ -170,8 +176,9 @@
         [dicPar addEntriesFromDictionary:parameters];
     }
     [dicPar setObject:kCommApiKey forKey:@"apikey"];
-    
-    [self requestWithPath:kCommServerUrl method:method parameters:dicPar prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    NSString *totalUrl = [NSString stringWithFormat:@"%@%@",kCommServerUrl,url];
+    //totalUrl = [self UrlEncodedString:totalUrl];
+    [self requestWithPath:totalUrl method:method parameters:dicPar prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         DLOG(@"requestWithMethod return response = %@",responseObject);
         success(task,responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {

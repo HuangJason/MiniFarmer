@@ -151,14 +151,19 @@
 - (void)requestHomeDataWithId:(NSString *)lastId
 {
     NSDictionary *dicPar =@{
-                            @"c":@"tw",
-                            @"m":@"gettwlist",
+//                            @"c":@"tw",
+//                            @"m":@"gettwlist",
                             @"id":lastId,
                             @"pagesize":kPageSize,
                             };
     __weak HomeViewController *wself = self;
     
-    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dicPar prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet
+                                             subUrl:@"?c=tw&m=gettwlist"
+                                         parameters: dicPar
+                                     prepareExecute:nil
+                                            success:^(NSURLSessionDataTask *task, id responseObject)
+    {
         [_homeTableView.header endRefreshing];
         [_homeTableView.footer endRefreshing];
         if (!responseObject) {

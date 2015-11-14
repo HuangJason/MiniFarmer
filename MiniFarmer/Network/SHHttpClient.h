@@ -59,6 +59,7 @@ typedef void (^PrepareRequestBlock)(void);
  */
 
 - (void)requestWithMethod:(SHHttpRequestType)method
+                   subUrl:(NSString *)url
                parameters:(NSDictionary *)parameters
            prepareExecute:(PrepareRequestBlock)prepareRequest
                   success:(void (^)(NSURLSessionDataTask *task, id responseObject))success

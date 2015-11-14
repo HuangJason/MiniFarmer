@@ -145,10 +145,15 @@
     }
     
     //请求登录的接口
-    NSDictionary *dic = @{@"c":@"user",@"m":@"userlogin",@"mobile":[APPHelper safeString:self.usernameTF.text],@"password":[APPHelper safeString:self.passwordTF.text]};
+    NSDictionary *dic = @{/*@"c":@"user",@"m":@"userlogin",*/@"mobile":[APPHelper safeString:self.usernameTF.text],@"password":[APPHelper safeString:self.passwordTF.text]};
     [self.view showLoadingWihtText:@"登录中"];
     __weak __typeof(self)weakSelf = self;
-    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost
+                                             subUrl:@"?c=tw&m=gettwlist"
+                                         parameters:dic
+                                     prepareExecute:nil
+                                            success:^(NSURLSessionDataTask *task, id responseObject)
+    {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
 
         [self.view dismissLoading];

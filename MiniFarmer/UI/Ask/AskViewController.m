@@ -94,23 +94,23 @@
         return;
     }
     NSDictionary *dic = @{@"c":@"tw",@"m":@"savetw",@"userid":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userId]],@"mobile":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userLoginNumber]],@"zjid":@"",@"wtzw":self.askCropNameView.text,@"wtms":self.askTextView.text};
-    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        AskSendModel *sendModel = [[AskSendModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
-        if ([sendModel.msg isEqualToString:@"success"])
-        {
-            [self.view showWeakPromptViewWithMessage:@"发送成功"];
-            [self dismissAskVC:nil];
-        }
-        else
-        {
-            [self.view showWeakPromptViewWithMessage:@"发送失败"];
- 
-        }
-        
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        [self.view showWeakPromptViewWithMessage:@"发送失败"];
-
-    }];
+//    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+//        AskSendModel *sendModel = [[AskSendModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
+//        if ([sendModel.msg isEqualToString:@"success"])
+//        {
+//            [self.view showWeakPromptViewWithMessage:@"发送成功"];
+//            [self dismissAskVC:nil];
+//        }
+//        else
+//        {
+//            [self.view showWeakPromptViewWithMessage:@"发送失败"];
+// 
+//        }
+//        
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        [self.view showWeakPromptViewWithMessage:@"发送失败"];
+//
+//    }];
 }
 
 

@@ -39,7 +39,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self requestQuDataWithUserId:_wtUid wtid:_curWtid];
+    [self requestQuDataWithUserId:@"0" wtid:_curWtid];
 }
 
 #pragma mark- private
@@ -56,14 +56,18 @@
 - (void)requestQuDataWithUserId:(NSString *)uid wtid:(NSString *)wtid
 {
     NSDictionary *dicPar =@{
-                            @"c":@"tw",
-                            @"m":@"getwthflist",
-                            @"useid":[NSNumber numberWithLongLong:[uid longLongValue]],
-                            @"wtid":[NSNumber numberWithLongLong:[wtid longLongValue]],
+//                            @"c":@"tw",
+//                            @"m":@"getwthflist",
+                            @"userid":[NSNumber numberWithInt:[uid intValue]],
+                            @"wtid":[NSNumber numberWithInt:[wtid intValue]],
                             };
     //__weak QuestionDetailViewController *wself = self;
     
-    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dicPar prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet subUrl:@"?c=tw&m=getwthflist"
+                                         parameters:dicPar
+                                     prepareExecute:nil
+                                            success:^(NSURLSessionDataTask *task, id responseObject)
+    {
         if (!responseObject) {
             DLOG(@"responseObject is nil");
             return ;

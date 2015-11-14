@@ -62,19 +62,19 @@
             [weakself.view showWeakPromptViewWithMessage:@"手机号码不能为空"];
         }
         NSDictionary *dic = @{@"c":@"user",@"m":@"sendvcode",@"mobile":[APPHelper safeString:weakself.phoneTF.text]};
-        [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject)
-        {
-            RegisterModel *model = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
-            [weakself.view showWeakPromptViewWithMessage:model.msg];
-            
-            //TODO:发送成功的时候 要不要显示验证码
-            if (model.code.intValue == 1)
-            {
-                weakself.verificationCodeTF.text = model.vcode;
-            }
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            
-        }];
+//        [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject)
+//        {
+//            RegisterModel *model = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
+//            [weakself.view showWeakPromptViewWithMessage:model.msg];
+//            
+//            //TODO:发送成功的时候 要不要显示验证码
+//            if (model.code.intValue == 1)
+//            {
+//                weakself.verificationCodeTF.text = model.vcode;
+//            }
+//        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//            
+//        }];
         sender.userInteractionEnabled = NO;
         [sender startWithSecond:60];
         /// 获取过程（倒计时）
@@ -343,20 +343,20 @@
     }
     //开始注册
     NSDictionary *dic = @{@"c":@"user",@"m":@"register",@"mobile":[APPHelper safeString:self.phoneTF.text],@"yzm":[APPHelper safeString:self.verificationCodeTF.text],@"password":[APPHelper safeString:self.passwordTF.text]};
-    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        RegisterModel *registerModel = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
-        [self.view showWeakPromptViewWithMessage:registerModel.msg];
-
-        if (registerModel.code.intValue == 1)
-        {
-            //这里要做特殊的处理
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
-        
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        [self.view showWeakPromptViewWithMessage:@"注册失败"];
-
-    }];
+//    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+//        RegisterModel *registerModel = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
+//        [self.view showWeakPromptViewWithMessage:registerModel.msg];
+//
+//        if (registerModel.code.intValue == 1)
+//        {
+//            //这里要做特殊的处理
+//            [self dismissViewControllerAnimated:YES completion:nil];
+//        }
+//        
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        [self.view showWeakPromptViewWithMessage:@"注册失败"];
+//
+//    }];
     
 }
 
