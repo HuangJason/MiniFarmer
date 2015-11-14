@@ -101,7 +101,6 @@
 //按钮被点击时调用
 - (void)changeViewController:(UIButton *)sender
 {
-#if 0
     //如果选中的是1 并且没有登录的情况下 就在原来的页面弹出一个登录的页面
     if (sender.tag - kBaseTabBarButtonTag == 1
         && ![[MiniAppEngine shareMiniAppEngine] isLogin])
@@ -109,7 +108,6 @@
         [self presentLogin];
         return;
     }
-#else
     self.selectedIndex = sender.tag-kBaseTabBarButtonTag; //切换不同控制器的界面
     self.tabBarController.selectedViewController=[self.tabBarController.viewControllers objectAtIndex:self.selectedIndex];
     sender.enabled = NO;
@@ -120,7 +118,6 @@
     _previousBtn = sender;
     
     NSLog(@"self.selectedIndex%ld",(unsigned long)self.selectedIndex);
-#endif
 }
 
 - (void)presentLogin
