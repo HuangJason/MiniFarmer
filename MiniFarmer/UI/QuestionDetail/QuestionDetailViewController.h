@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface QuestionDetailViewController : UIViewController
+@interface QuestionDetailViewController : BaseViewController
 
-//- (instancetype)initWithWtid:(NSString *)wtid;
-- (instancetype)initWithUid:(NSString *)uid wtid:(NSString *)wtid;
+- (instancetype)initWithWtid:(NSString *)wtid;
+
 @end

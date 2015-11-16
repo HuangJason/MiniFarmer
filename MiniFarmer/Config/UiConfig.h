@@ -14,7 +14,7 @@
 #define kTextLightBlackColor        RGBCOLOR(153, 153, 153)
 
 #pragma mark- 字体
-
+#define kTextFont18         [UIFont systemFontOfSize:18]
 #define kTextFont16         [UIFont systemFontOfSize:16]
 #define kTextFont14         [UIFont systemFontOfSize:14]
 #define kTextFont12         [UIFont systemFontOfSize:12]

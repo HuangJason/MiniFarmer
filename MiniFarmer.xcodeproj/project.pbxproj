@@ -61,6 +61,8 @@
 		31EC67A31BF0E4A700B8E1BC /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 31EC678C1BF0E4A700B8E1BC /* MWPhotoBrowser.bundle */; settings = {ASSET_TAGS = (); }; };
 		31EC67AD1BF0E63C00B8E1BC /* XDPhotoSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC67AC1BF0E63C00B8E1BC /* XDPhotoSelect.m */; settings = {ASSET_TAGS = (); }; };
 		31EC67B01BF0E66500B8E1BC /* XDPhotoAssetGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC67AF1BF0E66500B8E1BC /* XDPhotoAssetGroupViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FC37668F1BF71C2200FB2BA4 /* QuestionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */; settings = {ASSET_TAGS = (); }; };
+		FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3766911BF7393600FB2BA4 /* SingleImgCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626761BCA7A0E00943F99 /* AskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266C1BCA7A0E00943F99 /* AskViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626771BCA7A0E00943F99 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266F1BCA7A0E00943F99 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626781BCA7A0E00943F99 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC626721BCA7A0E00943F99 /* MineViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -285,6 +287,10 @@
 		31EC67AC1BF0E63C00B8E1BC /* XDPhotoSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDPhotoSelect.m; sourceTree = "<group>"; };
 		31EC67AE1BF0E66500B8E1BC /* XDPhotoAssetGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDPhotoAssetGroupViewController.h; sourceTree = "<group>"; };
 		31EC67AF1BF0E66500B8E1BC /* XDPhotoAssetGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDPhotoAssetGroupViewController.m; sourceTree = "<group>"; };
+		FC37668D1BF71C2200FB2BA4 /* QuestionDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetailModel.h; sourceTree = "<group>"; };
+		FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailModel.m; sourceTree = "<group>"; };
+		FC3766901BF7393600FB2BA4 /* SingleImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleImgCollectionViewCell.h; sourceTree = "<group>"; };
+		FC3766911BF7393600FB2BA4 /* SingleImgCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleImgCollectionViewCell.m; sourceTree = "<group>"; };
 		FCC626681BCA686600943F99 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FCC6266B1BCA7A0E00943F99 /* AskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskViewController.h; sourceTree = "<group>"; };
 		FCC6266C1BCA7A0E00943F99 /* AskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskViewController.m; sourceTree = "<group>"; };
@@ -726,6 +732,15 @@
 			path = PhotoSelect;
 			sourceTree = "<group>";
 		};
+		FC37668C1BF71C1500FB2BA4 /* QuestionDetailModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC37668D1BF71C2200FB2BA4 /* QuestionDetailModel.h */,
+				FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */,
+			);
+			path = QuestionDetailModel;
+			sourceTree = "<group>";
+		};
 		FCC626691BCA7A0E00943F99 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -792,6 +807,7 @@
 			isa = PBXGroup;
 			children = (
 				31DBC82A1BF78BAB007EDCD0 /* MineModel */,
+				FC37668C1BF71C1500FB2BA4 /* QuestionDetailModel */,
 				31EC66C51BF0B89500B8E1BC /* AskModel */,
 				31EC66491BEF838B00B8E1BC /* RegisterModel */,
 				31EC66451BEF7A6F00B8E1BC /* LoginInfo */,
@@ -1214,6 +1230,8 @@
 				FCC90DAD1BD3AE2600D341DD /* QuestionCell */,
 				31EC66541BF0416F00B8E1BC /* BaseTextView.h */,
 				31EC66551BF0416F00B8E1BC /* BaseTextView.m */,
+				FC3766901BF7393600FB2BA4 /* SingleImgCollectionViewCell.h */,
+				FC3766911BF7393600FB2BA4 /* SingleImgCollectionViewCell.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1522,6 +1540,7 @@
 				FCC752A51BC4E01500DE4B27 /* NSArray+MASAdditions.m in Sources */,
 				31EC663A1BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.m in Sources */,
 				31DBC8201BF77029007EDCD0 /* UILabel+CustomAttributeLabel.m in Sources */,
+				FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */,
 				FCC752AD1BC4E01500DE4B27 /* MJRefreshHeader.m in Sources */,
 				31EC66501BEF974B00B8E1BC /* ResetPasswordViewController.m in Sources */,
 				FCC752B31BC4E01500DE4B27 /* MJRefreshBackStateFooter.m in Sources */,
@@ -1534,6 +1553,7 @@
 				FCC7529A1BC4E01500DE4B27 /* JSONHTTPClient.m in Sources */,
 				31EC67941BF0E4A700B8E1BC /* MWZoomingScrollView.m in Sources */,
 				FCC626781BCA7A0E00943F99 /* MineViewController.m in Sources */,
+				FC37668F1BF71C2200FB2BA4 /* QuestionDetailModel.m in Sources */,
 				31EC664C1BEF839900B8E1BC /* RegisterModel.m in Sources */,
 				FCC64BFF1BCFE6D300BF56C4 /* LeJSONUtil.m in Sources */,
 				FCC752A91BC4E01500DE4B27 /* MJRefreshAutoFooter.m in Sources */,

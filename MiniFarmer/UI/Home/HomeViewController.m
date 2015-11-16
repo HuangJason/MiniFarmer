@@ -214,10 +214,8 @@
 {
     NSUInteger row = indexPath.row;
     QuestionCellSource *tmpSou = [_sourceArr objectAtIndex:row];
-    NSString *uid = tmpSou.qInfo.userid;
     NSString *wtid = tmpSou.qInfo.qid;
-    //QuestionDetailViewController *quVC = [[QuestionDetailViewController alloc] initWithWtid:wtid];
-    QuestionDetailViewController *quVC = [[QuestionDetailViewController alloc] initWithUid:uid wtid:wtid];
+    QuestionDetailViewController *quVC = [[QuestionDetailViewController alloc] initWithWtid:wtid];
     [self.navigationController pushViewController:quVC animated:YES];
 }
 

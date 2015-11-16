@@ -11,5 +11,8 @@
 
 @interface QuCommonView : UIView
 
+@property (nonatomic,strong)UICollectionView *collectionView;
+@property (nonatomic,assign,readonly)CGFloat totalViewHeight;
+
 - (void)refreshWithQuestionInfo:(QuestionInfo *)info;
 @end

@@ -11,10 +11,11 @@
 
 
 //服务器地址及加密密钥
-#define kCommServerUrl  @"http://www.xnr01.com/interface/index.php"
-//@"http://www.enbs.com.cn/apps_2/index.php"
-#define kCommApiKey     @"26f9a2878862d3bb27165020c6b4e7f0"
-//@"457077ad3a4e86ff53fc5555"
+//#define kCommServerUrl  @"http://www.xnr01.com/interface/index.php"
+//#define kCommApiKey     @"26f9a2878862d3bb27165020c6b4e7f0"
+
+#define kCommServerUrl  @"http://www.enbs.com.cn/apps_2/index.php"
+#define kCommApiKey     @"457077ad3a4e86ff53fc5555"
 
 
 // 1, 系统函数

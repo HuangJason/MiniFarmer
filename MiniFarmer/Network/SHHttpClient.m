@@ -171,7 +171,6 @@
     }
     [dicPar setObject:kCommApiKey forKey:@"apikey"];
     NSString *totalUrl = [NSString stringWithFormat:@"%@%@",kCommServerUrl,url];
-    //totalUrl = [self UrlEncodedString:totalUrl];
     [self requestWithPath:totalUrl method:method parameters:dicPar prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         DLOG(@"requestWithMethod return response = %@",responseObject);
         success(task,responseObject);

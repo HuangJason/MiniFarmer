@@ -53,14 +53,17 @@
 }
 
 - (void)setBarTitle:(NSString *)title
-{
-    
+{    
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 78, 20)];
     label.text = title;
     CGRect rect = label.frame;
     rect.size = [label contentTextSize];
     label.frame = rect;
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 180, 20)];
+//    label.textAlignment = NSTextAlignmentCenter;
+    //label.backgroundColor = [UIColor yellowColor];
     label.textColor = RGBCOLOR(57, 57, 57);
+    label.font = kTextFont18;
     label.center = CGPointMake(kScreenSizeWidth / 2, 22 + kStatusBarHeight);
     [self.view addSubview:label];
     
