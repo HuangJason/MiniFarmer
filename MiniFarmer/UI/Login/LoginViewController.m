@@ -150,6 +150,9 @@
         {
             [strongSelf.view showWeakPromptViewWithMessage:@"登录失败"];
         }
+        
+        
+        NSLog(@"sdfasdf");
             
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
