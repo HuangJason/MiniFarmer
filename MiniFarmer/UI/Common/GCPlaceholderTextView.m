@@ -8,7 +8,7 @@
 
 #import "GCPlaceholderTextView.h"
 
-@interface GCPlaceholderTextView () 
+@interface GCPlaceholderTextView () <UITextViewDelegate>
 
 @property (unsafe_unretained, nonatomic, readonly) NSString* realText;
 
@@ -36,7 +36,7 @@
 - (void)awakeFromNib {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginEditing:) name:UITextViewTextDidBeginEditingNotification object:self];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endEditing:) name:UITextViewTextDidEndEditingNotification object:self];
-    
+    //self.delegate = self;
     self.realTextColor = self.textColor;
     self.placeholderColor = [UIColor lightGrayColor];
 }
@@ -125,5 +125,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
 }
+
+
 
 @end

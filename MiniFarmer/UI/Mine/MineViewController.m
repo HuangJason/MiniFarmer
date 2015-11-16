@@ -8,6 +8,7 @@
 
 #import "MineViewController.h"
 #import "LoginViewController.h"
+#import "InvitedCodeViewController.h"
 
 #define kSection
 
@@ -153,7 +154,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    DLOG(@"secelected section is row is %d %d",indexPath.section,indexPath.row);
+    switch (indexPath.section)
+    {
+        case 2:
+        {
+            InvitedCodeViewController *invitedVC = [[InvitedCodeViewController alloc] init];
+            [self.navigationController pushViewController:invitedVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end

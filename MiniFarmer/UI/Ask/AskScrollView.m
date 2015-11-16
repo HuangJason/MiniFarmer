@@ -26,8 +26,8 @@
         [self setBackgroundColor:[UIColor blackColor]];
         //创建小得scrollview根据数组的个数
         self.selectedIndex = selectedIndex;
-        
-        [self reloadDataWihtInfos:[self newImagesWithImages:images]];
+        NSMutableArray *newImages = [[NSMutableArray alloc] initWithArray:images];
+        [self reloadDataWihtInfos:[self newImagesWithImages:newImages]];
         self.pagingEnabled = YES;
         self.contentSize = CGSizeMake(kScreenSizeWidth *images.count, 60);
         self.contentOffset = CGPointMake(kScreenSizeWidth * selectedIndex, 0);

@@ -342,21 +342,22 @@
         return;
     }
     //开始注册
-    NSDictionary *dic = @{@"c":@"user",@"m":@"register",@"mobile":[APPHelper safeString:self.phoneTF.text],@"yzm":[APPHelper safeString:self.verificationCodeTF.text],@"password":[APPHelper safeString:self.passwordTF.text]};
-//    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-//        RegisterModel *registerModel = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
-//        [self.view showWeakPromptViewWithMessage:registerModel.msg];
-//
-//        if (registerModel.code.intValue == 1)
-//        {
-//            //这里要做特殊的处理
-//            [self dismissViewControllerAnimated:YES completion:nil];
-//        }
-//        
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        [self.view showWeakPromptViewWithMessage:@"注册失败"];
-//
-//    }];
+    NSDictionary *dic = @{/*@"c":@"user",@"m":@"register",*/@"mobile":[APPHelper safeString:self.phoneTF.text],@"yzm":[APPHelper safeString:self.verificationCodeTF.text],@"password":[APPHelper safeString:self.passwordTF.text]};
+    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet subUrl:@"?c=user&m=register" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        RegisterModel *registerModel = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
+        [self.view showWeakPromptViewWithMessage:registerModel.msg];
+        
+        if (registerModel.code.intValue == 1)
+        {
+            //这里要做特殊的处理
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.view showWeakPromptViewWithMessage:@"注册失败"];
+
+    }];
+    
     
 }
 

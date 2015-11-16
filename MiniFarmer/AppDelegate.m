@@ -18,11 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    
-    
-    
-    // Override point for customization after application launch.
+      // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor greenColor];
     [self.window makeKeyAndVisible];
@@ -32,6 +28,13 @@
     
     RootTabBarViewController *rootVC = [[RootTabBarViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = rootVC;
+    
+    //取出保存的用户信息
+    [[MiniAppEngine shareMiniAppEngine] getInfos];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillTerminate) name:UIApplicationWillTerminateNotification object:nil];
+
+    
     
     return YES;
 }
@@ -58,4 +61,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+- (void)appWillTerminate
+{
+    //保存用户信息
+    [[MiniAppEngine shareMiniAppEngine] saveInfos];
+    
+}
 @end

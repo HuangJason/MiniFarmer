@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController+Navigation.h"
+#import "UILabel+CustomAttributeLabel.h"
 
 @implementation BaseViewController (Navigation)
 
@@ -53,10 +54,14 @@
 
 - (void)setBarTitle:(NSString *)title
 {
+    
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 78, 20)];
+    label.text = title;
+    CGRect rect = label.frame;
+    rect.size = [label contentTextSize];
+    label.frame = rect;
     label.textColor = RGBCOLOR(57, 57, 57);
     label.center = CGPointMake(kScreenSizeWidth / 2, 22 + kStatusBarHeight);
-    label.text = title;
     [self.view addSubview:label];
     
 }

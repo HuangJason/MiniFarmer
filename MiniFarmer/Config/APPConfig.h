@@ -168,6 +168,7 @@
 #import "MiniAppEngine.h"
 #import "JudgeTextIsRight.h"
 #import "UIView+Toast.h"
+#import "BaseModel.h"
 
 #pragma mark - enum
 

@@ -8,10 +8,9 @@
 
 #import "JSONModel.h"
 
-@interface RegisterModel : JSONModel
+@interface RegisterModel : BaseModel
 
-@property (nonatomic, strong) NSNumber<Optional> *code;
-@property (nonatomic, copy) NSString<Optional> *msg;
+
 @property (nonatomic, copy) NSString<Optional> *vcode;
 
 @end
