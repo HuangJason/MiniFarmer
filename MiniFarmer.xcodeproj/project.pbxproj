@@ -65,6 +65,7 @@
 		FCC64BFA1BCFE4FE00BF56C4 /* SHHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64BF61BCFE4FE00BF56C4 /* SHHttpClient.m */; settings = {ASSET_TAGS = (); }; };
 		FCC64BFB1BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64BF81BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m */; settings = {ASSET_TAGS = (); }; };
 		FCC64BFF1BCFE6D300BF56C4 /* LeJSONUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64BFE1BCFE6D300BF56C4 /* LeJSONUtil.m */; settings = {ASSET_TAGS = (); }; };
+		FCC6F82F1BF8941400D95F7C /* QuestionAnsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6F82E1BF8941400D95F7C /* QuestionAnsModel.m */; settings = {ASSET_TAGS = (); }; };
 		FCC74FF61BD27DAF008446ED /* QuestionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC74FF51BD27DAF008446ED /* QuestionInfo.m */; settings = {ASSET_TAGS = (); }; };
 		FCC7528B1BC4E01500DE4B27 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC751F41BC4E01400DE4B27 /* AFHTTPRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
 		FCC7528C1BC4E01500DE4B27 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC751F61BC4E01400DE4B27 /* AFHTTPRequestOperationManager.m */; settings = {ASSET_TAGS = (); }; };
@@ -291,6 +292,8 @@
 		FCC64BF81BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHJSONResponseSerializerData.m; sourceTree = "<group>"; };
 		FCC64BFD1BCFE6D300BF56C4 /* LeJSONUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeJSONUtil.h; sourceTree = "<group>"; };
 		FCC64BFE1BCFE6D300BF56C4 /* LeJSONUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeJSONUtil.m; sourceTree = "<group>"; };
+		FCC6F82D1BF8941400D95F7C /* QuestionAnsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionAnsModel.h; sourceTree = "<group>"; };
+		FCC6F82E1BF8941400D95F7C /* QuestionAnsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionAnsModel.m; sourceTree = "<group>"; };
 		FCC74FF41BD27DAF008446ED /* QuestionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionInfo.h; sourceTree = "<group>"; };
 		FCC74FF51BD27DAF008446ED /* QuestionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionInfo.m; sourceTree = "<group>"; };
 		FCC751F31BC4E01400DE4B27 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -752,6 +755,7 @@
 		FCC6267A1BCA7A8A00943F99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FCC6F82C1BF893DA00D95F7C /* QuestionAnsModel */,
 				FC37668C1BF71C1500FB2BA4 /* QuestionDetailModel */,
 				31EC66C51BF0B89500B8E1BC /* AskModel */,
 				31EC66491BEF838B00B8E1BC /* RegisterModel */,
@@ -804,6 +808,15 @@
 				FCC64BFE1BCFE6D300BF56C4 /* LeJSONUtil.m */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		FCC6F82C1BF893DA00D95F7C /* QuestionAnsModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCC6F82D1BF8941400D95F7C /* QuestionAnsModel.h */,
+				FCC6F82E1BF8941400D95F7C /* QuestionAnsModel.m */,
+			);
+			path = QuestionAnsModel;
 			sourceTree = "<group>";
 		};
 		FCC74FF31BD27DAF008446ED /* QuestionInfo */ = {
@@ -1362,6 +1375,7 @@
 				FCC64BFB1BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m in Sources */,
 				FCC752971BC4E01500DE4B27 /* JSONModelError.m in Sources */,
 				FCCA8FAE1BDD255E00B1CCF4 /* UIColor+Expanded.m in Sources */,
+				FCC6F82F1BF8941400D95F7C /* QuestionAnsModel.m in Sources */,
 				31EC678F1BF0E4A700B8E1BC /* MWGridViewController.m in Sources */,
 				31EC67911BF0E4A700B8E1BC /* MWPhotoBrowser.m in Sources */,
 				31EC67971BF0E4A700B8E1BC /* PSTCollectionView.m in Sources */,

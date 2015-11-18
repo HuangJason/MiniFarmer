@@ -117,5 +117,6 @@
 + (NSString *)newNumWithNums:(NSString*)nums;
 //ip 地址校验
 + (BOOL)isValidatIP:(NSString *)ipAddress;
-
+//时间描述
++ (NSString *)describeTimeWithMSec:(NSString *)twsj;
 @end
