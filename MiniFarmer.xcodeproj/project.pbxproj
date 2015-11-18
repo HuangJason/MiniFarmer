@@ -61,6 +61,18 @@
 		31EC67A31BF0E4A700B8E1BC /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 31EC678C1BF0E4A700B8E1BC /* MWPhotoBrowser.bundle */; settings = {ASSET_TAGS = (); }; };
 		31EC67AD1BF0E63C00B8E1BC /* XDPhotoSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC67AC1BF0E63C00B8E1BC /* XDPhotoSelect.m */; settings = {ASSET_TAGS = (); }; };
 		31EC67B01BF0E66500B8E1BC /* XDPhotoAssetGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EC67AF1BF0E66500B8E1BC /* XDPhotoAssetGroupViewController.m */; settings = {ASSET_TAGS = (); }; };
+		31FDE3781BFA1D0600AA199F /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3771BFA1D0600AA199F /* SettingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		31FDE37C1BFA1F1C00AA199F /* MineBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE37B1BFA1F1C00AA199F /* MineBaseTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		31FDE37F1BFA1F6B00AA199F /* SettingAbountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE37E1BFA1F6B00AA199F /* SettingAbountCell.m */; settings = {ASSET_TAGS = (); }; };
+		31FDE3821BFA1F9100AA199F /* SettinSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3811BFA1F9100AA199F /* SettinSpaceCell.m */; settings = {ASSET_TAGS = (); }; };
+		31FDE3851BFA1FA900AA199F /* SettingQuitLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3841BFA1FA900AA199F /* SettingQuitLoginCell.m */; settings = {ASSET_TAGS = (); }; };
+		31FDE3881BFA202100AA199F /* SettingAboutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3871BFA202100AA199F /* SettingAboutView.m */; settings = {ASSET_TAGS = (); }; };
+		31FDE38A1BFA204200AA199F /* SettingAboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31FDE3891BFA204200AA199F /* SettingAboutView.xib */; settings = {ASSET_TAGS = (); }; };
+		31FDE38E1BFA250200AA199F /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE38D1BFA250200AA199F /* SettingModel.m */; settings = {ASSET_TAGS = (); }; };
+		31FDE3941BFA346C00AA199F /* RecomentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3931BFA346C00AA199F /* RecomentViewController.m */; settings = {ASSET_TAGS = (); }; };
+		31FDE3981BFAB7EC00AA199F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3961BFAB7EC00AA199F /* AboutViewController.m */; settings = {ASSET_TAGS = (); }; };
+		31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31FDE3971BFAB7EC00AA199F /* AboutViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		31FDE3EA1BFB1F2100AA199F /* UITextField+CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3E91BFB1F2100AA199F /* UITextField+CustomTextField.m */; settings = {ASSET_TAGS = (); }; };
 		FC37668F1BF71C2200FB2BA4 /* QuestionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */; settings = {ASSET_TAGS = (); }; };
 		FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3766911BF7393600FB2BA4 /* SingleImgCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626761BCA7A0E00943F99 /* AskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266C1BCA7A0E00943F99 /* AskViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -287,6 +299,28 @@
 		31EC67AC1BF0E63C00B8E1BC /* XDPhotoSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDPhotoSelect.m; sourceTree = "<group>"; };
 		31EC67AE1BF0E66500B8E1BC /* XDPhotoAssetGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDPhotoAssetGroupViewController.h; sourceTree = "<group>"; };
 		31EC67AF1BF0E66500B8E1BC /* XDPhotoAssetGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDPhotoAssetGroupViewController.m; sourceTree = "<group>"; };
+		31FDE3761BFA1D0600AA199F /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		31FDE3771BFA1D0600AA199F /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		31FDE37A1BFA1F1C00AA199F /* MineBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineBaseTableViewCell.h; sourceTree = "<group>"; };
+		31FDE37B1BFA1F1C00AA199F /* MineBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineBaseTableViewCell.m; sourceTree = "<group>"; };
+		31FDE37D1BFA1F6B00AA199F /* SettingAbountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingAbountCell.h; sourceTree = "<group>"; };
+		31FDE37E1BFA1F6B00AA199F /* SettingAbountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingAbountCell.m; sourceTree = "<group>"; };
+		31FDE3801BFA1F9100AA199F /* SettinSpaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettinSpaceCell.h; sourceTree = "<group>"; };
+		31FDE3811BFA1F9100AA199F /* SettinSpaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettinSpaceCell.m; sourceTree = "<group>"; };
+		31FDE3831BFA1FA900AA199F /* SettingQuitLoginCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingQuitLoginCell.h; sourceTree = "<group>"; };
+		31FDE3841BFA1FA900AA199F /* SettingQuitLoginCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingQuitLoginCell.m; sourceTree = "<group>"; };
+		31FDE3861BFA202100AA199F /* SettingAboutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingAboutView.h; sourceTree = "<group>"; };
+		31FDE3871BFA202100AA199F /* SettingAboutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingAboutView.m; sourceTree = "<group>"; };
+		31FDE3891BFA204200AA199F /* SettingAboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingAboutView.xib; sourceTree = "<group>"; };
+		31FDE38C1BFA250200AA199F /* SettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingModel.h; sourceTree = "<group>"; };
+		31FDE38D1BFA250200AA199F /* SettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
+		31FDE3921BFA346C00AA199F /* RecomentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecomentViewController.h; sourceTree = "<group>"; };
+		31FDE3931BFA346C00AA199F /* RecomentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecomentViewController.m; sourceTree = "<group>"; };
+		31FDE3951BFAB7EC00AA199F /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		31FDE3961BFAB7EC00AA199F /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		31FDE3971BFAB7EC00AA199F /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		31FDE3E81BFB1F2100AA199F /* UITextField+CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+CustomTextField.h"; sourceTree = "<group>"; };
+		31FDE3E91BFB1F2100AA199F /* UITextField+CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CustomTextField.m"; sourceTree = "<group>"; };
 		FC37668D1BF71C2200FB2BA4 /* QuestionDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetailModel.h; sourceTree = "<group>"; };
 		FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailModel.m; sourceTree = "<group>"; };
 		FC3766901BF7393600FB2BA4 /* SingleImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleImgCollectionViewCell.h; sourceTree = "<group>"; };
@@ -519,11 +553,20 @@
 		31399E851BF73D210052A4EB /* MineDetail */ = {
 			isa = PBXGroup;
 			children = (
+				31FDE38B1BFA24EE00AA199F /* Model */,
+				31FDE3791BFA1EEF00AA199F /* Cells */,
 				31399E891BF73DA10052A4EB /* InvitedCodeViewController.h */,
 				31399E8A1BF73DA10052A4EB /* InvitedCodeViewController.m */,
 				31399E8B1BF73DA10052A4EB /* InvitedCodeViewController.xib */,
 				31399E8E1BF73DF00052A4EB /* MineBaseViewController.h */,
 				31399E8F1BF73DF00052A4EB /* MineBaseViewController.m */,
+				31FDE3761BFA1D0600AA199F /* SettingViewController.h */,
+				31FDE3771BFA1D0600AA199F /* SettingViewController.m */,
+				31FDE3921BFA346C00AA199F /* RecomentViewController.h */,
+				31FDE3931BFA346C00AA199F /* RecomentViewController.m */,
+				31FDE3951BFAB7EC00AA199F /* AboutViewController.h */,
+				31FDE3961BFAB7EC00AA199F /* AboutViewController.m */,
+				31FDE3971BFAB7EC00AA199F /* AboutViewController.xib */,
 			);
 			path = MineDetail;
 			sourceTree = "<group>";
@@ -730,6 +773,33 @@
 				31EC67AF1BF0E66500B8E1BC /* XDPhotoAssetGroupViewController.m */,
 			);
 			path = PhotoSelect;
+			sourceTree = "<group>";
+		};
+		31FDE3791BFA1EEF00AA199F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				31FDE37A1BFA1F1C00AA199F /* MineBaseTableViewCell.h */,
+				31FDE37B1BFA1F1C00AA199F /* MineBaseTableViewCell.m */,
+				31FDE37D1BFA1F6B00AA199F /* SettingAbountCell.h */,
+				31FDE37E1BFA1F6B00AA199F /* SettingAbountCell.m */,
+				31FDE3861BFA202100AA199F /* SettingAboutView.h */,
+				31FDE3871BFA202100AA199F /* SettingAboutView.m */,
+				31FDE3891BFA204200AA199F /* SettingAboutView.xib */,
+				31FDE3801BFA1F9100AA199F /* SettinSpaceCell.h */,
+				31FDE3811BFA1F9100AA199F /* SettinSpaceCell.m */,
+				31FDE3831BFA1FA900AA199F /* SettingQuitLoginCell.h */,
+				31FDE3841BFA1FA900AA199F /* SettingQuitLoginCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		31FDE38B1BFA24EE00AA199F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31FDE38C1BFA250200AA199F /* SettingModel.h */,
+				31FDE38D1BFA250200AA199F /* SettingModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FC37668C1BF71C1500FB2BA4 /* QuestionDetailModel */ = {
@@ -1276,6 +1346,8 @@
 				FCCA8FAA1BDD255E00B1CCF4 /* UIColor+Expanded.m */,
 				31DBC81B1BF76EF4007EDCD0 /* ConfigureBT.h */,
 				31DBC81C1BF76EF4007EDCD0 /* ConfigureBT.m */,
+				31FDE3E81BFB1F2100AA199F /* UITextField+CustomTextField.h */,
+				31FDE3E91BFB1F2100AA199F /* UITextField+CustomTextField.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1356,6 +1428,7 @@
 				TargetAttributes = {
 					FCC884B01BC3EBB900A1200B = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = SGQ49XLCNT;
 					};
 					FCC884C91BC3EBB900A1200B = {
 						CreatedOnToolsVersion = 7.0;
@@ -1393,10 +1466,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC7529E1BC4E01500DE4B27 /* Info.plist in Resources */,
+				31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */,
 				FCC884C11BC3EBB900A1200B /* Assets.xcassets in Resources */,
 				FCC752B71BC4E01500DE4B27 /* MJRefresh.bundle in Resources */,
 				31EC67A31BF0E4A700B8E1BC /* MWPhotoBrowser.bundle in Resources */,
 				31399E8D1BF73DA10052A4EB /* InvitedCodeViewController.xib in Resources */,
+				31FDE38A1BFA204200AA199F /* SettingAboutView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1435,6 +1510,7 @@
 				FCC90DB01BD3AE5B00D341DD /* QuestionCell.m in Sources */,
 				31EC679C1BF0E4A700B8E1BC /* PSTCollectionViewItemKey.m in Sources */,
 				FCC74FF61BD27DAF008446ED /* QuestionInfo.m in Sources */,
+				31FDE3851BFA1FA900AA199F /* SettingQuitLoginCell.m in Sources */,
 				FCC7529F1BC4E01500DE4B27 /* MASCompositeConstraint.m in Sources */,
 				FCC752C21BC4E01500DE4B27 /* SDWebImageDownloaderOperation.m in Sources */,
 				FCC752CB1BC4E01500DE4B27 /* UIView+WebCacheOperation.m in Sources */,
@@ -1448,6 +1524,7 @@
 				FCC7528E1BC4E01500DE4B27 /* AFNetworkReachabilityManager.m in Sources */,
 				31EC678D1BF0E4A700B8E1BC /* MWCaptionView.m in Sources */,
 				31EC66411BECF43700B8E1BC /* JudgeTextIsRight.m in Sources */,
+				31FDE3941BFA346C00AA199F /* RecomentViewController.m in Sources */,
 				31EC66341BECEBE100B8E1BC /* YHSMSCodeButton.m in Sources */,
 				FCC752B61BC4E01500DE4B27 /* MJRefreshStateHeader.m in Sources */,
 				31EC67991BF0E4A700B8E1BC /* PSTCollectionViewController.m in Sources */,
@@ -1468,6 +1545,8 @@
 				FCCBA0341BDF6315009AF469 /* GiFHUD.m in Sources */,
 				FCC752A61BC4E01500DE4B27 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				FCC7528D1BC4E01500DE4B27 /* AFHTTPSessionManager.m in Sources */,
+				31FDE3821BFA1F9100AA199F /* SettinSpaceCell.m in Sources */,
+				31FDE38E1BFA250200AA199F /* SettingModel.m in Sources */,
 				FCC752C01BC4E01500DE4B27 /* SDWebImageDecoder.m in Sources */,
 				31EC66591BF04ABB00B8E1BC /* GCPlaceholderTextView.m in Sources */,
 				31EC66321BECEBE100B8E1BC /* LoginViewController.m in Sources */,
@@ -1480,9 +1559,11 @@
 				31EC679E1BF0E4A700B8E1BC /* PSTCollectionViewUpdateItem.m in Sources */,
 				31EC66331BECEBE100B8E1BC /* RegisterViewController.m in Sources */,
 				31EC66391BECEC6F00B8E1BC /* BaseViewController+Navigation.m in Sources */,
+				31FDE3781BFA1D0600AA199F /* SettingViewController.m in Sources */,
 				FCC752B21BC4E01500DE4B27 /* MJRefreshBackNormalFooter.m in Sources */,
 				31EC67931BF0E4A700B8E1BC /* MWTapDetectingView.m in Sources */,
 				FCC752A21BC4E01500DE4B27 /* MASLayoutConstraint.m in Sources */,
+				31FDE37F1BFA1F6B00AA199F /* SettingAbountCell.m in Sources */,
 				FCC752911BC4E01500DE4B27 /* AFURLRequestSerialization.m in Sources */,
 				FCC752AA1BC4E01500DE4B27 /* MJRefreshBackFooter.m in Sources */,
 				31EC67961BF0E4A700B8E1BC /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
@@ -1502,6 +1583,7 @@
 				FCC752991BC4E01500DE4B27 /* JSONAPI.m in Sources */,
 				FCC884B61BC3EBB900A1200B /* main.m in Sources */,
 				FCC7528C1BC4E01500DE4B27 /* AFHTTPRequestOperationManager.m in Sources */,
+				31FDE3881BFA202100AA199F /* SettingAboutView.m in Sources */,
 				FCC752A71BC4E01500DE4B27 /* View+MASAdditions.m in Sources */,
 				31DBC81D1BF76EF4007EDCD0 /* ConfigureBT.m in Sources */,
 				31EC67A01BF0E4A700B8E1BC /* PSTGridLayoutItem.m in Sources */,
@@ -1540,13 +1622,16 @@
 				FCC752A51BC4E01500DE4B27 /* NSArray+MASAdditions.m in Sources */,
 				31EC663A1BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.m in Sources */,
 				31DBC8201BF77029007EDCD0 /* UILabel+CustomAttributeLabel.m in Sources */,
+				31FDE3EA1BFB1F2100AA199F /* UITextField+CustomTextField.m in Sources */,
 				FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */,
 				FCC752AD1BC4E01500DE4B27 /* MJRefreshHeader.m in Sources */,
 				31EC66501BEF974B00B8E1BC /* ResetPasswordViewController.m in Sources */,
+				31FDE3981BFAB7EC00AA199F /* AboutViewController.m in Sources */,
 				FCC752B31BC4E01500DE4B27 /* MJRefreshBackStateFooter.m in Sources */,
 				31EC66C21BF0710F00B8E1BC /* AskCropNameView.m in Sources */,
 				31EC66481BEF7A8000B8E1BC /* LoginModel.m in Sources */,
 				31EC678E1BF0E4A700B8E1BC /* MWGridCell.m in Sources */,
+				31FDE37C1BFA1F1C00AA199F /* MineBaseTableViewCell.m in Sources */,
 				FCC752B51BC4E01500DE4B27 /* MJRefreshNormalHeader.m in Sources */,
 				FCC752C41BC4E01500DE4B27 /* SDWebImagePrefetcher.m in Sources */,
 				FCC752921BC4E01500DE4B27 /* AFURLResponseSerialization.m in Sources */,
@@ -1613,6 +1698,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1656,6 +1742,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1681,6 +1768,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MiniFarmer/PrefixHeader.pch";
 				INFOPLIST_FILE = MiniFarmer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1694,6 +1782,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MiniFarmer/PrefixHeader.pch";
 				INFOPLIST_FILE = MiniFarmer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

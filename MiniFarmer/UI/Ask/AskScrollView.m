@@ -26,10 +26,9 @@
         [self setBackgroundColor:[UIColor blackColor]];
         //创建小得scrollview根据数组的个数
         self.selectedIndex = selectedIndex;
-        NSMutableArray *newImages = [[NSMutableArray alloc] initWithArray:images];
-        [self reloadDataWihtInfos:[self newImagesWithImages:newImages]];
+        [self reloadDataWihtInfos:images];
         self.pagingEnabled = YES;
-        self.contentSize = CGSizeMake(kScreenSizeWidth *images.count, 60);
+        self.contentSize = CGSizeMake(kScreenSizeWidth *images.count, kScreenSizeHeight);
         self.contentOffset = CGPointMake(kScreenSizeWidth * selectedIndex, 0);
         [self addGesture];
     }
@@ -45,26 +44,16 @@
 - (void)reloadDataWihtInfos:(NSMutableArray *)infos
 {
     CGFloat dwidth = CGRectGetWidth(self.frame);
-    CGFloat dheigth = 200;
+    CGFloat dheigth = kScreenSizeHeight;
     for (int i = 0; i<infos.count; i++)
     {
         ZoomScrollView *zoom = [[ZoomScrollView alloc] initWithFrame:CGRectMake(dwidth * i,(CGRectGetHeight(self.frame) - dheigth)/2, dwidth, dheigth)];
-        [zoom setBackgroundColor:[UIColor redColor]];
         MTPickerInfo *info = [infos objectAtIndex:i];
         [zoom setImage:info.image];
         [self addSubview:zoom];
     }
 }
 
-- (NSMutableArray *)newImagesWithImages:(NSMutableArray *)infos
-{
-    MTPickerInfo *info = [infos lastObject];
-    if (info.isSelectImage)
-    {
-        [infos removeObject:info];
-    }
-    return infos;
-}
 
 //自身带有缩放功能的scrollview
 - (ZoomScrollView *)zoomScrollview

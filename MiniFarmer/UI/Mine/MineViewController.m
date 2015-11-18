@@ -9,6 +9,7 @@
 #import "MineViewController.h"
 #import "LoginViewController.h"
 #import "InvitedCodeViewController.h"
+#import "SettingViewController.h"
 
 #define kSection
 
@@ -33,6 +34,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self commonInit];
     [self initSubviews];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -161,6 +164,13 @@
         {
             InvitedCodeViewController *invitedVC = [[InvitedCodeViewController alloc] init];
             [self.navigationController pushViewController:invitedVC animated:YES];
+        }
+            break;
+            case 3:
+        {
+            SettingViewController *setVC = [[SettingViewController alloc] init];
+            [self.navigationController pushViewController:setVC animated:YES];
+
         }
             break;
             

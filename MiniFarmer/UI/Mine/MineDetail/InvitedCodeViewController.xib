@@ -62,15 +62,21 @@
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66h-4W-WSf">
                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                    <color key="backgroundColor" red="0.066666666666666666" green="0.51764705882352935" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="cWB-1p-M9R">
                                             <variation key="widthClass=compact" constant="44"/>
                                         </constraint>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <state key="normal" title="确定">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <variation key="default">
                                         <mask key="constraints">
                                             <exclude reference="cWB-1p-M9R"/>
@@ -158,7 +164,7 @@
                         </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqe-ka-UVj">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <color key="backgroundColor" red="0.4615254706532641" green="1" blue="0.26889004702127661" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="14" id="kbw-FA-Pvs"/>
                             </constraints>
@@ -185,7 +191,7 @@
                             <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="什么是邀请码" image="mine_btn_nm">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <variation key="default">
                                 <mask key="constraints">
@@ -201,7 +207,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请码是每个小农人用户的专属邀请码，可用于邀请朋友加入小农人，并成为我的粉丝。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6O5-fc-jE1">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUQ-xv-9sH">
@@ -215,7 +221,7 @@
                             <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="如何使用邀请码" image="mine_btn_nm">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <variation key="default">
                                 <mask key="constraints">
@@ -233,9 +239,6 @@
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" misplaced="YES">
-                                <rect key="frame" x="35" y="360" width="353" height="20"/>
-                            </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OL-e6-e9U">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -248,15 +251,14 @@
                             <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="为什么要填写邀请码" image="mine_btn_nm">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="A4z-Qs-Usm"/>
                                 </mask>
                             </variation>
-                            <variation key="widthClass=compact" misplaced="YES">
-                                <rect key="frame" x="12" y="408" width="170" height="20"/>
+                            <variation key="widthClass=compact">
                                 <mask key="constraints">
                                     <include reference="A4z-Qs-Usm"/>
                                 </mask>
@@ -265,11 +267,8 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="填写邀请码后，双方即可获得200农人币。农人币可在积分商城中兑换超值礼品。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdS-TM-Ilj">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" misplaced="YES">
-                                <rect key="frame" x="35" y="442" width="353" height="38.5"/>
-                            </variation>
                         </label>
                     </subviews>
                     <constraints>
@@ -343,29 +342,29 @@
                             <exclude reference="FdS-TM-Ilj"/>
                         </mask>
                         <mask key="constraints">
+                            <exclude reference="5p3-ke-Pmr"/>
+                            <exclude reference="KU9-m6-iIn"/>
+                            <exclude reference="JMY-3d-9G9"/>
+                            <exclude reference="LxA-dk-6XP"/>
+                            <exclude reference="caP-cN-JVL"/>
+                            <exclude reference="pzs-iC-zYj"/>
+                            <exclude reference="fYF-Se-M7t"/>
+                            <exclude reference="vRf-R3-JYv"/>
+                            <exclude reference="wDO-WW-ah7"/>
+                            <exclude reference="MBN-o6-MUJ"/>
+                            <exclude reference="fRq-IR-Oaj"/>
+                            <exclude reference="tTu-SZ-kru"/>
+                            <exclude reference="D0s-X2-GPj"/>
+                            <exclude reference="Eh9-z2-YyJ"/>
+                            <exclude reference="v6e-6X-Ox8"/>
+                            <exclude reference="4Wz-sp-mr1"/>
+                            <exclude reference="dbs-bu-M1x"/>
+                            <exclude reference="hsE-gP-MFp"/>
                             <exclude reference="PvL-gM-Q8x"/>
                             <exclude reference="QBN-KO-i5t"/>
                             <exclude reference="bye-Bb-giz"/>
                             <exclude reference="r6U-Yd-0ty"/>
                             <exclude reference="uwc-wF-qxw"/>
-                            <exclude reference="4Wz-sp-mr1"/>
-                            <exclude reference="dbs-bu-M1x"/>
-                            <exclude reference="hsE-gP-MFp"/>
-                            <exclude reference="JMY-3d-9G9"/>
-                            <exclude reference="LxA-dk-6XP"/>
-                            <exclude reference="fYF-Se-M7t"/>
-                            <exclude reference="vRf-R3-JYv"/>
-                            <exclude reference="wDO-WW-ah7"/>
-                            <exclude reference="caP-cN-JVL"/>
-                            <exclude reference="pzs-iC-zYj"/>
-                            <exclude reference="D0s-X2-GPj"/>
-                            <exclude reference="Eh9-z2-YyJ"/>
-                            <exclude reference="v6e-6X-Ox8"/>
-                            <exclude reference="5p3-ke-Pmr"/>
-                            <exclude reference="KU9-m6-iIn"/>
-                            <exclude reference="MBN-o6-MUJ"/>
-                            <exclude reference="fRq-IR-Oaj"/>
-                            <exclude reference="tTu-SZ-kru"/>
                         </mask>
                     </variation>
                     <variation key="widthClass=compact">
@@ -380,29 +379,29 @@
                             <include reference="FdS-TM-Ilj"/>
                         </mask>
                         <mask key="constraints">
+                            <include reference="5p3-ke-Pmr"/>
+                            <include reference="KU9-m6-iIn"/>
+                            <include reference="JMY-3d-9G9"/>
+                            <include reference="LxA-dk-6XP"/>
+                            <include reference="caP-cN-JVL"/>
+                            <include reference="pzs-iC-zYj"/>
+                            <include reference="fYF-Se-M7t"/>
+                            <include reference="vRf-R3-JYv"/>
+                            <include reference="wDO-WW-ah7"/>
+                            <include reference="MBN-o6-MUJ"/>
+                            <include reference="fRq-IR-Oaj"/>
+                            <include reference="tTu-SZ-kru"/>
+                            <include reference="D0s-X2-GPj"/>
+                            <include reference="Eh9-z2-YyJ"/>
+                            <include reference="v6e-6X-Ox8"/>
+                            <include reference="4Wz-sp-mr1"/>
+                            <include reference="dbs-bu-M1x"/>
+                            <include reference="hsE-gP-MFp"/>
                             <include reference="PvL-gM-Q8x"/>
                             <include reference="QBN-KO-i5t"/>
                             <include reference="bye-Bb-giz"/>
                             <include reference="r6U-Yd-0ty"/>
                             <include reference="uwc-wF-qxw"/>
-                            <include reference="4Wz-sp-mr1"/>
-                            <include reference="dbs-bu-M1x"/>
-                            <include reference="hsE-gP-MFp"/>
-                            <include reference="JMY-3d-9G9"/>
-                            <include reference="LxA-dk-6XP"/>
-                            <include reference="fYF-Se-M7t"/>
-                            <include reference="vRf-R3-JYv"/>
-                            <include reference="wDO-WW-ah7"/>
-                            <include reference="caP-cN-JVL"/>
-                            <include reference="pzs-iC-zYj"/>
-                            <include reference="D0s-X2-GPj"/>
-                            <include reference="Eh9-z2-YyJ"/>
-                            <include reference="v6e-6X-Ox8"/>
-                            <include reference="5p3-ke-Pmr"/>
-                            <include reference="KU9-m6-iIn"/>
-                            <include reference="MBN-o6-MUJ"/>
-                            <include reference="fRq-IR-Oaj"/>
-                            <include reference="tTu-SZ-kru"/>
                         </mask>
                     </variation>
                 </scrollView>

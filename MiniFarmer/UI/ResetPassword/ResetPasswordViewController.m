@@ -60,20 +60,18 @@
         if (!weakself.phoneTF.text.length) {
             [weakself.view showWeakPromptViewWithMessage:@"手机号码不能为空"];
         }
-        NSDictionary *dic = @{@"c":@"user",@"m":@"sendvcode",@"mobile":[APPHelper safeString:weakself.phoneTF.text]};
-//        [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject)
-//         {
-//             RegisterModel *model = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
-//             [weakself.view showWeakPromptViewWithMessage:model.msg];
-//             
-//             //TODO:发送成功的时候 要不要显示验证码
-//             if (model.code.intValue == 1)
-//             {
-//                 weakself.verificationCodeTF.text = model.vcode;
-//             }
-//         } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//             
-//         }];
+        NSDictionary *dic = @{/*@"c":@"user",@"m":@"sendvcode",*/@"mobile":[APPHelper safeString:weakself.phoneTF.text]};
+        [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost subUrl:@"?c=user&m=sendvcode" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+            RegisterModel *model = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
+         [weakself.view showWeakPromptViewWithMessage:model.msg];
+
+         //TODO:发送成功的时候 要不要显示验证码
+         if (model.code.intValue == RequestResultStateSuccess)
+         {
+             weakself.verificationCodeTF.text = model.vcode;
+         }
+        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        }];
         sender.userInteractionEnabled = NO;
         [sender startWithSecond:60];
         /// 获取过程（倒计时）

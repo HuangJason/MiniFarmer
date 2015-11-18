@@ -37,12 +37,17 @@
     [super viewDidLoad];
     [self setBarTitle:@"填写邀请码"];
     [self.view setBackgroundColor:[UIColor colorWithHexString:@"f8f8f8"]];
-    [self.invitedCodeScrollview setContentSize:CGSizeMake(kScreenSizeWidth, 800)];
     [self configureSubviews];
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.invitedCodeScrollview.contentSize = CGSizeMake(kScreenSizeWidth, CGRectGetMaxY(self.whyUseInvitedCodeLabel.frame) + kBottomTabBarHeight);
 }
 
 #pragma mark - subviews
@@ -53,7 +58,7 @@
 #define kLabelColor [UIColor colorWithHexString:@"666666"]
 #define kLineDispace 8
     self.invitedTF.textColor = [UIColor colorWithHexString:@"a3a3a3"];
-    [self.invitedBT setBackgroundColor:[UIColor blueColor]];
+    [self.invitedBT setBackgroundColor:RGBCOLOR(17, 132, 255)];
     self.invitedBT.layer.cornerRadius = 7;
     [self.invitedLine setBackgroundColor:[UIColor colorWithHexString:@"dddddd"]];
     self.invitedLineHeight.constant = kLineWidth;
@@ -88,7 +93,7 @@
     NSDictionary *dic = @{@"userid":[[MiniAppEngine shareMiniAppEngine] userId],@"username":[[MiniAppEngine shareMiniAppEngine] userLoginNumber],@"icode":self.invitedTF.text};
     [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost subUrl:@"?c=user&m=save_vicode" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         InvitedCode *invitedCode = [[InvitedCode alloc] initWithDictionary:responseObject error:nil];
-        if (invitedCode.code.intValue == 1)
+        if (invitedCode.code.intValue == RequestResultStateSuccess)
         {
             [self.view showWeakPromptViewWithMessage:invitedCode.msg];
             [self.navigationController popViewControllerAnimated:YES];

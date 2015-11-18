@@ -44,10 +44,11 @@
     [self setLayerWithView:self.againPasswordTF];
     [self setLayerWithView:self.verificationCodeTF];
     
-    [self setTextFieldLeftPadding:self.phoneTF forWidth:16];
-    [self setTextFieldLeftPadding:self.passwordTF forWidth:16];
-    [self setTextFieldLeftPadding:self.againPasswordTF forWidth:16];
-    [self setTextFieldLeftPadding:self.verificationCodeTF forWidth:16];
+    [self.phoneTF setTextFieldLeftPaddingForWidth:16];
+    [self.passwordTF setTextFieldLeftPaddingForWidth:16];
+    [self.againPasswordTF setTextFieldLeftPaddingForWidth:16];
+    [self.verificationCodeTF setTextFieldLeftPaddingForWidth:16];
+
     
     /// 获取短信验证码按钮
     [self setLayerWithView:self.getSMSCodeBtn];
@@ -62,19 +63,18 @@
             [weakself.view showWeakPromptViewWithMessage:@"手机号码不能为空"];
         }
         NSDictionary *dic = @{@"c":@"user",@"m":@"sendvcode",@"mobile":[APPHelper safeString:weakself.phoneTF.text]};
-//        [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject)
-//        {
-//            RegisterModel *model = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
-//            [weakself.view showWeakPromptViewWithMessage:model.msg];
-//            
-//            //TODO:发送成功的时候 要不要显示验证码
-//            if (model.code.intValue == 1)
-//            {
-//                weakself.verificationCodeTF.text = model.vcode;
-//            }
-//        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//            
-//        }];
+        [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet subUrl:@"?c=user&m=sendvcode" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+            RegisterModel *model = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
+            [weakself.view showWeakPromptViewWithMessage:model.msg];
+            
+            //TODO:发送成功的时候 要不要显示验证码
+            if (model.code.intValue == RequestResultStateSuccess)
+            {
+                weakself.verificationCodeTF.text = model.vcode;
+            }
+        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+            
+        }];
         sender.userInteractionEnabled = NO;
         [sender startWithSecond:60];
         /// 获取过程（倒计时）
@@ -347,7 +347,7 @@
         RegisterModel *registerModel = [[RegisterModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
         [self.view showWeakPromptViewWithMessage:registerModel.msg];
         
-        if (registerModel.code.intValue == 1)
+        if (registerModel.code.intValue == RequestResultStateSuccess)
         {
             //这里要做特殊的处理
             [self dismissViewControllerAnimated:YES completion:nil];
@@ -380,15 +380,6 @@
     view.layer.borderWidth = 0.5f;
 }
 
-/// 设置 textField 输入域后缩
--(void)setTextFieldLeftPadding:(UITextField *)textField forWidth:(CGFloat)leftWidth
-{
-    CGRect frame = textField.frame;
-    frame.size.width = leftWidth;
-    UIView *leftview = [[UIView alloc] initWithFrame:frame];
-    textField.leftViewMode = UITextFieldViewModeAlways;
-    textField.leftView = leftview;
-}
 
 #pragma mark UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

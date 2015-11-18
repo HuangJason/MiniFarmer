@@ -348,7 +348,7 @@
     else
     {
         //做别的处理 进入轮播啊 这样的
-        AskScrollView *askScrollview = [[AskScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, kScreenSizeHeight) images:self.arrayPhotos selectedIndex:selectedItem];
+        AskScrollView *askScrollview = [[AskScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, kScreenSizeHeight) images:[self newImagesWithImages:self.arrayPhotos] selectedIndex:selectedItem];
         [self.view addSubview:askScrollview];
     }
 
@@ -383,6 +383,20 @@
     [self.imagesView reloadDataWithImagesInfo:[self imagesArr]];
     self.askScrollview.contentSize = CGSizeMake(kScreenSizeWidth, CGRectGetMaxY(self.imagesView.frame) + kBottomTabBarHeight);
 }
+
+- (NSMutableArray *)newImagesWithImages:(NSMutableArray *)infos
+{
+    NSMutableArray *newImages = [[NSMutableArray alloc] initWithArray:infos];
+
+    MTPickerInfo *info = [newImages lastObject];
+    
+    if (info.isSelectImage)
+    {
+        [newImages removeObject:info];
+    }
+    return newImages;
+}
+
 
 
 

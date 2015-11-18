@@ -31,7 +31,7 @@
         CGFloat height = self.frame.size.height;
         _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
         _imageView.backgroundColor = [UIColor redColor];
-        _imageView.contentMode = UIViewContentModeScaleAspectFill;
+//        _imageView.contentMode = UIViewContentModeScaleAspectFill;
         [self addSubview:_imageView];
         // Initialization code
     }

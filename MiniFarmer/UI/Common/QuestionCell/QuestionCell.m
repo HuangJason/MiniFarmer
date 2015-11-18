@@ -349,15 +349,15 @@
     
     NSUInteger days = hours/24;
     if (!days) {
-        return [NSString stringWithFormat:@"%lu小时前",hours];
+        return [NSString stringWithFormat:@"%lu小时前",(unsigned long)hours];
     }
     
     NSUInteger years = days/365;
     if (!years) {
-        return [NSString stringWithFormat:@"%lu天前",days];
+        return [NSString stringWithFormat:@"%lu天前",(unsigned long)days];
     }
     else{
-        return [NSString stringWithFormat:@"%lu年前",years];
+        return [NSString stringWithFormat:@"%lu年前",(unsigned long)years];
     }
 }
 
@@ -370,6 +370,12 @@
     _plantNameLabel.text = info.zwmc;
     _dateLable.text = [self describeWithTwsj:info.twsj];
     [self updateViewConstraint];
+}
+
++ (CGFloat)cellHeightWithObject:(id)object
+{
+    
+    return 60;
 }
 
 @end

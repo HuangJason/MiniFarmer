@@ -67,8 +67,9 @@
     [self setLayerWithView:self.passwordTF];
     [self setLayerWithView:self.loginButton];
 
-    [self setTextFieldLeftPadding:self.usernameTF forWidth:16];
-    [self setTextFieldLeftPadding:self.passwordTF forWidth:16];
+    [self.usernameTF setTextFieldLeftPaddingForWidth:16];
+    [self.passwordTF setTextFieldLeftPaddingForWidth:16];
+
     [self configSubviewsValue];
     
     CGRect subRect;
@@ -114,9 +115,14 @@
     
     //判断用户名和密码是否为空
     DLOG(@"---- %@",self.usernameTF.text);
-    if (!self.usernameTF.text.length || !self.passwordTF.text.length)
+    if (!self.usernameTF.text.length)
     {
-        [self.view showWeakPromptViewWithMessage:@"用户名和密码不能为空"];
+        [self.view showWeakPromptViewWithMessage:@"账号不能为空"];
+        return;
+    }
+    else if (!self.passwordTF.text.length)
+    {
+        [self.view showWeakPromptViewWithMessage:@"密码不能为空"];
         return;
     }
     
@@ -135,7 +141,8 @@
         [self.view dismissLoading];
         LoginModel *loginModel = [[LoginModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
         
-        if ([loginModel.msg isEqualToString:@"success"])
+        if ([loginModel.msg isEqualToString:@"success"]
+            && loginModel.code.intValue == RequestResultStateSuccess)
         {
             //登陆成功保存电话号码 保存用户userid
             [[MiniAppEngine shareMiniAppEngine] saveUserId:loginModel.rows.userId];
@@ -148,7 +155,7 @@
         }
         else
         {
-            [strongSelf.view showWeakPromptViewWithMessage:@"登录失败"];
+            [strongSelf.view showWeakPromptViewWithMessage:loginModel.msg];
         }
         
         
@@ -287,14 +294,7 @@
 
 #pragma mark - common
 
--(void)setTextFieldLeftPadding:(UITextField *)textField forWidth:(CGFloat)leftWidth
-{
-    CGRect frame = textField.frame;
-    frame.size.width = leftWidth;
-    UIView *leftview = [[UIView alloc] initWithFrame:frame];
-    textField.leftViewMode = UITextFieldViewModeAlways;
-    textField.leftView = leftview;
-}
+
 
 /// 取消键盘
 - (void)backKeyboard

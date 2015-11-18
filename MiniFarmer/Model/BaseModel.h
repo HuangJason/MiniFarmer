@@ -8,6 +8,12 @@
 
 #import "JSONModel.h"
 
+typedef enum
+{
+    RequestResultStateFaild,
+    RequestResultStateSuccess
+}RequestResultState;
+
 @interface BaseModel : JSONModel
 
 @property (nonatomic, strong) NSNumber <Optional> *code;
