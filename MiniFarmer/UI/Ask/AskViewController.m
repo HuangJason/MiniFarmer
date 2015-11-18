@@ -17,6 +17,7 @@
 #import "MTPickerInfo.h"
 #import "ImagesView.h"
 #import "AskScrollView.h"
+#import "UIScrollView+LGKeyboard.h"
 
 #define kPlaceHolderText @"请描述作物的异常情况和您的问题, 越详细专家越好给您准确的回答哟! (必填)"
 #define kCountOfNumber 3
@@ -60,6 +61,7 @@
 {
     [super viewWillAppear:animated];
     [self setNavigationBarIsHidden:YES];
+    [self.askScrollview enableAvoidKeyboard];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -71,6 +73,7 @@
 {
     [super viewWillDisappear:animated];
     [self setNavigationBarIsHidden:NO];
+    [self.askScrollview disableAvoidKeyboard];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -97,24 +100,25 @@
         [self.view showWeakPromptViewWithMessage:@"作物名称不能为空"];
         return;
     }
-    NSDictionary *dic = @{@"c":@"tw",@"m":@"savetw",@"userid":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userId]],@"mobile":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userLoginNumber]],@"zjid":@"",@"wtzw":self.askCropNameView.text,@"wtms":self.askTextView.text};
-//    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-//        AskSendModel *sendModel = [[AskSendModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
-//        if ([sendModel.msg isEqualToString:@"success"])
-//        {
-//            [self.view showWeakPromptViewWithMessage:@"发送成功"];
-//            [self dismissAskVC:nil];
-//        }
-//        else
-//        {
-//            [self.view showWeakPromptViewWithMessage:@"发送失败"];
-// 
-//        }
-//        
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        [self.view showWeakPromptViewWithMessage:@"发送失败"];
-//
-//    }];
+    NSDictionary *dic = @{/*@"c":@"tw",@"m":@"savetw",*/@"userid":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userId]],@"mobile":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userLoginNumber]],@"zjid":@"",@"wtzw":self.askCropNameView.text,@"wtms":self.askTextView.text};
+    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost subUrl:@"?c=tw&m=savetw" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        AskSendModel *sendModel = [[AskSendModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
+
+        if ([sendModel.msg isEqualToString:@"success"])
+        {
+            [self.view showWeakPromptViewWithMessage:@"发送成功"];
+            [self dismissAskVC:nil];
+        }
+        else
+        {
+            [self.view showWeakPromptViewWithMessage:sendModel.msg];
+            
+        }
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.view showWeakPromptViewWithMessage:@"发送失败"];
+
+    }];
 }
 
 
@@ -232,6 +236,7 @@
         [_sendButton setBackgroundImage:[UIImage imageNamed:@"ask_send_btn_hl"] forState:UIControlStateHighlighted];
         [_sendButton setBackgroundImage:[UIImage imageNamed:@"ask_send_btn_enable_nm"] forState:UIControlStateNormal];
         [_sendButton setTitle:@"发送" forState:UIControlStateNormal];
+        _sendButton.titleLabel.font = [UIFont systemFontOfSize:13];
         [_sendButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [_sendButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
         [_sendButton setEnabled:NO];
@@ -343,7 +348,7 @@
     else
     {
         //做别的处理 进入轮播啊 这样的
-        AskScrollView *askScrollview = [[AskScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, kScreenSizeHeight) images:self.arrayPhotos selectedIndex:selectedItem];
+        AskScrollView *askScrollview = [[AskScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, kScreenSizeHeight) images:[self newImagesWithImages:self.arrayPhotos] selectedIndex:selectedItem];
         [self.view addSubview:askScrollview];
     }
 
@@ -378,5 +383,21 @@
     [self.imagesView reloadDataWithImagesInfo:[self imagesArr]];
     self.askScrollview.contentSize = CGSizeMake(kScreenSizeWidth, CGRectGetMaxY(self.imagesView.frame) + kBottomTabBarHeight);
 }
+
+- (NSMutableArray *)newImagesWithImages:(NSMutableArray *)infos
+{
+    NSMutableArray *newImages = [[NSMutableArray alloc] initWithArray:infos];
+
+    MTPickerInfo *info = [newImages lastObject];
+    
+    if (info.isSelectImage)
+    {
+        [newImages removeObject:info];
+    }
+    return newImages;
+}
+
+
+
 
 @end

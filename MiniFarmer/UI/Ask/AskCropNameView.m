@@ -10,7 +10,7 @@
 
 #import "GCPlaceholderTextView.h"
 
-@interface AskCropNameView ()
+@interface AskCropNameView ()<UITextViewDelegate>
 
 @property (nonatomic, strong) GCPlaceholderTextView *textView;
 @property (nonatomic, strong) UIImageView *topLine;
@@ -81,6 +81,7 @@
         _textView.textColor = [UIColor colorWithHexString:@"a3a3a3"];
         _textView.font = kTextFont(14);
         _textView.placeholderColor = _textView.textColor;
+        _textView.delegate = self;
         //TODO:作物名称 要看了android的以后才可以确定
         _textView.placeholder = @"请输入作物名称";
     }
@@ -134,5 +135,16 @@
 {
     return _textView.text;
 }
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString*)text
+{
+    if ([text isEqualToString:@"\n"])
+    {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
 
 @end

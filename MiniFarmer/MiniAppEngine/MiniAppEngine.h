@@ -15,6 +15,8 @@
 #pragma mark - 设置
 - (void)saveUserId:(NSString *)userId;
 
+- (void)saveLogin;
+
 //保存密码
 - (void)saveUserLoginNumber:(NSString *)number;
 
@@ -36,6 +38,16 @@
 - (BOOL)isHasSaveUserLoginNumber;
 
 - (NSString *)userId;
+
+#pragma mark - 存入本地和从本地中读取
+
+- (void)saveInfos;
+- (void)getInfos;
+
+- (NSString *)documentPath;
+
+- (NSString *)userInfoPath;
+
 
 
 @end

@@ -22,9 +22,8 @@
 
 @end
 
-@interface LoginModel : JSONModel
-@property (nonatomic, strong) NSNumber <Optional> *code;
-@property (nonatomic, copy) NSString <Optional> *msg;
+@interface LoginModel : BaseModel
+
 @property (nonatomic, strong) Rows <Optional> *rows;
 
 @end

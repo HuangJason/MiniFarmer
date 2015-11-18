@@ -7,9 +7,11 @@
 //
 
 #import "MiniAppEngine.h"
+#import "UserInfo.h"
 
 #define kUserLoginNumber @"userLoginNumber"
 #define kIsSaveUserLoginNumber @"isSaveUserLoginNumber"
+#define kUserInfo @"userInfo"
 
 #define kUserId @"userId"
 
@@ -28,34 +30,35 @@ static MiniAppEngine *miniAppEngine;
 
 - (void)saveUserId:(NSString *)userId
 {
- [[NSUserDefaults standardUserDefaults] setObject:userId forKey:kUserId];
-
+    [UserInfo shareUserInfo].userId = userId;
 }
 
 - (void)saveUserLoginNumber:(NSString *)number
 {
-    if ([self isHasSaveUserLoginNumber])
-    {
-        [[NSUserDefaults standardUserDefaults] setObject:number forKey:kUserLoginNumber];
-    }
+    [UserInfo shareUserInfo].userName = number;
 }
 
 - (void)clearUserNumber
 {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserLoginNumber];
+    [UserInfo shareUserInfo].userName = nil;
 }
 
 - (void)clearUserLoginInfos
 {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserId];
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kIsSaveUserLoginNumber];
+    [UserInfo shareUserInfo].userId = nil;
+    [UserInfo shareUserInfo].isLogin = NO;
 }
 
+- (void)saveLogin;
+{
+    [UserInfo shareUserInfo].isLogin = YES;
+}
 
 
 - (void)setSaveNumber:(BOOL)saveNumber
 {
-    [[NSUserDefaults standardUserDefaults] setBool:saveNumber forKey:kIsSaveUserLoginNumber];
+    
+    [UserInfo shareUserInfo].isSaveUserName = saveNumber;
     if (!saveNumber)
     {
         [self clearUserNumber];
@@ -65,26 +68,63 @@ static MiniAppEngine *miniAppEngine;
 
 - (NSString *)userLoginNumber
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:kUserLoginNumber];
+    return [UserInfo shareUserInfo].userName;
 }
 
 - (NSString *)userId
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:kUserId];
+    return [UserInfo shareUserInfo].userId;
 }
 
 - (BOOL)isHasSaveUserLoginNumber
 {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:kIsSaveUserLoginNumber];
+    return [UserInfo shareUserInfo].isSaveUserName;
 }
 
 - (BOOL)isLogin
 {
-    if (![self userId])
+    if (![UserInfo shareUserInfo].isLogin)
     {
         return NO;
     }
     return YES;
+}
+
+
+- (void)saveInfos
+{
+    NSMutableData *data = [NSMutableData data];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+    [archiver encodeObject:[UserInfo shareUserInfo] forKey:kUserInfo];
+    [archiver finishEncoding];
+
+    [data writeToFile:[self userInfoPath] atomically:YES];
+    
+    
+}
+- (void)getInfos
+{
+    NSData *data = [NSData dataWithContentsOfFile:[self userInfoPath]];
+    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+    UserInfo *info = [unarchiver decodeObjectForKey:kUserInfo];
+    [unarchiver finishDecoding];
+    
+    //有时间可以研究属性列表 然后用属性列表来实现
+    [UserInfo shareUserInfo].userId = info.userId;
+    [UserInfo shareUserInfo].userName = info.userName;
+    [UserInfo shareUserInfo].isLogin = info.isLogin;
+    [UserInfo shareUserInfo].zjid = info.zjid;
+    [UserInfo shareUserInfo].isSaveUserName = info.isSaveUserName;
+}
+
+- (NSString *)userInfoPath
+{
+    return [[self documentPath] stringByAppendingPathComponent:@"UserInfos"];
+}
+
+- (NSString *)documentPath
+{
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 }
 
 @end

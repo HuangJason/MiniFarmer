@@ -8,6 +8,8 @@
 
 #import "MineViewController.h"
 #import "LoginViewController.h"
+#import "InvitedCodeViewController.h"
+#import "SettingViewController.h"
 
 #define kSection
 
@@ -32,6 +34,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self commonInit];
     [self initSubviews];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -153,7 +157,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    DLOG(@"secelected section is row is %d %d",indexPath.section,indexPath.row);
+    switch (indexPath.section)
+    {
+        case 2:
+        {
+            InvitedCodeViewController *invitedVC = [[InvitedCodeViewController alloc] init];
+            [self.navigationController pushViewController:invitedVC animated:YES];
+        }
+            break;
+            case 3:
+        {
+            SettingViewController *setVC = [[SettingViewController alloc] init];
+            [self.navigationController pushViewController:setVC animated:YES];
+
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end

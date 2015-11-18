@@ -46,9 +46,8 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if ([[MiniAppEngine shareMiniAppEngine] isHasSaveUserLoginNumber] && [JudgeTextIsRight isMobileNumber:self.usernameTF.text])
+    if ([JudgeTextIsRight isMobileNumber:self.usernameTF.text])
     {
-        
         [[MiniAppEngine shareMiniAppEngine] saveUserLoginNumber:self.usernameTF.text];
     }
 }
@@ -68,8 +67,9 @@
     [self setLayerWithView:self.passwordTF];
     [self setLayerWithView:self.loginButton];
 
-    [self setTextFieldLeftPadding:self.usernameTF forWidth:16];
-    [self setTextFieldLeftPadding:self.passwordTF forWidth:16];
+    [self.usernameTF setTextFieldLeftPaddingForWidth:16];
+    [self.passwordTF setTextFieldLeftPaddingForWidth:16];
+
     [self configSubviewsValue];
     
     CGRect subRect;
@@ -103,38 +103,6 @@
     subRect.size.height = 20;
     self.label.frame = subRect;
     
-//    [self.usernameTF mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.view.mas_leading).offset(16);
-//        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
-//        make.top.equalTo(self.view.mas_top).offset(64+16);
-//        make.height.equalTo(@(48));
-//    }];
-//    [self.passwordTF mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.usernameTF.mas_leading);
-//        make.trailing.equalTo(self.usernameTF.mas_trailing);
-//        make.top.equalTo(self.usernameTF.mas_bottom).offset(8);
-//        make.height.equalTo(@(48));
-//    }];
-//    [self.loginButton mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.usernameTF.mas_leading);
-//        make.trailing.equalTo(self.usernameTF.mas_trailing);
-//        make.top.equalTo(self.passwordTF.mas_bottom).offset(20);
-//        make.height.equalTo(@(50));
-//    }];
-//    
-//    [self.forgetButton mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.trailing.mas_equalTo(self.usernameTF.mas_trailing);
-//        make.top.equalTo(self.loginButton.mas_bottom).offset(16);
-//    }];
-//    [self.label mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.usernameTF.mas_leading).offset(21+24);
-//        make.centerY.equalTo(self.forgetButton.mas_centerY);
-//    }];
-//    [self.seletedButton mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.usernameTF.mas_leading);
-//        make.centerY.equalTo(self.label.mas_centerY);
-//        make.size.mas_equalTo(CGSizeMake(24, 24));
-//    }];
     
 }
 
@@ -147,9 +115,14 @@
     
     //判断用户名和密码是否为空
     DLOG(@"---- %@",self.usernameTF.text);
-    if (!self.usernameTF.text.length || !self.passwordTF.text.length)
+    if (!self.usernameTF.text.length)
     {
-        [self.view showWeakPromptViewWithMessage:@"用户名和密码不能为空"];
+        [self.view showWeakPromptViewWithMessage:@"账号不能为空"];
+        return;
+    }
+    else if (!self.passwordTF.text.length)
+    {
+        [self.view showWeakPromptViewWithMessage:@"密码不能为空"];
         return;
     }
     
@@ -168,18 +141,25 @@
         [self.view dismissLoading];
         LoginModel *loginModel = [[LoginModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
         
-        if ([loginModel.msg isEqualToString:@"success"])
+        if ([loginModel.msg isEqualToString:@"success"]
+            && loginModel.code.intValue == RequestResultStateSuccess)
         {
             //登陆成功保存电话号码 保存用户userid
             [[MiniAppEngine shareMiniAppEngine] saveUserId:loginModel.rows.userId];
+            [[MiniAppEngine shareMiniAppEngine] saveUserLoginNumber:self.usernameTF.text];
+            [[MiniAppEngine shareMiniAppEngine] saveLogin];
+            [[MiniAppEngine shareMiniAppEngine] saveInfos];
             strongSelf.loginBackBlock();
             [strongSelf dismissViewControllerAnimated:YES completion:nil];
             
         }
         else
         {
-            [strongSelf.view showWeakPromptViewWithMessage:@"登录失败"];
+            [strongSelf.view showWeakPromptViewWithMessage:loginModel.msg];
         }
+        
+        
+        NSLog(@"sdfasdf");
             
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -314,14 +294,7 @@
 
 #pragma mark - common
 
--(void)setTextFieldLeftPadding:(UITextField *)textField forWidth:(CGFloat)leftWidth
-{
-    CGRect frame = textField.frame;
-    frame.size.width = leftWidth;
-    UIView *leftview = [[UIView alloc] initWithFrame:frame];
-    textField.leftViewMode = UITextFieldViewModeAlways;
-    textField.leftView = leftview;
-}
+
 
 /// 取消键盘
 - (void)backKeyboard

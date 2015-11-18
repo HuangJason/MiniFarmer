@@ -13,4 +13,7 @@
 @interface QuestionCell : UITableViewCell
 
 - (void)refreshWithQuestionCellSource:(QuestionCellSource *)source;
+
++ (CGFloat)cellHeightWithObject:(id)object;
+
 @end

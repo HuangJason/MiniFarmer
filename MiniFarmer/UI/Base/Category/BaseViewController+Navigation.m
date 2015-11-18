@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController+Navigation.h"
+#import "UILabel+CustomAttributeLabel.h"
 
 @implementation BaseViewController (Navigation)
 
@@ -52,14 +53,18 @@
 }
 
 - (void)setBarTitle:(NSString *)title
-{
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 180, 20)];
-    label.textAlignment = NSTextAlignmentCenter;
-    //label.backgroundColor = [UIColor yellowColor];
-    label.textColor = RGBCOLOR(57, 57, 57);
+{    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 20)];
     label.font = kTextFont18;
-    label.center = CGPointMake(kScreenSizeWidth / 2, 22 + kStatusBarHeight);
     label.text = title;
+    label.textAlignment = NSTextAlignmentLeft;
+//    label.backgroundColor = [UIColor yellowColor];
+    label.textColor = RGBCOLOR(57, 57, 57);
+    CGRect rect = label.frame;
+    rect.size = [label contentTextSize];
+    label.frame = rect;
+    label.center = CGPointMake(kScreenSizeWidth / 2, 22 + kStatusBarHeight);
+    
     [self.view addSubview:label];
     
 }
@@ -76,6 +81,7 @@
 {
     UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight + 44, kScreenSizeWidth, heigth)];
     [line setBackgroundColor:color];
+    self.yDispaceToTop = CGRectGetMaxY(line.frame);
     [self.view addSubview:line];
 }
 

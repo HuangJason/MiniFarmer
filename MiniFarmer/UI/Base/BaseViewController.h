@@ -16,6 +16,9 @@
 
 @property (nonatomic, readwrite) CGFloat yOffset;
 
+@property (nonatomic, assign) CGFloat yDispaceToTop;
+
+
 - (void)initTitleLabel:(NSString *)title;
 
 - (void)initNavigationBottomLine;

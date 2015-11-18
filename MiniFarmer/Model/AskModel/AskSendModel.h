@@ -8,9 +8,8 @@
 
 #import "JSONModel.h"
 
-@interface AskSendModel : JSONModel
-@property (nonatomic, copy) NSNumber<Optional> *code;
-@property (nonatomic, copy) NSString<Optional> *msg;
+@interface AskSendModel : BaseModel
+
 @property (nonatomic, copy) NSString<Optional> *wtid;
 @property (nonatomic, copy) NSString<Optional> *zjid;
 @property (nonatomic, copy) NSString<Optional> *zjmobile;
