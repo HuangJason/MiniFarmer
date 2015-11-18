@@ -877,6 +877,7 @@
 		FCC6267A1BCA7A8A00943F99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				31DBC82A1BF78BAB007EDCD0 /* MineModel */,
 				FC37668C1BF71C1500FB2BA4 /* QuestionDetailModel */,
 				31EC66C51BF0B89500B8E1BC /* AskModel */,
 				31EC66491BEF838B00B8E1BC /* RegisterModel */,

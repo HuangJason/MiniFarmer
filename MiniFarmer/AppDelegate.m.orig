@@ -18,7 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+<<<<<<< HEAD
     // Override point for customization after application launch.
+=======
+      // Override point for customization after application launch.
+>>>>>>> 729df8a6ff5ec15bd439ba41d99c57b42ebb371a
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor greenColor];
     [self.window makeKeyAndVisible];
