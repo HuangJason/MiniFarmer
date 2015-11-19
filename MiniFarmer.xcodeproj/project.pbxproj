@@ -75,6 +75,7 @@
 		31FDE3EA1BFB1F2100AA199F /* UITextField+CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3E91BFB1F2100AA199F /* UITextField+CustomTextField.m */; settings = {ASSET_TAGS = (); }; };
 		FC37668F1BF71C2200FB2BA4 /* QuestionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */; settings = {ASSET_TAGS = (); }; };
 		FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3766911BF7393600FB2BA4 /* SingleImgCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		FC940B741BFDC84E0086A4D8 /* QuestionAnsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC940B731BFDC84E0086A4D8 /* QuestionAnsModel.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626761BCA7A0E00943F99 /* AskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266C1BCA7A0E00943F99 /* AskViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626771BCA7A0E00943F99 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266F1BCA7A0E00943F99 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626781BCA7A0E00943F99 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC626721BCA7A0E00943F99 /* MineViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -85,7 +86,7 @@
 		FCC64BFA1BCFE4FE00BF56C4 /* SHHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64BF61BCFE4FE00BF56C4 /* SHHttpClient.m */; settings = {ASSET_TAGS = (); }; };
 		FCC64BFB1BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64BF81BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m */; settings = {ASSET_TAGS = (); }; };
 		FCC64BFF1BCFE6D300BF56C4 /* LeJSONUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64BFE1BCFE6D300BF56C4 /* LeJSONUtil.m */; settings = {ASSET_TAGS = (); }; };
-		FCC6F82F1BF8941400D95F7C /* QuestionAnsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6F82E1BF8941400D95F7C /* QuestionAnsModel.m */; settings = {ASSET_TAGS = (); }; };
+		FCC6F82F1BF8941400D95F7C /* (null) in Sources */ = {isa = PBXBuildFile; settings = {ASSET_TAGS = (); }; };
 		FCC74FF61BD27DAF008446ED /* QuestionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC74FF51BD27DAF008446ED /* QuestionInfo.m */; settings = {ASSET_TAGS = (); }; };
 		FCC7528B1BC4E01500DE4B27 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC751F41BC4E01400DE4B27 /* AFHTTPRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
 		FCC7528C1BC4E01500DE4B27 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC751F61BC4E01400DE4B27 /* AFHTTPRequestOperationManager.m */; settings = {ASSET_TAGS = (); }; };
@@ -326,6 +327,8 @@
 		FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailModel.m; sourceTree = "<group>"; };
 		FC3766901BF7393600FB2BA4 /* SingleImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleImgCollectionViewCell.h; sourceTree = "<group>"; };
 		FC3766911BF7393600FB2BA4 /* SingleImgCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleImgCollectionViewCell.m; sourceTree = "<group>"; };
+		FC940B721BFDC84E0086A4D8 /* QuestionAnsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionAnsModel.h; sourceTree = "<group>"; };
+		FC940B731BFDC84E0086A4D8 /* QuestionAnsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionAnsModel.m; sourceTree = "<group>"; };
 		FCC626681BCA686600943F99 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FCC6266B1BCA7A0E00943F99 /* AskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskViewController.h; sourceTree = "<group>"; };
 		FCC6266C1BCA7A0E00943F99 /* AskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskViewController.m; sourceTree = "<group>"; };
@@ -812,6 +815,15 @@
 			path = QuestionDetailModel;
 			sourceTree = "<group>";
 		};
+		FC940B711BFDC84E0086A4D8 /* QuestionAnsModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC940B721BFDC84E0086A4D8 /* QuestionAnsModel.h */,
+				FC940B731BFDC84E0086A4D8 /* QuestionAnsModel.m */,
+			);
+			path = QuestionAnsModel;
+			sourceTree = "<group>";
+		};
 		FCC626691BCA7A0E00943F99 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -877,6 +889,7 @@
 		FCC6267A1BCA7A8A00943F99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC940B711BFDC84E0086A4D8 /* QuestionAnsModel */,
 				31DBC82A1BF78BAB007EDCD0 /* MineModel */,
 				FC37668C1BF71C1500FB2BA4 /* QuestionDetailModel */,
 				31EC66C51BF0B89500B8E1BC /* AskModel */,
@@ -932,15 +945,6 @@
 				FCC64BFE1BCFE6D300BF56C4 /* LeJSONUtil.m */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		FCC6F82C1BF893DA00D95F7C /* QuestionAnsModel */ = {
-			isa = PBXGroup;
-			children = (
-				FCC6F82D1BF8941400D95F7C /* QuestionAnsModel.h */,
-				FCC6F82E1BF8941400D95F7C /* QuestionAnsModel.m */,
-			);
-			path = QuestionAnsModel;
 			sourceTree = "<group>";
 		};
 		FCC74FF31BD27DAF008446ED /* QuestionInfo */ = {
@@ -1512,7 +1516,7 @@
 				31DBC8291BF78B01007EDCD0 /* BaseModel.m in Sources */,
 				FCC752971BC4E01500DE4B27 /* JSONModelError.m in Sources */,
 				FCCA8FAE1BDD255E00B1CCF4 /* UIColor+Expanded.m in Sources */,
-				FCC6F82F1BF8941400D95F7C /* QuestionAnsModel.m in Sources */,
+				FCC6F82F1BF8941400D95F7C /* (null) in Sources */,
 				31EC678F1BF0E4A700B8E1BC /* MWGridViewController.m in Sources */,
 				31EC67911BF0E4A700B8E1BC /* MWPhotoBrowser.m in Sources */,
 				31EC67971BF0E4A700B8E1BC /* PSTCollectionView.m in Sources */,
@@ -1522,6 +1526,7 @@
 				31EC679C1BF0E4A700B8E1BC /* PSTCollectionViewItemKey.m in Sources */,
 				FCC74FF61BD27DAF008446ED /* QuestionInfo.m in Sources */,
 				31FDE3851BFA1FA900AA199F /* SettingQuitLoginCell.m in Sources */,
+				FC940B741BFDC84E0086A4D8 /* QuestionAnsModel.m in Sources */,
 				FCC7529F1BC4E01500DE4B27 /* MASCompositeConstraint.m in Sources */,
 				FCC752C21BC4E01500DE4B27 /* SDWebImageDownloaderOperation.m in Sources */,
 				FCC752CB1BC4E01500DE4B27 /* UIView+WebCacheOperation.m in Sources */,
