@@ -368,7 +368,7 @@
     
     _contentLable.text = info.wtms;
     _plantNameLabel.text = info.zwmc;
-    _dateLable.text = [self describeWithTwsj:info.twsj];
+    _dateLable.text = [APPHelper describeTimeWithMSec:info.twsj];
     [self updateViewConstraint];
 }
 

@@ -22,7 +22,7 @@
 #define kPicPadding             3
 #define kPicImgWidth            ((kMaxContentWidth-2*kPicPadding)/3.0)
 #define kPicImgHeight           (kPicImgWidth/1.1)
-#define kPicViewTopPadding      12
+#define kPicViewTopPadding      9
 
 
 @interface QuCommonView()<UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
@@ -53,12 +53,12 @@
         self.backgroundColor = [UIColor greenColor];
         _outputView = [UIView new];
         [self addSubview:_outputView];
-        _outputView.backgroundColor = [UIColor redColor];
+        //_outputView.backgroundColor = [UIColor redColor];
         [_outputView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self);
             make.left.equalTo(self);
             make.right.equalTo(self);
-            make.bottom.equalTo(self).offset(-10);
+            make.bottom.equalTo(self);
         }];
         
         //问题描述
@@ -87,7 +87,8 @@
     
     _contentLable.text = _qInfo.wtms;
     _plantNameLabel.text = _qInfo.zwmc;
-    _dateLable.text = [APPHelper describeWithTwsj:info.twsj];
+
+    _dateLable.text = [APPHelper describeTimeWithMSec:info.twsj];
     [self updateViewConstraint];
 }
 
@@ -98,7 +99,7 @@
     //_middleView.backgroundColor = [UIColor greenColor];
     [_outputView addSubview:_middleView];
     [_middleView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_collectionView.mas_bottom).offset(kMiddleViewTopPadding);
+        make.top.equalTo(_contentLable.mas_bottom).offset(kMiddleViewTopPadding);
         make.left.equalTo(_contentLable);
         make.right.equalTo(self.mas_right).offset(-kRightSpace);
         make.height.mas_equalTo(kMiddleViewHeight);
@@ -166,7 +167,8 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
-    [self addSubview:_collectionView];
+    _collectionView.backgroundColor = [UIColor whiteColor];
+    [_outputView addSubview:_collectionView];
 //    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.top.equalTo(_middleView).offset(kMiddleViewTopPadding);
 //        make.left.equalTo(_middleView);
@@ -175,37 +177,6 @@
 
 }
 
-////TODO:时间描述规则
-//- (NSString *)describeWithTwsj:(NSString *)twsj
-//{
-//    if (!twsj) {
-//        return @"";
-//    }
-//    
-//    long long curTimeMSec = (long long)([NSDate date].timeIntervalSince1970*1000);
-//    long long passTimeSec = (curTimeMSec - [twsj longLongValue])/1000;
-//    if (passTimeSec < 0) {
-//        return @"1小时前";
-//    }
-//    //换算成小时
-//    NSUInteger hours = (NSUInteger)(passTimeSec/3600);
-//    if (!hours) {
-//        return @"1小时前";
-//    }
-//    
-//    NSUInteger days = hours/24;
-//    if (!days) {
-//        return [NSString stringWithFormat:@"%lu小时前",hours];
-//    }
-//    
-//    NSUInteger years = days/365;
-//    if (!years) {
-//        return [NSString stringWithFormat:@"%lu天前",days];
-//    }
-//    else{
-//        return [NSString stringWithFormat:@"%lu年前",years];
-//    }
-//}
 
 - (void)updateViewConstraint
 {
@@ -219,9 +190,21 @@
     
     NSUInteger imgCount = _qInfo.images.count;
     if (imgCount >0) {
-        self.collectionView.frame = CGRectMake(kLeftSpace, _contentLable.frame.origin.y+_contentLabelSize.height + kPicViewTopPadding, kMaxContentWidth, _picViewHeight);
+        self.collectionView.frame = CGRectMake(kLeftSpace, kContentTopPadding+_contentLabelSize.height + kPicViewTopPadding, kMaxContentWidth, _picViewHeight);
         [_collectionView reloadData];
+        
+        [_middleView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(_collectionView.mas_bottom).offset(kMiddleViewTopPadding);
+            make.left.equalTo(_contentLable);
+            make.right.equalTo(self.mas_right).offset(-kRightSpace);
+            make.height.mas_equalTo(kMiddleViewHeight);
+        }];
     }
+//    else{
+//        [_middleView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            <#code#>
+//        }]
+//    }
 }
 
 - (void)calculateHeight
@@ -235,7 +218,7 @@
         if (_qInfo.images.count%3) {
             rows += 1;
         }
-        _picViewHeight = rows*kPicImgHeight;
+        _picViewHeight = rows*(kPicImgHeight+kPicPadding);
     }
     //总高度
     self.totalViewHeight = kContentTopPadding + _contentLabelSize.height + kMiddleViewTopPadding + kMiddleViewHeight;

@@ -840,8 +840,7 @@
 }
 
 
-
-+ (NSString *)describeWithTwsj:(NSString *)twsj
++ (NSString *)describeTimeWithMSec:(NSString *)twsj
 {
     if (!twsj) {
         return @"";
@@ -849,28 +848,36 @@
     
     long long curTimeMSec = (long long)([NSDate date].timeIntervalSince1970*1000);
     long long passTimeSec = (curTimeMSec - [twsj longLongValue])/1000;
+
+    //异常错误
     if (passTimeSec < 0) {
-        return @"1小时前";
+        return @"";
     }
-    //换算成小时
-    NSUInteger hours = (NSUInteger)(passTimeSec/3600);
+    
+    //分
+    NSUInteger mins = (NSUInteger)(passTimeSec/60);
+    if (!mins) {
+        return [NSString stringWithFormat:@"%lld秒钟前",passTimeSec];
+    }
+    //小时
+    NSUInteger hours = (NSUInteger)(mins/60);
     if (!hours) {
-        return @"1小时前";
+        return [NSString stringWithFormat:@"%lu分钟前",mins];
     }
     
     NSUInteger days = hours/24;
     if (!days) {
-        return [NSString stringWithFormat:@"%lu小时前",(unsigned long)hours];
+
+        return [NSString stringWithFormat:@"%lu小时前",hours];
     }
     
     NSUInteger years = days/365;
     if (!years) {
-        return [NSString stringWithFormat:@"%lu天前",(unsigned long)days];
+        return [NSString stringWithFormat:@"%lu天前",days];
     }
     else{
-        return [NSString stringWithFormat:@"%lu年前",(unsigned long)years];
+        return [NSString stringWithFormat:@"%lu年前",years];
     }
 }
-
 
 @end
