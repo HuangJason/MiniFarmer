@@ -10,8 +10,10 @@
 
 @interface MineBaseTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) UIImageView *line;
 
 
+- (void)setHiddenLine:(BOOL)hidden;
 - (void)refreshDataWithModel:(id)model;
 + (CGFloat)cellHeightWihtModel:(id)model;
 

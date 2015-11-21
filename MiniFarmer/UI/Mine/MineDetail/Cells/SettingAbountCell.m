@@ -13,7 +13,7 @@
 @interface SettingAbountCell ()
 
 @property (nonatomic, strong) SettingAboutView *abountView;
-@property (nonatomic, strong) UIImageView *line;
+@property (nonatomic, strong) UIImageView *subLine;
 
 @end
 
@@ -26,10 +26,10 @@
         self.backgroundColor = [UIColor colorWithHexString:@"ffffff"];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.abountView = [[[NSBundle mainBundle] loadNibNamed:@"SettingAboutView" owner:self options:nil] lastObject];
-        self.line = [[UIImageView alloc] initWithFrame:CGRectZero];
-        [self.line setBackgroundColor:[UIColor colorWithHexString:@"e4e4e4"]];
+        self.subLine = [[UIImageView alloc] initWithFrame:CGRectZero];
+        [self.subLine setBackgroundColor:[UIColor colorWithHexString:@"e4e4e4"]];
         [self.contentView addSubview:self.abountView];
-        [self.contentView addSubview:self.line];
+        [self.contentView addSubview:self.subLine];
     }
     return self;
 }
@@ -38,8 +38,8 @@
 {
     [super layoutSubviews];
     self.abountView.frame = self.contentView.bounds;
-    self.line.frame = CGRectMake(self.lineDispaceToLeft, CGRectGetHeight(self.frame) - kLineWidth, CGRectGetWidth(self.frame) - self.lineDispaceToLeft, kLineWidth);
-    self.line.backgroundColor = [UIColor colorWithHexString:self.stringColor];
+    self.subLine.frame = CGRectMake(self.lineDispaceToLeft, CGRectGetHeight(self.frame) - kLineWidth, CGRectGetWidth(self.frame) - self.lineDispaceToLeft, kLineWidth);
+    self.subLine.backgroundColor = [UIColor colorWithHexString:self.stringColor];
 }
 
 - (void)refreshDataWithModel:(id)model

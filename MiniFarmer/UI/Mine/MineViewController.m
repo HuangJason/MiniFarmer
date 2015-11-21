@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import "InvitedCodeViewController.h"
 #import "SettingViewController.h"
+#import "MyResponseViewController.h"
 
 #define kSection
 
@@ -160,13 +161,19 @@
     DLOG(@"secelected section is row is %d %d",indexPath.section,indexPath.row);
     switch (indexPath.section)
     {
+        case 0:
+        {
+            MyResponseViewController *myVC = [[MyResponseViewController alloc] init];
+            [self.navigationController pushViewController:myVC animated:YES];
+        }
+            break;
         case 2:
         {
             InvitedCodeViewController *invitedVC = [[InvitedCodeViewController alloc] init];
             [self.navigationController pushViewController:invitedVC animated:YES];
         }
             break;
-            case 3:
+        case 3:
         {
             SettingViewController *setVC = [[SettingViewController alloc] init];
             [self.navigationController pushViewController:setVC animated:YES];

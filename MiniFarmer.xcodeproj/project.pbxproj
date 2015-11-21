@@ -13,6 +13,12 @@
 		31399E8C1BF73DA10052A4EB /* InvitedCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E8A1BF73DA10052A4EB /* InvitedCodeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31399E8D1BF73DA10052A4EB /* InvitedCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31399E8B1BF73DA10052A4EB /* InvitedCodeViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		31399E901BF73DF00052A4EB /* MineBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E8F1BF73DF00052A4EB /* MineBaseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3172EC401BFD62D400F7EF6D /* MineReponseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC3F1BFD62D400F7EF6D /* MineReponseCell.m */; settings = {ASSET_TAGS = (); }; };
+		3172EC431BFD62E700F7EF6D /* MineResponseImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC421BFD62E700F7EF6D /* MineResponseImagesCell.m */; settings = {ASSET_TAGS = (); }; };
+		3172EC451BFD641300F7EF6D /* MineReponseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3172EC441BFD641300F7EF6D /* MineReponseCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3172EC4A1BFD93C300F7EF6D /* MyReponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC491BFD93C300F7EF6D /* MyReponseModel.m */; settings = {ASSET_TAGS = (); }; };
+		3172EC4D1BFDC15400F7EF6D /* MineResponseTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC4C1BFDC15400F7EF6D /* MineResponseTableController.m */; settings = {ASSET_TAGS = (); }; };
+		3172EC501BFDC1F700F7EF6D /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC4F1BFDC1F700F7EF6D /* CommonViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC21BF3A5320081F64F /* MTAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC11BF3A5320081F64F /* MTAssetsPickerController.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC91BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC81BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDCC1BF3A9550081F64F /* MTPickerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDCB1BF3A9550081F64F /* MTPickerInfo.m */; settings = {ASSET_TAGS = (); }; };
@@ -73,6 +79,7 @@
 		31FDE3981BFAB7EC00AA199F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3961BFAB7EC00AA199F /* AboutViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31FDE3971BFAB7EC00AA199F /* AboutViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		31FDE3EA1BFB1F2100AA199F /* UITextField+CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3E91BFB1F2100AA199F /* UITextField+CustomTextField.m */; settings = {ASSET_TAGS = (); }; };
+		31FDE3ED1BFC10F600AA199F /* MyResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3EC1BFC10F600AA199F /* MyResponseViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FC37668F1BF71C2200FB2BA4 /* QuestionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */; settings = {ASSET_TAGS = (); }; };
 		FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3766911BF7393600FB2BA4 /* SingleImgCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		FCC626761BCA7A0E00943F99 /* AskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6266C1BCA7A0E00943F99 /* AskViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -199,6 +206,17 @@
 		31399E8B1BF73DA10052A4EB /* InvitedCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvitedCodeViewController.xib; sourceTree = "<group>"; };
 		31399E8E1BF73DF00052A4EB /* MineBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineBaseViewController.h; sourceTree = "<group>"; };
 		31399E8F1BF73DF00052A4EB /* MineBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineBaseViewController.m; sourceTree = "<group>"; };
+		3172EC3E1BFD62D400F7EF6D /* MineReponseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineReponseCell.h; sourceTree = "<group>"; };
+		3172EC3F1BFD62D400F7EF6D /* MineReponseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineReponseCell.m; sourceTree = "<group>"; };
+		3172EC411BFD62E700F7EF6D /* MineResponseImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineResponseImagesCell.h; sourceTree = "<group>"; };
+		3172EC421BFD62E700F7EF6D /* MineResponseImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineResponseImagesCell.m; sourceTree = "<group>"; };
+		3172EC441BFD641300F7EF6D /* MineReponseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineReponseCell.xib; sourceTree = "<group>"; };
+		3172EC481BFD93C300F7EF6D /* MyReponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyReponseModel.h; sourceTree = "<group>"; };
+		3172EC491BFD93C300F7EF6D /* MyReponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyReponseModel.m; sourceTree = "<group>"; };
+		3172EC4B1BFDC15400F7EF6D /* MineResponseTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineResponseTableController.h; sourceTree = "<group>"; };
+		3172EC4C1BFDC15400F7EF6D /* MineResponseTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineResponseTableController.m; sourceTree = "<group>"; };
+		3172EC4E1BFDC1F700F7EF6D /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
+		3172EC4F1BFDC1F700F7EF6D /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
 		31D4FDC01BF3A5320081F64F /* MTAssetsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAssetsPickerController.h; sourceTree = "<group>"; };
 		31D4FDC11BF3A5320081F64F /* MTAssetsPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAssetsPickerController.m; sourceTree = "<group>"; };
 		31D4FDC71BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MTButtonCheckMarkAnimation.h"; sourceTree = "<group>"; };
@@ -321,6 +339,8 @@
 		31FDE3971BFAB7EC00AA199F /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		31FDE3E81BFB1F2100AA199F /* UITextField+CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+CustomTextField.h"; sourceTree = "<group>"; };
 		31FDE3E91BFB1F2100AA199F /* UITextField+CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CustomTextField.m"; sourceTree = "<group>"; };
+		31FDE3EB1BFC10F600AA199F /* MyResponseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyResponseViewController.h; sourceTree = "<group>"; };
+		31FDE3EC1BFC10F600AA199F /* MyResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyResponseViewController.m; sourceTree = "<group>"; };
 		FC37668D1BF71C2200FB2BA4 /* QuestionDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetailModel.h; sourceTree = "<group>"; };
 		FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailModel.m; sourceTree = "<group>"; };
 		FC3766901BF7393600FB2BA4 /* SingleImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleImgCollectionViewCell.h; sourceTree = "<group>"; };
@@ -553,6 +573,9 @@
 		31399E851BF73D210052A4EB /* MineDetail */ = {
 			isa = PBXGroup;
 			children = (
+				3172EC511BFDE1B900F7EF6D /* views */,
+				3172EC4E1BFDC1F700F7EF6D /* CommonViewController.h */,
+				3172EC4F1BFDC1F700F7EF6D /* CommonViewController.m */,
 				31FDE38B1BFA24EE00AA199F /* Model */,
 				31FDE3791BFA1EEF00AA199F /* Cells */,
 				31399E891BF73DA10052A4EB /* InvitedCodeViewController.h */,
@@ -567,8 +590,19 @@
 				31FDE3951BFAB7EC00AA199F /* AboutViewController.h */,
 				31FDE3961BFAB7EC00AA199F /* AboutViewController.m */,
 				31FDE3971BFAB7EC00AA199F /* AboutViewController.xib */,
+				31FDE3EB1BFC10F600AA199F /* MyResponseViewController.h */,
+				31FDE3EC1BFC10F600AA199F /* MyResponseViewController.m */,
+				3172EC4B1BFDC15400F7EF6D /* MineResponseTableController.h */,
+				3172EC4C1BFDC15400F7EF6D /* MineResponseTableController.m */,
 			);
 			path = MineDetail;
+			sourceTree = "<group>";
+		};
+		3172EC511BFDE1B900F7EF6D /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		31D4FDBF1BF3A5320081F64F /* MTAssetsPickerController */ = {
@@ -789,6 +823,11 @@
 				31FDE3811BFA1F9100AA199F /* SettinSpaceCell.m */,
 				31FDE3831BFA1FA900AA199F /* SettingQuitLoginCell.h */,
 				31FDE3841BFA1FA900AA199F /* SettingQuitLoginCell.m */,
+				3172EC3E1BFD62D400F7EF6D /* MineReponseCell.h */,
+				3172EC3F1BFD62D400F7EF6D /* MineReponseCell.m */,
+				3172EC441BFD641300F7EF6D /* MineReponseCell.xib */,
+				3172EC411BFD62E700F7EF6D /* MineResponseImagesCell.h */,
+				3172EC421BFD62E700F7EF6D /* MineResponseImagesCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -798,6 +837,8 @@
 			children = (
 				31FDE38C1BFA250200AA199F /* SettingModel.h */,
 				31FDE38D1BFA250200AA199F /* SettingModel.m */,
+				3172EC481BFD93C300F7EF6D /* MyReponseModel.h */,
+				3172EC491BFD93C300F7EF6D /* MyReponseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1466,6 +1507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC7529E1BC4E01500DE4B27 /* Info.plist in Resources */,
+				3172EC451BFD641300F7EF6D /* MineReponseCell.xib in Resources */,
 				31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */,
 				FCC884C11BC3EBB900A1200B /* Assets.xcassets in Resources */,
 				FCC752B71BC4E01500DE4B27 /* MJRefresh.bundle in Resources */,
@@ -1502,6 +1544,7 @@
 				31DBC8291BF78B01007EDCD0 /* BaseModel.m in Sources */,
 				FCC752971BC4E01500DE4B27 /* JSONModelError.m in Sources */,
 				FCCA8FAE1BDD255E00B1CCF4 /* UIColor+Expanded.m in Sources */,
+				3172EC4A1BFD93C300F7EF6D /* MyReponseModel.m in Sources */,
 				31EC678F1BF0E4A700B8E1BC /* MWGridViewController.m in Sources */,
 				31EC67911BF0E4A700B8E1BC /* MWPhotoBrowser.m in Sources */,
 				31EC67971BF0E4A700B8E1BC /* PSTCollectionView.m in Sources */,
@@ -1519,6 +1562,7 @@
 				FCC752A31BC4E01500DE4B27 /* MASViewAttribute.m in Sources */,
 				FCC752BA1BC4E01500DE4B27 /* UIScrollView+MJRefresh.m in Sources */,
 				FCC752BF1BC4E01500DE4B27 /* SDWebImageCompat.m in Sources */,
+				3172EC431BFD62E700F7EF6D /* MineResponseImagesCell.m in Sources */,
 				FCC752C11BC4E01500DE4B27 /* SDWebImageDownloader.m in Sources */,
 				FCC752BD1BC4E01500DE4B27 /* NSData+ImageContentType.m in Sources */,
 				FCC7528E1BC4E01500DE4B27 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1537,6 +1581,7 @@
 				31EC67AD1BF0E63C00B8E1BC /* XDPhotoSelect.m in Sources */,
 				FCCA8FB51BDD2F9E00B1CCF4 /* QuestionCellSource.m in Sources */,
 				31399E8C1BF73DA10052A4EB /* InvitedCodeViewController.m in Sources */,
+				3172EC401BFD62D400F7EF6D /* MineReponseCell.m in Sources */,
 				FCCA178A1BEF116400BAE15C /* HomeMenuButton.m in Sources */,
 				FCC752901BC4E01500DE4B27 /* AFURLConnectionOperation.m in Sources */,
 				FCC752951BC4E01500DE4B27 /* JSONModelArray.m in Sources */,
@@ -1558,6 +1603,7 @@
 				FCC752C31BC4E01500DE4B27 /* SDWebImageManager.m in Sources */,
 				31EC679E1BF0E4A700B8E1BC /* PSTCollectionViewUpdateItem.m in Sources */,
 				31EC66331BECEBE100B8E1BC /* RegisterViewController.m in Sources */,
+				3172EC501BFDC1F700F7EF6D /* CommonViewController.m in Sources */,
 				31EC66391BECEC6F00B8E1BC /* BaseViewController+Navigation.m in Sources */,
 				31FDE3781BFA1D0600AA199F /* SettingViewController.m in Sources */,
 				FCC752B21BC4E01500DE4B27 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1573,7 +1619,9 @@
 				FCC752B81BC4E01500DE4B27 /* MJRefreshConst.m in Sources */,
 				31399E841BF63F2A0052A4EB /* AskScrollView.m in Sources */,
 				FCC64BFA1BCFE4FE00BF56C4 /* SHHttpClient.m in Sources */,
+				3172EC4D1BFDC15400F7EF6D /* MineResponseTableController.m in Sources */,
 				FCCBA0301BDF4727009AF469 /* APPHelper.m in Sources */,
+				31FDE3ED1BFC10F600AA199F /* MyResponseViewController.m in Sources */,
 				31399E7A1BF56E470052A4EB /* ImagesView.m in Sources */,
 				FCC64BF91BCFE4FE00BF56C4 /* LeHttpService.m in Sources */,
 				31EC67A11BF0E4A700B8E1BC /* PSTGridLayoutRow.m in Sources */,

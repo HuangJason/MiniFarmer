@@ -118,4 +118,9 @@
 //ip 地址校验
 + (BOOL)isValidatIP:(NSString *)ipAddress;
 
+//TODO:时间描述规则
+//根据时间规则得到时间字符串
++ (NSString *)describeWithTwsj:(NSString *)twsj;
+
+
 @end

@@ -839,4 +839,38 @@
     return [urlTest evaluateWithObject:ipAddress];
 }
 
+
+
++ (NSString *)describeWithTwsj:(NSString *)twsj
+{
+    if (!twsj) {
+        return @"";
+    }
+    
+    long long curTimeMSec = (long long)([NSDate date].timeIntervalSince1970*1000);
+    long long passTimeSec = (curTimeMSec - [twsj longLongValue])/1000;
+    if (passTimeSec < 0) {
+        return @"1小时前";
+    }
+    //换算成小时
+    NSUInteger hours = (NSUInteger)(passTimeSec/3600);
+    if (!hours) {
+        return @"1小时前";
+    }
+    
+    NSUInteger days = hours/24;
+    if (!days) {
+        return [NSString stringWithFormat:@"%lu小时前",(unsigned long)hours];
+    }
+    
+    NSUInteger years = days/365;
+    if (!years) {
+        return [NSString stringWithFormat:@"%lu天前",(unsigned long)days];
+    }
+    else{
+        return [NSString stringWithFormat:@"%lu年前",(unsigned long)years];
+    }
+}
+
+
 @end

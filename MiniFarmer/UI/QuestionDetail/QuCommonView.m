@@ -87,7 +87,7 @@
     
     _contentLable.text = _qInfo.wtms;
     _plantNameLabel.text = _qInfo.zwmc;
-    _dateLable.text = [self describeWithTwsj:info.twsj];
+    _dateLable.text = [APPHelper describeWithTwsj:info.twsj];
     [self updateViewConstraint];
 }
 
@@ -175,37 +175,37 @@
 
 }
 
-//TODO:时间描述规则
-- (NSString *)describeWithTwsj:(NSString *)twsj
-{
-    if (!twsj) {
-        return @"";
-    }
-    
-    long long curTimeMSec = (long long)([NSDate date].timeIntervalSince1970*1000);
-    long long passTimeSec = (curTimeMSec - [twsj longLongValue])/1000;
-    if (passTimeSec < 0) {
-        return @"1小时前";
-    }
-    //换算成小时
-    NSUInteger hours = (NSUInteger)(passTimeSec/3600);
-    if (!hours) {
-        return @"1小时前";
-    }
-    
-    NSUInteger days = hours/24;
-    if (!days) {
-        return [NSString stringWithFormat:@"%lu小时前",hours];
-    }
-    
-    NSUInteger years = days/365;
-    if (!years) {
-        return [NSString stringWithFormat:@"%lu天前",days];
-    }
-    else{
-        return [NSString stringWithFormat:@"%lu年前",years];
-    }
-}
+////TODO:时间描述规则
+//- (NSString *)describeWithTwsj:(NSString *)twsj
+//{
+//    if (!twsj) {
+//        return @"";
+//    }
+//    
+//    long long curTimeMSec = (long long)([NSDate date].timeIntervalSince1970*1000);
+//    long long passTimeSec = (curTimeMSec - [twsj longLongValue])/1000;
+//    if (passTimeSec < 0) {
+//        return @"1小时前";
+//    }
+//    //换算成小时
+//    NSUInteger hours = (NSUInteger)(passTimeSec/3600);
+//    if (!hours) {
+//        return @"1小时前";
+//    }
+//    
+//    NSUInteger days = hours/24;
+//    if (!days) {
+//        return [NSString stringWithFormat:@"%lu小时前",hours];
+//    }
+//    
+//    NSUInteger years = days/365;
+//    if (!years) {
+//        return [NSString stringWithFormat:@"%lu天前",days];
+//    }
+//    else{
+//        return [NSString stringWithFormat:@"%lu年前",years];
+//    }
+//}
 
 - (void)updateViewConstraint
 {
