@@ -19,6 +19,11 @@
 		3172EC4A1BFD93C300F7EF6D /* MyReponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC491BFD93C300F7EF6D /* MyReponseModel.m */; settings = {ASSET_TAGS = (); }; };
 		3172EC4D1BFDC15400F7EF6D /* MineResponseTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC4C1BFDC15400F7EF6D /* MineResponseTableController.m */; settings = {ASSET_TAGS = (); }; };
 		3172EC501BFDC1F700F7EF6D /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC4F1BFDC1F700F7EF6D /* CommonViewController.m */; settings = {ASSET_TAGS = (); }; };
+		318A87D41C005057008456C1 /* MyQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87D31C005057008456C1 /* MyQuestionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		318A87D71C00509A008456C1 /* MyQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87D61C00509A008456C1 /* MyQuestionCell.m */; settings = {ASSET_TAGS = (); }; };
+		318A87DE1C00A0F1008456C1 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87D91C00A0F1008456C1 /* Colours.m */; settings = {ASSET_TAGS = (); }; };
+		318A87DF1C00A0F1008456C1 /* UIView+FrameCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87DB1C00A0F1008456C1 /* UIView+FrameCategory.m */; settings = {ASSET_TAGS = (); }; };
+		318A87E01C00A0F1008456C1 /* YHSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87DD1C00A0F1008456C1 /* YHSegmentView.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC21BF3A5320081F64F /* MTAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC11BF3A5320081F64F /* MTAssetsPickerController.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC91BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC81BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDCC1BF3A9550081F64F /* MTPickerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDCB1BF3A9550081F64F /* MTPickerInfo.m */; settings = {ASSET_TAGS = (); }; };
@@ -219,6 +224,16 @@
 		3172EC4C1BFDC15400F7EF6D /* MineResponseTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineResponseTableController.m; sourceTree = "<group>"; };
 		3172EC4E1BFDC1F700F7EF6D /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
 		3172EC4F1BFDC1F700F7EF6D /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
+		318A87D21C005057008456C1 /* MyQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionViewController.h; sourceTree = "<group>"; };
+		318A87D31C005057008456C1 /* MyQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionViewController.m; sourceTree = "<group>"; };
+		318A87D51C00509A008456C1 /* MyQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionCell.h; sourceTree = "<group>"; };
+		318A87D61C00509A008456C1 /* MyQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionCell.m; sourceTree = "<group>"; };
+		318A87D81C00A0F1008456C1 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
+		318A87D91C00A0F1008456C1 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
+		318A87DA1C00A0F1008456C1 /* UIView+FrameCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameCategory.h"; sourceTree = "<group>"; };
+		318A87DB1C00A0F1008456C1 /* UIView+FrameCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameCategory.m"; sourceTree = "<group>"; };
+		318A87DC1C00A0F1008456C1 /* YHSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHSegmentView.h; sourceTree = "<group>"; };
+		318A87DD1C00A0F1008456C1 /* YHSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHSegmentView.m; sourceTree = "<group>"; };
 		31D4FDC01BF3A5320081F64F /* MTAssetsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAssetsPickerController.h; sourceTree = "<group>"; };
 		31D4FDC11BF3A5320081F64F /* MTAssetsPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAssetsPickerController.m; sourceTree = "<group>"; };
 		31D4FDC71BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MTButtonCheckMarkAnimation.h"; sourceTree = "<group>"; };
@@ -596,6 +611,8 @@
 				31FDE3971BFAB7EC00AA199F /* AboutViewController.xib */,
 				31FDE3EB1BFC10F600AA199F /* MyResponseViewController.h */,
 				31FDE3EC1BFC10F600AA199F /* MyResponseViewController.m */,
+				318A87D21C005057008456C1 /* MyQuestionViewController.h */,
+				318A87D31C005057008456C1 /* MyQuestionViewController.m */,
 				3172EC4B1BFDC15400F7EF6D /* MineResponseTableController.h */,
 				3172EC4C1BFDC15400F7EF6D /* MineResponseTableController.m */,
 			);
@@ -605,6 +622,12 @@
 		3172EC511BFDE1B900F7EF6D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				318A87D81C00A0F1008456C1 /* Colours.h */,
+				318A87D91C00A0F1008456C1 /* Colours.m */,
+				318A87DA1C00A0F1008456C1 /* UIView+FrameCategory.h */,
+				318A87DB1C00A0F1008456C1 /* UIView+FrameCategory.m */,
+				318A87DC1C00A0F1008456C1 /* YHSegmentView.h */,
+				318A87DD1C00A0F1008456C1 /* YHSegmentView.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -832,6 +855,8 @@
 				3172EC441BFD641300F7EF6D /* MineReponseCell.xib */,
 				3172EC411BFD62E700F7EF6D /* MineResponseImagesCell.h */,
 				3172EC421BFD62E700F7EF6D /* MineResponseImagesCell.m */,
+				318A87D51C00509A008456C1 /* MyQuestionCell.h */,
+				318A87D61C00509A008456C1 /* MyQuestionCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1574,6 +1599,7 @@
 				FCC752C21BC4E01500DE4B27 /* SDWebImageDownloaderOperation.m in Sources */,
 				FCC752CB1BC4E01500DE4B27 /* UIView+WebCacheOperation.m in Sources */,
 				FCC752C51BC4E01500DE4B27 /* UIButton+WebCache.m in Sources */,
+				318A87DF1C00A0F1008456C1 /* UIView+FrameCategory.m in Sources */,
 				FCC752AF1BC4E01500DE4B27 /* MJRefreshAutoNormalFooter.m in Sources */,
 				FCC752A31BC4E01500DE4B27 /* MASViewAttribute.m in Sources */,
 				FCC752BA1BC4E01500DE4B27 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1586,12 +1612,15 @@
 				31EC66411BECF43700B8E1BC /* JudgeTextIsRight.m in Sources */,
 				31FDE3941BFA346C00AA199F /* RecomentViewController.m in Sources */,
 				31EC66341BECEBE100B8E1BC /* YHSMSCodeButton.m in Sources */,
+				318A87D41C005057008456C1 /* MyQuestionViewController.m in Sources */,
 				FCC752B61BC4E01500DE4B27 /* MJRefreshStateHeader.m in Sources */,
 				31EC67991BF0E4A700B8E1BC /* PSTCollectionViewController.m in Sources */,
 				FCC752AC1BC4E01500DE4B27 /* MJRefreshFooter.m in Sources */,
 				31399E901BF73DF00052A4EB /* MineBaseViewController.m in Sources */,
 				FCC884B91BC3EBB900A1200B /* AppDelegate.m in Sources */,
 				31D4FDCC1BF3A9550081F64F /* MTPickerInfo.m in Sources */,
+				318A87D71C00509A008456C1 /* MyQuestionCell.m in Sources */,
+				318A87E01C00A0F1008456C1 /* YHSegmentView.m in Sources */,
 				FCC752C91BC4E01500DE4B27 /* UIImageView+HighlightedWebCache.m in Sources */,
 				FCC752B41BC4E01500DE4B27 /* MJRefreshGifHeader.m in Sources */,
 				31EC67AD1BF0E63C00B8E1BC /* XDPhotoSelect.m in Sources */,
@@ -1707,6 +1736,7 @@
 				FCC64BFF1BCFE6D300BF56C4 /* LeJSONUtil.m in Sources */,
 				FCC752A91BC4E01500DE4B27 /* MJRefreshAutoFooter.m in Sources */,
 				31EC67901BF0E4A700B8E1BC /* MWPhoto.m in Sources */,
+				318A87DE1C00A0F1008456C1 /* Colours.m in Sources */,
 				FCC752B01BC4E01500DE4B27 /* MJRefreshAutoStateFooter.m in Sources */,
 				FCC7528B1BC4E01500DE4B27 /* AFHTTPRequestOperation.m in Sources */,
 				FCC752BE1BC4E01500DE4B27 /* SDImageCache.m in Sources */,

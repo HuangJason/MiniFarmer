@@ -24,8 +24,8 @@
 {
     [super viewDidLoad];
     [self addTableView];
-    //添加tableview
-//    self.ps = 10;
+//    //添加tableview
+////    self.ps = 10;
     [self updateViewConstraints];
 }
 

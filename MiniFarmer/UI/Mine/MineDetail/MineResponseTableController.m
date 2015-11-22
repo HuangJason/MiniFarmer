@@ -10,7 +10,6 @@
 #import "MyReponseModel.h"
 #import "MineReponseCell.h"
 #import "MineResponseImagesCell.h"
-#define kPageSize @"10"
 
 @interface MineResponseTableController ()
 
@@ -35,7 +34,6 @@
 {
     [super viewDidLoad];
     
-    [self requestDataWithLastId:@"0"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,6 +41,15 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)reloadData
+{
+    
+    if (!_dataSourceArr)
+    {
+        [self requestDataWithLastId:@"0"];
+    }
+
+}
 
 #pragma mark - other
 

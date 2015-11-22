@@ -12,6 +12,7 @@
 @interface List : JSONModel
 
 @property (nonatomic, copy) NSString<Optional> *listId;
+///问题的描述
 @property (nonatomic, copy) NSString<Optional> *wtms;
 @property (nonatomic, copy) NSString<Optional> *userid;
 @property (nonatomic, copy) NSString<Optional> *xm;

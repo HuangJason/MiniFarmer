@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define kPageSize @"10"
+
+
 @class CommonViewController;
 @protocol CommonViewControllerDelegate <NSObject>
 

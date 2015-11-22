@@ -63,7 +63,7 @@
         [self.backContentView addSubview:self.messageCountLabel];
         [self.backContentView addSubview:self.timeLabel];
         [self.backContentView addSubview:self.messageBT];
-        
+        [self.backContentView addSubview:self.imagesCountBT];
         //添加约束
         [self addButtons];
         [self addConstraintsToSubviews];
@@ -144,20 +144,29 @@
 
 + (CGFloat)cellHeightWihtModel:(id)model
 {
+    List *list = (List *)model;
+    CGSize textSize = [APPHelper getStringWordWrappingSize:list.wtms andConstrainToSize:CGSizeMake(kScreenSizeWidth - 24, CGFLOAT_MAX) andFont:kTextFont(16)];
+    
+    
     //内容的高度 + 图片的宽度kdwidth + 14 * 2 + 12 + timelabel的高度 + 20 + klinewidth
-    return 20;
+    return textSize.height + kDwidth + 28 + 12 + 16 + 20 + kLineWidth;
 }
 
 - (void)refreshDataWithModel:(id)model
 {
     List *list = (List *)model;
+    [self.contentLabel setText:list.wtms];
+    [self.messageCountLabel setText:list.hdcs];
+    [self.timeLabel setText:[APPHelper describeTimeWithMSec:list.zfcs]];
     [self.imagesCountBT setHidden:list.images.count >= kCountOfRow];
     NSString *title = [NSString stringWithFormat:@"共%d张",list.images.count];
     [self.imagesCountBT setTitle:title forState:UIControlStateNormal];
     
+    [self setImagesToBtnWithModel:list];
+    
 }
 
-- (void)setImagesToBtnWithArr:(List *)list
+- (void)setImagesToBtnWithModel:(List *)list
 {
     for (int i = 0; i<self.imageButtons.count > list.images.count ? list.images.count : self.imageButtons.count; i++)
     {
