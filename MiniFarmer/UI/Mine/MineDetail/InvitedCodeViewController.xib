@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -34,6 +34,7 @@
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入邀请码，保存后不可以修改哦," textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qaI-fa-SaZ">
                                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                    <animations/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="42" id="OIV-gS-EMk">
                                             <variation key="widthClass=compact" constant="42"/>
@@ -62,6 +63,7 @@
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66h-4W-WSf">
                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                    <animations/>
                                     <color key="backgroundColor" red="0.066666666666666666" green="0.51764705882352935" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="cWB-1p-M9R">
@@ -92,6 +94,7 @@
                                     </connections>
                                 </button>
                             </subviews>
+                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="66h-4W-WSf" secondAttribute="trailing" constant="21" id="5Ob-hG-VdG">
@@ -164,6 +167,7 @@
                         </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqe-ka-UVj">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <animations/>
                             <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="14" id="kbw-FA-Pvs"/>
@@ -181,6 +185,7 @@
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crc-sb-Myi">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <animations/>
                             <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="112" id="lZG-pO-t2y">
@@ -206,12 +211,14 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请码是每个小农人用户的专属邀请码，可用于邀请朋友加入小农人，并成为我的粉丝。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6O5-fc-jE1">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUQ-xv-9sH">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="98" id="hsw-lj-H1U">
                                     <variation key="widthClass=compact" constant="140"/>
@@ -236,12 +243,14 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHa-2E-N69">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OL-e6-e9U">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="A4z-Qs-Usm">
                                     <variation key="widthClass=compact" constant="170"/>
@@ -266,11 +275,13 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="填写邀请码后，双方即可获得200农人币。农人币可在积分商城中兑换超值礼品。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdS-TM-Ilj">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <animations/>
                     <constraints>
                         <constraint firstItem="hqe-ka-UVj" firstAttribute="leading" secondItem="gm5-Mf-tbD" secondAttribute="leading" constant="31" id="4Wz-sp-mr1">
                             <variation key="widthClass=compact" constant="0.0"/>
@@ -406,6 +417,7 @@
                     </variation>
                 </scrollView>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="gm5-Mf-tbD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="A89-uk-rHU">

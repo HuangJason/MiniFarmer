@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6BE1601C03F4E400D69A2D /* SeachView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE15F1C03F4E400D69A2D /* SeachView.m */; settings = {ASSET_TAGS = (); }; };
+		1B6BE1621C03F53900D69A2D /* SeachView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B6BE1611C03F53900D69A2D /* SeachView.xib */; settings = {ASSET_TAGS = (); }; };
+		1B6BE1651C04304B00D69A2D /* UIView+UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE1641C04304B00D69A2D /* UIView+UIViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1B6BE1711C04393A00D69A2D /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE1701C04393A00D69A2D /* MessageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1B6BE1741C04467F00D69A2D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE1731C04467F00D69A2D /* SearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1B6BE1771C04580500D69A2D /* SortView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE1761C04580500D69A2D /* SortView.m */; settings = {ASSET_TAGS = (); }; };
+		1B6BE1791C04582200D69A2D /* SortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B6BE1781C04582200D69A2D /* SortView.xib */; settings = {ASSET_TAGS = (); }; };
 		31399E7A1BF56E470052A4EB /* ImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E791BF56E470052A4EB /* ImagesView.m */; settings = {ASSET_TAGS = (); }; };
 		31399E811BF63D210052A4EB /* ZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E801BF63D210052A4EB /* ZoomScrollView.m */; settings = {ASSET_TAGS = (); }; };
 		31399E841BF63F2A0052A4EB /* AskScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E831BF63F2A0052A4EB /* AskScrollView.m */; settings = {ASSET_TAGS = (); }; };
@@ -202,6 +209,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B6BE15E1C03F4E400D69A2D /* SeachView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeachView.h; sourceTree = "<group>"; };
+		1B6BE15F1C03F4E400D69A2D /* SeachView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeachView.m; sourceTree = "<group>"; };
+		1B6BE1611C03F53900D69A2D /* SeachView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeachView.xib; sourceTree = "<group>"; };
+		1B6BE1631C04304B00D69A2D /* UIView+UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewController.h"; sourceTree = "<group>"; };
+		1B6BE1641C04304B00D69A2D /* UIView+UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIViewController.m"; sourceTree = "<group>"; };
+		1B6BE16F1C04393A00D69A2D /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		1B6BE1701C04393A00D69A2D /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		1B6BE1721C04467F00D69A2D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		1B6BE1731C04467F00D69A2D /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		1B6BE1751C04580500D69A2D /* SortView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortView.h; sourceTree = "<group>"; };
+		1B6BE1761C04580500D69A2D /* SortView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortView.m; sourceTree = "<group>"; };
+		1B6BE1781C04582200D69A2D /* SortView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SortView.xib; sourceTree = "<group>"; };
 		31399E781BF56E470052A4EB /* ImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesView.h; sourceTree = "<group>"; };
 		31399E791BF56E470052A4EB /* ImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesView.m; sourceTree = "<group>"; };
 		31399E7F1BF63D210052A4EB /* ZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomScrollView.h; sourceTree = "<group>"; };
@@ -589,6 +608,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B6BE15D1C03F49C00D69A2D /* SeachView */ = {
+			isa = PBXGroup;
+			children = (
+				1B6BE16B1C04325B00D69A2D /* Viewtronller */,
+				1B6BE1681C04320A00D69A2D /* View */,
+				1B6BE1661C0431E200D69A2D /* Model */,
+			);
+			name = SeachView;
+			sourceTree = "<group>";
+		};
+		1B6BE1661C0431E200D69A2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1B6BE1681C04320A00D69A2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B6BE15E1C03F4E400D69A2D /* SeachView.h */,
+				1B6BE15F1C03F4E400D69A2D /* SeachView.m */,
+				1B6BE1611C03F53900D69A2D /* SeachView.xib */,
+				1B6BE1751C04580500D69A2D /* SortView.h */,
+				1B6BE1761C04580500D69A2D /* SortView.m */,
+				1B6BE1781C04582200D69A2D /* SortView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1B6BE16B1C04325B00D69A2D /* Viewtronller */ = {
+			isa = PBXGroup;
+			children = (
+				1B6BE16F1C04393A00D69A2D /* MessageViewController.h */,
+				1B6BE1701C04393A00D69A2D /* MessageViewController.m */,
+				1B6BE1721C04467F00D69A2D /* SearchViewController.h */,
+				1B6BE1731C04467F00D69A2D /* SearchViewController.m */,
+			);
+			name = Viewtronller;
+			sourceTree = "<group>";
+		};
 		31399E851BF73D210052A4EB /* MineDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -929,6 +989,7 @@
 				FCC6266F1BCA7A0E00943F99 /* HomeViewController.m */,
 				FCCA17881BEF116400BAE15C /* HomeMenuButton.h */,
 				FCCA17891BEF116400BAE15C /* HomeMenuButton.m */,
+				1B6BE15D1C03F49C00D69A2D /* SeachView */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1407,6 +1468,8 @@
 				FCCA8FA81BDD255E00B1CCF4 /* Category */,
 				FCCA8FAB1BDD255E00B1CCF4 /* SimpleImageTitleButton.h */,
 				FCCA8FAC1BDD255E00B1CCF4 /* SimpleImageTitleButton.m */,
+				1B6BE1631C04304B00D69A2D /* UIView+UIViewController.h */,
+				1B6BE1641C04304B00D69A2D /* UIView+UIViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1549,9 +1612,11 @@
 				3172EC451BFD641300F7EF6D /* MineReponseCell.xib in Resources */,
 				31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */,
 				FCC884C11BC3EBB900A1200B /* Assets.xcassets in Resources */,
+				1B6BE1621C03F53900D69A2D /* SeachView.xib in Resources */,
 				FCC752B71BC4E01500DE4B27 /* MJRefresh.bundle in Resources */,
 				31EC67A31BF0E4A700B8E1BC /* MWPhotoBrowser.bundle in Resources */,
 				31399E8D1BF73DA10052A4EB /* InvitedCodeViewController.xib in Resources */,
+				1B6BE1791C04582200D69A2D /* SortView.xib in Resources */,
 				31FDE38A1BFA204200AA199F /* SettingAboutView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1595,6 +1660,7 @@
 				FCC74FF61BD27DAF008446ED /* QuestionInfo.m in Sources */,
 				31FDE3851BFA1FA900AA199F /* SettingQuitLoginCell.m in Sources */,
 				FC940B741BFDC84E0086A4D8 /* QuestionAnsModel.m in Sources */,
+				1B6BE1651C04304B00D69A2D /* UIView+UIViewController.m in Sources */,
 				FCC7529F1BC4E01500DE4B27 /* MASCompositeConstraint.m in Sources */,
 				FCC752C21BC4E01500DE4B27 /* SDWebImageDownloaderOperation.m in Sources */,
 				FCC752CB1BC4E01500DE4B27 /* UIView+WebCacheOperation.m in Sources */,
@@ -1610,6 +1676,8 @@
 				FCC7528E1BC4E01500DE4B27 /* AFNetworkReachabilityManager.m in Sources */,
 				31EC678D1BF0E4A700B8E1BC /* MWCaptionView.m in Sources */,
 				31EC66411BECF43700B8E1BC /* JudgeTextIsRight.m in Sources */,
+				1B6BE1711C04393A00D69A2D /* MessageViewController.m in Sources */,
+				1B6BE1601C03F4E400D69A2D /* SeachView.m in Sources */,
 				31FDE3941BFA346C00AA199F /* RecomentViewController.m in Sources */,
 				31EC66341BECEBE100B8E1BC /* YHSMSCodeButton.m in Sources */,
 				318A87D41C005057008456C1 /* MyQuestionViewController.m in Sources */,
@@ -1638,6 +1706,7 @@
 				31FDE3821BFA1F9100AA199F /* SettinSpaceCell.m in Sources */,
 				31FDE38E1BFA250200AA199F /* SettingModel.m in Sources */,
 				FCC752C01BC4E01500DE4B27 /* SDWebImageDecoder.m in Sources */,
+				1B6BE1771C04580500D69A2D /* SortView.m in Sources */,
 				31EC66591BF04ABB00B8E1BC /* GCPlaceholderTextView.m in Sources */,
 				31EC66321BECEBE100B8E1BC /* LoginViewController.m in Sources */,
 				FCC630BB1BF4D70000A2B08C /* QuestionDetailViewController.m in Sources */,
@@ -1702,6 +1771,7 @@
 				FCCB90611BE1B738005F1A83 /* AnswersButton.m in Sources */,
 				FCCA8FAD1BDD255E00B1CCF4 /* BaseViewController.m in Sources */,
 				31EC67921BF0E4A700B8E1BC /* MWTapDetectingImageView.m in Sources */,
+				1B6BE1741C04467F00D69A2D /* SearchViewController.m in Sources */,
 				31EC67B01BF0E66500B8E1BC /* XDPhotoAssetGroupViewController.m in Sources */,
 				31EC679F1BF0E4A700B8E1BC /* PSTGridLayoutInfo.m in Sources */,
 				FCC752A81BC4E01500DE4B27 /* MBProgressHUD.m in Sources */,

@@ -7,7 +7,32 @@
 //
 
 #import "MessageViewController.h"
+#import "BaseViewController+Navigation.h"
 
 @implementation MessageViewController
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    [self setBarLeftDefualtButtonWithTarget:self action:@selector(backBtnPressed)];
+    [self initTitleLabel:@"我的消息"];
+    
+
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self setNavigationBarIsHidden:NO];
+    //[self initNavigationbgView:[UIColor grayColor]];
+    
+}
+- (void)backBtnPressed{
+  
+    [self.navigationController popToRootViewControllerAnimated:YES];
+
+}
+
 
 @end

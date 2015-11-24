@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UserMenuItem : NSObject
+
 @property (nonatomic, strong)NSString *title;
 @property (nonatomic, strong)NSString *subTitle;
 @end

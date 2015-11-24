@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/*用于获得当前视图的控制器*/
 @interface UIView (UIViewController)
+
+- (UIViewController *)ViewController;
 
 @end

@@ -82,6 +82,8 @@
         _mineScrollview.showsVerticalScrollIndicator = NO;
         _mineScrollview.delegate = self;
         _mineScrollview.pagingEnabled = YES;
+        
+        
     }
     return _mineScrollview;
 }

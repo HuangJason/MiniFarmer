@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SeachView : UIView
+@interface SeachView : UIView<UITextFieldDelegate>{
+
+
+    __weak IBOutlet UIView *_textView;
+    
+
+    __weak IBOutlet UIButton *_message;
+}
+
+@property(nonatomic,copy)NSString *title;
+@property(nonatomic,copy)NSString *imageNmae;
+@property(nonatomic,assign)BOOL isSearch;
+
 
 @end
