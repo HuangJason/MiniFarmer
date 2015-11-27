@@ -30,6 +30,7 @@
 
 #pragma mark- public
 - (void)refreshWithImageUrl:(NSString *)url
+
 {
     [_picView sd_setImageWithURL:[NSURL URLWithString:[APPHelper safeString:url]] placeholderImage:nil];
 }

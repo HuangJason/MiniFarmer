@@ -14,7 +14,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.edgesForExtendedLayout = UIRectEdgeAll;
     
     [self setBarLeftDefualtButtonWithTarget:self action:@selector(backBtnPressed)];
     [self initTitleLabel:@"我的消息"];
@@ -24,7 +24,11 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    
     [self setNavigationBarIsHidden:NO];
+
+   // tabview.hidden = YES;
+    
     //[self initNavigationbgView:[UIColor grayColor]];
     
 }
@@ -33,6 +37,7 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 
 }
+
 
 
 @end

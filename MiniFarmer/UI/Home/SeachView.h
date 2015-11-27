@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+
+
 @interface SeachView : UIView<UITextFieldDelegate>{
 
 
@@ -20,6 +24,9 @@
 @property(nonatomic,copy)NSString *title;
 @property(nonatomic,copy)NSString *imageNmae;
 @property(nonatomic,assign)BOOL isSearch;
+
+
+
 
 
 @end

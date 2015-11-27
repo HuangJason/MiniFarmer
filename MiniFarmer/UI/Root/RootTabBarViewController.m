@@ -20,7 +20,7 @@
 //    HomeViewController *homeVC;
 //    AskViewController *askVC;
 //    MineViewController *mineVC;
-    UIView *_tabBarView;
+    
     UIButton *_previousBtn;
     UIButton *_homeBtn;
 }
@@ -32,6 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self addSubviews];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificatopnAction:) name:@"homeViewAppear" object:nil];
+    _tabBarView.hidden = NO;
     
     //默认选中第一个
     _homeBtn.enabled = NO;
@@ -46,11 +48,16 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    _tabBarView.hidden = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+}
+- (void)notificatopnAction:(NSNotificationCenter *)notification{
+    _tabBarView.hidden =NO;
+
 }
 
 #pragma mark- private
@@ -70,6 +77,7 @@
     self.tabBar.hidden = YES;
     
     _tabBarView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds)-kBottomTabBarHeight, CGRectGetWidth(self.view.bounds), kBottomTabBarHeight)];
+    _tabBarView.tag = 201;
     [self.view addSubview:_tabBarView];
     _tabBarView.backgroundColor = [UIColor whiteColor];
     
@@ -132,6 +140,7 @@
 
 - (void)presentLogin
 {
+    
     LoginViewController *vc = [[LoginViewController alloc] init];
     vc.loginBackBlock = ^(){
         [self changeIndexToSelected:0];
@@ -145,8 +154,16 @@
     UIButton *btn = [_tabBarView.subviews objectAtIndex:selectedIndex];
     [self changeViewController:btn];
     
+    
 }
+- (void)setHidesBottomBarWhenPushed:(BOOL)hidesBottomBarWhenPushed{
+    [super setHidesBottomBarWhenPushed:hidesBottomBarWhenPushed];
+    
+    CGAffineTransform transform = _tabBarView.transform;
+    
+    _tabBarView.transform = CGAffineTransformTranslate(transform, 0 ,  kBottomTabBarHeight+10);
 
+}
 
 
 

@@ -147,6 +147,9 @@
 - (void)segmentView:(YHSegmentView *)segmentView didSelectedAtIndex:(NSInteger)index
 {
     [self.mineScrollview setContentOffset:CGPointMake(CGRectGetWidth(self.mineScrollview.frame) * index, 0)];
+    
+    
+    
 
 }
 

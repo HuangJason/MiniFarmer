@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SortView : UIView
+@interface SortView : UIView{
+
+
+    __weak IBOutlet UILabel *_title;
+    
+    __weak IBOutlet UILabel *_history;
+    
+    
+    __weak IBOutlet UIView *_dividine;
+
+
+}
+@property(nonatomic,strong)NSArray *data;
+@property(nonatomic,assign)NSInteger currentIndex;
 
 @end

@@ -13,15 +13,19 @@
 #import "UITextField+CustomTextField.h"
 
 
-@implementation SeachView
+@implementation SeachView{
+    UITextField  *_textfiled;
+
+}
 - (void)awakeFromNib{
+    _textView.layer.cornerRadius = 4;
+    _textView.backgroundColor = [UIColor colorWithHexString:@"#eeeeee"];
     
-    _textView.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
-    
-    UITextField  *textfiled = (UITextField *)[_textView viewWithTag:101];
-    textfiled.delegate = self;
-    [textfiled setTextColor:[UIColor colorWithHexString:@"#a3a3a3"]];
-    textfiled.font = kTextFont(14);
+    _textfiled = (UITextField *)[_textView viewWithTag:201];
+    _textfiled.delegate = self;
+    [_textfiled setTextColor:[UIColor colorWithHexString:@"#a3a3a3"]];
+    _textfiled.font = kTextFont(14);
+    _textfiled.returnKeyType = UIReturnKeySearch;
 
     _message.titleLabel.font = kTextFont18;
     [_message setTitleColor:[UIColor colorWithHexString:@"#a3a3a3"] forState:UIControlStateNormal];
@@ -43,6 +47,7 @@
     if (_imageNmae.length != 0) {
         [_message setImage:[UIImage imageNamed:_imageNmae] forState:UIControlStateNormal];
         [_message addTarget:self action:@selector(imageAction:) forControlEvents:UIControlEventTouchUpInside];
+        //[_message setImage:[UIImage imageNamed:@"home_btn_message_pinside"] forState:UIControlStateHighlighted];
     }
     
 }
@@ -53,14 +58,13 @@
 - (void)imageAction:(UIButton *)button{
     
     MessageViewController *messageVC = [[MessageViewController alloc] init];
-    
-    
-
     messageVC.view.backgroundColor = [UIColor whiteColor];
    
     self.ViewController.tabBarController.hidesBottomBarWhenPushed = YES;
     
     [self.ViewController.navigationController pushViewController:messageVC animated:YES];
+    
+    
 
 }
 #pragma mark ----UITextfiled的协议方法
@@ -71,7 +75,7 @@
         SearchViewController *searchVC = [[SearchViewController alloc] init];
         
         [self.ViewController presentViewController:searchVC animated:YES completion:nil];
-        
+        self.ViewController.hidesBottomBarWhenPushed = YES;
         
         return YES;
     }
@@ -81,6 +85,13 @@
     return YES;
 
 }
+//监听发送按钮
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+   
+    return YES;
+}
+
+
 
 
 @end
