@@ -165,19 +165,34 @@
                 success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                 failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
+    
     NSMutableDictionary *dicPar = [[NSMutableDictionary alloc] initWithCapacity:1];
+    
     if (parameters) {
         [dicPar addEntriesFromDictionary:parameters];
     }
     [dicPar setObject:kCommApiKey forKey:@"apikey"];
+    
+    //1.拼接URL
     NSString *totalUrl = [NSString stringWithFormat:@"%@%@",kCommServerUrl,url];
+    
+    NSLog(@"%@",totalUrl);
+    
+    
+    //2.发送请求
     [self requestWithPath:totalUrl method:method parameters:dicPar prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
         DLOG(@"requestWithMethod return response = %@",responseObject);
         success(task,responseObject);
+     
+    
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
         DLOG(@"requestWithMethod return error = %@",error);
         failure(task,error);
+        
     }];
+    
 }
 
 

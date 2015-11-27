@@ -159,7 +159,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DLOG(@"secelected section is row is %d %d",indexPath.section,indexPath.row);
+   // DLOG(@"secelected section is row is %d %d",indexPath.section,indexPath.row);
     switch (indexPath.section)
     {
         case 0:
@@ -173,6 +173,7 @@
                 MineRecipeViewController *myVC = [[MineRecipeViewController alloc] init];
                 [self.navigationController pushViewController:myVC animated:YES];
             }
+
         }
             break;
         case 2:

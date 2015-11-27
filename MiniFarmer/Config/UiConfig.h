@@ -29,3 +29,6 @@
 #pragma mark - 系统
 #define kNavigationBarHeigth 44
 #define kStatusBarHeigth 20
+
+#pragma mark--本地
+#define KHistory   @"history"

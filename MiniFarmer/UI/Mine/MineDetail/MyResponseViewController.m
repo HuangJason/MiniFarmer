@@ -85,6 +85,8 @@
         _mineScrollview.showsVerticalScrollIndicator = NO;
         _mineScrollview.delegate = self;
         _mineScrollview.pagingEnabled = YES;
+        
+        
     }
     return _mineScrollview;
 }
@@ -146,6 +148,7 @@
 {
     [self.mineScrollview setContentOffset:CGPointMake(CGRectGetWidth(self.mineScrollview.frame) * index, 0)];
     [[self currentVC] reloadData];
+
 
 }
 

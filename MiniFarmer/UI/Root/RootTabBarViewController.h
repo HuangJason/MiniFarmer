@@ -11,5 +11,6 @@
 @interface RootTabBarViewController : UITabBarController<UITabBarControllerDelegate>
 
 - (void)changeIndexToSelected:(NSInteger)selectedIndex;
+@property(nonatomic,retain)UIView *tabBarView;
 
 @end

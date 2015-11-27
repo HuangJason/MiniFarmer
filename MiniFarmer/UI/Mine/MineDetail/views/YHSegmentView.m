@@ -89,7 +89,6 @@
         [self.bottomLineView setFrame:CGRectMake(left, top, width, height)];
         
         
-        
         //设置按钮的frame
         CGFloat buttonLeft = self.itemToLeft;
         CGFloat buttonHeight = self.height - height;

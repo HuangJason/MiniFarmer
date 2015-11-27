@@ -14,6 +14,8 @@
 #import "HomeMenuButton.h"
 #import "QuestionDetailViewController.h"
 #import "AskSpecialistViewController.h"
+#import "SeachView.h"
+#import "StudyViewController.h"
 
 #define kPageSize   @"10"   //一次请求数据数
 
@@ -22,6 +24,7 @@
     NSMutableArray *_sourceArr;
     NSUInteger      _totalQuestionCount;
     UIView          *_headView;
+    SeachView        *_seachView;
 }
 
 @property (nonatomic , strong) UITableView *homeTableView;
@@ -37,6 +40,7 @@
     [self commonInit];
     [self addSubviews];
     
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +51,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self requestHomeDataWithId:@"0"];
+    //通知告诉视图重新显示了
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"homeViewAppear" object:nil];
 }
+
 
 #pragma mark- private
 - (void)commonInit
@@ -59,11 +66,20 @@
 - (void)addSubviews
 {
     [self headViewInit];
-    _homeTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _homeTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight, kScreenSizeWidth, kScreenSizeHeight-kStatusBarHeight) style:UITableViewStylePlain];
     _homeTableView.dataSource = self;
     _homeTableView.delegate = self;
     _homeTableView.tableHeaderView = _headView;
     [self.view addSubview:_homeTableView];
+    
+    //搜索栏
+    _seachView = [[NSBundle mainBundle]loadNibNamed:@"SeachView" owner:self options:nil].lastObject;
+  //  _seachView.backgroundColor = [UIColor redColor];
+    _seachView.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+    _seachView.frame = CGRectMake(0,kStatusBarHeight,kScreenSizeWidth , kNavigationBarHeight);
+    _seachView.imageNmae = @"home_btn_message_nm";
+    _seachView.isSearch = NO;
+    [self.view addSubview:_seachView];
     
     MJRefreshNormalHeader *mjHeader= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         DLOG(@"home refresh!");
@@ -72,6 +88,8 @@
     _homeTableView.header = mjHeader;
     mjHeader.lastUpdatedTimeLabel.hidden = YES;
     //[mjHeader setTitle:@"" forState:MJRefreshStateIdle];
+    
+    
     
     _homeTableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         if (_sourceArr.count == 0) {
@@ -87,7 +105,9 @@
 
 - (void)headViewInit
 {
-    _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 270)];
+    
+    
+    _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 44, CGRectGetWidth(self.view.bounds), 270)];
     //_headView.backgroundColor = [UIColor yellowColor];
     CGFloat bannerHeight = 170;
     UIImageView *hImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_headView.bounds), bannerHeight)];
@@ -117,6 +137,8 @@
         make.left.equalTo(buyBtn.mas_right).offset(menuSpadding);
         make.size.mas_equalTo(buyBtn);
     }];
+    [studyBtn addTarget:self action:@selector(studyAction:) forControlEvents:UIControlEventTouchUpInside];
+    
     
     HomeMenuButton *askBtn = [self menuButtonWithTitle:@"问专家" normalImgName:@"home_btn_ask_nm"];
     [askBtn addTarget:self action:@selector(tapAskBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -242,6 +264,27 @@
     
     return cell;
 }
+#pragma mark ----菜单按钮绑定的事件
+- (void)studyAction:(UIButton *)button{
+    
+    /*
+    MessageViewController *messageVC = [[MessageViewController alloc] init];
+    messageVC.view.backgroundColor = [UIColor whiteColor];
+    
+    self.ViewController.tabBarController.hidesBottomBarWhenPushed = YES;
+    
+    [self.ViewController.navigationController pushViewController:messageVC animated:YES];
+     */
+    StudyViewController *studyVC = [[StudyViewController alloc] init];
+    studyVC.view.backgroundColor = [UIColor whiteColor];
+    //studyVC.data =
+    self.tabBarController.hidesBottomBarWhenPushed = YES;
+
+    [self.navigationController pushViewController:studyVC animated:YES];
+    
+
+}
+
 
 
 #pragma mark - clickevent
