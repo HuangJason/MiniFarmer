@@ -34,21 +34,16 @@
 		31399E8C1BF73DA10052A4EB /* InvitedCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E8A1BF73DA10052A4EB /* InvitedCodeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31399E8D1BF73DA10052A4EB /* InvitedCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31399E8B1BF73DA10052A4EB /* InvitedCodeViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		31399E901BF73DF00052A4EB /* MineBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E8F1BF73DF00052A4EB /* MineBaseViewController.m */; settings = {ASSET_TAGS = (); }; };
-		313E98031C01F81F00DC7B4F /* MineRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 313E98021C01F81F00DC7B4F /* MineRecipeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		313E98061C01F99C00DC7B4F /* MyRecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 313E98051C01F99C00DC7B4F /* MyRecipeModel.m */; settings = {ASSET_TAGS = (); }; };
-		313E98091C0211C400DC7B4F /* NSString+CustomAttributeString.m in Sources */ = {isa = PBXBuildFile; fileRef = 313E98081C0211C400DC7B4F /* NSString+CustomAttributeString.m */; settings = {ASSET_TAGS = (); }; };
-		313E980F1C044E4B00DC7B4F /* MyAskQuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 313E980E1C044E4B00DC7B4F /* MyAskQuestionModel.m */; settings = {ASSET_TAGS = (); }; };
-		313E98131C058B6100DC7B4F /* AskSpecialistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 313E98121C058B6100DC7B4F /* AskSpecialistViewController.m */; settings = {ASSET_TAGS = (); }; };
-		313E98161C05939700DC7B4F /* UIButton+Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 313E98151C05939700DC7B4F /* UIButton+Font.m */; settings = {ASSET_TAGS = (); }; };
-		313E981A1C05955300DC7B4F /* AskSpecialistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 313E98191C05955300DC7B4F /* AskSpecialistView.m */; settings = {ASSET_TAGS = (); }; };
-		313E981C1C05957500DC7B4F /* AskSpecialistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313E981B1C05957500DC7B4F /* AskSpecialistView.xib */; settings = {ASSET_TAGS = (); }; };
-		3172EC401BFD62D400F7EF6D /* MineAskQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC3F1BFD62D400F7EF6D /* MineAskQuestionCell.m */; settings = {ASSET_TAGS = (); }; };
-		3172EC431BFD62E700F7EF6D /* MineAskQuestionImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC421BFD62E700F7EF6D /* MineAskQuestionImagesCell.m */; settings = {ASSET_TAGS = (); }; };
-		3172EC451BFD641300F7EF6D /* MineAskQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3172EC441BFD641300F7EF6D /* MineAskQuestionCell.xib */; settings = {ASSET_TAGS = (); }; };
+		313E98031C01F81F00DC7B4F /* (null) in Sources */ = {isa = PBXBuildFile; settings = {ASSET_TAGS = (); }; };
+		313E98061C01F99C00DC7B4F /* (null) in Sources */ = {isa = PBXBuildFile; settings = {ASSET_TAGS = (); }; };
+		313E98091C0211C400DC7B4F /* (null) in Sources */ = {isa = PBXBuildFile; settings = {ASSET_TAGS = (); }; };
+		313E980F1C044E4B00DC7B4F /* (null) in Sources */ = {isa = PBXBuildFile; settings = {ASSET_TAGS = (); }; };
+		313E98131C058B6100DC7B4F /* (null) in Sources */ = {isa = PBXBuildFile; settings = {ASSET_TAGS = (); }; };
+		313E98161C05939700DC7B4F /* (null) in Sources */ = {isa = PBXBuildFile; settings = {ASSET_TAGS = (); }; };
+		313E981A1C05955300DC7B4F /* (null) in Sources */ = {isa = PBXBuildFile; settings = {ASSET_TAGS = (); }; };
+		313E981C1C05957500DC7B4F /* (null) in Resources */ = {isa = PBXBuildFile; settings = {ASSET_TAGS = (); }; };
 		3172EC4A1BFD93C300F7EF6D /* MyReponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC491BFD93C300F7EF6D /* MyReponseModel.m */; settings = {ASSET_TAGS = (); }; };
-		3172EC4D1BFDC15400F7EF6D /* MineAskQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC4C1BFDC15400F7EF6D /* MineAskQuestionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3172EC501BFDC1F700F7EF6D /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172EC4F1BFDC1F700F7EF6D /* CommonViewController.m */; settings = {ASSET_TAGS = (); }; };
-		318A87D41C005057008456C1 /* MineReponseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87D31C005057008456C1 /* MineReponseTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		318A87D71C00509A008456C1 /* MyQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87D61C00509A008456C1 /* MyQuestionCell.m */; settings = {ASSET_TAGS = (); }; };
 		318A87DE1C00A0F1008456C1 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87D91C00A0F1008456C1 /* Colours.m */; settings = {ASSET_TAGS = (); }; };
 		318A87DF1C00A0F1008456C1 /* UIView+FrameCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87DB1C00A0F1008456C1 /* UIView+FrameCategory.m */; settings = {ASSET_TAGS = (); }; };
@@ -56,6 +51,19 @@
 		318A87E61C01E8C6008456C1 /* MyRecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87E51C01E8C6008456C1 /* MyRecipeCell.m */; settings = {ASSET_TAGS = (); }; };
 		318A87E91C01E982008456C1 /* MyRecipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87E81C01E982008456C1 /* MyRecipeView.m */; settings = {ASSET_TAGS = (); }; };
 		318A87EB1C01E99B008456C1 /* MyRecipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 318A87EA1C01E99B008456C1 /* MyRecipeView.xib */; settings = {ASSET_TAGS = (); }; };
+		31A0DBC21C0899780017D1F0 /* NSString+CustomAttributeString.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBBF1C0899780017D1F0 /* NSString+CustomAttributeString.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBC31C0899780017D1F0 /* UIButton+Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBC11C0899780017D1F0 /* UIButton+Font.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBC91C0899A20017D1F0 /* MineAskQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBC51C0899A20017D1F0 /* MineAskQuestionCell.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBCA1C0899A20017D1F0 /* MineAskQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0DBC61C0899A20017D1F0 /* MineAskQuestionCell.xib */; settings = {ASSET_TAGS = (); }; };
+		31A0DBCB1C0899A20017D1F0 /* MineAskQuestionImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBC81C0899A20017D1F0 /* MineAskQuestionImagesCell.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBD01C089EDF0017D1F0 /* MyAskQuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBCD1C089EDF0017D1F0 /* MyAskQuestionModel.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBD11C089EDF0017D1F0 /* MyRecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBCF1C089EDF0017D1F0 /* MyRecipeModel.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBD81C089F0F0017D1F0 /* MineAskQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBD31C089F0F0017D1F0 /* MineAskQuestionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBD91C089F0F0017D1F0 /* MineRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBD51C089F0F0017D1F0 /* MineRecipeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBDA1C089F0F0017D1F0 /* MineReponseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBD71C089F0F0017D1F0 /* MineReponseTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBDE1C089F8C0017D1F0 /* AskSpecialistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBDC1C089F8C0017D1F0 /* AskSpecialistView.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBDF1C089F8C0017D1F0 /* AskSpecialistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0DBDD1C089F8C0017D1F0 /* AskSpecialistView.xib */; settings = {ASSET_TAGS = (); }; };
+		31A0DBE21C089F980017D1F0 /* AskSpecialistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBE11C089F980017D1F0 /* AskSpecialistViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC21BF3A5320081F64F /* MTAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC11BF3A5320081F64F /* MTAssetsPickerController.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC91BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC81BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDCC1BF3A9550081F64F /* MTPickerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDCB1BF3A9550081F64F /* MTPickerInfo.m */; settings = {ASSET_TAGS = (); }; };
@@ -283,19 +291,10 @@
 		31399E8B1BF73DA10052A4EB /* InvitedCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvitedCodeViewController.xib; sourceTree = "<group>"; };
 		31399E8E1BF73DF00052A4EB /* MineBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineBaseViewController.h; sourceTree = "<group>"; };
 		31399E8F1BF73DF00052A4EB /* MineBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineBaseViewController.m; sourceTree = "<group>"; };
-		3172EC3E1BFD62D400F7EF6D /* MineReponseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineReponseCell.h; sourceTree = "<group>"; };
-		3172EC3F1BFD62D400F7EF6D /* MineReponseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineReponseCell.m; sourceTree = "<group>"; };
-		3172EC411BFD62E700F7EF6D /* MineResponseImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineResponseImagesCell.h; sourceTree = "<group>"; };
-		3172EC421BFD62E700F7EF6D /* MineResponseImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineResponseImagesCell.m; sourceTree = "<group>"; };
-		3172EC441BFD641300F7EF6D /* MineReponseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineReponseCell.xib; sourceTree = "<group>"; };
 		3172EC481BFD93C300F7EF6D /* MyReponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyReponseModel.h; sourceTree = "<group>"; };
 		3172EC491BFD93C300F7EF6D /* MyReponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyReponseModel.m; sourceTree = "<group>"; };
-		3172EC4B1BFDC15400F7EF6D /* MineResponseTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineResponseTableController.h; sourceTree = "<group>"; };
-		3172EC4C1BFDC15400F7EF6D /* MineResponseTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineResponseTableController.m; sourceTree = "<group>"; };
 		3172EC4E1BFDC1F700F7EF6D /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
 		3172EC4F1BFDC1F700F7EF6D /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
-		318A87D21C005057008456C1 /* MyQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionViewController.h; sourceTree = "<group>"; };
-		318A87D31C005057008456C1 /* MyQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionViewController.m; sourceTree = "<group>"; };
 		318A87D51C00509A008456C1 /* MyQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionCell.h; sourceTree = "<group>"; };
 		318A87D61C00509A008456C1 /* MyQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionCell.m; sourceTree = "<group>"; };
 		318A87D81C00A0F1008456C1 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
@@ -309,6 +308,30 @@
 		318A87E71C01E982008456C1 /* MyRecipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecipeView.h; sourceTree = "<group>"; };
 		318A87E81C01E982008456C1 /* MyRecipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRecipeView.m; sourceTree = "<group>"; };
 		318A87EA1C01E99B008456C1 /* MyRecipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyRecipeView.xib; sourceTree = "<group>"; };
+		31A0DBBE1C0899780017D1F0 /* NSString+CustomAttributeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CustomAttributeString.h"; sourceTree = "<group>"; };
+		31A0DBBF1C0899780017D1F0 /* NSString+CustomAttributeString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CustomAttributeString.m"; sourceTree = "<group>"; };
+		31A0DBC01C0899780017D1F0 /* UIButton+Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Font.h"; sourceTree = "<group>"; };
+		31A0DBC11C0899780017D1F0 /* UIButton+Font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Font.m"; sourceTree = "<group>"; };
+		31A0DBC41C0899A20017D1F0 /* MineAskQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineAskQuestionCell.h; sourceTree = "<group>"; };
+		31A0DBC51C0899A20017D1F0 /* MineAskQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineAskQuestionCell.m; sourceTree = "<group>"; };
+		31A0DBC61C0899A20017D1F0 /* MineAskQuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineAskQuestionCell.xib; sourceTree = "<group>"; };
+		31A0DBC71C0899A20017D1F0 /* MineAskQuestionImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineAskQuestionImagesCell.h; sourceTree = "<group>"; };
+		31A0DBC81C0899A20017D1F0 /* MineAskQuestionImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineAskQuestionImagesCell.m; sourceTree = "<group>"; };
+		31A0DBCC1C089EDF0017D1F0 /* MyAskQuestionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAskQuestionModel.h; sourceTree = "<group>"; };
+		31A0DBCD1C089EDF0017D1F0 /* MyAskQuestionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAskQuestionModel.m; sourceTree = "<group>"; };
+		31A0DBCE1C089EDF0017D1F0 /* MyRecipeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecipeModel.h; sourceTree = "<group>"; };
+		31A0DBCF1C089EDF0017D1F0 /* MyRecipeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRecipeModel.m; sourceTree = "<group>"; };
+		31A0DBD21C089F0F0017D1F0 /* MineAskQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineAskQuestionViewController.h; sourceTree = "<group>"; };
+		31A0DBD31C089F0F0017D1F0 /* MineAskQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineAskQuestionViewController.m; sourceTree = "<group>"; };
+		31A0DBD41C089F0F0017D1F0 /* MineRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineRecipeViewController.h; sourceTree = "<group>"; };
+		31A0DBD51C089F0F0017D1F0 /* MineRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineRecipeViewController.m; sourceTree = "<group>"; };
+		31A0DBD61C089F0F0017D1F0 /* MineReponseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineReponseTableViewController.h; sourceTree = "<group>"; };
+		31A0DBD71C089F0F0017D1F0 /* MineReponseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineReponseTableViewController.m; sourceTree = "<group>"; };
+		31A0DBDB1C089F8C0017D1F0 /* AskSpecialistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskSpecialistView.h; sourceTree = "<group>"; };
+		31A0DBDC1C089F8C0017D1F0 /* AskSpecialistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskSpecialistView.m; sourceTree = "<group>"; };
+		31A0DBDD1C089F8C0017D1F0 /* AskSpecialistView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskSpecialistView.xib; sourceTree = "<group>"; };
+		31A0DBE01C089F980017D1F0 /* AskSpecialistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AskSpecialistViewController.h; path = HomeDetail/AskSpecialistViewController.h; sourceTree = "<group>"; };
+		31A0DBE11C089F980017D1F0 /* AskSpecialistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AskSpecialistViewController.m; path = HomeDetail/AskSpecialistViewController.m; sourceTree = "<group>"; };
 		31D4FDC01BF3A5320081F64F /* MTAssetsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAssetsPickerController.h; sourceTree = "<group>"; };
 		31D4FDC11BF3A5320081F64F /* MTAssetsPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAssetsPickerController.m; sourceTree = "<group>"; };
 		31D4FDC71BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MTButtonCheckMarkAnimation.h"; sourceTree = "<group>"; };
@@ -779,6 +802,12 @@
 		31399E851BF73D210052A4EB /* MineDetail */ = {
 			isa = PBXGroup;
 			children = (
+				31A0DBD21C089F0F0017D1F0 /* MineAskQuestionViewController.h */,
+				31A0DBD31C089F0F0017D1F0 /* MineAskQuestionViewController.m */,
+				31A0DBD41C089F0F0017D1F0 /* MineRecipeViewController.h */,
+				31A0DBD51C089F0F0017D1F0 /* MineRecipeViewController.m */,
+				31A0DBD61C089F0F0017D1F0 /* MineReponseTableViewController.h */,
+				31A0DBD71C089F0F0017D1F0 /* MineReponseTableViewController.m */,
 				3172EC511BFDE1B900F7EF6D /* views */,
 				3172EC4E1BFDC1F700F7EF6D /* CommonViewController.h */,
 				3172EC4F1BFDC1F700F7EF6D /* CommonViewController.m */,
@@ -798,12 +827,6 @@
 				31FDE3971BFAB7EC00AA199F /* AboutViewController.xib */,
 				31FDE3EB1BFC10F600AA199F /* MyResponseViewController.h */,
 				31FDE3EC1BFC10F600AA199F /* MyResponseViewController.m */,
-				318A87D21C005057008456C1 /* MineReponseTableViewController.h */,
-				318A87D31C005057008456C1 /* MineReponseTableViewController.m */,
-				3172EC4B1BFDC15400F7EF6D /* MineAskQuestionViewController.h */,
-				3172EC4C1BFDC15400F7EF6D /* MineAskQuestionViewController.m */,
-				313E98011C01F81F00DC7B4F /* MineRecipeViewController.h */,
-				313E98021C01F81F00DC7B4F /* MineRecipeViewController.m */,
 			);
 			path = MineDetail;
 			sourceTree = "<group>";
@@ -812,8 +835,6 @@
 			isa = PBXGroup;
 			children = (
 				313E98171C05950700DC7B4F /* HomeDetailViews */,
-				313E98111C058B6100DC7B4F /* AskSpecialistViewController.h */,
-				313E98121C058B6100DC7B4F /* AskSpecialistViewController.m */,
 			);
 			path = HomeDetail;
 			sourceTree = "<group>";
@@ -821,9 +842,9 @@
 		313E98171C05950700DC7B4F /* HomeDetailViews */ = {
 			isa = PBXGroup;
 			children = (
-				313E98181C05955300DC7B4F /* AskSpecialistView.h */,
-				313E98191C05955300DC7B4F /* AskSpecialistView.m */,
-				313E981B1C05957500DC7B4F /* AskSpecialistView.xib */,
+				31A0DBDB1C089F8C0017D1F0 /* AskSpecialistView.h */,
+				31A0DBDC1C089F8C0017D1F0 /* AskSpecialistView.m */,
+				31A0DBDD1C089F8C0017D1F0 /* AskSpecialistView.xib */,
 			);
 			path = HomeDetailViews;
 			sourceTree = "<group>";
@@ -1048,6 +1069,11 @@
 		31FDE3791BFA1EEF00AA199F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				31A0DBC41C0899A20017D1F0 /* MineAskQuestionCell.h */,
+				31A0DBC51C0899A20017D1F0 /* MineAskQuestionCell.m */,
+				31A0DBC61C0899A20017D1F0 /* MineAskQuestionCell.xib */,
+				31A0DBC71C0899A20017D1F0 /* MineAskQuestionImagesCell.h */,
+				31A0DBC81C0899A20017D1F0 /* MineAskQuestionImagesCell.m */,
 				31FDE37A1BFA1F1C00AA199F /* MineBaseTableViewCell.h */,
 				31FDE37B1BFA1F1C00AA199F /* MineBaseTableViewCell.m */,
 				31FDE37D1BFA1F6B00AA199F /* SettingAbountCell.h */,
@@ -1059,11 +1085,6 @@
 				31FDE3811BFA1F9100AA199F /* SettinSpaceCell.m */,
 				31FDE3831BFA1FA900AA199F /* SettingQuitLoginCell.h */,
 				31FDE3841BFA1FA900AA199F /* SettingQuitLoginCell.m */,
-				3172EC3E1BFD62D400F7EF6D /* MineAskQuestionCell.h */,
-				3172EC3F1BFD62D400F7EF6D /* MineAskQuestionCell.m */,
-				3172EC441BFD641300F7EF6D /* MineAskQuestionCell.xib */,
-				3172EC411BFD62E700F7EF6D /* MineAskQuestionImagesCell.h */,
-				3172EC421BFD62E700F7EF6D /* MineAskQuestionImagesCell.m */,
 				318A87D51C00509A008456C1 /* MyQuestionCell.h */,
 				318A87D61C00509A008456C1 /* MyQuestionCell.m */,
 				318A87E41C01E8C6008456C1 /* MyRecipeCell.h */,
@@ -1078,14 +1099,14 @@
 		31FDE38B1BFA24EE00AA199F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				31A0DBCC1C089EDF0017D1F0 /* MyAskQuestionModel.h */,
+				31A0DBCD1C089EDF0017D1F0 /* MyAskQuestionModel.m */,
+				31A0DBCE1C089EDF0017D1F0 /* MyRecipeModel.h */,
+				31A0DBCF1C089EDF0017D1F0 /* MyRecipeModel.m */,
 				31FDE38C1BFA250200AA199F /* SettingModel.h */,
 				31FDE38D1BFA250200AA199F /* SettingModel.m */,
 				3172EC481BFD93C300F7EF6D /* MyReponseModel.h */,
 				3172EC491BFD93C300F7EF6D /* MyReponseModel.m */,
-				313E98041C01F99C00DC7B4F /* MyRecipeModel.h */,
-				313E98051C01F99C00DC7B4F /* MyRecipeModel.m */,
-				313E980D1C044E4B00DC7B4F /* MyAskQuestionModel.h */,
-				313E980E1C044E4B00DC7B4F /* MyAskQuestionModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1143,6 +1164,8 @@
 		FCC6266D1BCA7A0E00943F99 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				31A0DBE01C089F980017D1F0 /* AskSpecialistViewController.h */,
+				31A0DBE11C089F980017D1F0 /* AskSpecialistViewController.m */,
 				313E98101C058B2B00DC7B4F /* HomeDetail */,
 				FCC6266E1BCA7A0E00943F99 /* HomeViewController.h */,
 				FCC6266F1BCA7A0E00943F99 /* HomeViewController.m */,
@@ -1639,10 +1662,12 @@
 		FCCA8FA81BDD255E00B1CCF4 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				31A0DBBE1C0899780017D1F0 /* NSString+CustomAttributeString.h */,
+				31A0DBBF1C0899780017D1F0 /* NSString+CustomAttributeString.m */,
+				31A0DBC01C0899780017D1F0 /* UIButton+Font.h */,
+				31A0DBC11C0899780017D1F0 /* UIButton+Font.m */,
 				31DBC81E1BF77029007EDCD0 /* UILabel+CustomAttributeLabel.h */,
 				31DBC81F1BF77029007EDCD0 /* UILabel+CustomAttributeLabel.m */,
-				313E98071C0211C400DC7B4F /* NSString+CustomAttributeString.h */,
-				313E98081C0211C400DC7B4F /* NSString+CustomAttributeString.m */,
 				31EC66421BECF52200B8E1BC /* UIView+Toast.h */,
 				31EC66431BECF52200B8E1BC /* UIView+Toast.m */,
 				31EC66351BECEC6F00B8E1BC /* BaseViewController+Navigation.h */,
@@ -1655,8 +1680,6 @@
 				31DBC81C1BF76EF4007EDCD0 /* ConfigureBT.m */,
 				31FDE3E81BFB1F2100AA199F /* UITextField+CustomTextField.h */,
 				31FDE3E91BFB1F2100AA199F /* UITextField+CustomTextField.m */,
-				313E98141C05939700DC7B4F /* UIButton+Font.h */,
-				313E98151C05939700DC7B4F /* UIButton+Font.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1775,9 +1798,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC7529E1BC4E01500DE4B27 /* Info.plist in Resources */,
-				3172EC451BFD641300F7EF6D /* MineAskQuestionCell.xib in Resources */,
 				31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */,
-				313E981C1C05957500DC7B4F /* AskSpecialistView.xib in Resources */,
+				313E981C1C05957500DC7B4F /* (null) in Resources */,
+				31A0DBDF1C089F8C0017D1F0 /* AskSpecialistView.xib in Resources */,
 				FCC884C11BC3EBB900A1200B /* Assets.xcassets in Resources */,
 				1B6BE1621C03F53900D69A2D /* SeachView.xib in Resources */,
 				FCC752B71BC4E01500DE4B27 /* MJRefresh.bundle in Resources */,
@@ -1785,6 +1808,7 @@
 				31EC67A31BF0E4A700B8E1BC /* MWPhotoBrowser.bundle in Resources */,
 				1B337D7E1C06FDD600F2FE5B /* DiseaseView.xib in Resources */,
 				31399E8D1BF73DA10052A4EB /* InvitedCodeViewController.xib in Resources */,
+				31A0DBCA1C0899A20017D1F0 /* MineAskQuestionCell.xib in Resources */,
 				1B337D741C06F27E00F2FE5B /* StudymoreCell.xib in Resources */,
 				1B6BE1791C04582200D69A2D /* SortView.xib in Resources */,
 				31FDE38A1BFA204200AA199F /* SettingAboutView.xib in Resources */,
@@ -1813,6 +1837,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC752931BC4E01500DE4B27 /* AFURLSessionManager.m in Sources */,
+				31A0DBD91C089F0F0017D1F0 /* MineRecipeViewController.m in Sources */,
 				FCC64BFB1BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m in Sources */,
 				31DBC82D1BF78BC0007EDCD0 /* InvitedCode.m in Sources */,
 				31DBC8291BF78B01007EDCD0 /* BaseModel.m in Sources */,
@@ -1826,10 +1851,11 @@
 				31EC67971BF0E4A700B8E1BC /* PSTCollectionView.m in Sources */,
 				FCC752941BC4E01500DE4B27 /* JSONModel.m in Sources */,
 				FCC752B91BC4E01500DE4B27 /* UIScrollView+MJExtension.m in Sources */,
-				313E98131C058B6100DC7B4F /* AskSpecialistViewController.m in Sources */,
+				313E98131C058B6100DC7B4F /* (null) in Sources */,
 				1B32534B1C059C2D00B2F28F /* DetailsearchViewController.m in Sources */,
 				FCC90DB01BD3AE5B00D341DD /* QuestionCell.m in Sources */,
-				313E98061C01F99C00DC7B4F /* MyRecipeModel.m in Sources */,
+				313E98061C01F99C00DC7B4F /* (null) in Sources */,
+				31A0DBDE1C089F8C0017D1F0 /* AskSpecialistView.m in Sources */,
 				31EC679C1BF0E4A700B8E1BC /* PSTCollectionViewItemKey.m in Sources */,
 				FCC74FF61BD27DAF008446ED /* QuestionInfo.m in Sources */,
 				31FDE3851BFA1FA900AA199F /* SettingQuitLoginCell.m in Sources */,
@@ -1840,13 +1866,14 @@
 				FCC752CB1BC4E01500DE4B27 /* UIView+WebCacheOperation.m in Sources */,
 				FCC752C51BC4E01500DE4B27 /* UIButton+WebCache.m in Sources */,
 				318A87DF1C00A0F1008456C1 /* UIView+FrameCategory.m in Sources */,
-				313E98091C0211C400DC7B4F /* NSString+CustomAttributeString.m in Sources */,
+				313E98091C0211C400DC7B4F /* (null) in Sources */,
 				FCC752AF1BC4E01500DE4B27 /* MJRefreshAutoNormalFooter.m in Sources */,
 				FCC752A31BC4E01500DE4B27 /* MASViewAttribute.m in Sources */,
 				1B97F4E31C0824A700A58D03 /* MyModel.m in Sources */,
 				FCC752BA1BC4E01500DE4B27 /* UIScrollView+MJRefresh.m in Sources */,
+				31A0DBD01C089EDF0017D1F0 /* MyAskQuestionModel.m in Sources */,
 				FCC752BF1BC4E01500DE4B27 /* SDWebImageCompat.m in Sources */,
-				3172EC431BFD62E700F7EF6D /* MineAskQuestionImagesCell.m in Sources */,
+				31A0DBCB1C0899A20017D1F0 /* MineAskQuestionImagesCell.m in Sources */,
 				FCC752C11BC4E01500DE4B27 /* SDWebImageDownloader.m in Sources */,
 				FCC752BD1BC4E01500DE4B27 /* NSData+ImageContentType.m in Sources */,
 				FCC7528E1BC4E01500DE4B27 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1856,7 +1883,6 @@
 				1B6BE1601C03F4E400D69A2D /* SeachView.m in Sources */,
 				31FDE3941BFA346C00AA199F /* RecomentViewController.m in Sources */,
 				31EC66341BECEBE100B8E1BC /* YHSMSCodeButton.m in Sources */,
-				318A87D41C005057008456C1 /* MineReponseTableViewController.m in Sources */,
 				FCC752B61BC4E01500DE4B27 /* MJRefreshStateHeader.m in Sources */,
 				31EC67991BF0E4A700B8E1BC /* PSTCollectionViewController.m in Sources */,
 				1B337D691C06D5EF00F2FE5B /* StudtydetailViewController.m in Sources */,
@@ -1871,7 +1897,6 @@
 				31EC67AD1BF0E63C00B8E1BC /* XDPhotoSelect.m in Sources */,
 				FCCA8FB51BDD2F9E00B1CCF4 /* QuestionCellSource.m in Sources */,
 				31399E8C1BF73DA10052A4EB /* InvitedCodeViewController.m in Sources */,
-				3172EC401BFD62D400F7EF6D /* MineAskQuestionCell.m in Sources */,
 				FCCA178A1BEF116400BAE15C /* HomeMenuButton.m in Sources */,
 				FCC752901BC4E01500DE4B27 /* AFURLConnectionOperation.m in Sources */,
 				FCC752951BC4E01500DE4B27 /* JSONModelArray.m in Sources */,
@@ -1882,6 +1907,7 @@
 				1B337D731C06F27E00F2FE5B /* StudymoreCell.m in Sources */,
 				FCC7528D1BC4E01500DE4B27 /* AFHTTPSessionManager.m in Sources */,
 				1B337D841C07031100F2FE5B /* UITableView+FDTemplateLayoutCell.m in Sources */,
+				31A0DBC31C0899780017D1F0 /* UIButton+Font.m in Sources */,
 				31FDE3821BFA1F9100AA199F /* SettinSpaceCell.m in Sources */,
 				318A87E61C01E8C6008456C1 /* MyRecipeCell.m in Sources */,
 				31FDE38E1BFA250200AA199F /* SettingModel.m in Sources */,
@@ -1894,6 +1920,7 @@
 				1B97F4EC1C083B3300A58D03 /* DiseaPicViewController.m in Sources */,
 				31EC66561BF0416F00B8E1BC /* BaseTextView.m in Sources */,
 				31EC67981BF0E4A700B8E1BC /* PSTCollectionViewCell.m in Sources */,
+				31A0DBC21C0899780017D1F0 /* NSString+CustomAttributeString.m in Sources */,
 				FCC626791BCA7A0E00943F99 /* RootTabBarViewController.m in Sources */,
 				FCC630BA1BF4D70000A2B08C /* QuCommonView.m in Sources */,
 				FCC752C31BC4E01500DE4B27 /* SDWebImageManager.m in Sources */,
@@ -1905,6 +1932,7 @@
 				FCC752B21BC4E01500DE4B27 /* MJRefreshBackNormalFooter.m in Sources */,
 				31EC67931BF0E4A700B8E1BC /* MWTapDetectingView.m in Sources */,
 				FCC752A21BC4E01500DE4B27 /* MASLayoutConstraint.m in Sources */,
+				31A0DBC91C0899A20017D1F0 /* MineAskQuestionCell.m in Sources */,
 				31FDE37F1BFA1F6B00AA199F /* SettingAbountCell.m in Sources */,
 				FCC752911BC4E01500DE4B27 /* AFURLRequestSerialization.m in Sources */,
 				FCC752AA1BC4E01500DE4B27 /* MJRefreshBackFooter.m in Sources */,
@@ -1915,19 +1943,17 @@
 				FCC752B81BC4E01500DE4B27 /* MJRefreshConst.m in Sources */,
 				31399E841BF63F2A0052A4EB /* AskScrollView.m in Sources */,
 				FCC64BFA1BCFE4FE00BF56C4 /* SHHttpClient.m in Sources */,
-				3172EC4D1BFDC15400F7EF6D /* MineAskQuestionViewController.m in Sources */,
 				1B97F4F21C084C5000A58D03 /* TwoclassMode.m in Sources */,
-				3172EC4D1BFDC15400F7EF6D /* MineResponseTableController.m in Sources */,
 				FCCBA0301BDF4727009AF469 /* APPHelper.m in Sources */,
 				318A87E91C01E982008456C1 /* MyRecipeView.m in Sources */,
-				313E98161C05939700DC7B4F /* UIButton+Font.m in Sources */,
+				313E98161C05939700DC7B4F /* (null) in Sources */,
 				31FDE3ED1BFC10F600AA199F /* MyResponseViewController.m in Sources */,
 				31399E7A1BF56E470052A4EB /* ImagesView.m in Sources */,
 				FCC64BF91BCFE4FE00BF56C4 /* LeHttpService.m in Sources */,
 				31EC67A11BF0E4A700B8E1BC /* PSTGridLayoutRow.m in Sources */,
 				FCC752AE1BC4E01500DE4B27 /* MJRefreshAutoGifFooter.m in Sources */,
 				31D4FDC21BF3A5320081F64F /* MTAssetsPickerController.m in Sources */,
-				313E980F1C044E4B00DC7B4F /* MyAskQuestionModel.m in Sources */,
+				313E980F1C044E4B00DC7B4F /* (null) in Sources */,
 				FCC752CA1BC4E01500DE4B27 /* UIImageView+WebCache.m in Sources */,
 				FCC752991BC4E01500DE4B27 /* JSONAPI.m in Sources */,
 				FCC884B61BC3EBB900A1200B /* main.m in Sources */,
@@ -1935,6 +1961,7 @@
 				31FDE3881BFA202100AA199F /* SettingAboutView.m in Sources */,
 				FCC752A71BC4E01500DE4B27 /* View+MASAdditions.m in Sources */,
 				31DBC81D1BF76EF4007EDCD0 /* ConfigureBT.m in Sources */,
+				31A0DBDA1C089F0F0017D1F0 /* MineReponseTableViewController.m in Sources */,
 				31EC67A01BF0E4A700B8E1BC /* PSTGridLayoutItem.m in Sources */,
 				31EC679B1BF0E4A700B8E1BC /* PSTCollectionViewFlowLayout.m in Sources */,
 				FCC752BB1BC4E01500DE4B27 /* UIView+MJExtension.m in Sources */,
@@ -1950,12 +1977,12 @@
 				31EC67A21BF0E4A700B8E1BC /* PSTGridLayoutSection.m in Sources */,
 				FCC752AB1BC4E01500DE4B27 /* MJRefreshComponent.m in Sources */,
 				FCCA8FAF1BDD255E00B1CCF4 /* SimpleImageTitleButton.m in Sources */,
-				313E98031C01F81F00DC7B4F /* MineRecipeViewController.m in Sources */,
+				313E98031C01F81F00DC7B4F /* (null) in Sources */,
 				FCC7529D1BC4E01500DE4B27 /* JSONValueTransformer.m in Sources */,
 				FCC752A01BC4E01500DE4B27 /* MASConstraint.m in Sources */,
 				31DBC8311BF78F5F007EDCD0 /* UserInfo.m in Sources */,
 				FCC752A11BC4E01500DE4B27 /* MASConstraintMaker.m in Sources */,
-				313E981A1C05955300DC7B4F /* AskSpecialistView.m in Sources */,
+				313E981A1C05955300DC7B4F /* (null) in Sources */,
 				FCC7529C1BC4E01500DE4B27 /* JSONKeyMapper.m in Sources */,
 				FCCB90611BE1B738005F1A83 /* AnswersButton.m in Sources */,
 				FCCA8FAD1BDD255E00B1CCF4 /* BaseViewController.m in Sources */,
@@ -1968,6 +1995,7 @@
 				FCC752A41BC4E01500DE4B27 /* MASViewConstraint.m in Sources */,
 				FCC752C71BC4E01500DE4B27 /* UIImage+MultiFormat.m in Sources */,
 				FCCA8FB21BDD2BED00B1CCF4 /* UIViewAdditions.m in Sources */,
+				31A0DBE21C089F980017D1F0 /* AskSpecialistViewController.m in Sources */,
 				31399E811BF63D210052A4EB /* ZoomScrollView.m in Sources */,
 				31EC67951BF0E4A700B8E1BC /* DACircularProgressView.m in Sources */,
 				FCC7528F1BC4E01500DE4B27 /* AFSecurityPolicy.m in Sources */,
@@ -1980,6 +2008,7 @@
 				FCC752AD1BC4E01500DE4B27 /* MJRefreshHeader.m in Sources */,
 				31EC66501BEF974B00B8E1BC /* ResetPasswordViewController.m in Sources */,
 				31FDE3981BFAB7EC00AA199F /* AboutViewController.m in Sources */,
+				31A0DBD81C089F0F0017D1F0 /* MineAskQuestionViewController.m in Sources */,
 				FCC752B31BC4E01500DE4B27 /* MJRefreshBackStateFooter.m in Sources */,
 				1B337D7C1C06FDBA00F2FE5B /* DiseaseView.m in Sources */,
 				31EC66C21BF0710F00B8E1BC /* AskCropNameView.m in Sources */,
@@ -1996,6 +2025,7 @@
 				FC37668F1BF71C2200FB2BA4 /* QuestionDetailModel.m in Sources */,
 				31EC664C1BEF839900B8E1BC /* RegisterModel.m in Sources */,
 				FCC64BFF1BCFE6D300BF56C4 /* LeJSONUtil.m in Sources */,
+				31A0DBD11C089EDF0017D1F0 /* MyRecipeModel.m in Sources */,
 				FCC752A91BC4E01500DE4B27 /* MJRefreshAutoFooter.m in Sources */,
 				31EC67901BF0E4A700B8E1BC /* MWPhoto.m in Sources */,
 				318A87DE1C00A0F1008456C1 /* Colours.m in Sources */,
