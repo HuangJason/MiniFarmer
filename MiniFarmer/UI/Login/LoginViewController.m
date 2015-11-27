@@ -50,6 +50,7 @@
     {
         [[MiniAppEngine shareMiniAppEngine] saveUserLoginNumber:self.usernameTF.text];
     }
+    [[MiniAppEngine shareMiniAppEngine] saveInfos];
 }
 
 /// 初始化子视图

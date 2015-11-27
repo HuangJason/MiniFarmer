@@ -38,7 +38,6 @@
         for (YHSegmentItem *item in items) {
             [self addSegmentItem:item];
         }
-        self.backgroundColor = [UIColor colorFromHexString:@"#eeeeee"];
     }
     return self;
 }
@@ -153,18 +152,24 @@
 - (void)segmentTapAction:(UIButton *)btn{
     
     NSInteger index = [self.buttons indexOfObject:btn];
+    [self changeToSelectedIndex:index animated:YES];
+}
+
+- (void)changeToSelectedIndex:(NSInteger)index animated:(BOOL)animated
+{
     [self setSelectedIndex:index animated:YES];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(segmentView:didSelectedAtIndex:)]) {
         [self.delegate segmentView:self didSelectedAtIndex:index];
     }
+ 
 }
 
 - (void)setOffsetWithScrollViewWidth:(CGFloat)width
                     scrollViewOffset:(CGFloat)offset{
     CGFloat left ;
     
-    [self setSelectedIndex:(NSInteger)offset / (NSInteger)width animated:YES];
+    [self changeToSelectedIndex:(NSInteger)offset / (NSInteger)width animated:YES];
     return;
     
     if ((NSInteger)offset % (NSInteger)width == 0)

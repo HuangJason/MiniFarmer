@@ -14,7 +14,7 @@
 
 - (void)setTextColor:(UIColor *)color atRange:(NSRange)range;
 
-- (void)setTextLineSpace:(float)space;
+- (void)setTextLineSpace:(float)space font:(UIFont *)font;
 
 - (void)setTextFont:(UIFont *)font color:(UIColor *)color atRange:(NSRange)range;
 
@@ -35,6 +35,9 @@
 - (void)attributeLabelWithImage:(UIImage *)image imageSize:(CGSize)imageSize;
 
 - (void)attributeLabelWithArray:(NSArray *)arr;
+
+
+- (CGSize)contentTextSizeWithFont:(UIFont *)font verticalSpace:(CGFloat)space;
 
 @end
 

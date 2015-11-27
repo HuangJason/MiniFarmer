@@ -9,6 +9,7 @@
 #import "MineBaseTableViewCell.h"
 
 @interface SettingAbountCell : MineBaseTableViewCell
+
 @property (nonatomic, assign) CGFloat lineDispaceToLeft;
 @property (nonatomic, copy) NSString *stringColor;
 

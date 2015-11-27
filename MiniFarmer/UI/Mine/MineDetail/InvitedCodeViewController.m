@@ -68,9 +68,9 @@
     [self.wathInvitedLabel setTextColor:kLabelColor];
     [self.howUseInvitedCodeLaebl setTextColor:kLabelColor];
     [self.whyUseInvitedCodeLabel setTextColor:kLabelColor];
-    [self.wathInvitedLabel setTextLineSpace:kLineDispace];
-    [self.howUseInvitedCodeLaebl setTextLineSpace:kLineDispace];
-    [self.whyUseInvitedCodeLabel setTextLineSpace:kLineDispace];
+    [self.wathInvitedLabel setTextLineSpace:kLineDispace font:kTextFont(16)];
+    [self.howUseInvitedCodeLaebl setTextLineSpace:kLineDispace font:kTextFont(16)];
+    [self.whyUseInvitedCodeLabel setTextLineSpace:kLineDispace font:kTextFont(16)];
 
     UIImage *foucsImage =[UIImage imageNamed:@"mine_btn_foucs_nm"];
     UIImage *inveitedFriendImage = [UIImage imageNamed:@"mine_btn_invited_nm"];

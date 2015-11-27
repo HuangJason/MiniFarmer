@@ -63,12 +63,8 @@ typedef enum
 - (NSMutableArray *)models
 {
     NSMutableArray *models = [NSMutableArray arrayWithCapacity:3];
-    NSString *quilt = @"退出登录";
-    if ([MiniAppEngine shareMiniAppEngine].isLogin)
-    {
-        quilt = @"登录";
-    }
-    NSArray *tempArr = @[@"",@"关于小农人",@"意见反馈",@"",quilt];
+    
+    NSArray *tempArr = @[@"",@"关于小农人",@"意见反馈",@"",@"退出登录"];
     NSArray *heigth = @[@15,@50,@50,@30,@44];
     NSArray *classesArr = @[@"SettinSpaceCell",@"SettingAbountCell",@"SettingAbountCell",@"SettinSpaceCell",@"SettingQuitLoginCell"];
 
@@ -153,6 +149,7 @@ typedef enum
     {
         [[MiniAppEngine shareMiniAppEngine] clearUserLoginInfos];
         [[MiniAppEngine shareMiniAppEngine] saveInfos];
+        [self.view showWeakPromptViewWithMessage:@"退出登录成功"];
         [self.navigationController popViewControllerAnimated:YES];
         return;
     }

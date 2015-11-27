@@ -11,12 +11,19 @@
 
 
 //服务器地址及加密密钥
-#define kCommServerUrl  @"http://www.xnr01.com/interface/index.php"
+//测试地址
+#if 1
+#define kCommServerUrl  @"http://www.enbs.com.cn/apps_test/index.php"
+//@"http://www.xnr01.com/interface/index.php"
+//
+//
 #define kCommApiKey     @"26f9a2878862d3bb27165020c6b4e7f0"
 
+#else
+//正式环境
 //#define kCommServerUrl  @"http://www.enbs.com.cn/apps_2/index.php"
 //#define kCommApiKey     @"457077ad3a4e86ff53fc5555"
-
+#endif
 
 // 1, 系统函数
 #pragma mark - #define System Methods
@@ -171,6 +178,10 @@
 #import "UIView+Toast.h"
 #import "BaseModel.h"
 #import "UITextField+CustomTextField.h"
+#import "NSString+CustomAttributeString.h"
+#import "UILabel+CustomAttributeLabel.h"
+#import "UIButton+Font.h"
+
 
 #pragma mark - enum
 

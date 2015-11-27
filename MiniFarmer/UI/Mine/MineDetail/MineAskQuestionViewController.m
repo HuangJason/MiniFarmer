@@ -6,20 +6,22 @@
 //  Copyright © 2015年 enbs. All rights reserved.
 //
 
-#import "MineResponseTableController.h"
-#import "MyReponseModel.h"
-#import "MineReponseCell.h"
-#import "MineResponseImagesCell.h"
 
-@interface MineResponseTableController ()
+
+
+#import "MineAskQuestionViewController.h"
+#import "MyAskQuestionModel.h"
+#import "MineAskQuestionCell.h"
+#import "MineAskQuestionImagesCell.h"
+
+@interface MineAskQuestionViewController ()
 
 @property (nonatomic, strong) NSMutableArray *dataSourceArr;
-@property (nonatomic, strong) UITableView *responseTab;
 
 
 @end
 
-@implementation MineResponseTableController
+@implementation MineAskQuestionViewController
 
 - (instancetype)init
 {
@@ -33,6 +35,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor colorWithHexString:@"#eeeeee"]];
+    [self setTableBackGroundColor:[UIColor colorWithHexString:@"#eeeeee"]];
     
 }
 
@@ -43,7 +47,6 @@
 
 - (void)reloadData
 {
-    
     if (!_dataSourceArr)
     {
         [self requestDataWithLastId:@"0"];
@@ -56,13 +59,22 @@
 - (void)requestDataWithLastId:(NSString *)lastId
 {
     //添加loading
+    NSLog(@"---------- requestCount");
+    if (!self.dataSourceArr.count)
+    {
+        [self.view showLoadingWihtText:@"加载中"];
+    }
+
+    NSDictionary *dic = @{@"userid":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userId]],@"id":lastId,@"pagesize":kPageSize,@"mobile":[[MiniAppEngine shareMiniAppEngine] userLoginNumber]};
     
-    NSDictionary *dic = @{@"userid":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userId]],@"id":lastId,@"pagesize":kPageSize};
-    
-    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost subUrl:@"c=tw&m=gethdtw4userid" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet subUrl:@"?c=tw&m=gettw4userid" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.view dismissLoading];
+        [self cancelCurrentLoadAnimation];
         [self handleSuccess:responseObject lastId:lastId];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.view dismissLoading];
+        [self cancelCurrentLoadAnimation];
         [self handleFailure];
     }];
 }
@@ -70,11 +82,12 @@
 - (void)handleSuccess:(id)responseObject lastId:(NSString *)lastId
 {
     //如果是0代表刷新 那么如果请求到了数据就要清楚现在的数据
-    MyReponseModel *model = [[MyReponseModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
+    MyAskQuestionModel *model = [[MyAskQuestionModel alloc] initWithDictionary:(NSDictionary *)responseObject error:nil];
     if (!self.dataSourceArr)
     {
         self.dataSourceArr = [NSMutableArray arrayWithArray:model.list];
     }
+    
     if (model.list.count)
     {
         if (!lastId.intValue)
@@ -83,12 +96,18 @@
         }
         [self.dataSourceArr addObjectsFromArray:model.list];
     }
+    
+//    for (int i = 0; i < 10; i++) {
+//        MyAskQuestionList *list = [[MyAskQuestionList alloc] init];
+//        [self.dataSourceArr addObject:list];
+//    }
     [self noMoreData:model.list.count < kPageSize.intValue];
     if (!self.dataSourceArr.count)
     {
         //这里显示无结果页
         [self.view showWeakPromptViewWithMessage:@"没有内容哦"];
     }
+    [super reloadData];
 }
 
 - (void)handleFailure
@@ -107,7 +126,7 @@
     
 }
 
-- (List *)lastMyReponseModel
+- (MyAskQuestionList *)lastMyReponseModel
 {
     return [_dataSourceArr lastObject];
 }
@@ -121,32 +140,33 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    List *model = [_dataSourceArr objectAtIndex:indexPath.row];
+    
+    MyAskQuestionList *model = [_dataSourceArr objectAtIndex:indexPath.row];
     if (model.images.count)
     {
-        return [MineResponseImagesCell cellHeightWihtModel:model];
+        return [MineAskQuestionImagesCell cellHeightWihtModel:model];
     }
-    return [MineReponseCell cellHeightWihtModel:model];
+    return [MineAskQuestionCell cellHeightWihtModel:model];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    List *model = [_dataSourceArr objectAtIndex:indexPath.row];
+    MyAskQuestionList *model = [_dataSourceArr objectAtIndex:indexPath.row];
     MineBaseTableViewCell *cell;
     if (model.images.count)
     {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"MineResponseImagesCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"MineAskQuestionImagesCell"];
         if (!cell)
         {
-          cell = [[MineResponseImagesCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MineResponseImagesCell"];
+          cell = [[MineAskQuestionImagesCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MineAskQuestionImagesCell"];
         }
     }
     else
     {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"MineResponseCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"MineAskQuestionCell"];
         if (!cell)
         {
-            cell = [[MineResponseImagesCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MineResponseCell"];
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"MineAskQuestionCell" owner:self options:nil] lastObject];
         }
     }
     [cell refreshDataWithModel:model];

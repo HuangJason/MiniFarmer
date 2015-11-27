@@ -24,7 +24,13 @@
 @end
 
 
+
 @interface MyReponseModel : BaseModel
+
+
+@property (nonatomic, copy) NSNumber<Optional> *device;
+@property (nonatomic, copy) NSNumber<Optional> *count;
+
 
 @property (nonatomic, copy) NSArray<Optional,List> *list;
 

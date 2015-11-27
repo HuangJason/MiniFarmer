@@ -7,8 +7,8 @@
 //
 
 #import "MyResponseViewController.h"
-#import "MineResponseTableController.h"
-#import "MyQuestionViewController.h"
+#import "MineAskQuestionViewController.h"
+#import "MineReponseTableViewController.h"
 #import "YHSegmentView.h"
 #import "UIView+FrameCategory.h"
 
@@ -54,16 +54,19 @@
     
     self.segmentView.frame = CGRectMake(0, self.yDispaceToTop, kScreenSizeWidth, 47);
 
+    MineAskQuestionViewController *myQVC = [[MineAskQuestionViewController alloc] init];
+    [self.mineScrollview addSubview:myQVC.view];
+    [myQVC.view setBackgroundColor:[UIColor redColor]];
+    [self addChildViewController:myQVC];
     
-    MineResponseTableController *mineVC = [[MineResponseTableController alloc] init];
+    MineReponseTableViewController *mineVC = [[MineReponseTableViewController alloc] init];
     [self.mineScrollview addSubview:mineVC.view];
-    [mineVC.view setBackgroundColor:[UIColor redColor]];
+    [myQVC.view setBackgroundColor:[UIColor orangeColor]];
     [self addChildViewController:mineVC];
     
-    MyQuestionViewController *myQVC = [[MyQuestionViewController alloc] init];
-    [self.mineScrollview addSubview:myQVC.view];
-    [myQVC.view setBackgroundColor:[UIColor orangeColor]];
-    [self addChildViewController:myQVC];
+   
+    
+    
     
     self.mineScrollview.frame = CGRectMake(0, CGRectGetMaxY(self.segmentView.frame), kScreenSizeWidth, kScreenSizeHeight - self.yDispaceToTop);
     myQVC.view.frame = CGRectMake(0,0, kScreenSizeWidth, CGRectGetHeight(self.mineScrollview.frame));
@@ -91,12 +94,13 @@
     if (!_segmentView)
     {
         _segmentView = [[YHSegmentView alloc] init];
+        _segmentView.backgroundColor = [UIColor whiteColor];
         _segmentView.itemToLeft = 64;
         _segmentView.directionLineHeigth = 4;
         _segmentView.itemsDispace = 64;
-        _segmentView.textSelectedColor = [UIColor orangeColor];
-        _segmentView.textNormalColor = [UIColor colorWithHexString:@"#333333"];
-        _segmentView.directionLineColor = [UIColor orangeColor];
+        _segmentView.textSelectedColor = [UIColor colorWithHexString:@"#ff6633"];
+        _segmentView.textNormalColor = [UIColor colorWithHexString:@"#666666"];
+        _segmentView.directionLineColor = [UIColor colorWithHexString:@"#ff6633"];
         _segmentView.bottomLineHeigth = 1;
         _segmentView.bottomLineColor = [UIColor colorWithHexString:@"#e4e4e4"];
         _segmentView.delegate = self;
@@ -131,10 +135,6 @@
 
 #pragma mark - delegate or block
 #pragma mark - scrollviewdelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    //滑动过程中的操作
-    [self.segmentView setOffsetWithScrollViewWidth:scrollView.width scrollViewOffset:scrollView.contentOffset.x];
-}
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
@@ -145,6 +145,7 @@
 - (void)segmentView:(YHSegmentView *)segmentView didSelectedAtIndex:(NSInteger)index
 {
     [self.mineScrollview setContentOffset:CGPointMake(CGRectGetWidth(self.mineScrollview.frame) * index, 0)];
+    [[self currentVC] reloadData];
 
 }
 

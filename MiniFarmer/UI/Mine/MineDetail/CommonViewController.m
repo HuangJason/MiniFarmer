@@ -62,7 +62,7 @@
 
 - (void)reloadData
 {
-    
+    [self.commonTab reloadData];
 }
 
 #pragma mark - addSubviews
@@ -99,6 +99,11 @@
 - (void)pullToRefresh
 {
     
+}
+
+- (void)setTableBackGroundColor:(UIColor *)color
+{
+    [self.commonTab setBackgroundColor:color];
 }
 
 - (void)noMoreData:(BOOL)noMore

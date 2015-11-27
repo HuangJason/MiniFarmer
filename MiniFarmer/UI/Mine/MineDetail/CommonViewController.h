@@ -44,5 +44,5 @@
 
 - (NSIndexPath *)indexPathWithCell:(UITableViewCell *)cell;
 
-
+- (void)setTableBackGroundColor:(UIColor *)color;
 @end

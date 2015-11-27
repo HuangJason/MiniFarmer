@@ -11,6 +11,7 @@
 #import "InvitedCodeViewController.h"
 #import "SettingViewController.h"
 #import "MyResponseViewController.h"
+#import "MineRecipeViewController.h"
 
 #define kSection
 
@@ -163,8 +164,15 @@
     {
         case 0:
         {
-            MyResponseViewController *myVC = [[MyResponseViewController alloc] init];
-            [self.navigationController pushViewController:myVC animated:YES];
+            if (indexPath.row == 0) {
+                MyResponseViewController *myVC = [[MyResponseViewController alloc] init];
+                [self.navigationController pushViewController:myVC animated:YES];
+            }
+            else if (indexPath.row == 2)
+            {
+                MineRecipeViewController *myVC = [[MineRecipeViewController alloc] init];
+                [self.navigationController pushViewController:myVC animated:YES];
+            }
         }
             break;
         case 2:

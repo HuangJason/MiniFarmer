@@ -14,7 +14,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于小农人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-U9-DUE">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x25-YO-cME">
@@ -60,10 +60,10 @@
                     <exclude reference="x25-YO-cME"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="8Xe-pE-bWH"/>
-                    <exclude reference="d3S-Xf-EVZ"/>
                     <exclude reference="29d-an-NfJ"/>
                     <exclude reference="45p-wx-EGu"/>
+                    <exclude reference="8Xe-pE-bWH"/>
+                    <exclude reference="d3S-Xf-EVZ"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -72,10 +72,10 @@
                     <include reference="x25-YO-cME"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="8Xe-pE-bWH"/>
-                    <include reference="d3S-Xf-EVZ"/>
                     <include reference="29d-an-NfJ"/>
                     <include reference="45p-wx-EGu"/>
+                    <include reference="8Xe-pE-bWH"/>
+                    <include reference="d3S-Xf-EVZ"/>
                 </mask>
             </variation>
             <connections>

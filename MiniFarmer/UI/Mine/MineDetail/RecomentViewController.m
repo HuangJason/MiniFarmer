@@ -160,7 +160,7 @@
         return;
   
     }
-    else if ([JudgeTextIsRight isMobileNumber:self.phoneTextField.text])
+    else if (![JudgeTextIsRight isMobileNumber:self.phoneTextField.text])
     {
         [self.view showWeakPromptViewWithMessage:@"请输入正确的手机号"];
          return;

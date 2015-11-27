@@ -38,7 +38,7 @@
     MBProgressHUD *hud;
     hud = [[MBProgressHUD alloc] initWithView:self];
     hud.color = [UIColor blackColor];
-    hud.dimBackground = YES;
+//    hud.dimBackground = YES;
     hud.labelText = text;
     hud.tag = kLoadingTag;
     [self addSubview:hud];

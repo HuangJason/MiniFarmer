@@ -14,6 +14,7 @@
 
 
 - (void)setHiddenLine:(BOOL)hidden;
+
 - (void)refreshDataWithModel:(id)model;
 + (CGFloat)cellHeightWihtModel:(id)model;
 

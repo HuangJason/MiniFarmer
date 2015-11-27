@@ -1,5 +1,5 @@
 //
-//  MineResponseImagesCell.h
+//  MineReponseCell.h
 //  MiniFarmer
 //
 //  Created by 尹新春 on 15/11/19.
@@ -8,9 +8,6 @@
 
 #import "MineBaseTableViewCell.h"
 
-@interface MineResponseImagesCell : MineBaseTableViewCell
-
-
-
+@interface MineAskQuestionCell : MineBaseTableViewCell
 
 @end

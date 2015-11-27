@@ -7,7 +7,7 @@
 //
 
 #import "CommonViewController.h"
-
-@interface MineResponseTableController : CommonViewController
+//我的回答的controller
+@interface MineAskQuestionViewController : CommonViewController
 
 @end

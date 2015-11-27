@@ -13,6 +13,7 @@
 #import "MJRefresh.h"
 #import "HomeMenuButton.h"
 #import "QuestionDetailViewController.h"
+#import "AskSpecialistViewController.h"
 
 #define kPageSize   @"10"   //一次请求数据数
 
@@ -118,6 +119,7 @@
     }];
     
     HomeMenuButton *askBtn = [self menuButtonWithTitle:@"问专家" normalImgName:@"home_btn_ask_nm"];
+    [askBtn addTarget:self action:@selector(tapAskBtn:) forControlEvents:UIControlEventTouchUpInside];
     [funView addSubview:askBtn];
     [askBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(buyBtn);
@@ -241,5 +243,12 @@
     return cell;
 }
 
+
+#pragma mark - clickevent
+- (void)tapAskBtn:(UIButton *)btn
+{
+    AskSpecialistViewController *askSVC = [[AskSpecialistViewController alloc] init];
+    [self.navigationController pushViewController:askSVC animated:YES];
+}
 
 @end
