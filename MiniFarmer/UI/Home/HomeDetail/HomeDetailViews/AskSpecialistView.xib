@@ -53,7 +53,7 @@
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" title="Button"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="326" y="66" width="46" height="30"/>
+                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                     </variation>
                 </button>
             </subviews>
@@ -88,12 +88,12 @@
                 <mask key="constraints">
                     <exclude reference="hq4-FK-JVR"/>
                     <exclude reference="tSX-jZ-EZA"/>
-                    <exclude reference="ejY-cN-X0u"/>
-                    <exclude reference="spP-XZ-jd4"/>
-                    <exclude reference="n9S-4h-dEz"/>
-                    <exclude reference="qQE-l3-Ocj"/>
                     <exclude reference="AIF-Ue-z7T"/>
                     <exclude reference="Gwi-Ko-Jlr"/>
+                    <exclude reference="n9S-4h-dEz"/>
+                    <exclude reference="qQE-l3-Ocj"/>
+                    <exclude reference="ejY-cN-X0u"/>
+                    <exclude reference="spP-XZ-jd4"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -107,15 +107,15 @@
                 <mask key="constraints">
                     <include reference="hq4-FK-JVR"/>
                     <include reference="tSX-jZ-EZA"/>
-                    <include reference="ejY-cN-X0u"/>
-                    <include reference="spP-XZ-jd4"/>
-                    <include reference="n9S-4h-dEz"/>
-                    <include reference="qQE-l3-Ocj"/>
                     <include reference="AIF-Ue-z7T"/>
                     <include reference="Gwi-Ko-Jlr"/>
+                    <include reference="n9S-4h-dEz"/>
+                    <include reference="qQE-l3-Ocj"/>
+                    <include reference="ejY-cN-X0u"/>
+                    <include reference="spP-XZ-jd4"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="280" y="-1.5"/>
+            <point key="canvasLocation" x="380" y="-332"/>
         </view>
     </objects>
 </document>
