@@ -53,6 +53,10 @@
 		318A87EB1C01E99B008456C1 /* MyRecipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 318A87EA1C01E99B008456C1 /* MyRecipeView.xib */; settings = {ASSET_TAGS = (); }; };
 		31919DC61C0C0539007096F4 /* AskSpeicalistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31919DC51C0C0539007096F4 /* AskSpeicalistTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		31919DC91C0C0571007096F4 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31919DC81C0C0571007096F4 /* BaseTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		31919DCD1C0C66B8007096F4 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31919DCC1C0C66B8007096F4 /* LoginView.m */; settings = {ASSET_TAGS = (); }; };
+		31919DD01C0C66C4007096F4 /* NotLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31919DCF1C0C66C4007096F4 /* NotLoginView.m */; settings = {ASSET_TAGS = (); }; };
+		31919DD21C0C673C007096F4 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31919DD11C0C673C007096F4 /* LoginView.xib */; settings = {ASSET_TAGS = (); }; };
+		31919DD41C0C67A9007096F4 /* NotLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31919DD31C0C67A9007096F4 /* NotLoginView.xib */; settings = {ASSET_TAGS = (); }; };
 		31A0DBC21C0899780017D1F0 /* NSString+CustomAttributeString.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBBF1C0899780017D1F0 /* NSString+CustomAttributeString.m */; settings = {ASSET_TAGS = (); }; };
 		31A0DBC31C0899780017D1F0 /* UIButton+Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBC11C0899780017D1F0 /* UIButton+Font.m */; settings = {ASSET_TAGS = (); }; };
 		31A0DBC91C0899A20017D1F0 /* MineAskQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBC51C0899A20017D1F0 /* MineAskQuestionCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -314,6 +318,12 @@
 		31919DC51C0C0539007096F4 /* AskSpeicalistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskSpeicalistTableViewCell.m; sourceTree = "<group>"; };
 		31919DC71C0C0571007096F4 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		31919DC81C0C0571007096F4 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		31919DCB1C0C66B8007096F4 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		31919DCC1C0C66B8007096F4 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		31919DCE1C0C66C4007096F4 /* NotLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotLoginView.h; sourceTree = "<group>"; };
+		31919DCF1C0C66C4007096F4 /* NotLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotLoginView.m; sourceTree = "<group>"; };
+		31919DD11C0C673C007096F4 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		31919DD31C0C67A9007096F4 /* NotLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotLoginView.xib; sourceTree = "<group>"; };
 		31A0DBBE1C0899780017D1F0 /* NSString+CustomAttributeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CustomAttributeString.h"; sourceTree = "<group>"; };
 		31A0DBBF1C0899780017D1F0 /* NSString+CustomAttributeString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CustomAttributeString.m"; sourceTree = "<group>"; };
 		31A0DBC01C0899780017D1F0 /* UIButton+Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Font.h"; sourceTree = "<group>"; };
@@ -1206,6 +1216,12 @@
 				31399E851BF73D210052A4EB /* MineDetail */,
 				FCC626711BCA7A0E00943F99 /* MineViewController.h */,
 				FCC626721BCA7A0E00943F99 /* MineViewController.m */,
+				31919DCB1C0C66B8007096F4 /* LoginView.h */,
+				31919DCC1C0C66B8007096F4 /* LoginView.m */,
+				31919DD11C0C673C007096F4 /* LoginView.xib */,
+				31919DCE1C0C66C4007096F4 /* NotLoginView.h */,
+				31919DCF1C0C66C4007096F4 /* NotLoginView.m */,
+				31919DD31C0C67A9007096F4 /* NotLoginView.xib */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1825,6 +1841,8 @@
 			files = (
 				FCC7529E1BC4E01500DE4B27 /* Info.plist in Resources */,
 				31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */,
+				31919DD41C0C67A9007096F4 /* NotLoginView.xib in Resources */,
+				31919DD21C0C673C007096F4 /* LoginView.xib in Resources */,
 				313E981C1C05957500DC7B4F /* (null) in Resources */,
 				31A0DBDF1C089F8C0017D1F0 /* AskSpecialistCellSubview.xib in Resources */,
 				FCC884C11BC3EBB900A1200B /* Assets.xcassets in Resources */,
@@ -1868,6 +1886,7 @@
 				31DBC82D1BF78BC0007EDCD0 /* InvitedCode.m in Sources */,
 				31DBC8291BF78B01007EDCD0 /* BaseModel.m in Sources */,
 				FCC752971BC4E01500DE4B27 /* JSONModelError.m in Sources */,
+				31919DD01C0C66C4007096F4 /* NotLoginView.m in Sources */,
 				FCCA8FAE1BDD255E00B1CCF4 /* UIColor+Expanded.m in Sources */,
 				3172EC4A1BFD93C300F7EF6D /* MyReponseModel.m in Sources */,
 				1B97F4E91C08252A00A58D03 /* StudyModel.m in Sources */,
@@ -1915,6 +1934,7 @@
 				1B337D691C06D5EF00F2FE5B /* StudtydetailViewController.m in Sources */,
 				FCC752AC1BC4E01500DE4B27 /* MJRefreshFooter.m in Sources */,
 				31399E901BF73DF00052A4EB /* MineBaseViewController.m in Sources */,
+				31919DCD1C0C66B8007096F4 /* LoginView.m in Sources */,
 				FCC884B91BC3EBB900A1200B /* AppDelegate.m in Sources */,
 				31D4FDCC1BF3A9550081F64F /* MTPickerInfo.m in Sources */,
 				318A87D71C00509A008456C1 /* MyQuestionCell.m in Sources */,

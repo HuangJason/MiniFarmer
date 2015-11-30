@@ -10,6 +10,17 @@
 #import "BaseViewController+Navigation.h"
 #import "AskSpeicalistTableViewCell.h"
 
+
+typedef NS_ENUM(NSInteger, SortType) {
+    SortTypeLocation = 0,
+    SortTypeSupportCount,
+    SortTypeApplyTime
+};
+
+
+
+
+
 @interface AskSpecialistViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UIButton *specialistTypeBT;
@@ -59,6 +70,18 @@
     [super viewDidDisappear:animated];
 }
 
+#pragma mark - requestData
+
+- (void)requestDataWithLastId:(NSString *)lastId
+{
+    NSDictionary *dic = @{@"pxlx":[NSString stringWithFormat:@"%d",SortTypeLocation],@"id":@"0",@"lat":@"",@"lng":@"",@"pagesize":@"10"};
+    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet subUrl:@"?c=wwzj&m=getzjlist4znpx" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    }];
+}
+
 #pragma mark - clickevent
 - (void)back:(UIButton *)btn
 {
@@ -101,7 +124,6 @@
     {
         _specialistTypeBT = [UIButton buttonWithType:UIButtonTypeCustom];
         [_specialistTypeBT setTitle:@"专家类型" forState:UIControlStateNormal];
-        [_specialistTypeBT setBackgroundColor:[UIColor redColor]];
         [_specialistTypeBT setImage:[UIImage imageNamed:@"ask_speicalist_type_btn"]forState:UIControlStateNormal];
         [_specialistTypeBT setBTFont:kTextFont(16)];
         [_specialistTypeBT setTitleEdgeInsets:UIEdgeInsetsMake(0, 6, 0, 0)];
