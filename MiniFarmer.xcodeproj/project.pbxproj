@@ -51,6 +51,8 @@
 		318A87E61C01E8C6008456C1 /* MyRecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87E51C01E8C6008456C1 /* MyRecipeCell.m */; settings = {ASSET_TAGS = (); }; };
 		318A87E91C01E982008456C1 /* MyRecipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87E81C01E982008456C1 /* MyRecipeView.m */; settings = {ASSET_TAGS = (); }; };
 		318A87EB1C01E99B008456C1 /* MyRecipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 318A87EA1C01E99B008456C1 /* MyRecipeView.xib */; settings = {ASSET_TAGS = (); }; };
+		31919DC61C0C0539007096F4 /* AskSpeicalistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31919DC51C0C0539007096F4 /* AskSpeicalistTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		31919DC91C0C0571007096F4 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31919DC81C0C0571007096F4 /* BaseTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		31A0DBC21C0899780017D1F0 /* NSString+CustomAttributeString.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBBF1C0899780017D1F0 /* NSString+CustomAttributeString.m */; settings = {ASSET_TAGS = (); }; };
 		31A0DBC31C0899780017D1F0 /* UIButton+Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBC11C0899780017D1F0 /* UIButton+Font.m */; settings = {ASSET_TAGS = (); }; };
 		31A0DBC91C0899A20017D1F0 /* MineAskQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBC51C0899A20017D1F0 /* MineAskQuestionCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -61,8 +63,8 @@
 		31A0DBD81C089F0F0017D1F0 /* MineAskQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBD31C089F0F0017D1F0 /* MineAskQuestionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31A0DBD91C089F0F0017D1F0 /* MineRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBD51C089F0F0017D1F0 /* MineRecipeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31A0DBDA1C089F0F0017D1F0 /* MineReponseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBD71C089F0F0017D1F0 /* MineReponseTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		31A0DBDE1C089F8C0017D1F0 /* AskSpecialistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBDC1C089F8C0017D1F0 /* AskSpecialistView.m */; settings = {ASSET_TAGS = (); }; };
-		31A0DBDF1C089F8C0017D1F0 /* AskSpecialistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0DBDD1C089F8C0017D1F0 /* AskSpecialistView.xib */; settings = {ASSET_TAGS = (); }; };
+		31A0DBDE1C089F8C0017D1F0 /* AskSpecialistCellSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBDC1C089F8C0017D1F0 /* AskSpecialistCellSubview.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBDF1C089F8C0017D1F0 /* AskSpecialistCellSubview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0DBDD1C089F8C0017D1F0 /* AskSpecialistCellSubview.xib */; settings = {ASSET_TAGS = (); }; };
 		31A0DBE21C089F980017D1F0 /* AskSpecialistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBE11C089F980017D1F0 /* AskSpecialistViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC21BF3A5320081F64F /* MTAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC11BF3A5320081F64F /* MTAssetsPickerController.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC91BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC81BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m */; settings = {ASSET_TAGS = (); }; };
@@ -308,6 +310,10 @@
 		318A87E71C01E982008456C1 /* MyRecipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecipeView.h; sourceTree = "<group>"; };
 		318A87E81C01E982008456C1 /* MyRecipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRecipeView.m; sourceTree = "<group>"; };
 		318A87EA1C01E99B008456C1 /* MyRecipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyRecipeView.xib; sourceTree = "<group>"; };
+		31919DC41C0C0539007096F4 /* AskSpeicalistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskSpeicalistTableViewCell.h; sourceTree = "<group>"; };
+		31919DC51C0C0539007096F4 /* AskSpeicalistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskSpeicalistTableViewCell.m; sourceTree = "<group>"; };
+		31919DC71C0C0571007096F4 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		31919DC81C0C0571007096F4 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		31A0DBBE1C0899780017D1F0 /* NSString+CustomAttributeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CustomAttributeString.h"; sourceTree = "<group>"; };
 		31A0DBBF1C0899780017D1F0 /* NSString+CustomAttributeString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CustomAttributeString.m"; sourceTree = "<group>"; };
 		31A0DBC01C0899780017D1F0 /* UIButton+Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Font.h"; sourceTree = "<group>"; };
@@ -327,9 +333,9 @@
 		31A0DBD51C089F0F0017D1F0 /* MineRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineRecipeViewController.m; sourceTree = "<group>"; };
 		31A0DBD61C089F0F0017D1F0 /* MineReponseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineReponseTableViewController.h; sourceTree = "<group>"; };
 		31A0DBD71C089F0F0017D1F0 /* MineReponseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineReponseTableViewController.m; sourceTree = "<group>"; };
-		31A0DBDB1C089F8C0017D1F0 /* AskSpecialistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskSpecialistView.h; sourceTree = "<group>"; };
-		31A0DBDC1C089F8C0017D1F0 /* AskSpecialistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskSpecialistView.m; sourceTree = "<group>"; };
-		31A0DBDD1C089F8C0017D1F0 /* AskSpecialistView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskSpecialistView.xib; sourceTree = "<group>"; };
+		31A0DBDB1C089F8C0017D1F0 /* AskSpecialistCellSubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskSpecialistCellSubview.h; sourceTree = "<group>"; };
+		31A0DBDC1C089F8C0017D1F0 /* AskSpecialistCellSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskSpecialistCellSubview.m; sourceTree = "<group>"; };
+		31A0DBDD1C089F8C0017D1F0 /* AskSpecialistCellSubview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskSpecialistCellSubview.xib; sourceTree = "<group>"; };
 		31A0DBE01C089F980017D1F0 /* AskSpecialistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AskSpecialistViewController.h; path = HomeDetail/AskSpecialistViewController.h; sourceTree = "<group>"; };
 		31A0DBE11C089F980017D1F0 /* AskSpecialistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AskSpecialistViewController.m; path = HomeDetail/AskSpecialistViewController.m; sourceTree = "<group>"; };
 		31D4FDC01BF3A5320081F64F /* MTAssetsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAssetsPickerController.h; sourceTree = "<group>"; };
@@ -834,6 +840,7 @@
 		313E98101C058B2B00DC7B4F /* HomeDetail */ = {
 			isa = PBXGroup;
 			children = (
+				31919DC31C0C050F007096F4 /* HomeCells */,
 				313E98171C05950700DC7B4F /* HomeDetailViews */,
 			);
 			path = HomeDetail;
@@ -842,9 +849,9 @@
 		313E98171C05950700DC7B4F /* HomeDetailViews */ = {
 			isa = PBXGroup;
 			children = (
-				31A0DBDB1C089F8C0017D1F0 /* AskSpecialistView.h */,
-				31A0DBDC1C089F8C0017D1F0 /* AskSpecialistView.m */,
-				31A0DBDD1C089F8C0017D1F0 /* AskSpecialistView.xib */,
+				31A0DBDB1C089F8C0017D1F0 /* AskSpecialistCellSubview.h */,
+				31A0DBDC1C089F8C0017D1F0 /* AskSpecialistCellSubview.m */,
+				31A0DBDD1C089F8C0017D1F0 /* AskSpecialistCellSubview.xib */,
 			);
 			path = HomeDetailViews;
 			sourceTree = "<group>";
@@ -860,6 +867,22 @@
 				318A87DD1C00A0F1008456C1 /* YHSegmentView.m */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		31919DC31C0C050F007096F4 /* HomeCells */ = {
+			isa = PBXGroup;
+			children = (
+				31919DC41C0C0539007096F4 /* AskSpeicalistTableViewCell.h */,
+				31919DC51C0C0539007096F4 /* AskSpeicalistTableViewCell.m */,
+			);
+			path = HomeCells;
+			sourceTree = "<group>";
+		};
+		31919DCA1C0C3073007096F4 /* AskSpeicalistModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AskSpeicalistModel;
 			sourceTree = "<group>";
 		};
 		31D4FDBF1BF3A5320081F64F /* MTAssetsPickerController */ = {
@@ -1199,6 +1222,7 @@
 		FCC6267A1BCA7A8A00943F99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				31919DCA1C0C3073007096F4 /* AskSpeicalistModel */,
 				FC940B711BFDC84E0086A4D8 /* QuestionAnsModel */,
 				31DBC82A1BF78BAB007EDCD0 /* MineModel */,
 				FC37668C1BF71C1500FB2BA4 /* QuestionDetailModel */,
@@ -1650,6 +1674,8 @@
 				1B97F4E01C08248100A58D03 /* MyModel */,
 				FCCA8FA61BDD255E00B1CCF4 /* BaseViewController.h */,
 				FCCA8FA71BDD255E00B1CCF4 /* BaseViewController.m */,
+				31919DC71C0C0571007096F4 /* BaseTableViewCell.h */,
+				31919DC81C0C0571007096F4 /* BaseTableViewCell.m */,
 				FCCA8FA81BDD255E00B1CCF4 /* Category */,
 				FCCA8FAB1BDD255E00B1CCF4 /* SimpleImageTitleButton.h */,
 				FCCA8FAC1BDD255E00B1CCF4 /* SimpleImageTitleButton.m */,
@@ -1800,7 +1826,7 @@
 				FCC7529E1BC4E01500DE4B27 /* Info.plist in Resources */,
 				31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */,
 				313E981C1C05957500DC7B4F /* (null) in Resources */,
-				31A0DBDF1C089F8C0017D1F0 /* AskSpecialistView.xib in Resources */,
+				31A0DBDF1C089F8C0017D1F0 /* AskSpecialistCellSubview.xib in Resources */,
 				FCC884C11BC3EBB900A1200B /* Assets.xcassets in Resources */,
 				1B6BE1621C03F53900D69A2D /* SeachView.xib in Resources */,
 				FCC752B71BC4E01500DE4B27 /* MJRefresh.bundle in Resources */,
@@ -1855,7 +1881,7 @@
 				1B32534B1C059C2D00B2F28F /* DetailsearchViewController.m in Sources */,
 				FCC90DB01BD3AE5B00D341DD /* QuestionCell.m in Sources */,
 				313E98061C01F99C00DC7B4F /* (null) in Sources */,
-				31A0DBDE1C089F8C0017D1F0 /* AskSpecialistView.m in Sources */,
+				31A0DBDE1C089F8C0017D1F0 /* AskSpecialistCellSubview.m in Sources */,
 				31EC679C1BF0E4A700B8E1BC /* PSTCollectionViewItemKey.m in Sources */,
 				FCC74FF61BD27DAF008446ED /* QuestionInfo.m in Sources */,
 				31FDE3851BFA1FA900AA199F /* SettingQuitLoginCell.m in Sources */,
@@ -1872,6 +1898,7 @@
 				1B97F4E31C0824A700A58D03 /* MyModel.m in Sources */,
 				FCC752BA1BC4E01500DE4B27 /* UIScrollView+MJRefresh.m in Sources */,
 				31A0DBD01C089EDF0017D1F0 /* MyAskQuestionModel.m in Sources */,
+				31919DC91C0C0571007096F4 /* BaseTableViewCell.m in Sources */,
 				FCC752BF1BC4E01500DE4B27 /* SDWebImageCompat.m in Sources */,
 				31A0DBCB1C0899A20017D1F0 /* MineAskQuestionImagesCell.m in Sources */,
 				FCC752C11BC4E01500DE4B27 /* SDWebImageDownloader.m in Sources */,
@@ -1911,6 +1938,7 @@
 				31FDE3821BFA1F9100AA199F /* SettinSpaceCell.m in Sources */,
 				318A87E61C01E8C6008456C1 /* MyRecipeCell.m in Sources */,
 				31FDE38E1BFA250200AA199F /* SettingModel.m in Sources */,
+				31919DC61C0C0539007096F4 /* AskSpeicalistTableViewCell.m in Sources */,
 				FCC752C01BC4E01500DE4B27 /* SDWebImageDecoder.m in Sources */,
 				1B97F4FB1C085A0000A58D03 /* DiseaDetailViewController.m in Sources */,
 				1B6BE1771C04580500D69A2D /* SortView.m in Sources */,
