@@ -33,7 +33,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    //self. automaticallyAdjustsScrollViewInsets= NO;
     
     //2,创建子视图
     [self _addSubViews];
@@ -46,7 +47,7 @@
 - (void)_addSubViews{
     //1.创建表视图
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-    _tableView.height =100000;
+
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
@@ -78,6 +79,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
      StudymoreCell *   cell = [tableView dequeueReusableCellWithIdentifier:identify1 forIndexPath:indexPath];
+        
         cell.model = _data[indexPath.section];
         return cell;
     }else{
@@ -125,17 +127,14 @@
         StudyModel *model  = self.data[indexPath.section];
         
         DiseaPicViewController *diseaVC = [[DiseaPicViewController alloc] init];
+        diseaVC.hidesBottomBarWhenPushed = YES;
+        
         [diseaVC initTitleLabel:model.twoclassname];
         diseaVC.twoclassid = model.twoclassid;
 
         [self.navigationController pushViewController:diseaVC animated:YES];
         
-    }else{
-        
-     
-        
-    }
-    
+    }    
 
 
 }

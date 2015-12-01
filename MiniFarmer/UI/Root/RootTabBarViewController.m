@@ -49,6 +49,11 @@
 {
     [super viewWillAppear:animated];
     _tabBarView.hidden = NO;
+    
+   
+
+   // _tabBarView.transform = CGAffineTransformIdentity;
+  
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -158,10 +163,12 @@
 }
 - (void)setHidesBottomBarWhenPushed:(BOOL)hidesBottomBarWhenPushed{
     [super setHidesBottomBarWhenPushed:hidesBottomBarWhenPushed];
-    
+    /*
     CGAffineTransform transform = _tabBarView.transform;
     
     _tabBarView.transform = CGAffineTransformTranslate(transform, 0 ,  kBottomTabBarHeight+10);
+     */
+    _tabBarView.hidden = YES;
 
 }
 

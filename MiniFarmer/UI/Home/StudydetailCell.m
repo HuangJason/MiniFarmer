@@ -28,9 +28,11 @@
             DiseaseView *view = [[NSBundle mainBundle] loadNibNamed:@"DiseaseView" owner:self options:nil].lastObject;
             if (self.data.count != 0) {
                 view.model = _data [i];
+                self.selectionStyle =UITableViewCellSelectionStyleNone;
 
             }else {
                 view.dic = _model.zplist[i];
+                
                 self.selectionStyle =UITableViewCellSelectionStyleNone;
             }
             view.frame = CGRectMake(i*(weiht+10)+12, 0,weiht,125);

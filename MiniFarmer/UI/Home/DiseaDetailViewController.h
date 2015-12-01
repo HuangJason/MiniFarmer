@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 
-@interface DiseaDetailViewController : UIViewController
+@interface DiseaDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property(nonatomic,copy)NSString *bchid;
+@property(nonatomic,strong)NSArray *data;
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -13,6 +13,7 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5c3-yW-WUy">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -22,6 +23,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYE-p0-hmh">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="Button">
                         <color key="titleColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,6 +34,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bZ-CC-gyR">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="18" id="eT5-xt-i0z"/>
                         <constraint firstAttribute="height" constant="18" id="i8t-Wv-W0p"/>
@@ -53,6 +56,7 @@
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOr-Cb-LfS">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -62,6 +66,7 @@
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDF-sX-dP5">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -71,6 +76,7 @@
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-oM-VFT">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -80,6 +86,7 @@
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-3k-SHI">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -89,8 +96,10 @@
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-XK-Dy1">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <animations/>
                 </imageView>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="ayd-3k-SHI" firstAttribute="top" secondItem="0bZ-CC-gyR" secondAttribute="bottom" constant="17.5" id="4eN-c7-sKV">
@@ -143,26 +152,26 @@
                     <exclude reference="dHH-XK-Dy1"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="De3-Wj-jdv"/>
-                    <exclude reference="Ec3-7i-xy5"/>
                     <exclude reference="Fgb-9h-ye9"/>
                     <exclude reference="J3Y-UI-m3C"/>
+                    <exclude reference="94b-Qk-06t"/>
+                    <exclude reference="l2f-Yb-zRp"/>
+                    <exclude reference="De3-Wj-jdv"/>
+                    <exclude reference="Ec3-7i-xy5"/>
+                    <exclude reference="5eg-gC-riT"/>
+                    <exclude reference="cgo-Op-gcN"/>
+                    <exclude reference="jwA-X9-2Tt"/>
+                    <exclude reference="PFm-d6-ZMD"/>
+                    <exclude reference="XZ1-f9-5g2"/>
+                    <exclude reference="h5u-Ov-B67"/>
                     <exclude reference="KEc-8u-bkL"/>
                     <exclude reference="Tvh-Fi-Amh"/>
                     <exclude reference="4eN-c7-sKV"/>
                     <exclude reference="Qfy-nA-VLf"/>
-                    <exclude reference="5eg-gC-riT"/>
-                    <exclude reference="cgo-Op-gcN"/>
-                    <exclude reference="jwA-X9-2Tt"/>
                     <exclude reference="YAg-On-IEA"/>
                     <exclude reference="deh-HV-BO2"/>
                     <exclude reference="ela-gc-c7E"/>
                     <exclude reference="yG0-P0-kxA"/>
-                    <exclude reference="PFm-d6-ZMD"/>
-                    <exclude reference="XZ1-f9-5g2"/>
-                    <exclude reference="h5u-Ov-B67"/>
-                    <exclude reference="94b-Qk-06t"/>
-                    <exclude reference="l2f-Yb-zRp"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -177,26 +186,26 @@
                     <include reference="dHH-XK-Dy1"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="De3-Wj-jdv"/>
-                    <include reference="Ec3-7i-xy5"/>
                     <include reference="Fgb-9h-ye9"/>
                     <include reference="J3Y-UI-m3C"/>
+                    <include reference="94b-Qk-06t"/>
+                    <include reference="l2f-Yb-zRp"/>
+                    <include reference="De3-Wj-jdv"/>
+                    <include reference="Ec3-7i-xy5"/>
+                    <include reference="5eg-gC-riT"/>
+                    <include reference="cgo-Op-gcN"/>
+                    <include reference="jwA-X9-2Tt"/>
+                    <include reference="PFm-d6-ZMD"/>
+                    <include reference="XZ1-f9-5g2"/>
+                    <include reference="h5u-Ov-B67"/>
                     <include reference="KEc-8u-bkL"/>
                     <include reference="Tvh-Fi-Amh"/>
                     <include reference="4eN-c7-sKV"/>
                     <include reference="Qfy-nA-VLf"/>
-                    <include reference="5eg-gC-riT"/>
-                    <include reference="cgo-Op-gcN"/>
-                    <include reference="jwA-X9-2Tt"/>
                     <include reference="YAg-On-IEA"/>
                     <include reference="deh-HV-BO2"/>
                     <include reference="ela-gc-c7E"/>
                     <include reference="yG0-P0-kxA"/>
-                    <include reference="PFm-d6-ZMD"/>
-                    <include reference="XZ1-f9-5g2"/>
-                    <include reference="h5u-Ov-B67"/>
-                    <include reference="94b-Qk-06t"/>
-                    <include reference="l2f-Yb-zRp"/>
                 </mask>
             </variation>
             <connections>

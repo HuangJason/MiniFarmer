@@ -27,12 +27,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.edgesForExtendedLayout = UIRectEdgeAll;
+    
     
     [self setNavigationBarIsHidden:NO];
     self.view.backgroundColor = [UIColor whiteColor];
     [self setBarLeftDefualtButtonWithTarget:self action:@selector(backBtnPressed)];
-    self.view.height = kScreenSizeHeight+kStatusBarHeigth+kNavigationBarHeight;
+    //self.view.height = kScreenSizeHeight+kStatusBarHeigth+kNavigationBarHeight;
     
     
    // [self _creaSubView];
@@ -40,11 +40,13 @@
 }
 - (void)backBtnPressed{
 
-    [self.navigationController popToRootViewControllerAnimated:NO];
+    [self.navigationController popViewControllerAnimated:YES];
 
 }
 - (void)_creaSubView{
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight+kNavigationBarHeight,kScreenSizeWidth, kScreenSizeHeight) style:UITableViewStylePlain];
+    self.extendedLayoutIncludesOpaqueBars = NO;
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight+kNavigationBarHeight,kScreenSizeWidth, kScreenSizeHeight-(kStatusBarHeight +kNavigationBarHeight)) style:UITableViewStylePlain];
+
     _tableView.delegate = self;
     _tableView.dataSource = self;
     identify = @"studydetailcell";

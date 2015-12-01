@@ -16,6 +16,7 @@
 #import "AskSpecialistViewController.h"
 #import "SeachView.h"
 #import "StudyViewController.h"
+#import "DiseaDetailViewController.h"
 
 #define kPageSize   @"10"   //一次请求数据数
 
@@ -275,14 +276,14 @@
     
     [self.ViewController.navigationController pushViewController:messageVC animated:YES];
      */
+    
+    
     StudyViewController *studyVC = [[StudyViewController alloc] init];
     studyVC.view.backgroundColor = [UIColor whiteColor];
-    //studyVC.data =
+
     self.tabBarController.hidesBottomBarWhenPushed = YES;
 
     [self.navigationController pushViewController:studyVC animated:YES];
-    
-
 }
 
 
@@ -292,6 +293,9 @@
 {
     AskSpecialistViewController *askSVC = [[AskSpecialistViewController alloc] init];
     [self.navigationController pushViewController:askSVC animated:YES];
+    
+    
+    
 }
 
 @end

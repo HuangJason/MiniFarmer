@@ -27,7 +27,7 @@
     
     [self setNavigationBarIsHidden:NO];
 
-   // tabview.hidden = YES;
+    //tabview.hidden = YES;
     
     //[self initNavigationbgView:[UIColor grayColor]];
     

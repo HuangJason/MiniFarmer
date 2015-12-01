@@ -28,6 +28,15 @@
 		1B97F4EC1C083B3300A58D03 /* DiseaPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B97F4EB1C083B3300A58D03 /* DiseaPicViewController.m */; settings = {ASSET_TAGS = (); }; };
 		1B97F4F21C084C5000A58D03 /* TwoclassMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B97F4F11C084C5000A58D03 /* TwoclassMode.m */; settings = {ASSET_TAGS = (); }; };
 		1B97F4FB1C085A0000A58D03 /* DiseaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B97F4FA1C085A0000A58D03 /* DiseaDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1BCA80351C0BD0F5001E1285 /* DrugDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA80341C0BD0F5001E1285 /* DrugDetailView.m */; settings = {ASSET_TAGS = (); }; };
+		1BCA80371C0BD43F001E1285 /* DrugDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCA80361C0BD43F001E1285 /* DrugDetailView.xib */; settings = {ASSET_TAGS = (); }; };
+		1BCA803D1C0C2A8D001E1285 /* DieaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA803C1C0C2A8D001E1285 /* DieaseModel.m */; settings = {ASSET_TAGS = (); }; };
+		1BEC27691C0AFF460046F96A /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC27681C0AFF460046F96A /* ShareView.m */; settings = {ASSET_TAGS = (); }; };
+		1BEC276B1C0AFF540046F96A /* ShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BEC276A1C0AFF540046F96A /* ShareView.xib */; settings = {ASSET_TAGS = (); }; };
+		1BEC27AF1C0B34050046F96A /* StudyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC27AE1C0B34050046F96A /* StudyHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		1BEC27B11C0B34230046F96A /* StudyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BEC27B01C0B34230046F96A /* StudyHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
+		1BEC27B51C0B4CBE0046F96A /* DiseaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC27B31C0B4CBE0046F96A /* DiseaseCell.m */; settings = {ASSET_TAGS = (); }; };
+		1BEC27B61C0B4CBE0046F96A /* DiseaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BEC27B41C0B4CBE0046F96A /* DiseaseCell.xib */; settings = {ASSET_TAGS = (); }; };
 		31399E7A1BF56E470052A4EB /* ImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E791BF56E470052A4EB /* ImagesView.m */; settings = {ASSET_TAGS = (); }; };
 		31399E811BF63D210052A4EB /* ZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E801BF63D210052A4EB /* ZoomScrollView.m */; settings = {ASSET_TAGS = (); }; };
 		31399E841BF63F2A0052A4EB /* AskScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31399E831BF63F2A0052A4EB /* AskScrollView.m */; settings = {ASSET_TAGS = (); }; };
@@ -280,6 +289,20 @@
 		1B97F4F11C084C5000A58D03 /* TwoclassMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoclassMode.m; sourceTree = "<group>"; };
 		1B97F4F91C085A0000A58D03 /* DiseaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiseaDetailViewController.h; sourceTree = "<group>"; };
 		1B97F4FA1C085A0000A58D03 /* DiseaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiseaDetailViewController.m; sourceTree = "<group>"; };
+		1BCA80331C0BD0F5001E1285 /* DrugDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugDetailView.h; sourceTree = "<group>"; };
+		1BCA80341C0BD0F5001E1285 /* DrugDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugDetailView.m; sourceTree = "<group>"; };
+		1BCA80361C0BD43F001E1285 /* DrugDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugDetailView.xib; sourceTree = "<group>"; };
+		1BCA803B1C0C2A8D001E1285 /* DieaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieaseModel.h; sourceTree = "<group>"; };
+		1BCA803C1C0C2A8D001E1285 /* DieaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieaseModel.m; sourceTree = "<group>"; };
+		1BEC27671C0AFF460046F96A /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
+		1BEC27681C0AFF460046F96A /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
+		1BEC276A1C0AFF540046F96A /* ShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareView.xib; sourceTree = "<group>"; };
+		1BEC27AD1C0B34050046F96A /* StudyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyHeaderView.h; sourceTree = "<group>"; };
+		1BEC27AE1C0B34050046F96A /* StudyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyHeaderView.m; sourceTree = "<group>"; };
+		1BEC27B01C0B34230046F96A /* StudyHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudyHeaderView.xib; sourceTree = "<group>"; };
+		1BEC27B21C0B4CBE0046F96A /* DiseaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiseaseCell.h; sourceTree = "<group>"; };
+		1BEC27B31C0B4CBE0046F96A /* DiseaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiseaseCell.m; sourceTree = "<group>"; };
+		1BEC27B41C0B4CBE0046F96A /* DiseaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiseaseCell.xib; sourceTree = "<group>"; };
 		31399E781BF56E470052A4EB /* ImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesView.h; sourceTree = "<group>"; };
 		31399E791BF56E470052A4EB /* ImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesView.m; sourceTree = "<group>"; };
 		31399E7F1BF63D210052A4EB /* ZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomScrollView.h; sourceTree = "<group>"; };
@@ -713,6 +736,18 @@
 				1B337D7A1C06FDBA00F2FE5B /* DiseaseView.h */,
 				1B337D7B1C06FDBA00F2FE5B /* DiseaseView.m */,
 				1B337D7D1C06FDD600F2FE5B /* DiseaseView.xib */,
+				1BEC27671C0AFF460046F96A /* ShareView.h */,
+				1BEC27681C0AFF460046F96A /* ShareView.m */,
+				1BEC276A1C0AFF540046F96A /* ShareView.xib */,
+				1BEC27AD1C0B34050046F96A /* StudyHeaderView.h */,
+				1BEC27AE1C0B34050046F96A /* StudyHeaderView.m */,
+				1BEC27B01C0B34230046F96A /* StudyHeaderView.xib */,
+				1BEC27B21C0B4CBE0046F96A /* DiseaseCell.h */,
+				1BEC27B31C0B4CBE0046F96A /* DiseaseCell.m */,
+				1BEC27B41C0B4CBE0046F96A /* DiseaseCell.xib */,
+				1BCA80331C0BD0F5001E1285 /* DrugDetailView.h */,
+				1BCA80341C0BD0F5001E1285 /* DrugDetailView.m */,
+				1BCA80361C0BD43F001E1285 /* DrugDetailView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -724,6 +759,8 @@
 				1B97F4E81C08252A00A58D03 /* StudyModel.m */,
 				1B97F4F01C084C5000A58D03 /* TwoclassMode.h */,
 				1B97F4F11C084C5000A58D03 /* TwoclassMode.m */,
+				1BCA803B1C0C2A8D001E1285 /* DieaseModel.h */,
+				1BCA803C1C0C2A8D001E1285 /* DieaseModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -757,12 +794,12 @@
 		1B6BE1681C04320A00D69A2D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1B6BE15E1C03F4E400D69A2D /* SeachView.h */,
 				1B6BE15F1C03F4E400D69A2D /* SeachView.m */,
 				1B6BE1611C03F53900D69A2D /* SeachView.xib */,
 				1B6BE1751C04580500D69A2D /* SortView.h */,
 				1B6BE1761C04580500D69A2D /* SortView.m */,
 				1B6BE1781C04582200D69A2D /* SortView.xib */,
+				1B6BE15E1C03F4E400D69A2D /* SeachView.h */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1797,6 +1834,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEC27B61C0B4CBE0046F96A /* DiseaseCell.xib in Resources */,
 				FCC7529E1BC4E01500DE4B27 /* Info.plist in Resources */,
 				31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */,
 				313E981C1C05957500DC7B4F /* (null) in Resources */,
@@ -1806,9 +1844,12 @@
 				FCC752B71BC4E01500DE4B27 /* MJRefresh.bundle in Resources */,
 				318A87EB1C01E99B008456C1 /* MyRecipeView.xib in Resources */,
 				31EC67A31BF0E4A700B8E1BC /* MWPhotoBrowser.bundle in Resources */,
+				1BCA80371C0BD43F001E1285 /* DrugDetailView.xib in Resources */,
+				1BEC276B1C0AFF540046F96A /* ShareView.xib in Resources */,
 				1B337D7E1C06FDD600F2FE5B /* DiseaseView.xib in Resources */,
 				31399E8D1BF73DA10052A4EB /* InvitedCodeViewController.xib in Resources */,
 				31A0DBCA1C0899A20017D1F0 /* MineAskQuestionCell.xib in Resources */,
+				1BEC27B11C0B34230046F96A /* StudyHeaderView.xib in Resources */,
 				1B337D741C06F27E00F2FE5B /* StudymoreCell.xib in Resources */,
 				1B6BE1791C04582200D69A2D /* SortView.xib in Resources */,
 				31FDE38A1BFA204200AA199F /* SettingAboutView.xib in Resources */,
@@ -1881,8 +1922,10 @@
 				31EC66411BECF43700B8E1BC /* JudgeTextIsRight.m in Sources */,
 				1B6BE1711C04393A00D69A2D /* MessageViewController.m in Sources */,
 				1B6BE1601C03F4E400D69A2D /* SeachView.m in Sources */,
+				1BEC27691C0AFF460046F96A /* ShareView.m in Sources */,
 				31FDE3941BFA346C00AA199F /* RecomentViewController.m in Sources */,
 				31EC66341BECEBE100B8E1BC /* YHSMSCodeButton.m in Sources */,
+				1BCA803D1C0C2A8D001E1285 /* DieaseModel.m in Sources */,
 				FCC752B61BC4E01500DE4B27 /* MJRefreshStateHeader.m in Sources */,
 				31EC67991BF0E4A700B8E1BC /* PSTCollectionViewController.m in Sources */,
 				1B337D691C06D5EF00F2FE5B /* StudtydetailViewController.m in Sources */,
@@ -1950,6 +1993,7 @@
 				31FDE3ED1BFC10F600AA199F /* MyResponseViewController.m in Sources */,
 				31399E7A1BF56E470052A4EB /* ImagesView.m in Sources */,
 				FCC64BF91BCFE4FE00BF56C4 /* LeHttpService.m in Sources */,
+				1BCA80351C0BD0F5001E1285 /* DrugDetailView.m in Sources */,
 				31EC67A11BF0E4A700B8E1BC /* PSTGridLayoutRow.m in Sources */,
 				FCC752AE1BC4E01500DE4B27 /* MJRefreshAutoGifFooter.m in Sources */,
 				31D4FDC21BF3A5320081F64F /* MTAssetsPickerController.m in Sources */,
@@ -2022,10 +2066,12 @@
 				FCC7529A1BC4E01500DE4B27 /* JSONHTTPClient.m in Sources */,
 				31EC67941BF0E4A700B8E1BC /* MWZoomingScrollView.m in Sources */,
 				FCC626781BCA7A0E00943F99 /* MineViewController.m in Sources */,
+				1BEC27AF1C0B34050046F96A /* StudyHeaderView.m in Sources */,
 				FC37668F1BF71C2200FB2BA4 /* QuestionDetailModel.m in Sources */,
 				31EC664C1BEF839900B8E1BC /* RegisterModel.m in Sources */,
 				FCC64BFF1BCFE6D300BF56C4 /* LeJSONUtil.m in Sources */,
 				31A0DBD11C089EDF0017D1F0 /* MyRecipeModel.m in Sources */,
+				1BEC27B51C0B4CBE0046F96A /* DiseaseCell.m in Sources */,
 				FCC752A91BC4E01500DE4B27 /* MJRefreshAutoFooter.m in Sources */,
 				31EC67901BF0E4A700B8E1BC /* MWPhoto.m in Sources */,
 				318A87DE1C00A0F1008456C1 /* Colours.m in Sources */,

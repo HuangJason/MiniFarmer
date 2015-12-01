@@ -33,32 +33,33 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+   
     if (_history == nil) {
         _history = [NSMutableArray array];
     }
     NSMutableArray *array = [[NSUserDefaults standardUserDefaults] objectForKey:KHistory];
     _history = [NSMutableArray arrayWithArray:array];
     
-        /*
+    /*
          CGRect frame = _tableView.frame;
-         frame.size.height = _history.count*44;
+         frame.size.height = 170;
          _tableView.frame = frame;
-         */
+     */
+    
     if (_history.count!= 0) {
         _tableView.hidden = NO;
     }else{
         _tableView.hidden = YES;
 
     }
+    
     CGRect frame = _tableFooterView.frame;
     frame.size.height = _tableView.height-_history.count*44;
     _tableFooterView.frame = frame;
     
     [_tableView reloadData];
-
-
-    
-    
+     
 
 }
 
@@ -66,6 +67,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
     [self _CreateSubView];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
 
     
 }
@@ -109,14 +112,14 @@
     _sortView.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
     [self.view addSubview:_sortView];
     
-#warning mark---测试分类按钮的切换
+
     NSArray *array = @[@"问题",@"商品",@"技术",@"专家",@"配方"];
     _sortView.data = array;
     
 
     //3.历史记录
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _sortView.bottom,kScreenSizeHeight,kScreenSizeHeight-(kStatusBarHeight+kNavigationBarHeight+_sortView.height)) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _sortView.bottom,kScreenSizeWidth,kScreenSizeHeight-_sortView.frame.origin.y) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         
@@ -127,6 +130,7 @@
         _tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, 0)];
         //_tableFooterView.backgroundColor = [UIColor redColor];
         _tableView.tableFooterView = _tableFooterView;
+        _tableView.tableFooterView.height = 170;
         [self clearHistory];
         
         [self.view addSubview:_tableView];
@@ -138,12 +142,14 @@
 
     UIButton *clear = [UIButton buttonWithType:UIButtonTypeCustom];
     [clear setBackgroundImage:[UIImage imageNamed:@"home_search_clearbtn"] forState:UIControlStateNormal];
+    clear.frame = CGRectMake(_tableFooterView.height/2-65.5, 16, 131, 43);
     [clear setTitle:@"清除历史记录" forState:UIControlStateNormal];
     [clear setTitleColor:[UIColor colorWithHexString:@"#ff6633"] forState:UIControlStateNormal];
     [clear addTarget:self action:@selector(clearAction:) forControlEvents:UIControlEventTouchUpInside];
     
     [_tableFooterView addSubview:clear];
     UIView *superView = _tableFooterView;
+    
     [clear mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(superView.mas_top).offset(16);
         make.width.equalTo(@131);
@@ -151,6 +157,8 @@
         make.left.equalTo(superView.mas_left).offset(kScreenSizeWidth/2-65.5);
         
     }];
+    
+    
 }
 - (void)clearAction:(UIButton *)buttton{
     
@@ -183,6 +191,7 @@
     
     return cell;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     return 44;
@@ -191,9 +200,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-
+ 
    
 }
+
+/*
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+
+    return _tableFooterView;
+
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+
+    return  170;
+}
+ */
+
 
 #pragma mark-----UITextFiled协议
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{

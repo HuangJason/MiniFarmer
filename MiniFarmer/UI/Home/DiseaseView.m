@@ -11,7 +11,11 @@
 #import "DiseaDetailViewController.h"
 #import "UIView+UIViewController.h"
 
-@implementation DiseaseView
+@implementation DiseaseView{
+
+    NSString *_bchid;
+
+}
 - (void)awakeFromNib{
     
     _name.font = kTextFont14;
@@ -23,12 +27,19 @@
     [_browseV setImage:[UIImage imageNamed:@"home_study_detail_browse"]];
     _imageView.backgroundColor = [UIColor redColor];
     
+    _imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+    [_imageView addGestureRecognizer:tap];
+
+    
 }
 - (void)setDic:(NSDictionary *)dic{
     _dic = dic;
     _name.text =_dic[@"title"];
     
     NSString *url =_dic[@"lbzp"];
+    
+    _bchid = _dic[@"id"];
 
     NSString *str = [kPictureURL stringByAppendingString:url];
     
@@ -42,6 +53,8 @@
 - (void)setModel:(TwoclassMode *)model{
     _model = model;
     _name.text = _model.title;
+    _bchid = _model.diseaid;
+
     
     NSString *url =_model.lbzp;
     
@@ -53,13 +66,14 @@
     [_imageView sd_setImageWithURL:URL placeholderImage:nil];
     
 }
-/*
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+- (void)tap{
     
     DiseaDetailViewController *detailVC = [[DiseaDetailViewController alloc] init];
     
+    detailVC.bchid = _bchid;
     [self.ViewController.navigationController pushViewController:detailVC animated:YES];
- 
+
+
 }
- */
+
 @end

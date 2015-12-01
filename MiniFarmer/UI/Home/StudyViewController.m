@@ -34,7 +34,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.edgesForExtendedLayout = UIRectEdgeAll;
+
+    self.automaticallyAdjustsScrollViewInsets=NO;
     [self requesetData];
 
     
@@ -73,7 +74,7 @@
     [self.view addSubview:self.segmentView];
   
     self.segmentView.frame = CGRectMake(0, self.yDispaceToTop, kScreenSizeWidth, 42);
-    //_data = @[@"经作",@"蔬菜",@"瓜类",@"果树",@"粮食",@"杂草"];
+    
     
     
     for (int i=0; i<_data.count; i++) {
@@ -192,6 +193,7 @@
     
     
     __weak StudyViewController *wself =  self;
+    
     [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost subUrl:@"?c=wxjs&m=getzwbigclass" parameters:nil prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         
     
@@ -208,9 +210,6 @@
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
     }];
-
-
-
 
 }
 
