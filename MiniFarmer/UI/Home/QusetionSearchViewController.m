@@ -1,24 +1,22 @@
 //
-//  DetailsearchViewController.m
+//  QusetionSearchViewController.m
 //  MiniFarmer
 //
-//  Created by 牛筋草 on 15/11/25.
+//  Created by 牛筋草 on 15/12/3.
 //  Copyright © 2015年 enbs. All rights reserved.
 //
 
-#import "DetailsearchViewController.h"
+#import "QusetionSearchViewController.h"
 
-@interface DetailsearchViewController ()
+@interface QusetionSearchViewController ()
 
 @end
 
-@implementation DetailsearchViewController
+@implementation QusetionSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-     
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
