@@ -11,6 +11,8 @@
 #import "StudydetailCell.h"
 #import "TwoclassMode.h"
 #import "UIView+FrameCategory.h"
+#import "UserInfo.h"
+#import "SeachView.h"
 
 
 @interface DiseaPicViewController ()
@@ -22,11 +24,15 @@
 @implementation DiseaPicViewController{
 
     NSString *identify;
+    SeachView *_seachView;
+    
 
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //self.edgesForExtendedLayout = UIRectEdgeAll;
     
     
     [self setNavigationBarIsHidden:NO];
@@ -54,14 +60,14 @@
     
     [_tableView registerClass:[StudydetailCell class] forCellReuseIdentifier:identify];
     
-    
-    
-
-
 }
 #pragma mark---UITabeView的协议
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.data.count/3;
+    if (self.data.count%3==0) {
+        return self.data.count/3;
+    }
+    
+    return (self.data.count/3+1);
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     StudydetailCell *cell = [tableView dequeueReusableCellWithIdentifier:identify forIndexPath:indexPath];
@@ -69,7 +75,10 @@
     NSMutableArray *array = [[NSMutableArray alloc] init];
     for (int i = 0; i<3; i++) {
         NSInteger index = indexPath.row*3 +i;
-        [array addObject:self.data[index]];
+        if (index<self.data.count) {
+             [array addObject:self.data[index]];
+        }
+       
     }
     cell.data =array.mutableCopy;
     
@@ -82,23 +91,46 @@
 
 
 #pragma mark---数据处理
+- (void)setIsSearch:(BOOL)isSearch{
+    _isSearch = isSearch;
+    _seachView = [[NSBundle mainBundle] loadNibNamed:@"SeachView" owner:self options:nil].lastObject;
+    _seachView.frame = CGRectMake(50, kStatusBarHeight, kScreenSizeWidth-50, kNavigationBarHeight);
+    _seachView.imageNmae = @"home_btn_message_nm";
+    _seachView.isSearch = NO;
+    [self.view addSubview:_seachView];
+
+}
+- (void)setKeyword:(NSString *)keyword{
+    _keyword = keyword;
+    NSString *userid = [UserInfo shareUserInfo].userId;
+    if (userid == nil) {
+        userid = @"819";
+    }
+    NSDictionary *dic = @{
+                          @"userid":userid,
+                          @"wd":_keyword
+                          };
+    [self _reqestData:@"?c=search&m=bchjs" with:dic type:SHHttpRequestGet];
+
+}
 
 - (void)setTwoclassid:(NSString *)twoclassid{
     _twoclassid = twoclassid;
-    [self _reqestData];
+    NSDictionary *dic = @{
+                          @"twoclassid":_twoclassid
+                          };
+    [self _reqestData:@"?c=wxjs&m=getlistbytwoclass" with:dic type:SHHttpRequestPost];
 
 }
-- (void)_reqestData{
+- (void)_reqestData:(NSString *)url with:(NSDictionary *)dic type:(NSInteger)typemethod{
     
     if (_data ==nil) {
         _data = [NSMutableArray array];
     }
     
     __weak DiseaPicViewController *weself = self;
-    NSDictionary *dic = @{
-                          @"twoclassid":_twoclassid
-                          };
-    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestPost subUrl:@"?c=wxjs&m=getlistbytwoclass" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    
+    [[SHHttpClient defaultClient] requestWithMethod:typemethod subUrl:url parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
                 dispatch_async(dispatch_get_main_queue(),^{
             
                     NSArray *array = responseObject[@"list"];

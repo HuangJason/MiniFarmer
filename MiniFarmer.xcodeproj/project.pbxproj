@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B32534B1C059C2D00B2F28F /* DetailsearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B32534A1C059C2D00B2F28F /* DetailsearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1B23956F1C0FE3F00096CE50 /* QusetionSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B23956E1C0FE3F00096CE50 /* QusetionSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1B23957A1C0FEAA70096CE50 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2395731C0FEAA70096CE50 /* PhotoViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1B23957B1C0FEAA70096CE50 /* PhotoCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2395751C0FEAA70096CE50 /* PhotoCollectionView.m */; settings = {ASSET_TAGS = (); }; };
+		1B23957C1C0FEAA70096CE50 /* PhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2395771C0FEAA70096CE50 /* PhotoViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		1B23957D1C0FEAA70096CE50 /* PhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2395791C0FEAA70096CE50 /* PhotoScrollView.m */; settings = {ASSET_TAGS = (); }; };
 		1B337D691C06D5EF00F2FE5B /* StudtydetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B337D681C06D5EF00F2FE5B /* StudtydetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		1B337D731C06F27E00F2FE5B /* StudymoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B337D711C06F27E00F2FE5B /* StudymoreCell.m */; settings = {ASSET_TAGS = (); }; };
 		1B337D741C06F27E00F2FE5B /* StudymoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B337D721C06F27E00F2FE5B /* StudymoreCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -60,6 +64,12 @@
 		318A87E61C01E8C6008456C1 /* MyRecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87E51C01E8C6008456C1 /* MyRecipeCell.m */; settings = {ASSET_TAGS = (); }; };
 		318A87E91C01E982008456C1 /* MyRecipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A87E81C01E982008456C1 /* MyRecipeView.m */; settings = {ASSET_TAGS = (); }; };
 		318A87EB1C01E99B008456C1 /* MyRecipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 318A87EA1C01E99B008456C1 /* MyRecipeView.xib */; settings = {ASSET_TAGS = (); }; };
+		31919DC61C0C0539007096F4 /* AskSpeicalistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31919DC51C0C0539007096F4 /* AskSpeicalistTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		31919DC91C0C0571007096F4 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31919DC81C0C0571007096F4 /* BaseTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		31919DCD1C0C66B8007096F4 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31919DCC1C0C66B8007096F4 /* LoginView.m */; settings = {ASSET_TAGS = (); }; };
+		31919DD01C0C66C4007096F4 /* NotLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31919DCF1C0C66C4007096F4 /* NotLoginView.m */; settings = {ASSET_TAGS = (); }; };
+		31919DD21C0C673C007096F4 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31919DD11C0C673C007096F4 /* LoginView.xib */; settings = {ASSET_TAGS = (); }; };
+		31919DD41C0C67A9007096F4 /* NotLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31919DD31C0C67A9007096F4 /* NotLoginView.xib */; settings = {ASSET_TAGS = (); }; };
 		31A0DBC21C0899780017D1F0 /* NSString+CustomAttributeString.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBBF1C0899780017D1F0 /* NSString+CustomAttributeString.m */; settings = {ASSET_TAGS = (); }; };
 		31A0DBC31C0899780017D1F0 /* UIButton+Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBC11C0899780017D1F0 /* UIButton+Font.m */; settings = {ASSET_TAGS = (); }; };
 		31A0DBC91C0899A20017D1F0 /* MineAskQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBC51C0899A20017D1F0 /* MineAskQuestionCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -70,8 +80,8 @@
 		31A0DBD81C089F0F0017D1F0 /* MineAskQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBD31C089F0F0017D1F0 /* MineAskQuestionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31A0DBD91C089F0F0017D1F0 /* MineRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBD51C089F0F0017D1F0 /* MineRecipeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31A0DBDA1C089F0F0017D1F0 /* MineReponseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBD71C089F0F0017D1F0 /* MineReponseTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		31A0DBDE1C089F8C0017D1F0 /* AskSpecialistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBDC1C089F8C0017D1F0 /* AskSpecialistView.m */; settings = {ASSET_TAGS = (); }; };
-		31A0DBDF1C089F8C0017D1F0 /* AskSpecialistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0DBDD1C089F8C0017D1F0 /* AskSpecialistView.xib */; settings = {ASSET_TAGS = (); }; };
+		31A0DBDE1C089F8C0017D1F0 /* AskSpecialistCellSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBDC1C089F8C0017D1F0 /* AskSpecialistCellSubview.m */; settings = {ASSET_TAGS = (); }; };
+		31A0DBDF1C089F8C0017D1F0 /* AskSpecialistCellSubview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0DBDD1C089F8C0017D1F0 /* AskSpecialistCellSubview.xib */; settings = {ASSET_TAGS = (); }; };
 		31A0DBE21C089F980017D1F0 /* AskSpecialistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0DBE11C089F980017D1F0 /* AskSpecialistViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC21BF3A5320081F64F /* MTAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC11BF3A5320081F64F /* MTAssetsPickerController.m */; settings = {ASSET_TAGS = (); }; };
 		31D4FDC91BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4FDC81BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m */; settings = {ASSET_TAGS = (); }; };
@@ -251,8 +261,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B3253491C059C2D00B2F28F /* DetailsearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsearchViewController.h; sourceTree = "<group>"; };
-		1B32534A1C059C2D00B2F28F /* DetailsearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsearchViewController.m; sourceTree = "<group>"; };
+		1B23956D1C0FE3F00096CE50 /* QusetionSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QusetionSearchViewController.h; sourceTree = "<group>"; };
+		1B23956E1C0FE3F00096CE50 /* QusetionSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QusetionSearchViewController.m; sourceTree = "<group>"; };
+		1B2395721C0FEAA70096CE50 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		1B2395731C0FEAA70096CE50 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		1B2395741C0FEAA70096CE50 /* PhotoCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionView.h; sourceTree = "<group>"; };
+		1B2395751C0FEAA70096CE50 /* PhotoCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionView.m; sourceTree = "<group>"; };
+		1B2395761C0FEAA70096CE50 /* PhotoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewCell.h; sourceTree = "<group>"; };
+		1B2395771C0FEAA70096CE50 /* PhotoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewCell.m; sourceTree = "<group>"; };
+		1B2395781C0FEAA70096CE50 /* PhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoScrollView.h; sourceTree = "<group>"; };
+		1B2395791C0FEAA70096CE50 /* PhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoScrollView.m; sourceTree = "<group>"; };
 		1B337D671C06D5EF00F2FE5B /* StudtydetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudtydetailViewController.h; sourceTree = "<group>"; };
 		1B337D681C06D5EF00F2FE5B /* StudtydetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudtydetailViewController.m; sourceTree = "<group>"; };
 		1B337D701C06F27E00F2FE5B /* StudymoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudymoreCell.h; sourceTree = "<group>"; };
@@ -331,6 +349,16 @@
 		318A87E71C01E982008456C1 /* MyRecipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecipeView.h; sourceTree = "<group>"; };
 		318A87E81C01E982008456C1 /* MyRecipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRecipeView.m; sourceTree = "<group>"; };
 		318A87EA1C01E99B008456C1 /* MyRecipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyRecipeView.xib; sourceTree = "<group>"; };
+		31919DC41C0C0539007096F4 /* AskSpeicalistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskSpeicalistTableViewCell.h; sourceTree = "<group>"; };
+		31919DC51C0C0539007096F4 /* AskSpeicalistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskSpeicalistTableViewCell.m; sourceTree = "<group>"; };
+		31919DC71C0C0571007096F4 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		31919DC81C0C0571007096F4 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		31919DCB1C0C66B8007096F4 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		31919DCC1C0C66B8007096F4 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		31919DCE1C0C66C4007096F4 /* NotLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotLoginView.h; sourceTree = "<group>"; };
+		31919DCF1C0C66C4007096F4 /* NotLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotLoginView.m; sourceTree = "<group>"; };
+		31919DD11C0C673C007096F4 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		31919DD31C0C67A9007096F4 /* NotLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotLoginView.xib; sourceTree = "<group>"; };
 		31A0DBBE1C0899780017D1F0 /* NSString+CustomAttributeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CustomAttributeString.h"; sourceTree = "<group>"; };
 		31A0DBBF1C0899780017D1F0 /* NSString+CustomAttributeString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CustomAttributeString.m"; sourceTree = "<group>"; };
 		31A0DBC01C0899780017D1F0 /* UIButton+Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Font.h"; sourceTree = "<group>"; };
@@ -350,9 +378,9 @@
 		31A0DBD51C089F0F0017D1F0 /* MineRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineRecipeViewController.m; sourceTree = "<group>"; };
 		31A0DBD61C089F0F0017D1F0 /* MineReponseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineReponseTableViewController.h; sourceTree = "<group>"; };
 		31A0DBD71C089F0F0017D1F0 /* MineReponseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineReponseTableViewController.m; sourceTree = "<group>"; };
-		31A0DBDB1C089F8C0017D1F0 /* AskSpecialistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskSpecialistView.h; sourceTree = "<group>"; };
-		31A0DBDC1C089F8C0017D1F0 /* AskSpecialistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskSpecialistView.m; sourceTree = "<group>"; };
-		31A0DBDD1C089F8C0017D1F0 /* AskSpecialistView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskSpecialistView.xib; sourceTree = "<group>"; };
+		31A0DBDB1C089F8C0017D1F0 /* AskSpecialistCellSubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskSpecialistCellSubview.h; sourceTree = "<group>"; };
+		31A0DBDC1C089F8C0017D1F0 /* AskSpecialistCellSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskSpecialistCellSubview.m; sourceTree = "<group>"; };
+		31A0DBDD1C089F8C0017D1F0 /* AskSpecialistCellSubview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskSpecialistCellSubview.xib; sourceTree = "<group>"; };
 		31A0DBE01C089F980017D1F0 /* AskSpecialistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AskSpecialistViewController.h; path = HomeDetail/AskSpecialistViewController.h; sourceTree = "<group>"; };
 		31A0DBE11C089F980017D1F0 /* AskSpecialistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AskSpecialistViewController.m; path = HomeDetail/AskSpecialistViewController.m; sourceTree = "<group>"; };
 		31D4FDC01BF3A5320081F64F /* MTAssetsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAssetsPickerController.h; sourceTree = "<group>"; };
@@ -710,6 +738,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B2395711C0FEA930096CE50 /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				1B2395721C0FEAA70096CE50 /* PhotoViewController.h */,
+				1B2395731C0FEAA70096CE50 /* PhotoViewController.m */,
+				1B2395741C0FEAA70096CE50 /* PhotoCollectionView.h */,
+				1B2395751C0FEAA70096CE50 /* PhotoCollectionView.m */,
+				1B2395761C0FEAA70096CE50 /* PhotoViewCell.h */,
+				1B2395771C0FEAA70096CE50 /* PhotoViewCell.m */,
+				1B2395781C0FEAA70096CE50 /* PhotoScrollView.h */,
+				1B2395791C0FEAA70096CE50 /* PhotoScrollView.m */,
+			);
+			name = PhotoView;
+			sourceTree = "<group>";
+		};
 		1B337D641C06D4E000F2FE5B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -811,8 +854,8 @@
 				1B6BE1701C04393A00D69A2D /* MessageViewController.m */,
 				1B6BE1721C04467F00D69A2D /* SearchViewController.h */,
 				1B6BE1731C04467F00D69A2D /* SearchViewController.m */,
-				1B3253491C059C2D00B2F28F /* DetailsearchViewController.h */,
-				1B32534A1C059C2D00B2F28F /* DetailsearchViewController.m */,
+				1B23956D1C0FE3F00096CE50 /* QusetionSearchViewController.h */,
+				1B23956E1C0FE3F00096CE50 /* QusetionSearchViewController.m */,
 			);
 			name = Viewtronller;
 			sourceTree = "<group>";
@@ -871,6 +914,7 @@
 		313E98101C058B2B00DC7B4F /* HomeDetail */ = {
 			isa = PBXGroup;
 			children = (
+				31919DC31C0C050F007096F4 /* HomeCells */,
 				313E98171C05950700DC7B4F /* HomeDetailViews */,
 			);
 			path = HomeDetail;
@@ -879,9 +923,9 @@
 		313E98171C05950700DC7B4F /* HomeDetailViews */ = {
 			isa = PBXGroup;
 			children = (
-				31A0DBDB1C089F8C0017D1F0 /* AskSpecialistView.h */,
-				31A0DBDC1C089F8C0017D1F0 /* AskSpecialistView.m */,
-				31A0DBDD1C089F8C0017D1F0 /* AskSpecialistView.xib */,
+				31A0DBDB1C089F8C0017D1F0 /* AskSpecialistCellSubview.h */,
+				31A0DBDC1C089F8C0017D1F0 /* AskSpecialistCellSubview.m */,
+				31A0DBDD1C089F8C0017D1F0 /* AskSpecialistCellSubview.xib */,
 			);
 			path = HomeDetailViews;
 			sourceTree = "<group>";
@@ -897,6 +941,22 @@
 				318A87DD1C00A0F1008456C1 /* YHSegmentView.m */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		31919DC31C0C050F007096F4 /* HomeCells */ = {
+			isa = PBXGroup;
+			children = (
+				31919DC41C0C0539007096F4 /* AskSpeicalistTableViewCell.h */,
+				31919DC51C0C0539007096F4 /* AskSpeicalistTableViewCell.m */,
+			);
+			path = HomeCells;
+			sourceTree = "<group>";
+		};
+		31919DCA1C0C3073007096F4 /* AskSpeicalistModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AskSpeicalistModel;
 			sourceTree = "<group>";
 		};
 		31D4FDBF1BF3A5320081F64F /* MTAssetsPickerController */ = {
@@ -1220,6 +1280,12 @@
 				31399E851BF73D210052A4EB /* MineDetail */,
 				FCC626711BCA7A0E00943F99 /* MineViewController.h */,
 				FCC626721BCA7A0E00943F99 /* MineViewController.m */,
+				31919DCB1C0C66B8007096F4 /* LoginView.h */,
+				31919DCC1C0C66B8007096F4 /* LoginView.m */,
+				31919DD11C0C673C007096F4 /* LoginView.xib */,
+				31919DCE1C0C66C4007096F4 /* NotLoginView.h */,
+				31919DCF1C0C66C4007096F4 /* NotLoginView.m */,
+				31919DD31C0C67A9007096F4 /* NotLoginView.xib */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1236,6 +1302,7 @@
 		FCC6267A1BCA7A8A00943F99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				31919DCA1C0C3073007096F4 /* AskSpeicalistModel */,
 				FC940B711BFDC84E0086A4D8 /* QuestionAnsModel */,
 				31DBC82A1BF78BAB007EDCD0 /* MineModel */,
 				FC37668C1BF71C1500FB2BA4 /* QuestionDetailModel */,
@@ -1285,6 +1352,7 @@
 		FCC64BFC1BCFE6D300BF56C4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1B2395711C0FEA930096CE50 /* PhotoView */,
 				31EC67A41BF0E4E200B8E1BC /* PhotoSelect */,
 				FCCBA02E1BDF4727009AF469 /* APPHelper.h */,
 				FCCBA02F1BDF4727009AF469 /* APPHelper.m */,
@@ -1687,6 +1755,8 @@
 				1B97F4E01C08248100A58D03 /* MyModel */,
 				FCCA8FA61BDD255E00B1CCF4 /* BaseViewController.h */,
 				FCCA8FA71BDD255E00B1CCF4 /* BaseViewController.m */,
+				31919DC71C0C0571007096F4 /* BaseTableViewCell.h */,
+				31919DC81C0C0571007096F4 /* BaseTableViewCell.m */,
 				FCCA8FA81BDD255E00B1CCF4 /* Category */,
 				FCCA8FAB1BDD255E00B1CCF4 /* SimpleImageTitleButton.h */,
 				FCCA8FAC1BDD255E00B1CCF4 /* SimpleImageTitleButton.m */,
@@ -1837,8 +1907,10 @@
 				1BEC27B61C0B4CBE0046F96A /* DiseaseCell.xib in Resources */,
 				FCC7529E1BC4E01500DE4B27 /* Info.plist in Resources */,
 				31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */,
+				31919DD41C0C67A9007096F4 /* NotLoginView.xib in Resources */,
+				31919DD21C0C673C007096F4 /* LoginView.xib in Resources */,
 				313E981C1C05957500DC7B4F /* (null) in Resources */,
-				31A0DBDF1C089F8C0017D1F0 /* AskSpecialistView.xib in Resources */,
+				31A0DBDF1C089F8C0017D1F0 /* AskSpecialistCellSubview.xib in Resources */,
 				FCC884C11BC3EBB900A1200B /* Assets.xcassets in Resources */,
 				1B6BE1621C03F53900D69A2D /* SeachView.xib in Resources */,
 				FCC752B71BC4E01500DE4B27 /* MJRefresh.bundle in Resources */,
@@ -1883,6 +1955,7 @@
 				31DBC82D1BF78BC0007EDCD0 /* InvitedCode.m in Sources */,
 				31DBC8291BF78B01007EDCD0 /* BaseModel.m in Sources */,
 				FCC752971BC4E01500DE4B27 /* JSONModelError.m in Sources */,
+				31919DD01C0C66C4007096F4 /* NotLoginView.m in Sources */,
 				FCCA8FAE1BDD255E00B1CCF4 /* UIColor+Expanded.m in Sources */,
 				3172EC4A1BFD93C300F7EF6D /* MyReponseModel.m in Sources */,
 				1B97F4E91C08252A00A58D03 /* StudyModel.m in Sources */,
@@ -1893,15 +1966,15 @@
 				FCC752941BC4E01500DE4B27 /* JSONModel.m in Sources */,
 				FCC752B91BC4E01500DE4B27 /* UIScrollView+MJExtension.m in Sources */,
 				313E98131C058B6100DC7B4F /* (null) in Sources */,
-				1B32534B1C059C2D00B2F28F /* DetailsearchViewController.m in Sources */,
 				FCC90DB01BD3AE5B00D341DD /* QuestionCell.m in Sources */,
 				313E98061C01F99C00DC7B4F /* (null) in Sources */,
-				31A0DBDE1C089F8C0017D1F0 /* AskSpecialistView.m in Sources */,
+				31A0DBDE1C089F8C0017D1F0 /* AskSpecialistCellSubview.m in Sources */,
 				31EC679C1BF0E4A700B8E1BC /* PSTCollectionViewItemKey.m in Sources */,
 				FCC74FF61BD27DAF008446ED /* QuestionInfo.m in Sources */,
 				31FDE3851BFA1FA900AA199F /* SettingQuitLoginCell.m in Sources */,
 				FC940B741BFDC84E0086A4D8 /* QuestionAnsModel.m in Sources */,
 				1B6BE1651C04304B00D69A2D /* UIView+UIViewController.m in Sources */,
+				1B23957B1C0FEAA70096CE50 /* PhotoCollectionView.m in Sources */,
 				FCC7529F1BC4E01500DE4B27 /* MASCompositeConstraint.m in Sources */,
 				FCC752C21BC4E01500DE4B27 /* SDWebImageDownloaderOperation.m in Sources */,
 				FCC752CB1BC4E01500DE4B27 /* UIView+WebCacheOperation.m in Sources */,
@@ -1913,6 +1986,7 @@
 				1B97F4E31C0824A700A58D03 /* MyModel.m in Sources */,
 				FCC752BA1BC4E01500DE4B27 /* UIScrollView+MJRefresh.m in Sources */,
 				31A0DBD01C089EDF0017D1F0 /* MyAskQuestionModel.m in Sources */,
+				31919DC91C0C0571007096F4 /* BaseTableViewCell.m in Sources */,
 				FCC752BF1BC4E01500DE4B27 /* SDWebImageCompat.m in Sources */,
 				31A0DBCB1C0899A20017D1F0 /* MineAskQuestionImagesCell.m in Sources */,
 				FCC752C11BC4E01500DE4B27 /* SDWebImageDownloader.m in Sources */,
@@ -1928,9 +2002,11 @@
 				1BCA803D1C0C2A8D001E1285 /* DieaseModel.m in Sources */,
 				FCC752B61BC4E01500DE4B27 /* MJRefreshStateHeader.m in Sources */,
 				31EC67991BF0E4A700B8E1BC /* PSTCollectionViewController.m in Sources */,
+				1B23957C1C0FEAA70096CE50 /* PhotoViewCell.m in Sources */,
 				1B337D691C06D5EF00F2FE5B /* StudtydetailViewController.m in Sources */,
 				FCC752AC1BC4E01500DE4B27 /* MJRefreshFooter.m in Sources */,
 				31399E901BF73DF00052A4EB /* MineBaseViewController.m in Sources */,
+				31919DCD1C0C66B8007096F4 /* LoginView.m in Sources */,
 				FCC884B91BC3EBB900A1200B /* AppDelegate.m in Sources */,
 				31D4FDCC1BF3A9550081F64F /* MTPickerInfo.m in Sources */,
 				318A87D71C00509A008456C1 /* MyQuestionCell.m in Sources */,
@@ -1954,9 +2030,11 @@
 				31FDE3821BFA1F9100AA199F /* SettinSpaceCell.m in Sources */,
 				318A87E61C01E8C6008456C1 /* MyRecipeCell.m in Sources */,
 				31FDE38E1BFA250200AA199F /* SettingModel.m in Sources */,
+				31919DC61C0C0539007096F4 /* AskSpeicalistTableViewCell.m in Sources */,
 				FCC752C01BC4E01500DE4B27 /* SDWebImageDecoder.m in Sources */,
 				1B97F4FB1C085A0000A58D03 /* DiseaDetailViewController.m in Sources */,
 				1B6BE1771C04580500D69A2D /* SortView.m in Sources */,
+				1B23957D1C0FEAA70096CE50 /* PhotoScrollView.m in Sources */,
 				31EC66591BF04ABB00B8E1BC /* GCPlaceholderTextView.m in Sources */,
 				31EC66321BECEBE100B8E1BC /* LoginViewController.m in Sources */,
 				FCC630BB1BF4D70000A2B08C /* QuestionDetailViewController.m in Sources */,
@@ -2021,6 +2099,7 @@
 				31EC67A21BF0E4A700B8E1BC /* PSTGridLayoutSection.m in Sources */,
 				FCC752AB1BC4E01500DE4B27 /* MJRefreshComponent.m in Sources */,
 				FCCA8FAF1BDD255E00B1CCF4 /* SimpleImageTitleButton.m in Sources */,
+				1B23956F1C0FE3F00096CE50 /* QusetionSearchViewController.m in Sources */,
 				313E98031C01F81F00DC7B4F /* (null) in Sources */,
 				FCC7529D1BC4E01500DE4B27 /* JSONValueTransformer.m in Sources */,
 				FCC752A01BC4E01500DE4B27 /* MASConstraint.m in Sources */,
@@ -2046,6 +2125,7 @@
 				FCC752A51BC4E01500DE4B27 /* NSArray+MASAdditions.m in Sources */,
 				31EC663A1BECEC6F00B8E1BC /* UIScrollView+LGKeyboard.m in Sources */,
 				31DBC8201BF77029007EDCD0 /* UILabel+CustomAttributeLabel.m in Sources */,
+				1B23957A1C0FEAA70096CE50 /* PhotoViewController.m in Sources */,
 				31FDE3EA1BFB1F2100AA199F /* UITextField+CustomTextField.m in Sources */,
 				FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */,
 				1B337D781C06F29F00F2FE5B /* StudydetailCell.m in Sources */,

@@ -10,7 +10,8 @@
 #import "SeachView.h"
 #import "SortView.h"
 #import "UIView+FrameCategory.h"
-#import "DetailsearchViewController.h"
+#import "QusetionSearchViewController.h"
+#import "DiseaPicViewController.h"
 
 
 @interface SearchViewController ()
@@ -67,7 +68,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
     [self _CreateSubView];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.edgesForExtendedLayout = UIRectEdgeAll;
     
 
     
@@ -88,6 +89,7 @@
     _seachView.imageNmae = nil;
     _seachView.title = @"取消";
     _seachView.isSearch = YES;
+    
     
     UIView *textView = (UIView *)[_seachView viewWithTag:101];
     _subtext = (UITextField *)[textView viewWithTag:201];
@@ -119,7 +121,7 @@
 
     //3.历史记录
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _sortView.bottom,kScreenSizeWidth,kScreenSizeHeight-_sortView.frame.origin.y) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _sortView.bottom,kScreenSizeWidth,kScreenSizeHeight-_sortView.frame.origin.y-kBottomTabBarHeight) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         
@@ -127,13 +129,14 @@
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identify];
         
         _tableView.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
-        _tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, 0)];
+        _tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, 150)];
         //_tableFooterView.backgroundColor = [UIColor redColor];
-        _tableView.tableFooterView = _tableFooterView;
-        _tableView.tableFooterView.height = 170;
+       
+
         [self clearHistory];
         
         [self.view addSubview:_tableView];
+         _tableView.tableFooterView = _tableFooterView;
 
     }
    
@@ -199,8 +202,25 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    NSString *str = cell.textLabel.text;
+    if (_sortView.currentIndex == 3) {
+        
+        
+        DiseaPicViewController *diseVC = [[DiseaPicViewController alloc] init];
+        diseVC.keyword  = str;
+        diseVC.isSearch = YES;
+        self.tabBarController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:diseVC animated:YES];
+    }
+    if (_sortView.currentIndex == 1) {
+        QusetionSearchViewController *qusetionVC = [[QusetionSearchViewController alloc] init];
+        qusetionVC.keyword = str;
+        qusetionVC.isSearch = YES;
+        self.tabBarController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:qusetionVC animated:YES];
+    }
     
- 
    
 }
 
@@ -228,15 +248,24 @@
     if (keyword.length == 0) {
         return YES;
     }
-    for (NSString *str in _history) {
-        if ([str isEqualToString:keyword ]) {
-            
         
-            return YES;
-        }
-    }
-    
     [_history insertObject:keyword atIndex:0];
+    if (index == 3) {
+        DiseaPicViewController *diseVC = [[DiseaPicViewController alloc] init];
+        diseVC.keyword  = textField.text;
+        diseVC.isSearch = YES;
+        self.tabBarController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:diseVC animated:YES];
+        
+    }
+    if (index == 1) {
+        QusetionSearchViewController *qusetionVC = [[QusetionSearchViewController alloc] init];
+        qusetionVC.keyword = textField.text;
+        qusetionVC.isSearch = YES;
+        self.tabBarController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:qusetionVC animated:YES];
+        
+    }
     
     return YES;
 }

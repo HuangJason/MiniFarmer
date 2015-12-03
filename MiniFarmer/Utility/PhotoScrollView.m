@@ -42,6 +42,7 @@
         
         
         //当tap2手势触发的时候，让tap1失效
+        [tap1 requireGestureRecognizerToFail:tap2];
         
         
         
@@ -68,7 +69,7 @@
 }
 - (void)tapAction1:(UITapGestureRecognizer *)tap{
     
-    [self.ViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.ViewController.navigationController popViewControllerAnimated:YES];
 }
 
 

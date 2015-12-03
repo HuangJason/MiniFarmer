@@ -22,6 +22,8 @@
     __weak IBOutlet UILabel *_diseasedetail;
 }
 @property(nonatomic,strong)DieaseModel *model;
+@property(nonatomic,strong)NSMutableArray *images;
+
 
 
 @end

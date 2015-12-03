@@ -31,6 +31,8 @@
     
     DrugDetailView *_drugdetailView;
     
+    NSArray *images;
+    
 
 
 }
@@ -159,6 +161,7 @@
         NSDictionary *jsonDic = responseObject[@"bchxq"];
        _model = [[DieaseModel alloc] initContentWithDic:jsonDic];
        // [weself _createSubView];
+        images = responseObject[@"images"];
         [weself dealData];
         
         
@@ -171,6 +174,9 @@
 }
 - (void)dealData{
     _headerView.model = _model;
+    _headerView.images = images.mutableCopy;
+    
+    
     _tableView.tableHeaderView = _headerView;
     _topView.model = _model;
     self.data = @[@"为害特征",@"发生规律",@"防治方法"];

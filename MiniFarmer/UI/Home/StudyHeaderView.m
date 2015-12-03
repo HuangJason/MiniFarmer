@@ -9,13 +9,18 @@
 #import "StudyHeaderView.h"
 #import "UIView+FrameCategory.h"
 #import "UILabel+CustomAttributeLabel.h"
+#import "PhotoViewController.h"
+#import "UIViewAdditions.h"
 
 @implementation StudyHeaderView
 - (void)awakeFromNib{
-
+    _backgroundView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+    [_backgroundView addGestureRecognizer:tap];
+    
     
     [_countView setImage:[UIImage imageNamed:@"home_study_count"]];
-    _countLabel.text = @"4";
+    
     _countLabel.textColor = [UIColor colorWithHexString:@"#ffffff"];
     _countLabel.font = kTextFont16;
     
@@ -69,6 +74,28 @@
     CGFloat heigth =[self countHeigthForLabel:_diseasedetail Labelwidth:kScreenSizeWidth-32 LineSpacing:10];
     self.height = heigth+350;
     _countView.contentMode = UIViewContentModeScaleAspectFit;
+
+}
+- (void)setImages:(NSMutableArray *)images{
+    _images = images;
+    NSInteger i =0 ;
+    for (NSString *str in _images) {
+        if (str.length == 0) {
+            i++;
+        }
+    }
+    NSInteger s = images.count -i;
+    _countLabel.text  = [NSString stringWithFormat:@"%ld",s];
+    
+
+
+}
+- (void)tap{
+    PhotoViewController *photoVC = [[PhotoViewController alloc] init];
+    photoVC.imageUrls = _images;
+    
+    [self.viewController.navigationController pushViewController:photoVC animated:YES];
+
 
 }
 

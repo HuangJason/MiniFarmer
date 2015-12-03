@@ -14,4 +14,7 @@
 
 @property(nonatomic,copy)NSString *twoclassid;
 
+@property(nonatomic,assign)BOOL isSearch;
+@property(nonatomic,copy)NSString *keyword;
+
 @end

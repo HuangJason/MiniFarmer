@@ -21,21 +21,25 @@
 }
 - (void)_createSubView{
     
-    CGFloat weiht = (kScreenSizeWidth-60)/3;
+    CGFloat weiht = (kScreenSizeWidth-36)/3;
 
         
         for (int i = 0; i<3;i++ ) {
             DiseaseView *view = [[NSBundle mainBundle] loadNibNamed:@"DiseaseView" owner:self options:nil].lastObject;
             if (self.data.count != 0) {
-                view.model = _data [i];
+                if (i<self.data.count) {
+                    view.model = _data [i];
+                }
+                
                 self.selectionStyle =UITableViewCellSelectionStyleNone;
 
             }else {
-                view.dic = _model.zplist[i];
-                
+                if (i<_model.zplist.count) {
+                    view.dic = _model.zplist[i];
+                }
                 self.selectionStyle =UITableViewCellSelectionStyleNone;
             }
-            view.frame = CGRectMake(i*(weiht+10)+12, 0,weiht,125);
+            view.frame = CGRectMake(i*(weiht+6)+12, 0,weiht,125);
             view.tag = i+1;
             [self.contentView addSubview:view];
         }

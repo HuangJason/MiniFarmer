@@ -46,7 +46,7 @@
 }
 - (void)_addSubViews{
     //1.创建表视图
-    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, kScreenSizeHeight-kStatusBarHeigth-kNavigationBarHeight-42) style:UITableViewStyleGrouped];
 
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -127,7 +127,7 @@
         StudyModel *model  = self.data[indexPath.section];
         
         DiseaPicViewController *diseaVC = [[DiseaPicViewController alloc] init];
-        diseaVC.hidesBottomBarWhenPushed = YES;
+        diseaVC.tabBarController.hidesBottomBarWhenPushed = YES;
         
         [diseaVC initTitleLabel:model.twoclassname];
         diseaVC.twoclassid = model.twoclassid;

@@ -8,6 +8,10 @@
 
 #import "BaseViewController.h"
 
-@interface QusetionSearchViewController : BaseViewController
+@interface QusetionSearchViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property(nonatomic,copy)NSString *keyword;
+@property(nonatomic,assign)BOOL isSearch;
+
 
 @end

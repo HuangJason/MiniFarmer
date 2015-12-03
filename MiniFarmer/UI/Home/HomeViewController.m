@@ -294,8 +294,11 @@
     AskSpecialistViewController *askSVC = [[AskSpecialistViewController alloc] init];
     [self.navigationController pushViewController:askSVC animated:YES];
     
+<<<<<<< HEAD
     
     
+=======
+>>>>>>> 59baf2d31d02ea9ca494e3ede1242c50950512ff
 }
 
 @end

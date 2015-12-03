@@ -34,12 +34,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout= UIRectEdgeAll;
 
-    self.automaticallyAdjustsScrollViewInsets=NO;
-    [self requesetData];
-
-    
-    
     [self setNavigationBarIsHidden:NO];
     
     [self setBarLeftDefualtButtonWithTarget:self action:@selector(backBtnPressed)];
@@ -48,7 +44,7 @@
     //[self addSubViews];
     
     //[self setupSegmentItem];
-
+    [self requesetData];
     
     
     
@@ -56,13 +52,14 @@
     
 }
 - (void)viewWillAppear:(BOOL)animated{
-    [self requesetData];
+    
    
 }
 - (void)setNavigation{
     _searchView  = [[NSBundle mainBundle] loadNibNamed:@"SeachView" owner:self options:nil].lastObject;
     _searchView.frame = CGRectMake(50,kStatusBarHeight , kScreenSizeWidth-62,kNavigationBarHeigth);
     _searchView.imageNmae = @"home_btn_message_nm";
+    _searchView.isSearch = NO;
     [self.view addSubview:_searchView];
 }
 

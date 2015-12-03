@@ -52,8 +52,26 @@
     
 }
 #pragma mark ----搜索栏按钮的点击事件
+- (void)setIsSearch:(BOOL)isSearch{
+    _isSearch = isSearch;
+    if (_isSearch ==NO) {
+        [_textfiled addTarget:self action:@selector(textFieldAction:) forControlEvents:UIControlEventTouchDown];
+    }
+    
+}
+- (void)textFieldAction:(UITextField *)textfiled{
+   
+    
+    SearchViewController *searchVC = [[SearchViewController alloc] init];
+    self.ViewController.tabBarController.hidesBottomBarWhenPushed = YES;
+    [self.ViewController.navigationController pushViewController:searchVC animated:YES];
+    
+    
+
+
+}
 - (void)textAction:(UIButton *)button{
-    [self.ViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.ViewController.navigationController popViewControllerAnimated:YES];
 }
 - (void)imageAction:(UIButton *)button{
     
@@ -70,18 +88,8 @@
 #pragma mark ----UITextfiled的协议方法
 //将要开始编辑
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    if (_isSearch == NO) {
-        
-        SearchViewController *searchVC = [[SearchViewController alloc] init];
-        
-        [self.ViewController presentViewController:searchVC animated:YES completion:nil];
-        self.ViewController.hidesBottomBarWhenPushed = YES;
-        
-        return YES;
-    }
     
 
-  
     return YES;
 
 }
