@@ -7,31 +7,155 @@
 //
 
 #import "QusetionSearchViewController.h"
+#import "SeachView.h"
+#import "BaseViewController+Navigation.h"
+#import "QuestionCell.h"
+#import "UserInfo.h"
+#import "QuestionCellSource.h"
+#import "QuestionDetailModel.h"
+#import "QuestionDetailViewController.h"
 
 @interface QusetionSearchViewController ()
 
+@property(nonatomic,strong)UITableView *tableView;
+
 @end
 
-@implementation QusetionSearchViewController
+@implementation QusetionSearchViewController{
+    SeachView *_seachView;
+    
+    
+    NSString *_identify;
+    NSMutableArray *_sourceArr;
+
+}
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        //UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:self];
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    [self setNavigationBarIsHidden:NO];
+    [self  setBarLeftDefualtButtonWithTarget:self action:@selector(backAction:)];
+    _sourceArr = [NSMutableArray arrayWithCapacity:1];
+    //1.创建子视图
+    [self _createSubView];
+    
+    
+    
+    
+}
+- (void)backAction:(UIButton *)button{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
+- (void)_createSubView{
+    //1.创建搜索栏视图
+    _seachView = [[NSBundle mainBundle] loadNibNamed:@"SeachView" owner:self options:nil].lastObject;
+    _seachView.frame = CGRectMake(62, kStatusBarHeight, kScreenSizeWidth-62, kNavigationBarHeight);
+    _seachView.imageNmae = @"home_btn_message_nm";
+    _seachView.isSearch = NO;
+    [self.view addSubview:_seachView];
+    
+    //2.创建tableView
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight+kNavigationBarHeight, kScreenSizeWidth, kScreenSizeHeight-(kStatusBarHeight+kNavigationBarHeight)) style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _identify = @"QuestionCell";
+    [_tableView registerClass:[QuestionCell class] forCellReuseIdentifier:_identify];
+    
+    [self.view addSubview:_tableView];
+    
+    
+}
+#pragma mark---UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return _sourceArr.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    QuestionCell *cell = [tableView dequeueReusableCellWithIdentifier:_identify forIndexPath:indexPath];
+    [cell refreshWithQuestionCellSource:(QuestionCellSource *)_sourceArr[indexPath.row]];
+    
+    
+    return cell;
+}
+#pragma mark----UITableViewdelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    QuestionCellSource *curSource = [_sourceArr objectAtIndex:indexPath.row];
+    return curSource.cellTotalHeight;
+    
+    return [QuestionCell cellHeightWithObject:nil];
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSUInteger row = indexPath.row;
+    QuestionCellSource *tmpSou = [_sourceArr objectAtIndex:row];
+    NSString *wtid = tmpSou.qInfo.qid;
+    QuestionDetailViewController *quVC = [[QuestionDetailViewController alloc] initWithWtid:wtid];
+    [self.navigationController pushViewController:quVC animated:YES];
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark---数据处理
+- (void)setKeyword:(NSString *)keyword{
+    _keyword = keyword;
+    NSString *userid = [UserInfo shareUserInfo].userId;
+    if (userid ==nil) {
+        userid = @"819";
+    }
+    NSDictionary * dic = @{
+                           @"userid":userid,
+                           @"wd":_keyword
+                           
+                           };
+    [self _reqestData:@"?c=search&m=home" with:dic type:SHHttpRequestGet];
+    
+    
+}
+- (void)_reqestData:(NSString *)url with:(NSDictionary *)dic type:(NSInteger)typemethod{
+    
+    __weak QusetionSearchViewController *weself = self;
+    
+    [[SHHttpClient defaultClient] requestWithMethod:typemethod subUrl:url parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *dicResult = responseObject;
+            BOOL code = [[dicResult objectForKey:@"code"] boolValue];
+            NSString *msg = [dicResult objectForKey:@"msg"];
+            DLOG(@"code = %d,msg = %@",code,msg);
+            if (!code) {
+                //显示加载错误提示
+                return;
+            }else{
+                //加载数据成功
+                NSMutableArray *curQuestions = [QuestionInfo arrayOfModelsFromDictionaries:[dicResult objectForKey:@"list"]];
+                for (int i= 0; i<curQuestions.count; i++) {
+                    QuestionInfo *questioninfo = [curQuestions objectAtIndex:i];
+                    QuestionCellSource *item = [[QuestionCellSource alloc] initWithQuestionInfo:questioninfo];
+                    [_sourceArr addObject:item];
+                }
+                [weself.tableView reloadData];
+            }
+        }
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    }];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
