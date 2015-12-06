@@ -230,9 +230,18 @@
 		FCC884B91BC3EBB900A1200B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC884B81BC3EBB900A1200B /* AppDelegate.m */; };
 		FCC884CF1BC3EBB900A1200B /* MiniFarmerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC884CE1BC3EBB900A1200B /* MiniFarmerTests.m */; };
 		FCC884DA1BC3EBBA00A1200B /* MiniFarmerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC884D91BC3EBBA00A1200B /* MiniFarmerUITests.m */; };
+		FCC90DB01BD3AE5B00D341DD /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC90DAF1BD3AE5B00D341DD /* QuestionCell.m */; };
+		FCCA178A1BEF116400BAE15C /* HomeMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA17891BEF116400BAE15C /* HomeMenuButton.m */; };
+		FCCA8FAD1BDD255E00B1CCF4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FA71BDD255E00B1CCF4 /* BaseViewController.m */; };
+		FCCA8FAE1BDD255E00B1CCF4 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FAA1BDD255E00B1CCF4 /* UIColor+Expanded.m */; };
+		FCCA8FAF1BDD255E00B1CCF4 /* SimpleImageTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FAC1BDD255E00B1CCF4 /* SimpleImageTitleButton.m */; };
+		FCCA8FB21BDD2BED00B1CCF4 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FB11BDD2BED00B1CCF4 /* UIViewAdditions.m */; };
+		FCCA8FB51BDD2F9E00B1CCF4 /* QuestionCellSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FB41BDD2F9E00B1CCF4 /* QuestionCellSource.m */; };
+		FCCB90611BE1B738005F1A83 /* AnswersButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB90601BE1B738005F1A83 /* AnswersButton.m */; };
+		FCCBA0301BDF4727009AF469 /* APPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBA02F1BDF4727009AF469 /* APPHelper.m */; };
+		FCCBA0341BDF6315009AF469 /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBA0331BDF6315009AF469 /* GiFHUD.m */; };
 		FCCBA0361BDF65B5009AF469 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCBA0351BDF65B5009AF469 /* AVFoundation.framework */; };
 		FCCBA0381BDF66F2009AF469 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCBA0371BDF66F2009AF469 /* AssetsLibrary.framework */; };
-		FCD35DFC1C0346E500E37CB6 /* QuAnswerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD35DFB1C0346E500E37CB6 /* QuAnswerHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -682,8 +691,6 @@
 		FCC884D51BC3EBB900A1200B /* MiniFarmerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniFarmerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC884D91BC3EBBA00A1200B /* MiniFarmerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiniFarmerUITests.m; sourceTree = "<group>"; };
 		FCC884DB1BC3EBBA00A1200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCC8CFF51C069C4200B726AD /* QuAnswerReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuAnswerReplyCell.h; sourceTree = "<group>"; };
-		FCC8CFF61C069C4200B726AD /* QuAnswerReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuAnswerReplyCell.m; sourceTree = "<group>"; };
 		FCC90DAE1BD3AE5B00D341DD /* QuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCell.h; sourceTree = "<group>"; };
 		FCC90DAF1BD3AE5B00D341DD /* QuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCell.m; sourceTree = "<group>"; };
 		FCCA17881BEF116400BAE15C /* HomeMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMenuButton.h; sourceTree = "<group>"; };
@@ -706,8 +713,6 @@
 		FCCBA0331BDF6315009AF469 /* GiFHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiFHUD.m; sourceTree = "<group>"; };
 		FCCBA0351BDF65B5009AF469 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FCCBA0371BDF66F2009AF469 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		FCD35DFA1C0346E500E37CB6 /* QuAnswerHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuAnswerHeaderView.h; sourceTree = "<group>"; };
-		FCD35DFB1C0346E500E37CB6 /* QuAnswerHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuAnswerHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1336,10 +1341,6 @@
 				FCC630B71BF4D70000A2B08C /* QuCommonView.m */,
 				FCC630B81BF4D70000A2B08C /* QuestionDetailViewController.h */,
 				FCC630B91BF4D70000A2B08C /* QuestionDetailViewController.m */,
-				FCD35DFA1C0346E500E37CB6 /* QuAnswerHeaderView.h */,
-				FCD35DFB1C0346E500E37CB6 /* QuAnswerHeaderView.m */,
-				FCC8CFF51C069C4200B726AD /* QuAnswerReplyCell.h */,
-				FCC8CFF61C069C4200B726AD /* QuAnswerReplyCell.m */,
 			);
 			path = QuestionDetail;
 			sourceTree = "<group>";
@@ -1974,7 +1975,6 @@
 				313E98061C01F99C00DC7B4F /* (null) in Sources */,
 				31A0DBDE1C089F8C0017D1F0 /* AskSpecialistView.m in Sources */,
 				31EC679C1BF0E4A700B8E1BC /* PSTCollectionViewItemKey.m in Sources */,
-				FCC8CFF71C069C4200B726AD /* QuAnswerReplyCell.m in Sources */,
 				FCC74FF61BD27DAF008446ED /* QuestionInfo.m in Sources */,
 				31FDE3851BFA1FA900AA199F /* SettingQuitLoginCell.m in Sources */,
 				FC940B741BFDC84E0086A4D8 /* QuestionAnsModel.m in Sources */,
@@ -2028,7 +2028,7 @@
 				FCC752BC1BC4E01500DE4B27 /* MKAnnotationView+WebCache.m in Sources */,
 				FCCBA0341BDF6315009AF469 /* GiFHUD.m in Sources */,
 				FCC752A61BC4E01500DE4B27 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				FCD35DFC1C0346E500E37CB6 /* QuAnswerHeaderView.m in Sources */,
+				1B337D731C06F27E00F2FE5B /* StudymoreCell.m in Sources */,
 				FCC7528D1BC4E01500DE4B27 /* AFHTTPSessionManager.m in Sources */,
 				1B337D841C07031100F2FE5B /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				31A0DBC31C0899780017D1F0 /* UIButton+Font.m in Sources */,

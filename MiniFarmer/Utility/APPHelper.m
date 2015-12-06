@@ -862,21 +862,21 @@
     //小时
     NSUInteger hours = (NSUInteger)(mins/60);
     if (!hours) {
-        return [NSString stringWithFormat:@"%lu分钟前",mins];
+        return [NSString stringWithFormat:@"%u分钟前",mins];
     }
     
     NSUInteger days = hours/24;
     if (!days) {
 
-        return [NSString stringWithFormat:@"%lu小时前",hours];
+        return [NSString stringWithFormat:@"%u小时前",hours];
     }
     
     NSUInteger years = days/365;
     if (!years) {
-        return [NSString stringWithFormat:@"%lu天前",days];
+        return [NSString stringWithFormat:@"%u天前",days];
     }
     else{
-        return [NSString stringWithFormat:@"%lu年前",years];
+        return [NSString stringWithFormat:@"%u年前",years];
     }
 }
 
