@@ -151,6 +151,7 @@
             [[MiniAppEngine shareMiniAppEngine] saveLogin];
             [[MiniAppEngine shareMiniAppEngine] saveInfos];
             strongSelf.loginBackBlock();
+            
             [strongSelf dismissViewControllerAnimated:YES completion:nil];
             
         }

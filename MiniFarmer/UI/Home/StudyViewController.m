@@ -34,18 +34,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
     self.edgesForExtendedLayout= UIRectEdgeAll;
 
     [self setNavigationBarIsHidden:NO];
     
-    [self setBarLeftDefualtButtonWithTarget:self action:@selector(backBtnPressed)];
+   // [self setBarLeftDefualtButtonWithTarget:self action:@selector(backBtnPressed)];
+    
+    
     [self setNavigation];
+    
     
     //[self addSubViews];
     
     //[self setupSegmentItem];
     [self requesetData];
     
+    //self.view.backgroundColor = ;
+    //配置导航栏和状态栏的底色
+    [self initNavigationbgView:[UIColor colorWithHexString:@"#ffffff"]];
     
     
 
@@ -56,14 +63,40 @@
    
 }
 - (void)setNavigation{
+    [self.view showLoadingWihtText:@"加载中"];
+    //1.搜索栏
     _searchView  = [[NSBundle mainBundle] loadNibNamed:@"SeachView" owner:self options:nil].lastObject;
-    _searchView.frame = CGRectMake(50,kStatusBarHeight , kScreenSizeWidth-62,kNavigationBarHeigth);
+    _searchView.frame = CGRectMake(35,kStatusBarHeight , kScreenSizeWidth-35,kNavigationBarHeigth);
     _searchView.imageNmae = @"home_btn_message_nm";
     _searchView.isSearch = NO;
+    _searchView.index = 3;
+    
     [self.view addSubview:_searchView];
+    
+    //2.导航栏返回按钮
+    
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setFrame:CGRectMake(0,kStatusBarHeight,44, 44)];
+    [backButton setBackgroundImage:[UIImage imageNamed:@"home_navigation_back_btn"] forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"home_navigation_back_btn"] forState:UIControlStateHighlighted];
+    [backButton addTarget:self action:@selector(Action:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self setLineToBarBottomWithColor:RGBCOLOR(169, 169, 169) heigth:kLineWidth];
+    
+    [self.view addSubview:backButton];
+    //3.导航栏底部分割线
+    [self setLineToBarBottomWithColor:[UIColor colorWithHexString:@"#eeeeee"] heigth:1];
+    
+    
+    
 }
+- (void)Action:(UIButton *)button{
+ 
+    [self.navigationController popViewControllerAnimated:YES];
 
+}
 - (void)addSubViews{
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
 
    //1.添加滚动视图
     [self.view addSubview:self.studyScrollview];
@@ -76,6 +109,8 @@
     
     for (int i=0; i<_data.count; i++) {
         StudtydetailViewController *studyDetailVC = [[StudtydetailViewController alloc] init];
+        studyDetailVC.view.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+       
 
         [self.studyScrollview addSubview:studyDetailVC.view];
         
@@ -83,14 +118,6 @@
         
         studyDetailVC.bigid = _idData[i];
         
-        
-        if(i%2 ==0){
-            studyDetailVC.view.backgroundColor = [UIColor greenColor];
-        }else{
-            
-            studyDetailVC.view.backgroundColor = [UIColor yellowColor];
-
-        }
         studyDetailVC.view.frame = CGRectMake(i*kScreenSizeWidth,0, kScreenSizeWidth,kScreenSizeHeight- self.yDispaceToTop);
         
     }
@@ -129,7 +156,7 @@
         _segmentView.bottomLineHeigth = 1;
         _segmentView.bottomLineColor = [UIColor colorWithHexString:@"#eeeeee"];
         _segmentView.delegate = self;
-       // _segmentView.backgroundColor = [UIColor blackColor];
+
         
         
     }
@@ -196,6 +223,8 @@
     
         //刷新UI
         dispatch_async(dispatch_get_main_queue(),^{
+            
+            [self.view dismissLoading];
             NSDictionary *dic = responseObject[@"zwzl"];
             wself.idData = [dic allKeys];
             wself.data = [dic allValues];

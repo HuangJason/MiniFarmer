@@ -12,7 +12,7 @@
 #import "QuestionCell.h"
 #import "UserInfo.h"
 #import "QuestionCellSource.h"
-#import "QuestionDetailModel.h"
+
 #import "QuestionDetailViewController.h"
 
 @interface QusetionSearchViewController ()
@@ -41,15 +41,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.edgesForExtendedLayout = UIRectEdgeAll;
     
     [self setNavigationBarIsHidden:NO];
-    [self  setBarLeftDefualtButtonWithTarget:self action:@selector(backAction:)];
+    
     _sourceArr = [NSMutableArray arrayWithCapacity:1];
     //1.创建子视图
-    [self _createSubView];
+     [self _createSubView];
+   
     
     
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setFrame:CGRectMake(0,kStatusBarHeight,44, 44)];
+    [backButton setBackgroundImage:[UIImage imageNamed:@"home_navigation_back_btn"] forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"home_navigation_back_btn"] forState:UIControlStateHighlighted];
+    [backButton addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self setLineToBarBottomWithColor:RGBCOLOR(169, 169, 169) heigth:kLineWidth];
+    
+    [self.view addSubview:backButton];
+    
+
     
     
 }
@@ -58,19 +70,30 @@
     
 }
 - (void)_createSubView{
+    //加载未成功的
+    [self.view showLoadingWihtText:@"加载中"];
+    
+
     //1.创建搜索栏视图
     _seachView = [[NSBundle mainBundle] loadNibNamed:@"SeachView" owner:self options:nil].lastObject;
-    _seachView.frame = CGRectMake(62, kStatusBarHeight, kScreenSizeWidth-62, kNavigationBarHeight);
+    _seachView.frame = CGRectMake(35, kStatusBarHeight, kScreenSizeWidth-35, kNavigationBarHeight);
     _seachView.imageNmae = @"home_btn_message_nm";
     _seachView.isSearch = NO;
+    _seachView.index = 1;
+    UIView *view = (UIView *)[_seachView viewWithTag:101];
+    UITextField *textfild = (UITextField *)[view viewWithTag:201];
+    textfild.text = _keyword;
+
     [self.view addSubview:_seachView];
     
     //2.创建tableView
+    
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight+kNavigationBarHeight, kScreenSizeWidth, kScreenSizeHeight-(kStatusBarHeight+kNavigationBarHeight)) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _identify = @"QuestionCell";
     [_tableView registerClass:[QuestionCell class] forCellReuseIdentifier:_identify];
+    _tableView.hidden = YES;
     
     [self.view addSubview:_tableView];
     
@@ -128,6 +151,8 @@
     
     __weak QusetionSearchViewController *weself = self;
     
+    
+    
     [[SHHttpClient defaultClient] requestWithMethod:typemethod subUrl:url parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
@@ -140,6 +165,8 @@
                 return;
             }else{
                 //加载数据成功
+                [self.view dismissLoading ];
+                _tableView.hidden = NO;
                 NSMutableArray *curQuestions = [QuestionInfo arrayOfModelsFromDictionaries:[dicResult objectForKey:@"list"]];
                 for (int i= 0; i<curQuestions.count; i++) {
                     QuestionInfo *questioninfo = [curQuestions objectAtIndex:i];

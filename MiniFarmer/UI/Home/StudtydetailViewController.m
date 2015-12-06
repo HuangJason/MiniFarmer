@@ -33,11 +33,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.edgesForExtendedLayout = UIRectEdgeAll;
     //self. automaticallyAdjustsScrollViewInsets= NO;
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
     
     //2,创建子视图
     [self _addSubViews];
+    
+   
     
 }
 - (void)viewWillAppear:(BOOL)animated{
@@ -45,13 +48,19 @@
 
 }
 - (void)_addSubViews{
+    
+    //添加显示加载中的视图
+    [self.view showLoadingWihtText:@"加载中"];
+    
+    
     //1.创建表视图
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, kScreenSizeHeight-kStatusBarHeigth-kNavigationBarHeight-42) style:UITableViewStyleGrouped];
 
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
-    
+    _tableView.bounces =NO;
+    _tableView.hidden = YES;
     [self.view addSubview:_tableView];
     
     //2.注册单元格
@@ -84,6 +93,8 @@
         return cell;
     }else{
         StudydetailCell *cell = [tableView dequeueReusableCellWithIdentifier:identify2 forIndexPath:indexPath];
+        
+        cell.isStudymore = NO;
         cell.model = _data[indexPath.section];
         return cell;
     }
@@ -91,7 +102,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
-        return 52;
+        return 31;
     }
     return 125;
 
@@ -155,20 +166,23 @@
                           @"bigclassid":_bigid
                           
                           };
+
    
     __weak StudtydetailViewController *weself = self;
     [[SHHttpClient defaultClient]requestWithMethod:SHHttpRequestGet subUrl:@"?c=wxjs&m=getwxjslist" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         
         
         dispatch_async(dispatch_get_main_queue(),^{
+            [self.view dismissLoading];
             
-            
+            _tableView.hidden = NO;
             NSArray * arrary = responseObject[@"list"];
             for (NSDictionary *dic in arrary) {
                 StudyModel *model = [[StudyModel alloc ] initContentWithDic:dic];
                 [weself.data addObject:model];
                 
             }
+
             [weself.tableView reloadData];
             
         });

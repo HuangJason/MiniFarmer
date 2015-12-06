@@ -24,7 +24,7 @@
 @property(nonatomic,copy)NSString *title;
 @property(nonatomic,copy)NSString *imageNmae;
 @property(nonatomic,assign)BOOL isSearch;
-
+@property(nonatomic,assign)NSInteger index;
 
 
 

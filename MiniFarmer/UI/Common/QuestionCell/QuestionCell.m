@@ -48,6 +48,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.contentView.backgroundColor = RGBCOLOR(238, 238, 238);
+        self.selectionStyle =UITableViewCellSelectionStyleNone;
+
         
         _outputView = [UIView new];
         [self.contentView addSubview:_outputView];

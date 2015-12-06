@@ -20,7 +20,7 @@
 
 
 }
-@property(nonatomic,strong)NSArray *data;
+
 @property(nonatomic,assign)NSInteger currentIndex;
 
 

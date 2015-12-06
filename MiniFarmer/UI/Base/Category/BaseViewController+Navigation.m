@@ -87,6 +87,7 @@
 
 
 - (void)setLeftDefualtButtonBackWithTarget:(id)target action:(SEL)action{
+    
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton setFrame:CGRectMake(0, 0,44, 44)];
     [backButton setImage:[UIImage imageNamed:@"login_btn_back"] forState:UIControlStateNormal];

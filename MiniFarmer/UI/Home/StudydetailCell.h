@@ -12,7 +12,7 @@
 
 @interface StudydetailCell : UITableViewCell
 
-
+@property(nonatomic,assign)BOOL isStudymore;
 @property(nonatomic,retain)StudyModel *model;
 @property(nonatomic,strong)NSArray *data;
 

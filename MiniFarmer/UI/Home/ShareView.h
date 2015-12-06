@@ -24,4 +24,6 @@
 @property(nonatomic,assign)BOOL isCollection;
 @property(nonatomic,strong)DieaseModel *model;
 
+@property(nonatomic,copy)NSNumber *iscoll;
+
 @end

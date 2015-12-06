@@ -33,7 +33,6 @@
 		1B97F4F21C084C5000A58D03 /* TwoclassMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B97F4F11C084C5000A58D03 /* TwoclassMode.m */; settings = {ASSET_TAGS = (); }; };
 		1B97F4FB1C085A0000A58D03 /* DiseaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B97F4FA1C085A0000A58D03 /* DiseaDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		1BCA80351C0BD0F5001E1285 /* DrugDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA80341C0BD0F5001E1285 /* DrugDetailView.m */; settings = {ASSET_TAGS = (); }; };
-		1BCA80371C0BD43F001E1285 /* DrugDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCA80361C0BD43F001E1285 /* DrugDetailView.xib */; settings = {ASSET_TAGS = (); }; };
 		1BCA803D1C0C2A8D001E1285 /* DieaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA803C1C0C2A8D001E1285 /* DieaseModel.m */; settings = {ASSET_TAGS = (); }; };
 		1BEC27691C0AFF460046F96A /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC27681C0AFF460046F96A /* ShareView.m */; settings = {ASSET_TAGS = (); }; };
 		1BEC276B1C0AFF540046F96A /* ShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BEC276A1C0AFF540046F96A /* ShareView.xib */; settings = {ASSET_TAGS = (); }; };
@@ -303,7 +302,6 @@
 		1B97F4FA1C085A0000A58D03 /* DiseaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiseaDetailViewController.m; sourceTree = "<group>"; };
 		1BCA80331C0BD0F5001E1285 /* DrugDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugDetailView.h; sourceTree = "<group>"; };
 		1BCA80341C0BD0F5001E1285 /* DrugDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugDetailView.m; sourceTree = "<group>"; };
-		1BCA80361C0BD43F001E1285 /* DrugDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugDetailView.xib; sourceTree = "<group>"; };
 		1BCA803B1C0C2A8D001E1285 /* DieaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieaseModel.h; sourceTree = "<group>"; };
 		1BCA803C1C0C2A8D001E1285 /* DieaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieaseModel.m; sourceTree = "<group>"; };
 		1BEC27671C0AFF460046F96A /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
@@ -774,7 +772,6 @@
 				1BEC27B41C0B4CBE0046F96A /* DiseaseCell.xib */,
 				1BCA80331C0BD0F5001E1285 /* DrugDetailView.h */,
 				1BCA80341C0BD0F5001E1285 /* DrugDetailView.m */,
-				1BCA80361C0BD43F001E1285 /* DrugDetailView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1872,7 +1869,6 @@
 				FCC752B71BC4E01500DE4B27 /* MJRefresh.bundle in Resources */,
 				318A87EB1C01E99B008456C1 /* MyRecipeView.xib in Resources */,
 				31EC67A31BF0E4A700B8E1BC /* MWPhotoBrowser.bundle in Resources */,
-				1BCA80371C0BD43F001E1285 /* DrugDetailView.xib in Resources */,
 				1BEC276B1C0AFF540046F96A /* ShareView.xib in Resources */,
 				1B337D7E1C06FDD600F2FE5B /* DiseaseView.xib in Resources */,
 				31399E8D1BF73DA10052A4EB /* InvitedCodeViewController.xib in Resources */,

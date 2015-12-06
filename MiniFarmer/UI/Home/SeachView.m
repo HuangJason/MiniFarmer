@@ -29,6 +29,7 @@
 
     _message.titleLabel.font = kTextFont18;
     [_message setTitleColor:[UIColor colorWithHexString:@"#a3a3a3"] forState:UIControlStateNormal];
+    self.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
     
 }
 //文字按钮
@@ -63,6 +64,7 @@
    
     
     SearchViewController *searchVC = [[SearchViewController alloc] init];
+    searchVC.index = _index;
     self.ViewController.tabBarController.hidesBottomBarWhenPushed = YES;
     [self.ViewController.navigationController pushViewController:searchVC animated:YES];
     

@@ -171,6 +171,11 @@
     _tabBarView.hidden = YES;
 
 }
+- (void)tabBarViewhidden{
+
+    _tabBarView.hidden = YES;
+
+}
 
 
 

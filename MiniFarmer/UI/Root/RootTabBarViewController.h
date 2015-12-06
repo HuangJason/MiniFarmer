@@ -13,4 +13,5 @@
 - (void)changeIndexToSelected:(NSInteger)selectedIndex;
 @property(nonatomic,retain)UIView *tabBarView;
 
+- (void)tabBarViewhidden;
 @end

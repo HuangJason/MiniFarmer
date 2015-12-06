@@ -17,7 +17,7 @@
 
     MBProgressHUD *hud;
     hud = [[MBProgressHUD alloc] initWithView:view];
-    hud.yOffset = CGRectGetHeight(view.frame)/2 - 60;
+    hud.yOffset =0 ;
     [self addSubview:hud];
     hud.labelText = message;
     hud.mode = MBProgressHUDModeText;

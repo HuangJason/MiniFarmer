@@ -36,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
     self.navigationController.navigationBar.hidden = YES;
     [self commonInit];
     [self addSubviews];
@@ -80,6 +80,7 @@
     _seachView.frame = CGRectMake(0,kStatusBarHeight,kScreenSizeWidth , kNavigationBarHeight);
     _seachView.imageNmae = @"home_btn_message_nm";
     _seachView.isSearch = NO;
+    _seachView.index = 1;
     [self.view addSubview:_seachView];
     
     MJRefreshNormalHeader *mjHeader= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -279,7 +280,7 @@
     
     
     StudyViewController *studyVC = [[StudyViewController alloc] init];
-    studyVC.view.backgroundColor = [UIColor whiteColor];
+
 
     self.tabBarController.hidesBottomBarWhenPushed = YES;
 

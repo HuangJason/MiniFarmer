@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface DrugDetailView : UIView{
-    __weak IBOutlet UIImageView *_leftimageV;
+     UIImageView *_leftimageV;
 
-    __weak IBOutlet UIImageView *_imageView;
+     UIImageView *_imageView;
 
 
-    __weak IBOutlet UILabel *_recommend;
+     UILabel *_recommend;
 }
 
 @end

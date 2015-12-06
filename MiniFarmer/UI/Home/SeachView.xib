@@ -12,15 +12,15 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAl-bd-unW">
-                    <rect key="frame" x="8" y="8" width="273" height="42"/>
+                    <rect key="frame" x="12" y="8" width="285" height="42"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_btn_search_nm" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-J9-noR">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_btn_search_nm" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-J9-noR">
                             <rect key="frame" x="8" y="2" width="13" height="38"/>
                             <animations/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入要搜索的内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVs-AE-Kh5">
-                            <rect key="frame" x="29" y="0.0" width="242" height="42"/>
+                        <textField opaque="NO" clipsSubviews="YES" tag="201" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入要搜索的内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVs-AE-Kh5">
+                            <rect key="frame" x="29" y="0.0" width="254" height="42"/>
                             <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -39,7 +39,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dE-k0-mcm">
-                    <rect key="frame" x="291" y="0.0" width="44" height="58"/>
+                    <rect key="frame" x="299" y="0.0" width="44" height="58"/>
                     <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -53,9 +53,9 @@
                 <constraint firstAttribute="bottom" secondItem="0dE-k0-mcm" secondAttribute="bottom" id="AWa-1z-XhB"/>
                 <constraint firstAttribute="bottom" secondItem="VAl-bd-unW" secondAttribute="bottom" constant="8" id="DOS-gr-kgr"/>
                 <constraint firstItem="VAl-bd-unW" firstAttribute="top" secondItem="SAO-V4-JIA" secondAttribute="top" constant="8" id="HsO-wI-Y5q"/>
-                <constraint firstItem="0dE-k0-mcm" firstAttribute="leading" secondItem="VAl-bd-unW" secondAttribute="trailing" constant="10" id="JcR-gK-tjJ"/>
-                <constraint firstItem="VAl-bd-unW" firstAttribute="leading" secondItem="SAO-V4-JIA" secondAttribute="leading" constant="8" id="R1X-Ws-qmC"/>
-                <constraint firstAttribute="trailing" secondItem="0dE-k0-mcm" secondAttribute="trailing" constant="10" id="qP5-hE-oub"/>
+                <constraint firstItem="0dE-k0-mcm" firstAttribute="leading" secondItem="VAl-bd-unW" secondAttribute="trailing" constant="2" id="JcR-gK-tjJ"/>
+                <constraint firstItem="VAl-bd-unW" firstAttribute="leading" secondItem="SAO-V4-JIA" secondAttribute="leading" constant="12" id="R1X-Ws-qmC"/>
+                <constraint firstAttribute="trailing" secondItem="0dE-k0-mcm" secondAttribute="trailing" constant="2" id="qP5-hE-oub"/>
                 <constraint firstItem="0dE-k0-mcm" firstAttribute="top" secondItem="SAO-V4-JIA" secondAttribute="top" id="y0J-It-z25"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

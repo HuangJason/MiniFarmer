@@ -11,6 +11,7 @@
 #import "UserInfo.h"
 #import "LoginViewController.h"
 #import "HomeViewController.h"
+#import "RootTabBarViewController.h"
 
 
 
@@ -65,13 +66,13 @@
     if (userid == nil) {
         button.selected = NO;
         LoginViewController *loginVC = [[LoginViewController alloc] init];
-        [self.ViewController presentViewController:loginVC animated:YES completion:nil];
-        loginVC.loginBackBlock = ^(){
-            HomeViewController *vc = [[HomeViewController alloc] init];
-            self.ViewController.view.window.rootViewController = vc;
         
+        [self.ViewController presentViewController:loginVC animated:YES completion:nil];
+        loginVC.loginBackBlock = ^{
+            
         };
-    }else {
+
+        }else {
         if (button.selected == YES) {//收藏
             [self _requestData:@"?c=wxjs&m=add_xjs_collection" type:YES];
             
@@ -96,7 +97,7 @@
 #pragma mark---收藏和取消技术
 - (void)_requestData:(NSString *)url type:(BOOL)isclloection {
     NSString *userid = [UserInfo shareUserInfo].userId;
-    NSString *bchid = _model.bachid;
+
     
     NSDictionary *dic = @{
                           @"userid":userid,
@@ -109,8 +110,9 @@
         if ([msg isEqualToString:@"success"]) {
             if (isclloection == YES) {
                 [weself.ViewController.view showWeakPromptViewWithMessage:@"收藏成功"];
-                
+               
             }else{
+
                 [weself.ViewController.view showWeakPromptViewWithMessage:@"取消收藏"];
                 
             }
@@ -126,6 +128,13 @@
         }
     
     }];
+    
+}
+- (void)setIscoll:(NSNumber *)iscoll{
+    _iscoll = iscoll;
+    if ([iscoll integerValue]!= 0) {
+        _collection.selected = YES;
+    }
     
 }
 

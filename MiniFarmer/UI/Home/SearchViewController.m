@@ -12,6 +12,7 @@
 #import "UIView+FrameCategory.h"
 #import "QusetionSearchViewController.h"
 #import "DiseaPicViewController.h"
+#import "BaseViewController+Navigation.h"
 
 
 @interface SearchViewController ()
@@ -66,9 +67,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
+    
     [self _CreateSubView];
+    
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+    [self setNavigationBarIsHidden:NO];
+    
     self.edgesForExtendedLayout = UIRectEdgeAll;
+    
+    //设置导航栏的分割线
+    [self setLineToBarBottomWithColor:[UIColor colorWithHexString:@"#eeeeee"] heigth:1];
+
     
 
     
@@ -79,6 +88,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
+
 
 - (void)_CreateSubView{
     //1.搜索栏
@@ -112,11 +122,12 @@
     _sortView = [[NSBundle mainBundle]loadNibNamed:@"SortView" owner:self options:nil].lastObject;
     _sortView.frame = CGRectMake(0, kStatusBarHeight+kNavigationBarHeight, kScreenSizeWidth, 120);
     _sortView.backgroundColor = [UIColor colorWithHexString:@"#f8f8f8"];
+    _sortView.currentIndex = _index;
     [self.view addSubview:_sortView];
     
 
-    NSArray *array = @[@"问题",@"商品",@"技术",@"专家",@"配方"];
-    _sortView.data = array;
+    
+
     
 
     //3.历史记录
@@ -149,7 +160,7 @@
     [clear setTitle:@"清除历史记录" forState:UIControlStateNormal];
     [clear setTitleColor:[UIColor colorWithHexString:@"#ff6633"] forState:UIControlStateNormal];
     [clear addTarget:self action:@selector(clearAction:) forControlEvents:UIControlEventTouchUpInside];
-    
+    clear.titleLabel.font = kTextFont14;
     [_tableFooterView addSubview:clear];
     UIView *superView = _tableFooterView;
     
@@ -173,6 +184,12 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     [_tableView reloadData];
     
+
+
+}
+- (void)setIndex:(NSInteger)index{
+    _index = index;
+  
 
 
 }
@@ -222,6 +239,12 @@
     }
     
    
+}
+//UITableView开始滑动
+-(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+   //使视图上的所有有文本编辑的视图的键盘都收起来
+    [self.view endEditing:YES];
+
 }
 
 /*

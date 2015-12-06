@@ -65,10 +65,14 @@
     _countLabel.text =[NSString stringWithFormat:@"%ld",i];
     _DiseaseName.text = _model.title;
     
+    
+  
+    
+    
     NSString *url = _model.zp1;
     NSString *str = [kPictureURL stringByAppendingString:url];
     NSURL *URL = [NSURL URLWithString:str];
-    [_backgroundView sd_setImageWithURL:URL placeholderImage:nil];
+    [_backgroundView sd_setImageWithURL:URL placeholderImage:[UIImage imageNamed:@"Sys_defalut"]];
     
     _diseasedetail.text = _model.fbwh;
     CGFloat heigth =[self countHeigthForLabel:_diseasedetail Labelwidth:kScreenSizeWidth-32 LineSpacing:10];

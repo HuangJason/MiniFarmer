@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface SearchViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+@interface SearchViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+
+@property(nonatomic,assign)NSInteger index;
 
 @end

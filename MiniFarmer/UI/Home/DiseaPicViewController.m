@@ -32,13 +32,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //self.edgesForExtendedLayout = UIRectEdgeAll;
+    self.edgesForExtendedLayout = UIRectEdgeAll;
     
     
     [self setNavigationBarIsHidden:NO];
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self setBarLeftDefualtButtonWithTarget:self action:@selector(backBtnPressed)];
-    //self.view.height = kScreenSizeHeight+kStatusBarHeigth+kNavigationBarHeight;
+    
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+    [self setLineToBarBottomWithColor:[UIColor colorWithHexString:@"#eeeeee"] heigth:1];
+    [self.view showLoadingWihtText:@"加载中"];
     
     
    // [self _creaSubView];
@@ -50,15 +51,31 @@
 
 }
 - (void)_creaSubView{
-    self.extendedLayoutIncludesOpaqueBars = NO;
+
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight+kNavigationBarHeight,kScreenSizeWidth, kScreenSizeHeight-(kStatusBarHeight +kNavigationBarHeight)) style:UITableViewStylePlain];
 
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.bounces = NO;
     identify = @"studydetailcell";
     [self.view addSubview:_tableView];
-    
     [_tableView registerClass:[StudydetailCell class] forCellReuseIdentifier:identify];
+    
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setFrame:CGRectMake(0,kStatusBarHeight,44, 44)];
+    [backButton setBackgroundImage:[UIImage imageNamed:@"home_navigation_back_btn"] forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"home_navigation_back_btn"] forState:UIControlStateHighlighted];
+    [backButton addTarget:self action:@selector(Action:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self setLineToBarBottomWithColor:RGBCOLOR(169, 169, 169) heigth:kLineWidth];
+    
+    [self.view addSubview:backButton];
+    
+    
+}
+- (void)Action:(UIButton *)button{
+    
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 #pragma mark---UITabeView的协议
@@ -71,6 +88,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     StudydetailCell *cell = [tableView dequeueReusableCellWithIdentifier:identify forIndexPath:indexPath];
+    cell.isStudymore = YES;
    
     NSMutableArray *array = [[NSMutableArray alloc] init];
     for (int i = 0; i<3; i++) {
@@ -85,7 +103,7 @@
         return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 125;
+    return 131;
 
 }
 
@@ -94,9 +112,13 @@
 - (void)setIsSearch:(BOOL)isSearch{
     _isSearch = isSearch;
     _seachView = [[NSBundle mainBundle] loadNibNamed:@"SeachView" owner:self options:nil].lastObject;
-    _seachView.frame = CGRectMake(50, kStatusBarHeight, kScreenSizeWidth-50, kNavigationBarHeight);
+    _seachView.frame = CGRectMake(35, kStatusBarHeight, kScreenSizeWidth-35, kNavigationBarHeight);
     _seachView.imageNmae = @"home_btn_message_nm";
     _seachView.isSearch = NO;
+    _seachView.index = 3;
+    UIView *view = (UIView *)[_seachView viewWithTag:101];
+    UITextField *textfild = (UITextField *)[view viewWithTag:201];
+    textfild.text = _keyword;
     [self.view addSubview:_seachView];
 
 }
@@ -111,7 +133,9 @@
                           @"wd":_keyword
                           };
     [self _reqestData:@"?c=search&m=bchjs" with:dic type:SHHttpRequestGet];
-
+    
+    
+ 
 }
 
 - (void)setTwoclassid:(NSString *)twoclassid{
@@ -132,6 +156,7 @@
     
     [[SHHttpClient defaultClient] requestWithMethod:typemethod subUrl:url parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
                 dispatch_async(dispatch_get_main_queue(),^{
+                    [weself.view dismissLoading];
             
                     NSArray *array = responseObject[@"list"];
                     for (NSDictionary *dic in array) {
@@ -142,7 +167,7 @@
                         
                     }
                     [weself _creaSubView];
-                   // [weself.tableView reloadData];
+                    [weself.tableView reloadData];
 
         });
         return ;

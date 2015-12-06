@@ -14,39 +14,39 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="71.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="作物" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zC0-HK-oHT">
-                        <rect key="frame" x="16" y="8" width="65" height="55.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作物" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zC0-HK-oHT">
+                        <rect key="frame" x="16" y="17" width="34" height="54.5"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_study_more_btn" translatesAutoresizingMaskIntoConstraints="NO" id="ADO-DO-MyO">
-                        <rect key="frame" x="290" y="19" width="14" height="33.5"/>
+                        <rect key="frame" x="290" y="17" width="14" height="54.5"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="14" id="Pyh-YF-qEu"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更多" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg5-cK-HmL">
-                        <rect key="frame" x="246" y="8" width="34" height="55.5"/>
+                        <rect key="frame" x="246" y="17" width="34" height="54.5"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="ADO-DO-MyO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="0RI-t2-N2U"/>
-                    <constraint firstAttribute="bottom" secondItem="ADO-DO-MyO" secondAttribute="bottom" constant="19" id="F6C-7h-MbX"/>
-                    <constraint firstAttribute="bottom" secondItem="zC0-HK-oHT" secondAttribute="bottom" constant="8" id="Jp2-6i-dcu"/>
+                    <constraint firstItem="ADO-DO-MyO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="0RI-t2-N2U"/>
+                    <constraint firstAttribute="bottom" secondItem="ADO-DO-MyO" secondAttribute="bottom" id="F6C-7h-MbX"/>
+                    <constraint firstAttribute="bottom" secondItem="zC0-HK-oHT" secondAttribute="bottom" id="Jp2-6i-dcu"/>
                     <constraint firstAttribute="trailing" secondItem="ADO-DO-MyO" secondAttribute="trailing" constant="16" id="Wb0-th-6Ng"/>
-                    <constraint firstAttribute="bottom" secondItem="tg5-cK-HmL" secondAttribute="bottom" constant="8" id="fVH-um-Z5o"/>
+                    <constraint firstAttribute="bottom" secondItem="tg5-cK-HmL" secondAttribute="bottom" id="fVH-um-Z5o"/>
                     <constraint firstItem="ADO-DO-MyO" firstAttribute="leading" secondItem="tg5-cK-HmL" secondAttribute="trailing" constant="10" id="hRh-hc-dfu"/>
-                    <constraint firstItem="tg5-cK-HmL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="iFB-gX-6Re"/>
+                    <constraint firstItem="tg5-cK-HmL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="iFB-gX-6Re"/>
                     <constraint firstItem="zC0-HK-oHT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pqv-a9-USy"/>
-                    <constraint firstItem="zC0-HK-oHT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="uaP-eL-Jvt"/>
+                    <constraint firstItem="zC0-HK-oHT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="uaP-eL-Jvt"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
