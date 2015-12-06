@@ -240,6 +240,7 @@
 		FCC94F341C149B78008885D7 /* APPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBA02F1BDF4727009AF469 /* APPHelper.m */; };
 		FCC94F351C149B8F008885D7 /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBA0331BDF6315009AF469 /* GiFHUD.m */; };
 		FCC94F361C149BDD008885D7 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FAA1BDD255E00B1CCF4 /* UIColor+Expanded.m */; };
+		FCC94F371C14A337008885D7 /* StudymoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B337D711C06F27E00F2FE5B /* StudymoreCell.m */; };
 		FCCBA0361BDF65B5009AF469 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCBA0351BDF65B5009AF469 /* AVFoundation.framework */; };
 		FCCBA0381BDF66F2009AF469 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCBA0371BDF66F2009AF469 /* AssetsLibrary.framework */; };
 		FCD35DFC1C0346E500E37CB6 /* QuAnswerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD35DFB1C0346E500E37CB6 /* QuAnswerHeaderView.m */; settings = {ASSET_TAGS = (); }; };
@@ -1965,6 +1966,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC94F371C14A337008885D7 /* StudymoreCell.m in Sources */,
 				FCC94F361C149BDD008885D7 /* UIColor+Expanded.m in Sources */,
 				FCC94F351C149B8F008885D7 /* GiFHUD.m in Sources */,
 				FCC94F341C149B78008885D7 /* APPHelper.m in Sources */,

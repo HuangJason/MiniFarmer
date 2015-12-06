@@ -242,6 +242,7 @@
     QuestionCellSource *tmpSou = [_sourceArr objectAtIndex:row];
     NSString *wtid = tmpSou.qInfo.qid;
     QuestionDetailViewController *quVC = [[QuestionDetailViewController alloc] initWithWtid:wtid];
+    //self.tabBarController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:quVC animated:YES];
 }
 
