@@ -13,7 +13,6 @@
 		1B23957C1C0FEAA70096CE50 /* PhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2395771C0FEAA70096CE50 /* PhotoViewCell.m */; };
 		1B23957D1C0FEAA70096CE50 /* PhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2395791C0FEAA70096CE50 /* PhotoScrollView.m */; };
 		1B337D691C06D5EF00F2FE5B /* StudtydetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B337D681C06D5EF00F2FE5B /* StudtydetailViewController.m */; };
-		1B337D731C06F27E00F2FE5B /* StudymoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B337D711C06F27E00F2FE5B /* StudymoreCell.m */; };
 		1B337D741C06F27E00F2FE5B /* StudymoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B337D721C06F27E00F2FE5B /* StudymoreCell.xib */; };
 		1B337D781C06F29F00F2FE5B /* StudydetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B337D761C06F29F00F2FE5B /* StudydetailCell.m */; };
 		1B337D7C1C06FDBA00F2FE5B /* DiseaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B337D7B1C06FDBA00F2FE5B /* DiseaseView.m */; };
@@ -230,6 +229,17 @@
 		FCC884B91BC3EBB900A1200B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC884B81BC3EBB900A1200B /* AppDelegate.m */; };
 		FCC884CF1BC3EBB900A1200B /* MiniFarmerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC884CE1BC3EBB900A1200B /* MiniFarmerTests.m */; };
 		FCC884DA1BC3EBBA00A1200B /* MiniFarmerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC884D91BC3EBBA00A1200B /* MiniFarmerUITests.m */; };
+		FCC94F2C1C149A66008885D7 /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC90DAF1BD3AE5B00D341DD /* QuestionCell.m */; };
+		FCC94F2D1C149AAF008885D7 /* HomeMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA17891BEF116400BAE15C /* HomeMenuButton.m */; };
+		FCC94F2E1C149AC2008885D7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FA71BDD255E00B1CCF4 /* BaseViewController.m */; };
+		FCC94F2F1C149ADB008885D7 /* AnswersButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB90601BE1B738005F1A83 /* AnswersButton.m */; };
+		FCC94F301C149AF2008885D7 /* QuAnswerReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC8CFF61C069C4200B726AD /* QuAnswerReplyCell.m */; };
+		FCC94F311C149B15008885D7 /* QuestionCellSource.m in Resources */ = {isa = PBXBuildFile; fileRef = FCCA8FB41BDD2F9E00B1CCF4 /* QuestionCellSource.m */; };
+		FCC94F321C149B46008885D7 /* QuestionCellSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FB41BDD2F9E00B1CCF4 /* QuestionCellSource.m */; };
+		FCC94F331C149B61008885D7 /* SimpleImageTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FAC1BDD255E00B1CCF4 /* SimpleImageTitleButton.m */; };
+		FCC94F341C149B78008885D7 /* APPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBA02F1BDF4727009AF469 /* APPHelper.m */; };
+		FCC94F351C149B8F008885D7 /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBA0331BDF6315009AF469 /* GiFHUD.m */; };
+		FCC94F361C149BDD008885D7 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FAA1BDD255E00B1CCF4 /* UIColor+Expanded.m */; };
 		FCCBA0361BDF65B5009AF469 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCBA0351BDF65B5009AF469 /* AVFoundation.framework */; };
 		FCCBA0381BDF66F2009AF469 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCBA0371BDF66F2009AF469 /* AssetsLibrary.framework */; };
 		FCD35DFC1C0346E500E37CB6 /* QuAnswerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD35DFB1C0346E500E37CB6 /* QuAnswerHeaderView.m */; settings = {ASSET_TAGS = (); }; };
@@ -1910,6 +1920,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC94F311C149B15008885D7 /* QuestionCellSource.m in Resources */,
 				1BEC27B61C0B4CBE0046F96A /* DiseaseCell.xib in Resources */,
 				FCC7529E1BC4E01500DE4B27 /* Info.plist in Resources */,
 				77B122081C142EF10073A125 /* HeaderNotLoginView.xib in Resources */,
@@ -1954,13 +1965,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC94F361C149BDD008885D7 /* UIColor+Expanded.m in Sources */,
+				FCC94F351C149B8F008885D7 /* GiFHUD.m in Sources */,
+				FCC94F341C149B78008885D7 /* APPHelper.m in Sources */,
+				FCC94F331C149B61008885D7 /* SimpleImageTitleButton.m in Sources */,
+				FCC94F321C149B46008885D7 /* QuestionCellSource.m in Sources */,
+				FCC94F301C149AF2008885D7 /* QuAnswerReplyCell.m in Sources */,
+				FCC94F2F1C149ADB008885D7 /* AnswersButton.m in Sources */,
+				FCC94F2E1C149AC2008885D7 /* BaseViewController.m in Sources */,
+				FCC94F2D1C149AAF008885D7 /* HomeMenuButton.m in Sources */,
+				FCC94F2C1C149A66008885D7 /* QuestionCell.m in Sources */,
 				FCC752931BC4E01500DE4B27 /* AFURLSessionManager.m in Sources */,
 				31A0DBD91C089F0F0017D1F0 /* MineRecipeViewController.m in Sources */,
 				FCC64BFB1BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m in Sources */,
 				31DBC82D1BF78BC0007EDCD0 /* InvitedCode.m in Sources */,
 				31DBC8291BF78B01007EDCD0 /* BaseModel.m in Sources */,
 				FCC752971BC4E01500DE4B27 /* JSONModelError.m in Sources */,
-				FCCA8FAE1BDD255E00B1CCF4 /* UIColor+Expanded.m in Sources */,
 				3172EC4A1BFD93C300F7EF6D /* MyReponseModel.m in Sources */,
 				1B97F4E91C08252A00A58D03 /* StudyModel.m in Sources */,
 				FCC6F82F1BF8941400D95F7C /* (null) in Sources */,
@@ -1970,11 +1990,9 @@
 				FCC752941BC4E01500DE4B27 /* JSONModel.m in Sources */,
 				FCC752B91BC4E01500DE4B27 /* UIScrollView+MJExtension.m in Sources */,
 				313E98131C058B6100DC7B4F /* (null) in Sources */,
-				FCC90DB01BD3AE5B00D341DD /* QuestionCell.m in Sources */,
 				313E98061C01F99C00DC7B4F /* (null) in Sources */,
 				31A0DBDE1C089F8C0017D1F0 /* AskSpecialistView.m in Sources */,
 				31EC679C1BF0E4A700B8E1BC /* PSTCollectionViewItemKey.m in Sources */,
-				FCC8CFF71C069C4200B726AD /* QuAnswerReplyCell.m in Sources */,
 				FCC74FF61BD27DAF008446ED /* QuestionInfo.m in Sources */,
 				31FDE3851BFA1FA900AA199F /* SettingQuitLoginCell.m in Sources */,
 				FC940B741BFDC84E0086A4D8 /* QuestionAnsModel.m in Sources */,
@@ -2019,14 +2037,11 @@
 				FCC752C91BC4E01500DE4B27 /* UIImageView+HighlightedWebCache.m in Sources */,
 				FCC752B41BC4E01500DE4B27 /* MJRefreshGifHeader.m in Sources */,
 				31EC67AD1BF0E63C00B8E1BC /* XDPhotoSelect.m in Sources */,
-				FCCA8FB51BDD2F9E00B1CCF4 /* QuestionCellSource.m in Sources */,
 				31399E8C1BF73DA10052A4EB /* InvitedCodeViewController.m in Sources */,
-				FCCA178A1BEF116400BAE15C /* HomeMenuButton.m in Sources */,
 				FCC752901BC4E01500DE4B27 /* AFURLConnectionOperation.m in Sources */,
 				FCC752951BC4E01500DE4B27 /* JSONModelArray.m in Sources */,
 				31EC679A1BF0E4A700B8E1BC /* PSTCollectionViewData.m in Sources */,
 				FCC752BC1BC4E01500DE4B27 /* MKAnnotationView+WebCache.m in Sources */,
-				FCCBA0341BDF6315009AF469 /* GiFHUD.m in Sources */,
 				FCC752A61BC4E01500DE4B27 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				FCD35DFC1C0346E500E37CB6 /* QuAnswerHeaderView.m in Sources */,
 				FCC7528D1BC4E01500DE4B27 /* AFHTTPSessionManager.m in Sources */,
@@ -2069,7 +2084,6 @@
 				31399E841BF63F2A0052A4EB /* AskScrollView.m in Sources */,
 				FCC64BFA1BCFE4FE00BF56C4 /* SHHttpClient.m in Sources */,
 				1B97F4F21C084C5000A58D03 /* TwoclassMode.m in Sources */,
-				FCCBA0301BDF4727009AF469 /* APPHelper.m in Sources */,
 				318A87E91C01E982008456C1 /* MyRecipeView.m in Sources */,
 				313E98161C05939700DC7B4F /* (null) in Sources */,
 				31FDE3ED1BFC10F600AA199F /* MyResponseViewController.m in Sources */,
@@ -2104,7 +2118,6 @@
 				FCC752B11BC4E01500DE4B27 /* MJRefreshBackGifFooter.m in Sources */,
 				31EC67A21BF0E4A700B8E1BC /* PSTGridLayoutSection.m in Sources */,
 				FCC752AB1BC4E01500DE4B27 /* MJRefreshComponent.m in Sources */,
-				FCCA8FAF1BDD255E00B1CCF4 /* SimpleImageTitleButton.m in Sources */,
 				1B23956F1C0FE3F00096CE50 /* QusetionSearchViewController.m in Sources */,
 				313E98031C01F81F00DC7B4F /* (null) in Sources */,
 				FCC7529D1BC4E01500DE4B27 /* JSONValueTransformer.m in Sources */,
@@ -2113,8 +2126,6 @@
 				FCC752A11BC4E01500DE4B27 /* MASConstraintMaker.m in Sources */,
 				313E981A1C05955300DC7B4F /* (null) in Sources */,
 				FCC7529C1BC4E01500DE4B27 /* JSONKeyMapper.m in Sources */,
-				FCCB90611BE1B738005F1A83 /* AnswersButton.m in Sources */,
-				FCCA8FAD1BDD255E00B1CCF4 /* BaseViewController.m in Sources */,
 				31EC67921BF0E4A700B8E1BC /* MWTapDetectingImageView.m in Sources */,
 				1B6BE1741C04467F00D69A2D /* SearchViewController.m in Sources */,
 				31EC67B01BF0E66500B8E1BC /* XDPhotoAssetGroupViewController.m in Sources */,
@@ -2123,7 +2134,6 @@
 				FCC752981BC4E01500DE4B27 /* NSArray+JSONModel.m in Sources */,
 				FCC752A41BC4E01500DE4B27 /* MASViewConstraint.m in Sources */,
 				FCC752C71BC4E01500DE4B27 /* UIImage+MultiFormat.m in Sources */,
-				FCCA8FB21BDD2BED00B1CCF4 /* UIViewAdditions.m in Sources */,
 				31A0DBE21C089F980017D1F0 /* AskSpecialistViewController.m in Sources */,
 				31399E811BF63D210052A4EB /* ZoomScrollView.m in Sources */,
 				77B122061C142EDC0073A125 /* HeaderNotLoginView.m in Sources */,
