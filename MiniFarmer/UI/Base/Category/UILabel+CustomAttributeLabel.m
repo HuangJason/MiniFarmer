@@ -92,6 +92,23 @@
     
 }
 
+
+- (void)setShadowWithRadius:(CGFloat)radius
+                     offset:(CGSize)offset
+                 shaowColor:(UIColor *)shadowColor
+{
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = shadowColor;
+    
+    shadow.shadowBlurRadius = radius;
+    shadow.shadowOffset = offset;
+    NSDictionary *dic = @{NSFontAttributeName:self.font,NSShadowAttributeName:shadow,NSVerticalGlyphFormAttributeName:@(0)};
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:[APPHelper safeString:self.text]];
+    NSRange range = {0,self.text.length};
+    [str setAttributes:dic range:range];
+    self.attributedText = str;
+}
+
 - (void)setLabelLineBreadkModelMiddle
 {
     self.lineBreakMode = NSLineBreakByTruncatingMiddle;
