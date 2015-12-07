@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MineSegmentView : UIView
+@property (weak, nonatomic) IBOutlet UIButton *mineSaveBT;
 
+@property (weak, nonatomic) IBOutlet UIButton *mineFocusBT;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *mineLineWidth;
 @end

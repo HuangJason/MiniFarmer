@@ -7,7 +7,7 @@
 //
 
 #import "MineCell.h"
-
+#import "UserMenuItem.h"
 
 @interface MineCell ()
 
@@ -50,7 +50,9 @@
 
 - (void)refreshDataWithModel:(id)model
 {
-    
+    UserMenuItem *item = (UserMenuItem *)model;
+    self.mineImageView.image = [UIImage imageNamed:item.imageString];
+    self.mineLabel.text = item.title;
 }
 
 + (CGFloat)cellHeightWihtModel:(id)model

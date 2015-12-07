@@ -14,18 +14,20 @@
 #import "MineRecipeViewController.h"
 #import "HeaderLoginView.h"
 #import "HeaderNotLoginView.h"
+#import "MineCell.h"
+#import "MineNothingCell.h"
+#import "MineSegmentCell.h"
+#import "UserMenuItem.h"
 
 #define kSection
 
-@implementation UserMenuItem
-
-@end
 
 @interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView     *_tableView;
     NSArray  *_keysArr;
     NSMutableDictionary *_sourceDic;
+    NSMutableArray *sourceArray;
 }
 
 @end
@@ -48,44 +50,69 @@
 }
 - (void)commonInit
 {
-//    UserMenuItem *item1 = [UserMenuItem new];
-    
-    
-    _sourceDic = [NSMutableDictionary dictionaryWithCapacity:1];
-    _keysArr = @[@"key0",@"key1",@"key2",@"key3"];
-    
-    NSMutableArray *tmpArr0 = [NSMutableArray arrayWithCapacity:1];
+    sourceArray = [[NSMutableArray alloc] init];
     UserMenuItem *item1 = [UserMenuItem new];
-    item1.title = @"我的回答";
-    [tmpArr0 addObject:item1];
+    item1.type = TypeSegment;
+    [sourceArray addObject:item1];
     
     UserMenuItem *item2 = [UserMenuItem new];
-    item2.title = @"我的订单";
-    [tmpArr0 addObject:item2];
-    
+    item2.type = TypeNothing;
+    [sourceArray addObject:item2];
+
     UserMenuItem *item3 = [UserMenuItem new];
-    item3.title = @"我的配方";
-    [tmpArr0 addObject:item3];
-    [_sourceDic setObject:tmpArr0 forKey:_keysArr[0]];
+    item3.type = TypeOther;
+    item3.imageString = @"mine_response_btn_nm";
+    item3.title = @"我的回答";
+    [sourceArray addObject:item3];
     
-    NSMutableArray *tmpArr1 = [NSMutableArray arrayWithCapacity:1];
     UserMenuItem *item4 = [UserMenuItem new];
-    item4.title = @"我的农人币";
-    item4.subTitle = @"兑换商城正式上线";
-    [tmpArr1 addObject:item4];
-    [_sourceDic setObject:tmpArr1 forKey:_keysArr[1]];
+    item4.type = TypeOther;
+    item4.title = @"我的订单";
+    item4.imageString = @"my_money";
+    [sourceArray addObject:item4];
     
-    NSMutableArray *tmpArr2 = [NSMutableArray arrayWithCapacity:1];
     UserMenuItem *item5 = [UserMenuItem new];
-    item5.title = @"填写邀请码";
-    [tmpArr2 addObject:item5];
-    [_sourceDic setObject:tmpArr2 forKey:_keysArr[2]];
+    item5.type = TypeOther;
+    item5.title = @"我的配方";
+    item5.imageString = @"my_orderform";
+    [sourceArray addObject:item5];
     
-    NSMutableArray *tmpArr3 = [NSMutableArray arrayWithCapacity:1];
     UserMenuItem *item6 = [UserMenuItem new];
-    item6.title = @"设置";
-    [tmpArr3 addObject:item6];
-    [_sourceDic setObject:tmpArr3 forKey:_keysArr[3]];
+    item6.type = TypeNothing;
+    [sourceArray addObject:item6];
+
+    
+    UserMenuItem *item7 = [UserMenuItem new];
+    item7.type = TypeOther;
+    item7.title = @"我的农人币";
+    item7.imageString = @"my_recipe";
+    [sourceArray addObject:item7];
+    
+    UserMenuItem *item8 = [UserMenuItem new];
+    item8.type = TypeNothing;
+    
+    [sourceArray addObject:item8];
+
+    UserMenuItem *item9 = [UserMenuItem new];
+    item9.type = TypeOther;
+    item9.title = @"填写邀请码";
+    item9.imageString = @"invite_code";
+    [sourceArray addObject:item9];
+
+    UserMenuItem *item10 = [UserMenuItem new];
+    item10.type = TypeNothing;
+    
+    [sourceArray addObject:item10];
+
+
+    UserMenuItem *item11 = [UserMenuItem new];
+    item11.type = TypeOther;
+    item11.title = @"设置";
+    item11.imageString = @"setting";
+    [sourceArray addObject:item11];
+
+    
+    
 }
 
 - (void)initSubviews
@@ -100,66 +127,52 @@
 #pragma mark- UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    if (section == 0) {
-        return 10;
-    }
-    else{
-        return 9;
-    }
+    return [MineBaseTableViewCell cellHeightWihtModel:nil];
 }
 
-- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_tableView.bounds), 1)];
-    return view;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 1;
-}
-
-- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_tableView.bounds), 1)];
-    return view;
-}
 
 #pragma mark- UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return _keysArr.count;
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray *rowArr = [_sourceDic objectForKey:_keysArr[section]];
-    return rowArr.count;
+    return sourceArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identify = @"mineCenter";
-    NSUInteger row = [indexPath row];
-    NSUInteger section = [indexPath section];
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    UserMenuItem *item = [sourceArray objectAtIndex:indexPath.row];
+    if (item.type == TypeNothing)
+    {
+        MineNothingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nothingCell"];
+        if (!cell)
+        {
+            cell = [[MineNothingCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"nothingCell"];
+        }
+        [cell refreshDataWithModel:item];
+        return cell;
+    }
+    else if (item.type == TypeOther)
+    {
+        MineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mineCell"];
+        if (!cell)
+        {
+            cell = [[MineCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"mineCell"];
+        }
+        [cell refreshDataWithModel:item];
+        return cell;
+    }
+    else
+    {
+        MineSegmentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mineSegmentCell"];
+        if (!cell)
+        {
+            cell = [[MineSegmentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"mineSegmentCell"];
+        }
+        [cell refreshDataWithModel:item];
+        return cell;
     }
     
-    NSArray *rowArr = [_sourceDic objectForKey:_keysArr[section]];
-    UserMenuItem *item = rowArr[row];
-    cell.textLabel.text = item.title;
-    cell.detailTextLabel.text = item.subTitle;
-    
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
