@@ -67,7 +67,7 @@
 - (void)addSubviews
 {
     [self headViewInit];
-    _homeTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight, kScreenSizeWidth, kScreenSizeHeight-kStatusBarHeight) style:UITableViewStylePlain];
+    _homeTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight+kNavigationBarHeight, kScreenSizeWidth, kScreenSizeHeight-kStatusBarHeight) style:UITableViewStylePlain];
     _homeTableView.dataSource = self;
     _homeTableView.delegate = self;
     _homeTableView.tableHeaderView = _headView;
@@ -109,13 +109,12 @@
 {
     
     
-    _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 44, CGRectGetWidth(self.view.bounds), 270)];
+    _headView = [[UIView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight+kNavigationBarHeight, CGRectGetWidth(self.view.bounds),255)];
     //_headView.backgroundColor = [UIColor yellowColor];
-    CGFloat bannerHeight = 170;
+    CGFloat bannerHeight = 155;
     UIImageView *hImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_headView.bounds), bannerHeight)];
     [_headView addSubview:hImage];
-    hImage.image = [UIImage imageNamed:@"home_banner"];
-    
+    hImage.image = [UIImage imageNamed:@"home_banner.jpg"];
     //菜单选项
     CGFloat funHeight = 86;
     CGFloat sideSpadding = 20;

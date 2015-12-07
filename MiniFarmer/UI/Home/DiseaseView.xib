@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -42,8 +41,8 @@
                         <constraint firstAttribute="width" constant="21" id="kUK-P5-gdm"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HWO-jo-jm0">
-                    <rect key="frame" x="4" y="0.0" width="159" height="114"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HWO-jo-jm0">
+                    <rect key="frame" x="4" y="0.0" width="159" height="104"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="75" id="pVo-3B-ogk"/>
@@ -68,10 +67,16 @@
                 <constraint firstItem="HWO-jo-jm0" firstAttribute="top" secondItem="9S9-6g-3He" secondAttribute="top" id="Kn8-0Y-Wv0"/>
                 <constraint firstItem="EDE-0v-Stu" firstAttribute="top" secondItem="BNq-q0-VO2" secondAttribute="bottom" constant="16" id="Xrt-Ju-Uyt"/>
                 <constraint firstItem="rGE-Kr-sfi" firstAttribute="leading" secondItem="BNq-q0-VO2" secondAttribute="trailing" id="dT5-pr-tCs"/>
+                <constraint firstItem="EDE-0v-Stu" firstAttribute="top" secondItem="HWO-jo-jm0" secondAttribute="bottom" constant="10" id="qcc-Zl-gZ6"/>
                 <constraint firstItem="EDE-0v-Stu" firstAttribute="top" secondItem="HWO-jo-jm0" secondAttribute="bottom" id="vv0-94-4PE"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="vv0-94-4PE"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="_browseV" destination="BNq-q0-VO2" id="GWO-9K-pEc"/>
                 <outlet property="_count" destination="rGE-Kr-sfi" id="Ekc-u5-Zvp"/>
@@ -81,11 +86,11 @@
             <point key="canvasLocation" x="442.5" y="136"/>
         </view>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="abH-R0-iSu" customClass="DiseaseView">
-            <rect key="frame" x="0.0" y="0.0" width="171" height="140"/>
+            <rect key="frame" x="0.0" y="0.0" width="167" height="140"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6m-jL-JEf">
-                    <rect key="frame" x="4" y="109.5" width="163" height="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6m-jL-JEf">
+                    <rect key="frame" x="0.0" y="110" width="163" height="14"/>
                     <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -95,8 +100,8 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acI-Z2-69Y">
-                    <rect key="frame" x="131" y="72.5" width="30" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acI-Z2-69Y">
+                    <rect key="frame" x="127" y="72" width="30" height="21"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="Cry-gu-cQN"/>
@@ -106,20 +111,19 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PIR-ze-307">
-                    <rect key="frame" x="110" y="72.5" width="21" height="21"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIR-ze-307">
+                    <rect key="frame" x="106" y="72" width="21" height="21"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="21" id="JOW-Q7-XD3"/>
                         <constraint firstAttribute="height" constant="21" id="dig-VR-nke"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k6W-1x-hL5">
-                    <rect key="frame" x="4" y="16" width="112" height="84"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k6W-1x-hL5">
+                    <rect key="frame" x="4" y="16" width="159" height="84"/>
                     <animations/>
-                    <color key="backgroundColor" red="1" green="0.37555315319999999" blue="0.36030991839999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="k6W-1x-hL5" secondAttribute="height" multiplier="4:3" id="9H4-31-mDP"/>
                         <constraint firstAttribute="height" constant="75" id="McP-Rx-m7o"/>
                     </constraints>
                     <variation key="default">
@@ -153,7 +157,7 @@
                 <outlet property="_imageView" destination="k6W-1x-hL5" id="YsM-Pl-Z7Z"/>
                 <outlet property="_name" destination="e6m-jL-JEf" id="J61-dj-D5R"/>
             </connections>
-            <point key="canvasLocation" x="687.5" y="134"/>
+            <point key="canvasLocation" x="689.5" y="134"/>
         </view>
     </objects>
 </document>

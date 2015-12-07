@@ -44,7 +44,7 @@
                     </variation>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVy-Yb-Coj">
-                    <rect key="frame" x="18" y="119" width="440" height="1"/>
+                    <rect key="frame" x="0.0" y="119" width="458" height="1"/>
                     <animations/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -59,7 +59,7 @@
                 <constraint firstAttribute="bottom" secondItem="gVy-Yb-Coj" secondAttribute="bottom" id="Tha-Ii-9X7"/>
                 <constraint firstItem="1kk-dq-cir" firstAttribute="leading" secondItem="Tst-U8-Bk5" secondAttribute="leading" constant="16" id="YIR-iF-ovP"/>
                 <constraint firstItem="oR3-id-BTy" firstAttribute="top" secondItem="Tst-U8-Bk5" secondAttribute="top" constant="8" id="lRJ-mq-YU7"/>
-                <constraint firstItem="gVy-Yb-Coj" firstAttribute="leading" secondItem="Tst-U8-Bk5" secondAttribute="leading" constant="18" id="pJZ-T7-IJk"/>
+                <constraint firstItem="gVy-Yb-Coj" firstAttribute="leading" secondItem="Tst-U8-Bk5" secondAttribute="leading" id="pJZ-T7-IJk"/>
                 <constraint firstItem="gVy-Yb-Coj" firstAttribute="top" secondItem="1kk-dq-cir" secondAttribute="bottom" constant="4" id="pUH-dM-nBZ"/>
                 <constraint firstAttribute="bottom" secondItem="1kk-dq-cir" secondAttribute="bottom" constant="8" id="r3g-Pa-c6L"/>
                 <constraint firstAttribute="trailing" secondItem="gVy-Yb-Coj" secondAttribute="trailing" id="vdy-6q-h6E"/>

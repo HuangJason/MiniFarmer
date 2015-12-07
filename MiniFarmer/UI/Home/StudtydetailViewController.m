@@ -102,9 +102,11 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
-        return 31;
+        return 40;
     }
-    return 125;
+    CGFloat weiht = (kScreenSizeWidth-36)/3;
+    
+    return weiht;
 
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -182,7 +184,7 @@
                 [weself.data addObject:model];
                 
             }
-
+             
             [weself.tableView reloadData];
             
         });

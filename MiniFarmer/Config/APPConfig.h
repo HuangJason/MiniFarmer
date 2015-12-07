@@ -126,6 +126,10 @@
 
 #define kOutputVideoFolder @"VideoOutput"
 
+
+//友盟分享SDK
+#define UMShareAppKey     @"5663c9dee0f55a74a2000b0e"
+
 //新浪微博
 #define kAppKey_sina                     @"2880108488"
 #define kAppSecret_sina                  @"0c5a15dc7de1660710cad64d654c04b1"

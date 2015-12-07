@@ -17,7 +17,7 @@
     __weak IBOutlet UIImageView *_browseV;
   
     __weak IBOutlet UILabel *_count;
-
+   
 }
 @property(nonatomic,strong)NSDictionary *dic;
 

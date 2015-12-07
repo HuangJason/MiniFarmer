@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DieaseModel.h"
-
+#import "UMSocialSnsService.h"
 @interface ShareView : UIView{
 
 

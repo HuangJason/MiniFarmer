@@ -43,7 +43,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithHexString:@"#eeeeee"];
     [self _createSubView];
-    self.edgesForExtendedLayout = UIRectEdgeAll;
+    //self.edgesForExtendedLayout = UIRectEdgeAll;
                                  
 }
 - (void)_createSubView{
@@ -62,6 +62,7 @@
     _tableView.dataSource = self;
     _tableView.bounces = NO;
     _tableView.hidden = YES;
+    _tableView.backgroundColor = [UIColor colorWithHexString:@"#eeeeee"];
     //[self.view insertSubview:_tableView atIndex:0];
     [self.view addSubview:_tableView];
    
@@ -106,13 +107,22 @@
 
 
 }
+//设置头视图
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, 12)];
-    view.backgroundColor = [UIColor colorWithHexString:@"#eeeeee"];
+
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, 12)];
+        view.backgroundColor = [UIColor colorWithHexString:@"#eeeeee"];
+        
+        return view;
     
-    return view;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    
+    return 12;
 
 }
+//自动计算单元格高度
 - (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (_model ==nil) {
         return 100;
@@ -140,10 +150,6 @@
 }
  */
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-
-    return 12;
-}
 #pragma mark ---数据处理
 - (void)setBchid:(NSString *)bchid{
     _bchid = bchid;

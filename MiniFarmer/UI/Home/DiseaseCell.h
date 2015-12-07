@@ -14,6 +14,7 @@
     __weak IBOutlet UILabel *_titleLabel;
 
     __weak IBOutlet UILabel *_commentLabel;
+    
 
 }
 @property(nonatomic,copy)NSString *comment;

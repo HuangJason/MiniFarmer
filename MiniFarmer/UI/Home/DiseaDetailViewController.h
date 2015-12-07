@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UMSocialSnsService.h"
 
-
-@interface DiseaDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface DiseaDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UMSocialUIDelegate>
 
 @property(nonatomic,copy)NSString *bchid;
 @property(nonatomic,strong)NSArray *data;

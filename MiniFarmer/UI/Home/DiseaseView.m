@@ -64,7 +64,7 @@
     NSURL *URL = [NSURL URLWithString:str];
     
     
-    [_imageView sd_setImageWithURL:URL placeholderImage:nil];
+    [_imageView sd_setImageWithURL:URL placeholderImage:[UIImage imageNamed:@"Sys_defalut"]];
      [_browseV setImage:[UIImage imageNamed:@"home_study_detail_browse"]];
     
 }

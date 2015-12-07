@@ -14,12 +14,12 @@
                 <view tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAl-bd-unW">
                     <rect key="frame" x="12" y="8" width="285" height="42"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_btn_search_nm" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-J9-noR">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_btn_search_nm" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-J9-noR">
                             <rect key="frame" x="8" y="2" width="13" height="38"/>
                             <animations/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" tag="201" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入要搜索的内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVs-AE-Kh5">
+                        <textField opaque="NO" clipsSubviews="YES" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入要搜索的内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVs-AE-Kh5">
                             <rect key="frame" x="29" y="0.0" width="254" height="42"/>
                             <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>

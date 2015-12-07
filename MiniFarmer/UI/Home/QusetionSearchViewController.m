@@ -126,9 +126,8 @@
     NSString *wtid = tmpSou.qInfo.qid;
     QuestionDetailViewController *quVC = [[QuestionDetailViewController alloc] initWithWtid:wtid];
     [self.navigationController pushViewController:quVC animated:YES];
-    
-    
 }
+
 
 
 #pragma mark---数据处理
@@ -136,7 +135,7 @@
     _keyword = keyword;
     NSString *userid = [UserInfo shareUserInfo].userId;
     if (userid ==nil) {
-        userid = @"819";
+        userid = @"0";
     }
     NSDictionary * dic = @{
                            @"userid":userid,

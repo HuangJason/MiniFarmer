@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "RootTabBarViewController.h"
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialQQHandler.h"
+
 
 @interface AppDelegate ()
 
@@ -33,11 +37,30 @@
     [[MiniAppEngine shareMiniAppEngine] getInfos];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillTerminate) name:UIApplicationWillTerminateNotification object:nil];
-
+   //集成UM分享
+    [UMSocialData setAppKey:@"5663c9dee0f55a74a2000b0e"];
+    
+    //微信
+    [UMSocialWechatHandler setWXAppId:@"wxf0cf6ca93505c941" appSecret:@"83c2c6d797f04951c0363aa82d22d6b1" url:@"your app_rederict_uri"];
+    //QQ
+    [UMSocialQQHandler setQQWithAppId:@"1104804134" appKey:@"oclH9fA1PRv3h0ju" url:@"your app_rederict_uri"];
+    
     
     
     return YES;
 }
+//用于分享回调
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    BOOL result = [UMSocialSnsService handleOpenURL:url];
+    if (result) {
+        //用于调用其他的SDK例如支付宝
+    }
+    return result;
+    
+
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

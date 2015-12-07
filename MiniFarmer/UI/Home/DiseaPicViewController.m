@@ -53,6 +53,25 @@
 - (void)_creaSubView{
 
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight+kNavigationBarHeight,kScreenSizeWidth, kScreenSizeHeight-(kStatusBarHeight +kNavigationBarHeight)) style:UITableViewStylePlain];
+    
+    //根据数据的多少来确定滑动视图的高度
+    if (_isSearch == YES) {
+        CGFloat weiht = (kScreenSizeWidth-36)/3;
+        if (self.data.count%3==0) {
+            _tableView.height =self.data.count/3*(weiht+16);
+        }else {
+            _tableView.height =(self.data.count/3+1)*(weiht+16)-1;
+    
+            
+            
+        }
+
+    }
+    
+    _tableView.backgroundColor = [UIColor redColor];
+    
+    
+   
 
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -103,14 +122,19 @@
         return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 131;
+    
+    CGFloat weiht = (kScreenSizeWidth-36)/3;
+
+    return weiht+16;
 
 }
 
 
 #pragma mark---数据处理
 - (void)setIsSearch:(BOOL)isSearch{
+    
     _isSearch = isSearch;
+   
     _seachView = [[NSBundle mainBundle] loadNibNamed:@"SeachView" owner:self options:nil].lastObject;
     _seachView.frame = CGRectMake(35, kStatusBarHeight, kScreenSizeWidth-35, kNavigationBarHeight);
     _seachView.imageNmae = @"home_btn_message_nm";
@@ -167,6 +191,7 @@
                         
                     }
                     [weself _creaSubView];
+                    
                     [weself.tableView reloadData];
 
         });

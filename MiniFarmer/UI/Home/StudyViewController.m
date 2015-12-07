@@ -106,7 +106,6 @@
     self.segmentView.frame = CGRectMake(0, self.yDispaceToTop, kScreenSizeWidth, 42);
     
     
-    
     for (int i=0; i<_data.count; i++) {
         StudtydetailViewController *studyDetailVC = [[StudtydetailViewController alloc] init];
         studyDetailVC.view.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
@@ -186,23 +185,20 @@
 }
 
 #pragma mark  ---UIScrollView协议方法
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    //滑动过程中的操作
-    [self.segmentView setOffsetWithScrollViewWidth:scrollView.width scrollViewOffset:scrollView.contentOffset.x];
-
-}
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     [self.segmentView setOffsetWithScrollViewWidth:scrollView.width scrollViewOffset:scrollView.contentOffset.x];
+    
+   
     
 }
 #pragma mark  ---- UISegementdelegate协议
 - (void)segmentView:(YHSegmentView *)segmentView
  didSelectedAtIndex:(NSInteger)index{
     [self.studyScrollview setContentOffset:CGPointMake(CGRectGetWidth(self.studyScrollview.frame) * index, 0)];
-
-
+     [[self currentVC].tableView reloadData];
+    
 
 }
 
