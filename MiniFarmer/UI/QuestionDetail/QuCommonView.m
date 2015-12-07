@@ -50,7 +50,7 @@
 {
     self = [super init];
     if (self) {
-        self.backgroundColor = [UIColor greenColor];
+        self.backgroundColor = kBgGrayColor;
         _outputView = [UIView new];
         [self addSubview:_outputView];
         //_outputView.backgroundColor = [UIColor redColor];
@@ -167,7 +167,7 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
-    _collectionView.backgroundColor = [UIColor whiteColor];
+    _collectionView.backgroundColor = kBgGrayColor;
     [_outputView addSubview:_collectionView];
 //    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.top.equalTo(_middleView).offset(kMiddleViewTopPadding);

@@ -10,6 +10,8 @@
 #import "QuCommonView.h"
 #import "BaseViewController+Navigation.h"
 #import "QuestionAnsModel.h"
+#import "QuAnswerHeaderView.h"
+#import "QuAnswerReplyCell.h"
 
 @interface QuestionDetailViewController()<UITableViewDataSource,UITableViewDelegate>
 
@@ -35,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = kBgGrayColor;
     [self setBarLeftDefualtButtonWithTarget:self action:@selector(backBtnPressed)];
     //[self commonInit];
     [self addSubviews];
@@ -81,7 +83,7 @@
     [self.view addSubview:_tableView];
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    _tableView.tableHeaderView = _commonView;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)updateViewWhenGetData
@@ -96,20 +98,19 @@
     //问题内容
     [_commonView refreshWithQuestionInfo:_qInfo];
     CGFloat needHeight = _commonView.totalViewHeight;
-    [_commonView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.view).offset(kStatusBarHeight+kNavigationBarHeight);
-//        make.left.equalTo(self.view);
-//        make.width.equalTo(self.view);
-        make.top.equalTo(_tableView);
-        make.left.equalTo(_tableView);
-        make.width.equalTo(_tableView);
-        make.height.mas_equalTo(needHeight);
-    }];
+    _commonView.frame = CGRectMake(0, 0, _tableView.bounds.size.width, needHeight);
+    _tableView.tableHeaderView = _commonView;
+
     //回答列表
 //    CGFloat curY = kStatusBarHeight+kNavigationBarHeight + needHeight;
 //    _tableView.frame = CGRectMake(0, curY, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)-curY);
     [_tableView reloadData];
 }
+
+//- (UIView *)sectionHeader
+//{
+//    
+//}
 
 #pragma mark- 网络请求
 - (void)requestQuDataWithUserId:(NSString *)uid wtid:(NSString *)wtid
@@ -180,32 +181,42 @@
     ReplyModel *repItem = [ansItem.relist objectAtIndex:indexPath.row];
     
     static NSString *identifier = @"relistCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    QuAnswerReplyCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[QuAnswerReplyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.textLabel.text = repItem.replaytext;
+    [cell refreshWithReplyModel:repItem];
+    
     return cell;
 }
 
 #pragma mark- UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 100;
+    QuestionAnsModel *ansItem= [_qAnsArr objectAtIndex:section];
+    CGFloat height = [QuAnswerHeaderView headerHeightWithAnsModel:ansItem];
+    return height;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    QuestionAnsModel *ansItem= [_qAnsArr objectAtIndex:indexPath.section];
+    ReplyModel *repItem = [ansItem.relist objectAtIndex:indexPath.row];
+    CGFloat height = [QuAnswerReplyCell cellTotalHightWithReplyModel:repItem];
+    return height;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     QuestionAnsModel *ansItem = [_qAnsArr objectAtIndex:section];
+    static NSString *HeaderIdentifier = @"QuHeader";
     
-    UIView* myView = [[UIView alloc] init];
-    myView.backgroundColor = [UIColor colorWithRed:0.10 green:0.68 blue:0.94 alpha:0.7];
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 90, 22)];
-    titleLabel.textColor=[UIColor whiteColor];
-    titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.text=ansItem.hdnr;
-    [myView addSubview:titleLabel];
-    return myView;
+    QuAnswerHeaderView *myHeader = [tableView dequeueReusableHeaderFooterViewWithIdentifier:HeaderIdentifier];
+    if(!myHeader) {
+        myHeader = [[QuAnswerHeaderView alloc] initWithReuseIdentifier:HeaderIdentifier];
+    }
+    [myHeader refreshWithAnsModel:ansItem];
+    return myHeader;
 }
 
 @end

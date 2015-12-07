@@ -15,7 +15,7 @@
 @interface QuestionCell()
 {
     UIView *_outputView;
-    UILabel *_contentLable;
+    UILabel *_contentLabel;
     
     //中间view
     UIView *_middleView;
@@ -62,13 +62,13 @@
         }];
         
         //问题描述
-        _contentLable = [UILabel new];
+        _contentLabel = [UILabel new];
         //_contentLable.backgroundColor = [UIColor redColor];
-        [_outputView addSubview:_contentLable];
-        _contentLable.font = kTextFont16;
-        _contentLable.lineBreakMode = NSLineBreakByCharWrapping;
-        _contentLable.textColor = [UIColor blackColor];
-        _contentLable.numberOfLines = 0;
+        [_outputView addSubview:_contentLabel];
+        _contentLabel.font = kTextFont16;
+        _contentLabel.lineBreakMode = NSLineBreakByCharWrapping;
+        _contentLabel.textColor = [UIColor blackColor];
+        _contentLabel.numberOfLines = 0;
         
         //
         [self middleViewInit];
@@ -91,8 +91,8 @@
     //_middleView.backgroundColor = [UIColor greenColor];
     [_outputView addSubview:_middleView];
     [_middleView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_contentLable.mas_bottom).offset(kMiddleViewTopPadding);
-        make.left.equalTo(_contentLable);
+        make.top.equalTo(_contentLabel.mas_bottom).offset(kMiddleViewTopPadding);
+        make.left.equalTo(_contentLabel);
         make.right.equalTo(_outputView.mas_right).offset(-kRightSpace);
         make.height.mas_equalTo(kMiddleViewHeight);
     }];
@@ -321,7 +321,7 @@
 
 - (void)updateViewConstraint
 {
-    [_contentLable mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [_contentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_outputView).offset(kContentTopPadding);
         make.left.equalTo(_outputView).offset(kLeftSpace);
         make.size.mas_equalTo(_qSource.contentLabelSize);
@@ -331,53 +331,16 @@
     
     [self updateBottemView];
 }
-//TODO:时间描述规则
-- (NSString *)describeWithTwsj:(NSString *)twsj
-{
-    if (!twsj) {
-        return @"";
-    }
-    
-    long long curTimeMSec = (long long)([NSDate date].timeIntervalSince1970*1000);
-    long long passTimeSec = (curTimeMSec - [twsj longLongValue])/1000;
-    if (passTimeSec < 0) {
-        return @"1小时前";
-    }
-    //换算成小时
-    NSUInteger hours = (NSUInteger)(passTimeSec/3600);
-    if (!hours) {
-        return @"1小时前";
-    }
-    
-    NSUInteger days = hours/24;
-    if (!days) {
-        return [NSString stringWithFormat:@"%lu小时前",(unsigned long)hours];
-    }
-    
-    NSUInteger years = days/365;
-    if (!years) {
-        return [NSString stringWithFormat:@"%lu天前",(unsigned long)days];
-    }
-    else{
-        return [NSString stringWithFormat:@"%lu年前",(unsigned long)years];
-    }
-}
 
 - (void)refreshWithQuestionCellSource:(QuestionCellSource *)source
 {
     _qSource = source;
     QuestionInfo *info = _qSource.qInfo;
     
-    _contentLable.text = info.wtms;
+    _contentLabel.text = info.wtms;
     _plantNameLabel.text = info.zwmc;
     _dateLable.text = [APPHelper describeTimeWithMSec:info.twsj];
     [self updateViewConstraint];
-}
-
-+ (CGFloat)cellHeightWithObject:(id)object
-{
-    
-    return 60;
 }
 
 @end

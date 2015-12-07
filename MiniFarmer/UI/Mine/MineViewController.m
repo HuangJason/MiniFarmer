@@ -12,6 +12,8 @@
 #import "SettingViewController.h"
 #import "MyResponseViewController.h"
 #import "MineRecipeViewController.h"
+#import "HeaderLoginView.h"
+#import "HeaderNotLoginView.h"
 
 #define kSection
 
@@ -46,6 +48,9 @@
 }
 - (void)commonInit
 {
+//    UserMenuItem *item1 = [UserMenuItem new];
+    
+    
     _sourceDic = [NSMutableDictionary dictionaryWithCapacity:1];
     _keysArr = @[@"key0",@"key1",@"key2",@"key3"];
     

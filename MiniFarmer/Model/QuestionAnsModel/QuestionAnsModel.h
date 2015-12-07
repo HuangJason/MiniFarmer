@@ -37,6 +37,7 @@
 @property (nonatomic,strong)NSString<Optional> *xm;
 @property (nonatomic,strong)NSString<Optional> *usertx;
 @property (nonatomic,strong)NSString<Optional> *location;
+@property (nonatomic,assign)NSString<Optional> *dzcs;
 @property (nonatomic,assign)NSNumber<Optional> *isdz;
 @property (nonatomic,assign)NSNumber<Optional> *iscoll;
 @property (nonatomic,assign)NSNumber<Optional> *iscn;

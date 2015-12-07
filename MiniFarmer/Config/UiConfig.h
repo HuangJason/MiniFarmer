@@ -12,6 +12,11 @@
 #define kLightBlueColor             RGBCOLOR(0,153,255)
 #define kTextBlackColor             RGBCOLOR(51,51,51)
 #define kTextLightBlackColor        RGBCOLOR(153, 153, 153)
+//分隔线颜色
+#define kSeparatorColor             RGBCOLOR(221, 221, 221)
+
+//背景颜色
+#define kBgGrayColor             RGBCOLOR(238, 238, 238)
 
 #pragma mark- 字体
 #define kTextFont18         [UIFont systemFontOfSize:18]

@@ -39,6 +39,11 @@
 
 - (CGSize)contentTextSizeWithFont:(UIFont *)font verticalSpace:(CGFloat)space;
 
+
+- (void)setShadowWithRadius:(CGFloat)radius
+                     offset:(CGSize)offset
+                 shaowColor:(UIColor *)shadowColor;
+
 @end
 
 

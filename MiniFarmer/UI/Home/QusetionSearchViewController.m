@@ -117,7 +117,7 @@
     QuestionCellSource *curSource = [_sourceArr objectAtIndex:indexPath.row];
     return curSource.cellTotalHeight;
     
-    return [QuestionCell cellHeightWithObject:nil];
+    //return [QuestionCell cellHeightWithObject:nil];
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     

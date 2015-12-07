@@ -14,6 +14,4 @@
 
 - (void)refreshWithQuestionCellSource:(QuestionCellSource *)source;
 
-+ (CGFloat)cellHeightWithObject:(id)object;
-
 @end

@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
+typedef enum
+{
+    TypeSegment,
+    TypeNothing,
+    TypeOther
+    
+} Type;
+
 @interface UserMenuItem : NSObject
 
 @property (nonatomic, strong)NSString *title;
