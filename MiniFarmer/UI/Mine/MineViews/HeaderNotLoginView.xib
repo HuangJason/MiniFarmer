@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="412" height="289"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NI4-Lf-gBY">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_back_image" translatesAutoresizingMaskIntoConstraints="NO" id="NI4-Lf-gBY">
                     <rect key="frame" x="0.0" y="0.0" width="412" height="289"/>
                     <animations/>
                     <color key="backgroundColor" red="1" green="0.19150539080439177" blue="0.1257780711174451" alpha="1" colorSpace="calibratedRGB"/>
@@ -23,7 +23,7 @@
                         <constraint firstAttribute="height" constant="76" id="S9x-I9-ZgJ"/>
                         <constraint firstAttribute="width" constant="76" id="lPt-Dw-Nvl"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" backgroundImage="mine_notlogin_pic"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xat-pB-Q0d">
                     <rect key="frame" x="205" y="154" width="1" height="18"/>
@@ -81,7 +81,11 @@
                 <outlet property="loginBT" destination="ETZ-LY-2Qe" id="Gd6-6I-3yI"/>
                 <outlet property="registerBT" destination="QPg-bB-lz0" id="cb8-7b-eKf"/>
             </connections>
-            <point key="canvasLocation" x="365" y="185.5"/>
+            <point key="canvasLocation" x="388" y="204.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="mine_back_image" width="375" height="238"/>
+        <image name="mine_notlogin_pic" width="76" height="76"/>
+    </resources>
 </document>

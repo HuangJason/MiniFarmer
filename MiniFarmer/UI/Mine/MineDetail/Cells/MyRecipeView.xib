@@ -17,9 +17,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" ambiguous="YES">
-                        <rect key="frame" x="10" y="12" width="44" height="21"/>
-                    </variation>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYE-p0-hmh">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -43,8 +40,7 @@
                             <exclude reference="i8t-Wv-W0p"/>
                         </mask>
                     </variation>
-                    <variation key="widthClass=compact" ambiguous="YES">
-                        <rect key="frame" x="10" y="44.5" width="18" height="18"/>
+                    <variation key="widthClass=compact">
                         <mask key="constraints">
                             <include reference="eT5-xt-i0z"/>
                             <include reference="i8t-Wv-W0p"/>
@@ -57,9 +53,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" ambiguous="YES">
-                        <rect key="frame" x="38" y="44" width="39.5" height="19.5"/>
-                    </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDF-sX-dP5">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -67,9 +60,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" ambiguous="YES">
-                        <rect key="frame" x="87.5" y="46" width="33" height="16"/>
-                    </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-oM-VFT">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -77,9 +67,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" ambiguous="YES">
-                        <rect key="frame" x="293" y="46" width="33" height="16"/>
-                    </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-3k-SHI">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -87,9 +74,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" ambiguous="YES">
-                        <rect key="frame" x="10" y="80.5" width="316" height="19.5"/>
-                    </variation>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-XK-Dy1">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>

@@ -13,6 +13,8 @@
 #import "SettingViewController.h"
 #import "MyResponseViewController.h"
 #import "MineRecipeViewController.h"
+#import "MineSaveViewController.h"
+#import "MineFocusViewController.h"
 #import "HeaderLoginView.h"
 #import "HeaderNotLoginView.h"
 #import "MineCell.h"
@@ -23,7 +25,7 @@
 #define kSection
 
 
-@interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface MineViewController ()<UITableViewDelegate,UITableViewDataSource,MineSegmentCellDelegate>
 {
     UITableView     *_tableView;
     NSArray  *_keysArr;
@@ -135,7 +137,7 @@
     if ([[MiniAppEngine shareMiniAppEngine] isLogin])
     {
         //初始化已经登录的
-        HeaderLoginView *loginView = [[HeaderLoginView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, 238)];
+        HeaderLoginView *loginView = [[HeaderLoginView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, kScreenSizeWidth * 476.0 / 750)];
 //        [self.view addSubview:loginView];
         
         headerView = loginView;
@@ -143,7 +145,7 @@
     else
     {
         HeaderNotLoginView *notLoginView = [[[NSBundle mainBundle] loadNibNamed:@"HeaderNotLoginView" owner:self options:nil] lastObject];
-        notLoginView.frame = CGRectMake(0, 0, kScreenSizeWidth, 238);
+        notLoginView.frame = CGRectMake(0, 0, kScreenSizeWidth, kScreenSizeWidth * 476.0 / 750);
 //        [self.view addSubview:notLoginView];
         __weak MineViewController *weakself = self;
         notLoginView.tapLoginBT = ^()
@@ -227,6 +229,7 @@
         if (!cell)
         {
             cell = [[MineSegmentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"mineSegmentCell"];
+            cell.delegate = self;
         }
         [cell refreshDataWithModel:item];
         return cell;
@@ -273,6 +276,24 @@
             
         default:
             break;
+    }
+}
+
+#pragma mark - delegate
+
+- (void)mineSegmentCell:(MineSegmentCell *)cell clickMineSave:(BOOL)clickMineSave
+{
+    
+
+    //因为这里里面只有两个暂时 这么写 以后多了可能会用不上 或者用别的方案
+    if (clickMineSave)
+    {
+        MineSaveViewController *saveVC = [[MineSaveViewController alloc] init];
+        [self.navigationController pushViewController:saveVC animated:YES];    }
+    else
+    {
+        MineFocusViewController *focusVC = [[MineFocusViewController alloc] init];
+        [self.navigationController pushViewController:focusVC animated:YES];
     }
 }
 

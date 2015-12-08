@@ -126,6 +126,7 @@
     if (!_headerImageView)
     {
         _headerImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+        [_headerImageView setImage:[UIImage imageNamed:@"mine_back_image"]];
     }
     return _headerImageView;
 }
@@ -264,7 +265,7 @@
     if (!_line1)
     {
         _line1 = [[UIImageView alloc] initWithFrame:CGRectZero];
-        _line1 = [UIColor whiteColor];
+        _line1.backgroundColor = [UIColor whiteColor];
     }
     return _line1;
 }
@@ -274,9 +275,15 @@
     if (!_line2)
     {
         _line2 = [[UIImageView alloc] initWithFrame:CGRectZero];
-        _line2 = [UIColor whiteColor];
+        _line2.backgroundColor = [UIColor whiteColor];
     }
     return _line2;
+}
+
+#pragma mark - refresh
+- (void)refreshUIWithModel:(id)model
+{
+    //更新用户的信息
 }
 
 @end

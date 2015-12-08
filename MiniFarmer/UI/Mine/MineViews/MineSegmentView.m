@@ -16,4 +16,12 @@
     self.mineLineWidth.constant = kLineWidth;
 }
 
+- (IBAction)tapMineSave:(id)sender {
+    self.tapMineSave();
+}
+
+- (IBAction)tapMineFocus:(id)sender {
+    self.tapMineFocus();
+}
+
 @end

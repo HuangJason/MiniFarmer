@@ -171,6 +171,8 @@
 		775130A61C15CE4500ED5FCE /* UserMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 775130A51C15CE4500ED5FCE /* UserMenuItem.m */; };
 		775130AB1C15D5AE00ED5FCE /* QuAnswerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 775130A81C15D5AE00ED5FCE /* QuAnswerHeaderView.m */; };
 		775130AC1C15D5AE00ED5FCE /* QuAnswerReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 775130AA1C15D5AE00ED5FCE /* QuAnswerReplyCell.m */; };
+		7754803F1C17142800745AB0 /* MineSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7754803E1C17142800745AB0 /* MineSaveViewController.m */; };
+		775480421C17180F00745AB0 /* MineFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 775480411C17180F00745AB0 /* MineFocusViewController.m */; };
 		FC37668F1BF71C2200FB2BA4 /* QuestionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */; };
 		FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3766911BF7393600FB2BA4 /* SingleImgCollectionViewCell.m */; };
 		FC940B741BFDC84E0086A4D8 /* QuestionAnsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC940B731BFDC84E0086A4D8 /* QuestionAnsModel.m */; };
@@ -582,6 +584,10 @@
 		775130A81C15D5AE00ED5FCE /* QuAnswerHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuAnswerHeaderView.m; sourceTree = "<group>"; };
 		775130A91C15D5AE00ED5FCE /* QuAnswerReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuAnswerReplyCell.h; sourceTree = "<group>"; };
 		775130AA1C15D5AE00ED5FCE /* QuAnswerReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuAnswerReplyCell.m; sourceTree = "<group>"; };
+		7754803D1C17142800745AB0 /* MineSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineSaveViewController.h; sourceTree = "<group>"; };
+		7754803E1C17142800745AB0 /* MineSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineSaveViewController.m; sourceTree = "<group>"; };
+		775480401C17180F00745AB0 /* MineFocusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineFocusViewController.h; sourceTree = "<group>"; };
+		775480411C17180F00745AB0 /* MineFocusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineFocusViewController.m; sourceTree = "<group>"; };
 		FC37668D1BF71C2200FB2BA4 /* QuestionDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetailModel.h; sourceTree = "<group>"; };
 		FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailModel.m; sourceTree = "<group>"; };
 		FC3766901BF7393600FB2BA4 /* SingleImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleImgCollectionViewCell.h; sourceTree = "<group>"; };
@@ -1078,6 +1084,10 @@
 				31FDE3971BFAB7EC00AA199F /* AboutViewController.xib */,
 				31FDE3EB1BFC10F600AA199F /* MyResponseViewController.h */,
 				31FDE3EC1BFC10F600AA199F /* MyResponseViewController.m */,
+				7754803D1C17142800745AB0 /* MineSaveViewController.h */,
+				7754803E1C17142800745AB0 /* MineSaveViewController.m */,
+				775480401C17180F00745AB0 /* MineFocusViewController.h */,
+				775480411C17180F00745AB0 /* MineFocusViewController.m */,
 			);
 			path = MineDetail;
 			sourceTree = "<group>";
@@ -2282,9 +2292,11 @@
 				FCC7528C1BC4E01500DE4B27 /* AFHTTPRequestOperationManager.m in Sources */,
 				7751309D1C15C98A00ED5FCE /* MineNothingCell.m in Sources */,
 				31FDE3881BFA202100AA199F /* SettingAboutView.m in Sources */,
+				775480421C17180F00745AB0 /* MineFocusViewController.m in Sources */,
 				FCC752A71BC4E01500DE4B27 /* View+MASAdditions.m in Sources */,
 				31DBC81D1BF76EF4007EDCD0 /* ConfigureBT.m in Sources */,
 				31A0DBDA1C089F0F0017D1F0 /* MineReponseTableViewController.m in Sources */,
+				7754803F1C17142800745AB0 /* MineSaveViewController.m in Sources */,
 				775130A21C15C98A00ED5FCE /* MineSegmentView.m in Sources */,
 				31EC67A01BF0E4A700B8E1BC /* PSTGridLayoutItem.m in Sources */,
 				31EC679B1BF0E4A700B8E1BC /* PSTCollectionViewFlowLayout.m in Sources */,

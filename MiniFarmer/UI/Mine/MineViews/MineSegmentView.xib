@@ -34,6 +34,9 @@
                     <state key="normal" title="我的收藏" image="mine_save">
                         <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="tapMineSave:" destination="iN0-l3-epB" eventType="touchUpInside" id="2B0-md-Q3g"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYC-XH-aqW">
                     <rect key="frame" x="202" y="48" width="130" height="38"/>
@@ -48,6 +51,9 @@
                     <state key="normal" title="关注的人" image="mine_focust_people">
                         <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="tapMineFocus:" destination="iN0-l3-epB" eventType="touchUpInside" id="74V-xP-frI"/>
+                    </connections>
                 </button>
             </subviews>
             <animations/>
