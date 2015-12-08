@@ -8,6 +8,7 @@
 
 #import "MineViewController.h"
 #import "LoginViewController.h"
+#import "RegisterViewController.h"
 #import "InvitedCodeViewController.h"
 #import "SettingViewController.h"
 #import "MyResponseViewController.h"
@@ -42,6 +43,19 @@
     [self initSubviews];
     
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:NO];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -117,9 +131,42 @@
 
 - (void)initSubviews
 {
-    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    UIView *headerView;
+    if ([[MiniAppEngine shareMiniAppEngine] isLogin])
+    {
+        //初始化已经登录的
+        HeaderLoginView *loginView = [[HeaderLoginView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, 238)];
+//        [self.view addSubview:loginView];
+        
+        headerView = loginView;
+    }
+    else
+    {
+        HeaderNotLoginView *notLoginView = [[[NSBundle mainBundle] loadNibNamed:@"HeaderNotLoginView" owner:self options:nil] lastObject];
+        notLoginView.frame = CGRectMake(0, 0, kScreenSizeWidth, 238);
+//        [self.view addSubview:notLoginView];
+        __weak MineViewController *weakself = self;
+        notLoginView.tapLoginBT = ^()
+        {
+            LoginViewController *loginVC = [[LoginViewController alloc] init];
+            UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:loginVC];
+            [weakself presentViewController:naVC animated:YES completion:nil];
+        };
+        
+        notLoginView.tapRegistBT = ^()
+        {
+            RegisterViewController *registVC = [[RegisterViewController alloc] init];
+            [weakself.navigationController pushViewController:registVC animated:YES];
+        };
+        headerView = notLoginView;
+    }
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.frame = CGRectMake(0,0, kScreenSizeWidth, kScreenSizeHeight);
+    _tableView.tableHeaderView = headerView;
+    _tableView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_tableView];
 }
 
@@ -127,7 +174,19 @@
 #pragma mark- UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [MineBaseTableViewCell cellHeightWihtModel:nil];
+    UserMenuItem *item = sourceArray[indexPath.row];
+    if (item.type == TypeOther)
+    {
+        return [MineCell cellHeightWihtModel:nil];
+    }
+    else if (item.type == TypeNothing)
+    {
+        return [MineNothingCell cellHeightWihtModel:nil];
+    }
+    else
+    {
+        return [MineSegmentCell cellHeightWihtModel:nil];
+    }
 }
 
 
@@ -178,33 +237,37 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
    // DLOG(@"secelected section is row is %d %d",indexPath.section,indexPath.row);
-    switch (indexPath.section)
+    switch (indexPath.row)
     {
         case 0:
         {
-            if (indexPath.row == 0) {
+            if (indexPath.row == 2) {
+                //我的回答
                 MyResponseViewController *myVC = [[MyResponseViewController alloc] init];
                 [self.navigationController pushViewController:myVC animated:YES];
             }
-            else if (indexPath.row == 2)
-            {
-                MineRecipeViewController *myVC = [[MineRecipeViewController alloc] init];
-                [self.navigationController pushViewController:myVC animated:YES];
-            }
-
+            
+            
         }
             break;
-        case 2:
+        case 4:
+        {
+            //我的配方
+//            MineRecipeViewController *myVC = [[MineRecipeViewController alloc] init];
+//            [self.navigationController pushViewController:myVC animated:YES];
+        }
+            break;
+        case 8:
         {
             InvitedCodeViewController *invitedVC = [[InvitedCodeViewController alloc] init];
             [self.navigationController pushViewController:invitedVC animated:YES];
         }
             break;
-        case 3:
+        case 10:
         {
             SettingViewController *setVC = [[SettingViewController alloc] init];
             [self.navigationController pushViewController:setVC animated:YES];
-
+            
         }
             break;
             

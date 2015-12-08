@@ -169,6 +169,8 @@
 		775130A21C15C98A00ED5FCE /* MineSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7751309A1C15C98A00ED5FCE /* MineSegmentView.m */; };
 		775130A31C15C98A00ED5FCE /* MineSegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7751309B1C15C98A00ED5FCE /* MineSegmentView.xib */; };
 		775130A61C15CE4500ED5FCE /* UserMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 775130A51C15CE4500ED5FCE /* UserMenuItem.m */; };
+		775130AB1C15D5AE00ED5FCE /* QuAnswerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 775130A81C15D5AE00ED5FCE /* QuAnswerHeaderView.m */; };
+		775130AC1C15D5AE00ED5FCE /* QuAnswerReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 775130AA1C15D5AE00ED5FCE /* QuAnswerReplyCell.m */; };
 		FC37668F1BF71C2200FB2BA4 /* QuestionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */; };
 		FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3766911BF7393600FB2BA4 /* SingleImgCollectionViewCell.m */; };
 		FC940B741BFDC84E0086A4D8 /* QuestionAnsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC940B731BFDC84E0086A4D8 /* QuestionAnsModel.m */; };
@@ -576,6 +578,10 @@
 		7751309B1C15C98A00ED5FCE /* MineSegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineSegmentView.xib; sourceTree = "<group>"; };
 		775130A41C15CE4500ED5FCE /* UserMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMenuItem.h; sourceTree = "<group>"; };
 		775130A51C15CE4500ED5FCE /* UserMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMenuItem.m; sourceTree = "<group>"; };
+		775130A71C15D5AE00ED5FCE /* QuAnswerHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuAnswerHeaderView.h; sourceTree = "<group>"; };
+		775130A81C15D5AE00ED5FCE /* QuAnswerHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuAnswerHeaderView.m; sourceTree = "<group>"; };
+		775130A91C15D5AE00ED5FCE /* QuAnswerReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuAnswerReplyCell.h; sourceTree = "<group>"; };
+		775130AA1C15D5AE00ED5FCE /* QuAnswerReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuAnswerReplyCell.m; sourceTree = "<group>"; };
 		FC37668D1BF71C2200FB2BA4 /* QuestionDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetailModel.h; sourceTree = "<group>"; };
 		FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailModel.m; sourceTree = "<group>"; };
 		FC3766901BF7393600FB2BA4 /* SingleImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleImgCollectionViewCell.h; sourceTree = "<group>"; };
@@ -1509,6 +1515,10 @@
 		FCC630B51BF4D70000A2B08C /* QuestionDetail */ = {
 			isa = PBXGroup;
 			children = (
+				775130A71C15D5AE00ED5FCE /* QuAnswerHeaderView.h */,
+				775130A81C15D5AE00ED5FCE /* QuAnswerHeaderView.m */,
+				775130A91C15D5AE00ED5FCE /* QuAnswerReplyCell.h */,
+				775130AA1C15D5AE00ED5FCE /* QuAnswerReplyCell.m */,
 				FCC630B61BF4D70000A2B08C /* QuCommonView.h */,
 				FCC630B71BF4D70000A2B08C /* QuCommonView.m */,
 				FCC630B81BF4D70000A2B08C /* QuestionDetailViewController.h */,
@@ -2203,6 +2213,7 @@
 				FCC752B41BC4E01500DE4B27 /* MJRefreshGifHeader.m in Sources */,
 				31EC67AD1BF0E63C00B8E1BC /* XDPhotoSelect.m in Sources */,
 				FCCA8FB51BDD2F9E00B1CCF4 /* QuestionCellSource.m in Sources */,
+				775130AB1C15D5AE00ED5FCE /* QuAnswerHeaderView.m in Sources */,
 				31399E8C1BF73DA10052A4EB /* InvitedCodeViewController.m in Sources */,
 				FCCA178A1BEF116400BAE15C /* HomeMenuButton.m in Sources */,
 				FCC752901BC4E01500DE4B27 /* AFURLConnectionOperation.m in Sources */,
@@ -2285,6 +2296,7 @@
 				31EC663E1BECECC400B8E1BC /* MiniAppEngine.m in Sources */,
 				31D4FDC91BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m in Sources */,
 				31EC66441BECF52200B8E1BC /* UIView+Toast.m in Sources */,
+				775130AC1C15D5AE00ED5FCE /* QuAnswerReplyCell.m in Sources */,
 				FCC752C81BC4E01500DE4B27 /* UIImage+WebP.m in Sources */,
 				7751309F1C15C98A00ED5FCE /* HeaderLoginView.m in Sources */,
 				31EC66C81BF0B8B600B8E1BC /* AskSendModel.m in Sources */,

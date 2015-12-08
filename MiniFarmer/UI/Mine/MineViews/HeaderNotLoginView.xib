@@ -26,7 +26,7 @@
                     <state key="normal" title="Button"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xat-pB-Q0d">
-                    <rect key="frame" x="205" y="219" width="1" height="18"/>
+                    <rect key="frame" x="205" y="154" width="1" height="18"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -35,7 +35,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPg-bB-lz0">
-                    <rect key="frame" x="216" y="211" width="36" height="34"/>
+                    <rect key="frame" x="216" y="146" width="36" height="34"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="注册">
@@ -46,7 +46,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETZ-LY-2Qe">
-                    <rect key="frame" x="159" y="211" width="36" height="34"/>
+                    <rect key="frame" x="159" y="146" width="36" height="34"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="登录">
@@ -66,7 +66,7 @@
                 <constraint firstItem="NI4-Lf-gBY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="X1A-hO-qoa"/>
                 <constraint firstItem="QPg-bB-lz0" firstAttribute="leading" secondItem="Xat-pB-Q0d" secondAttribute="trailing" constant="10" id="Z2y-kP-aH0"/>
                 <constraint firstItem="Nvp-dR-FE5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="58" id="aIS-vP-3Ak"/>
-                <constraint firstItem="Xat-pB-Q0d" firstAttribute="top" secondItem="Nvp-dR-FE5" secondAttribute="bottom" constant="85" id="cZF-pA-1kc"/>
+                <constraint firstItem="Xat-pB-Q0d" firstAttribute="top" secondItem="Nvp-dR-FE5" secondAttribute="bottom" constant="20" id="cZF-pA-1kc"/>
                 <constraint firstAttribute="bottom" secondItem="NI4-Lf-gBY" secondAttribute="bottom" id="do3-M1-IPu"/>
                 <constraint firstItem="QPg-bB-lz0" firstAttribute="centerY" secondItem="Xat-pB-Q0d" secondAttribute="centerY" id="eC4-MB-qfa"/>
                 <constraint firstItem="ETZ-LY-2Qe" firstAttribute="centerY" secondItem="Xat-pB-Q0d" secondAttribute="centerY" id="kSW-IY-Vhs"/>
