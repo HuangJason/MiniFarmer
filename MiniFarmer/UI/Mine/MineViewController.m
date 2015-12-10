@@ -21,6 +21,7 @@
 #import "MineNothingCell.h"
 #import "MineSegmentCell.h"
 #import "UserMenuItem.h"
+#import "MineInfos.h"
 
 #define kSection
 
@@ -43,6 +44,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self commonInit];
     [self initSubviews];
+    [self requestPersonInfos];
     
     
 }
@@ -64,6 +66,24 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)requestPersonInfos
+{
+    //添加loading
+    [self.view showLoadingWihtText:@"加载中..."];
+    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet subUrl:@"?c=user&m=get_user_info" parameters:@{@"userid":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userId]],@"local_userid":@""} prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.view dismissLoading];
+        MineInfos *infos = [[MineInfos alloc] initWithDictionary:responseObject error:nil];
+        [(HeaderLoginView *)(_tableView.tableHeaderView) refreshUIWithModel:infos];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.view dismissLoading];
+        [self.view showWeakPromptViewWithMessage:@"请求个人信息失败"];
+    }];
+}
+
+
+
 - (void)commonInit
 {
     sourceArray = [[NSMutableArray alloc] init];

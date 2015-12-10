@@ -8,10 +8,13 @@
 
 #import "MineFocusViewController.h"
 #import "YHSegmentView.h"
+#import "MIneExpertViewController.h"
 
 @interface MineFocusViewController ()<YHSegmentViewDelegate>
 
 @property (nonatomic, strong) YHSegmentView *segmentView;
+
+@property (nonatomic, strong) MIneExpertViewController *expertVC;
 
 @end
 
@@ -19,8 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     
     [self.view setBackgroundColor:[UIColor colorWithHexString:@"eeeeee"]];
     [self setBarTitle:@"关注的人"];
@@ -32,7 +33,24 @@
         make.top.equalTo(self.view.mas_top).offset(self.yDispaceToTop);
         make.size.mas_equalTo(CGSizeMake(kScreenSizeWidth, 47));
     }];
+    
+    [self addExpertViewController];
+    [self addFarmerViewController];
 
+}
+
+- (void)addExpertViewController
+{
+    self.expertVC = [[MIneExpertViewController alloc] init];
+    [self.view addSubview:self.expertVC.view];
+    [self addChildViewController:self.expertVC];
+    self.expertVC.view.frame = CGRectMake(0, 47+64, kScreenSizeWidth, kScreenSizeHeight - self.yDispaceToTop);
+//    self.expertVC.tableView.frame = self.expertVC.view.bounds;
+}
+
+- (void)addFarmerViewController
+{
+    
 }
 
 - (void)setupSegmentItem

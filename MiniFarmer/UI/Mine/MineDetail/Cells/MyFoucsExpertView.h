@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MineFoucsExpertCell.h"
+
 
 @interface MyFoucsExpertView : UIView
+
+- (void)setObject:(MineFoucsExpertCell *)cell;
 
 @end

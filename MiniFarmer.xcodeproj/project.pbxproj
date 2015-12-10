@@ -160,6 +160,9 @@
 		31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31FDE3971BFAB7EC00AA199F /* AboutViewController.xib */; };
 		31FDE3EA1BFB1F2100AA199F /* UITextField+CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3E91BFB1F2100AA199F /* UITextField+CustomTextField.m */; };
 		31FDE3ED1BFC10F600AA199F /* MyResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3EC1BFC10F600AA199F /* MyResponseViewController.m */; };
+		7730E17E1C19C519004B6161 /* MIneExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730E17D1C19C519004B6161 /* MIneExpertViewController.m */; };
+		7730E1811C19CF21004B6161 /* MineExpertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730E1801C19CF21004B6161 /* MineExpertModel.m */; };
+		7730E1841C19DE10004B6161 /* MineInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730E1831C19DE10004B6161 /* MineInfos.m */; };
 		7751309C1C15C98A00ED5FCE /* MineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7751308D1C15C98A00ED5FCE /* MineCell.m */; };
 		7751309D1C15C98A00ED5FCE /* MineNothingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7751308F1C15C98A00ED5FCE /* MineNothingCell.m */; };
 		7751309E1C15C98A00ED5FCE /* MineSegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 775130911C15C98A00ED5FCE /* MineSegmentCell.m */; };
@@ -175,6 +178,7 @@
 		775480421C17180F00745AB0 /* MineFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 775480411C17180F00745AB0 /* MineFocusViewController.m */; };
 		775480451C17259100745AB0 /* MyFoucsExpertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 775480441C17259100745AB0 /* MyFoucsExpertView.m */; };
 		775480471C1725D300745AB0 /* MyFoucsExpertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775480461C1725D300745AB0 /* MyFoucsExpertView.xib */; };
+		77F0E1941C18775300820192 /* MineFoucsExpertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F0E1931C18775300820192 /* MineFoucsExpertCell.m */; };
 		FC37668F1BF71C2200FB2BA4 /* QuestionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */; };
 		FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3766911BF7393600FB2BA4 /* SingleImgCollectionViewCell.m */; };
 		FC940B741BFDC84E0086A4D8 /* QuestionAnsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC940B731BFDC84E0086A4D8 /* QuestionAnsModel.m */; };
@@ -566,6 +570,12 @@
 		31FDE3E91BFB1F2100AA199F /* UITextField+CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CustomTextField.m"; sourceTree = "<group>"; };
 		31FDE3EB1BFC10F600AA199F /* MyResponseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyResponseViewController.h; sourceTree = "<group>"; };
 		31FDE3EC1BFC10F600AA199F /* MyResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyResponseViewController.m; sourceTree = "<group>"; };
+		7730E17C1C19C519004B6161 /* MIneExpertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIneExpertViewController.h; sourceTree = "<group>"; };
+		7730E17D1C19C519004B6161 /* MIneExpertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIneExpertViewController.m; sourceTree = "<group>"; };
+		7730E17F1C19CF21004B6161 /* MineExpertModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineExpertModel.h; sourceTree = "<group>"; };
+		7730E1801C19CF21004B6161 /* MineExpertModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineExpertModel.m; sourceTree = "<group>"; };
+		7730E1821C19DE10004B6161 /* MineInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineInfos.h; sourceTree = "<group>"; };
+		7730E1831C19DE10004B6161 /* MineInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineInfos.m; sourceTree = "<group>"; };
 		7751308C1C15C98A00ED5FCE /* MineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCell.h; sourceTree = "<group>"; };
 		7751308D1C15C98A00ED5FCE /* MineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCell.m; sourceTree = "<group>"; };
 		7751308E1C15C98A00ED5FCE /* MineNothingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineNothingCell.h; sourceTree = "<group>"; };
@@ -593,6 +603,8 @@
 		775480431C17259100745AB0 /* MyFoucsExpertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFoucsExpertView.h; sourceTree = "<group>"; };
 		775480441C17259100745AB0 /* MyFoucsExpertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFoucsExpertView.m; sourceTree = "<group>"; };
 		775480461C1725D300745AB0 /* MyFoucsExpertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFoucsExpertView.xib; sourceTree = "<group>"; };
+		77F0E1921C18775300820192 /* MineFoucsExpertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineFoucsExpertCell.h; sourceTree = "<group>"; };
+		77F0E1931C18775300820192 /* MineFoucsExpertCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineFoucsExpertCell.m; sourceTree = "<group>"; };
 		FC37668D1BF71C2200FB2BA4 /* QuestionDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetailModel.h; sourceTree = "<group>"; };
 		FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailModel.m; sourceTree = "<group>"; };
 		FC3766901BF7393600FB2BA4 /* SingleImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleImgCollectionViewCell.h; sourceTree = "<group>"; };
@@ -1093,6 +1105,8 @@
 				7754803E1C17142800745AB0 /* MineSaveViewController.m */,
 				775480401C17180F00745AB0 /* MineFocusViewController.h */,
 				775480411C17180F00745AB0 /* MineFocusViewController.m */,
+				7730E17C1C19C519004B6161 /* MIneExpertViewController.h */,
+				7730E17D1C19C519004B6161 /* MIneExpertViewController.m */,
 			);
 			path = MineDetail;
 			sourceTree = "<group>";
@@ -1376,6 +1390,10 @@
 				31FDE38D1BFA250200AA199F /* SettingModel.m */,
 				3172EC481BFD93C300F7EF6D /* MyReponseModel.h */,
 				3172EC491BFD93C300F7EF6D /* MyReponseModel.m */,
+				7730E17F1C19CF21004B6161 /* MineExpertModel.h */,
+				7730E1801C19CF21004B6161 /* MineExpertModel.m */,
+				7730E1821C19DE10004B6161 /* MineInfos.h */,
+				7730E1831C19DE10004B6161 /* MineInfos.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1389,6 +1407,8 @@
 				7751308F1C15C98A00ED5FCE /* MineNothingCell.m */,
 				775130901C15C98A00ED5FCE /* MineSegmentCell.h */,
 				775130911C15C98A00ED5FCE /* MineSegmentCell.m */,
+				77F0E1921C18775300820192 /* MineFoucsExpertCell.h */,
+				77F0E1931C18775300820192 /* MineFoucsExpertCell.m */,
 			);
 			path = MineCells;
 			sourceTree = "<group>";
@@ -2169,6 +2189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7730E1841C19DE10004B6161 /* MineInfos.m in Sources */,
 				FCC752931BC4E01500DE4B27 /* AFURLSessionManager.m in Sources */,
 				31A0DBD91C089F0F0017D1F0 /* MineRecipeViewController.m in Sources */,
 				FCC64BFB1BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m in Sources */,
@@ -2179,6 +2200,7 @@
 				3172EC4A1BFD93C300F7EF6D /* MyReponseModel.m in Sources */,
 				1B97F4E91C08252A00A58D03 /* StudyModel.m in Sources */,
 				FCC6F82F1BF8941400D95F7C /* (null) in Sources */,
+				7730E1811C19CF21004B6161 /* MineExpertModel.m in Sources */,
 				31EC678F1BF0E4A700B8E1BC /* MWGridViewController.m in Sources */,
 				31EC67911BF0E4A700B8E1BC /* MWPhotoBrowser.m in Sources */,
 				31EC67971BF0E4A700B8E1BC /* PSTCollectionView.m in Sources */,
@@ -2346,6 +2368,7 @@
 				FCC752C71BC4E01500DE4B27 /* UIImage+MultiFormat.m in Sources */,
 				FCCA8FB21BDD2BED00B1CCF4 /* UIViewAdditions.m in Sources */,
 				31A0DBE21C089F980017D1F0 /* AskSpecialistViewController.m in Sources */,
+				77F0E1941C18775300820192 /* MineFoucsExpertCell.m in Sources */,
 				31399E811BF63D210052A4EB /* ZoomScrollView.m in Sources */,
 				31EC67951BF0E4A700B8E1BC /* DACircularProgressView.m in Sources */,
 				FCC7528F1BC4E01500DE4B27 /* AFSecurityPolicy.m in Sources */,
@@ -2386,6 +2409,7 @@
 				FCC752B01BC4E01500DE4B27 /* MJRefreshAutoStateFooter.m in Sources */,
 				FCC7528B1BC4E01500DE4B27 /* AFHTTPRequestOperation.m in Sources */,
 				FCC752BE1BC4E01500DE4B27 /* SDImageCache.m in Sources */,
+				7730E17E1C19C519004B6161 /* MIneExpertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
