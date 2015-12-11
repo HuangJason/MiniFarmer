@@ -75,7 +75,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+
     _identify = @"ReplyCell";
     [_tableView registerClass:[QuAnswerReplyCell class] forCellReuseIdentifier:_identify];
     [self.view addSubview:_tableView];

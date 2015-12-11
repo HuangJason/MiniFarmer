@@ -11,6 +11,7 @@
 #import "PhotoViewController.h"
 #import "UIViewAdditions.h"
 #import "ReplyViewController.h"
+#import "UserInfo.h"
 
 #define kUserIconTopOffset      8
 #define kUserIconLeftOffset     12
@@ -73,21 +74,23 @@
         //用户名
         _nameLabel = [UILabel new];
         [self.contentView addSubview:_nameLabel];
-        //_nameLabel.backgroundColor = [UIColor blueColor];
+
         _nameLabel.font = kTextFont14;
         _nameLabel.textColor = kTextBlackColor;
         
         //采纳的按钮
         _adopButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_adopButton setTitle:@"采" forState:UIControlStateNormal];
+        
         _adopButton.titleLabel.textColor = [UIColor blackColor];
         _adopButton.titleLabel.font = kTextFont14;
-        [_adopButton setImage:[UIImage imageNamed:@"ask_send_btn_no_enable_nm"] forState:UIControlStateNormal];
-        [_adopButton setImage:[UIImage imageNamed:@"ask_send_btn_enable_nm"] forState:UIControlStateSelected];
+        [_adopButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [_adopButton setBackgroundImage:[UIImage imageNamed:@"ask_send_btn_no_enable_nm"] forState:UIControlStateNormal];
+        [_adopButton setBackgroundImage:[UIImage imageNamed:@"ask_send_btn_enable_nm"] forState:UIControlStateSelected];
+        [_adopButton setTitle:@"采纳" forState:UIControlStateNormal];
         [_adopButton addTarget:self action:@selector(adoptionAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:_adopButton];
-        
-        
+         _adopButton.hidden = YES;
+
         
         //回答内容
         _contentLabel = [UILabel new];
@@ -159,8 +162,14 @@
     _favCountLabel.text = _ansModel.dzcs;
     [self addViewConstraints];
     
+}
+- (void)setIsSelf:(BOOL)isSelf{
+   
+    _isSelf = isSelf;
     
+    _adopButton.hidden = _isSelf;
     
+
 
 }
 
@@ -302,9 +311,33 @@
 //采纳
 - (void)adoptionAction:(UIButton *)button{
 
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"是否采纳这个建议" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    alertView.delegate = self;
 
+    [alertView show];
+    
+}
+#pragma mark---UIAlertView协议方法
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    NSString *userid = [UserInfo shareUserInfo].userId;
+    
 
+    
+    NSDictionary *dic = @{
+                          @"id":_ansModel.ansid,
+                          @"userid":userid
+                          };
+
+    
+    if (buttonIndex == 1) {//采纳
+        [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet subUrl:@"?c=tw&m=save_cn" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+            
+            
+        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        }];
+        
+    }
 
 }
-
 @end

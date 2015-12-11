@@ -33,6 +33,9 @@
 
 @property (nonatomic, strong)UIButton *sharebutton;
 @property (nonatomic, strong)UIButton *colloctionbutton;
+
+
+@property(nonatomic ,assign)BOOL isSelf;
 @end
 
 @implementation QuestionDetailViewController
@@ -299,8 +302,6 @@
                 
                 self.qInfo = [[QuestionInfo alloc] initWithDictionary:dicQueInfo error:nil];
                 
-                
-                
                 //回答列表
                 self.qAnsArr = [QuestionAnsModel arrayOfModelsFromDictionaries:[dicResult objectForKey:@"list"]];
                // NSDictionary *dic = [dicResult objectForKey:@"list"];
@@ -338,13 +339,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     QuestionAnsModel *ansItem= [_qAnsArr objectAtIndex:indexPath.section];
+    
     ReplyModel *repItem = [ansItem.relist objectAtIndex:indexPath.row];
     
     static NSString *identifier = @"relistCell";
     QuAnswerReplyCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[QuAnswerReplyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
     }
+    
     [cell refreshWithReplyModel:repItem];
     
     return cell;
@@ -384,7 +388,15 @@
     if(!myHeader) {
         myHeader = [[QuAnswerHeaderView alloc] initWithReuseIdentifier:HeaderIdentifier];
     }
+    if (ansItem.userid == [UserInfo shareUserInfo].userId) {
+        self.isSelf = YES;
+    }else{
+        
+        self.isSelf = NO;
+    }
+
     [myHeader refreshWithAnsModel:ansItem];
+     myHeader.isSelf = _isSelf;
     
     return myHeader;
 }
