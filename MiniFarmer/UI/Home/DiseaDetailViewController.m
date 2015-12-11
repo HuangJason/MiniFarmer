@@ -202,9 +202,7 @@
     _topView.model = _model;
     _topView.iscoll = _iscoll;
     self.data = @[@"为害特征",@"发生规律",@"防治方法"];
-    
     [_tableView reloadData];
-    
     
 }
 

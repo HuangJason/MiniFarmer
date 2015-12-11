@@ -8,18 +8,6 @@
 
 #import "MineBaseTableViewCell.h"
 
-@class MineSegmentCell;
-
-@protocol MineSegmentCellDelegate <NSObject>
-
-@optional
-
-- (void)mineSegmentCell:(MineSegmentCell *)cell clickMineSave:(BOOL)clickMineSave;
-
-@end
-
 @interface MineSegmentCell : MineBaseTableViewCell
-
-@property (nonatomic, assign) id <MineSegmentCellDelegate> delegate;
 
 @end

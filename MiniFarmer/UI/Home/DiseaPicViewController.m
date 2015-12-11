@@ -61,18 +61,13 @@
             _tableView.height =self.data.count/3*(weiht+16);
         }else {
             _tableView.height =(self.data.count/3+1)*(weiht+16)-1;
-    
-            
             
         }
 
     }
     
-    _tableView.backgroundColor = [UIColor redColor];
+  //  _tableView.backgroundColor = [UIColor redColor];
     
-    
-   
-
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.bounces = NO;
@@ -157,9 +152,6 @@
                           @"wd":_keyword
                           };
     [self _reqestData:@"?c=search&m=bchjs" with:dic type:SHHttpRequestGet];
-    
-    
- 
 }
 
 - (void)setTwoclassid:(NSString *)twoclassid{

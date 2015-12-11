@@ -8,7 +8,7 @@
 
 #import "QuAnswerReplyCell.h"
 
-#define kContentLeftSpace      40
+#define kContentLeftSpace      50
 #define kContentRightSpace     20
 #define kTopPadding     10
 #define kBottomPadding  10
@@ -22,17 +22,23 @@
 
 @implementation QuAnswerReplyCell
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
+{  
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.contentView.backgroundColor = kBgGrayColor;
-        
+        self.contentView.backgroundColor = [UIColor colorWithHexString:@"ffffff"];
+        //回复Label
         _replyContentLabel = [UILabel new];
         [self.contentView addSubview:_replyContentLabel];
         //_replyContentLabel.backgroundColor = [UIColor greenColor];
         _replyContentLabel.numberOfLines = 0;
         _replyContentLabel.font = kTextFont14;
         _replyContentLabel.textColor = kTextBlackColor;
+        
+        
+        
+        
+        
+        
         [self addViewConstraints];
     }
     return self;

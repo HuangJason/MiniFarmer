@@ -23,6 +23,7 @@
 
 /// 设置default返回按钮
 - (void)setLeftDefualtButtonBackWithTarget:(id)target action:(SEL)action;
+- (void)setNaVIgationBackAction:(id)target action:(SEL)action;
 
 //设置右边默认的button
 - (void)setRightDefaultButtonBackWithTarget:(id)target action:(SEL)action;

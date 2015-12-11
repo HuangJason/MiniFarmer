@@ -55,7 +55,6 @@
         [self.dataSourceArr addObjectsFromArray:model.list];
     }
     [self noMoreData:model.list.count < kPageSize.intValue];
-    [super reloadData];
     if (!self.dataSourceArr.count)
     {
         //这里显示无结果页

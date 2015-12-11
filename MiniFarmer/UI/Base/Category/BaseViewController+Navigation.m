@@ -38,6 +38,19 @@
 
     [self.view addSubview:backButton];
 }
+- (void)setNaVIgationBackAction:(id)target action:(SEL)action{
+
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setFrame:CGRectMake(0,kStatusBarHeight,44, 44)];
+    [backButton setBackgroundImage:[UIImage imageNamed:@"home_navigation_back_btn"] forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"home_navigation_back_btn"] forState:UIControlStateHighlighted];
+    [backButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [self setLineToBarBottomWithColor:RGBCOLOR(169, 169, 169) heigth:kLineWidth];
+    
+    [self.view addSubview:backButton];
+
+
+}
 
 - (void)setBarRightDefaultButtonWithTarget:(id)target action:(SEL)action
 {

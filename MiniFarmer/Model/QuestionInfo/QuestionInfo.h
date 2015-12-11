@@ -23,5 +23,6 @@
 @property (nonatomic,strong) NSString<Optional> *location;
 @property (nonatomic,strong) NSString<Optional> *zwmc;
 @property (nonatomic,strong) NSArray<NSString*> *images;
+@property (nonatomic,strong) NSNumber <Optional>*iscoll;
 
 @end

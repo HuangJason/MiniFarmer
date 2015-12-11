@@ -75,9 +75,12 @@
 
 - (void)setUrl:(NSURL *)url{
     _url = url;
-    [_imageView sd_setImageWithURL:_url placeholderImage:nil];
+    //[_imageView setImageWithURL:_url];
+
     
+   // [_imageView sd_setImageWithURL:_url];
     
+    [_imageView sd_setImageWithURL:_url placeholderImage:[UIImage imageNamed:@"Sys_defalut"]];
     
     
 }

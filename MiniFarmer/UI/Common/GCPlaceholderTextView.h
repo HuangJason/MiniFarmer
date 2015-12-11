@@ -3,7 +3,7 @@
 //  GCLibrary
 //
 //  Created by Guillaume Campagna on 10-11-16.
-//  Copyright 2010 LittleKiwi. All rights reserved.
+//  Copyright 2010 LittlexKiwi. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

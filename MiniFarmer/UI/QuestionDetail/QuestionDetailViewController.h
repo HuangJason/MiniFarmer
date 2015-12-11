@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "UMSocialSnsService.h"
 
-@interface QuestionDetailViewController : BaseViewController
+@interface QuestionDetailViewController : BaseViewController<UMSocialUIDelegate>
 
 - (instancetype)initWithWtid:(NSString *)wtid;
 

@@ -434,5 +434,39 @@
     }];
 
 }
++ (NSURLSessionUploadTask *)uploadURL:(NSString *)urlString params:(NSDictionary *)params fileData:(NSDictionary *)filesData completion:(void (^)(id, NSError *))block{
+    
+    
+    NSMutableDictionary *dicPar = [[NSMutableDictionary alloc] initWithCapacity:1];
+    
+    if (params) {
+        [dicPar addEntriesFromDictionary:params];
+    }
+    [dicPar setObject:kCommApiKey forKey:@"apikey"];
+    //1.拼接URL
+    NSString *totalUrl = [NSString stringWithFormat:@"%@%@",kCommServerUrl,urlString];
+
+    
+    NSLog(@"%@",totalUrl);
+    
+    
+    
+    AFHTTPSessionManager *af = [[AFHTTPSessionManager alloc]init];
+    NSURLSessionDataTask *uploadTask = [af POST:totalUrl parameters:dicPar constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [filesData enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            [formData appendPartWithFileData:obj name:key fileName:@"hl" mimeType:@"image/jpeg"];
+        }];
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        block(responseObject,nil);
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        block(nil,error);
+    }];
+    return (NSURLSessionUploadTask *)uploadTask;
+
+
+}
 
 @end

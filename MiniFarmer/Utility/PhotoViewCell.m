@@ -29,6 +29,10 @@
 
 - (void)setUrlString:(NSString *)urlString{
     _urlString = urlString;
+    
+    if ([_urlString rangeOfString:@"http://www.enbs.com.cn/apps_2"].location!= NSNotFound) {
+        _scrollView.url = [NSURL URLWithString:_urlString];
+    }
     NSString *str = [kPictureURL stringByAppendingString:_urlString];
     _scrollView.url = [NSURL URLWithString:str];
 }

@@ -53,6 +53,9 @@
 }
 - (void)setModel:(TwoclassMode *)model{
     _model = model;
+    if (_model== nil) {
+        self.hidden = YES;
+    }
     _name.text = _model.title;
     _bchid = _model.diseaid;
 

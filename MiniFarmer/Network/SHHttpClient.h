@@ -124,4 +124,9 @@ typedef void (^PrepareRequestBlock)(void);
                         fileName:(NSString *)fileName
                          success:(void (^)(id responseObject))success
                          failure:(void (^)(NSError *error))failure;
+//上传图片
++ (NSURLSessionUploadTask *)uploadURL:(NSString *)urlString
+                               params:(NSDictionary *)params  //文本参数
+                             fileData:(NSDictionary *)filesData   //图片参数
+                           completion:(void(^)(id result,NSError *error))block;
 @end

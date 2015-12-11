@@ -176,6 +176,11 @@
     _tabBarView.hidden = YES;
 
 }
+- (void)dealloc{
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+}
 
 
 

@@ -167,6 +167,50 @@
     subRect.size.height = 16;
     self.protocalBtn.frame = subRect;
     
+//    
+//    [self.phoneTF mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.leading.equalTo(self.view.mas_leading).offset(16);
+//        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
+//        make.top.equalTo(self.view.mas_top).offset(80);
+//        make.height.equalTo(@(48));
+//    }];
+//    [self.passwordTF mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.leading.equalTo(self.view.mas_leading).offset(16);
+//        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
+//        make.top.equalTo(self.phoneTF.mas_bottom).offset(8);
+//        make.height.equalTo(@(48));
+//    }];
+//    [self.againPasswordTF mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.leading.equalTo(self.view.mas_leading).offset(16);
+//        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
+//        make.top.equalTo(self.passwordTF.mas_bottom).offset(8);
+//        make.height.equalTo(@(48));
+//    }];
+//    [self.verificationCodeTF mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.leading.equalTo(self.view.mas_leading).offset(16);
+//        make.top.equalTo(self.againPasswordTF.mas_bottom).offset(8);
+//        make.width.equalTo(@(170));
+//        make.height.equalTo(@(48));
+//    }];
+//    [self.getSMSCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.leading.equalTo(self.verificationCodeTF.mas_trailing).offset(16);
+//        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
+//        make.top.equalTo(self.againPasswordTF.mas_bottom).offset(8);
+//        make.height.equalTo(@(48));
+//    }];
+//    [self.registerButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.leading.equalTo(self.view.mas_leading).offset(16);
+//        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
+//        make.top.equalTo(self.verificationCodeTF.mas_bottom).offset(16);
+//        make.height.equalTo(@(50));
+//    }];
+//    [self.protocalBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.registerButton.mas_bottom).offset(25);
+//        make.centerX.equalTo(self.view.mas_centerX);
+//    }];
+//    [self.protocalBtn setBackgroundColor:[UIColor redColor]];
+//
+    
 }
 
 #pragma mark - init views

@@ -13,6 +13,7 @@
 - (void)awakeFromNib {
     
     self.selectionStyle =UITableViewCellSelectionStyleNone;
+    self.selected = NO;
 
     name.font = kTextFont16;
     name.textColor = [UIColor colorWithHexString:@"#333333"];

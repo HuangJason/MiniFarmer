@@ -21,7 +21,7 @@
 //#define kCommServerUrl  @"http://www.enbs.com.cn/apps_2/index.php"
 //#define kCommApiKey     @"457077ad3a4e86ff53fc5555"
 #endif
-#define kPictureURL      @"http://www.enbs.com.cn/apps_2/uploads/"
+#define kPictureURL      @"http://www.enbs.com.cn/apps_test/uploads/"
 
 // 1, 系统函数
 #pragma mark - #define System Methods

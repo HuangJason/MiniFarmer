@@ -8,6 +8,8 @@
 
 #import "QuCommonView.h"
 #import "SingleImgCollectionViewCell.h"
+#import "UIViewAdditions.h"
+#import "PhotoViewController.h"
 
 #define kCommonCelIdentifier    @"QuCommonViewIdent"
 
@@ -50,7 +52,7 @@
 {
     self = [super init];
     if (self) {
-        self.backgroundColor = kBgGrayColor;
+        self.backgroundColor = [UIColor whiteColor];
         _outputView = [UIView new];
         [self addSubview:_outputView];
         //_outputView.backgroundColor = [UIColor redColor];
@@ -135,6 +137,7 @@
         make.size.mas_equalTo(CGSizeMake(0.5, 16));
     }];
     
+    
     //日期
     _dateLable = [UILabel new];
     [_middleView addSubview:_dateLable];
@@ -146,6 +149,8 @@
         make.left.equalTo(lineLabel.mas_right).offset(12);
         make.height.mas_equalTo(kMiddleViewHeight);
     }];
+    
+
 }
 
 - (void)collectionViewInit
@@ -167,7 +172,7 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
-    _collectionView.backgroundColor = kBgGrayColor;
+    _collectionView.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
     [_outputView addSubview:_collectionView];
 //    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.top.equalTo(_middleView).offset(kMiddleViewTopPadding);
@@ -249,6 +254,22 @@
 }
 
 #pragma mark- UICollectionViewDelegate
+//点击事件
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    PhotoViewController *photoVC = [[PhotoViewController alloc] init]
+    ;
+    photoVC.imageUrls = _qInfo.images.mutableCopy;
+    photoVC.indexPath = indexPath
+    ;
+  // self.viewController.tabBarController.hidesBottomBarWhenPushed = YES;
+    
+    [self.viewController.navigationController pushViewController:photoVC animated:YES];
+    
+    
+
+
+}
 
 
 @end
