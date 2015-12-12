@@ -20,10 +20,8 @@
 
 @implementation HeaderNotLoginView
 - (IBAction)tapRegisterBT:(id)sender {
-    self.tapRegistBT();
 }
 - (IBAction)tapLoginBT:(id)sender {
-    self.tapLoginBT();
 }
 
 @end

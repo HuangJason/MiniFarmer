@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "QuestionAnsModel.h"
 
-@interface QuAnswerHeaderView : UITableViewHeaderFooterView
+@interface QuAnswerHeaderView : UITableViewHeaderFooterView<UIAlertViewDelegate>
 
 - (void)refreshWithAnsModel:(QuestionAnsModel *)ansModel;
 + (CGFloat)headerHeightWithAnsModel:(QuestionAnsModel *)ansModel;
+@property(nonatomic,assign)BOOL isSelf;
+
 @end

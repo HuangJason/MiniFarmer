@@ -382,10 +382,11 @@
         
         if(data != nil)
         {
-            [formData appendPartWithFileData:data name:@"photo" fileName:fileName mimeType:@"image/png"];
+            [formData appendPartWithFileData:data name:@"photo" fileName:fileName mimeType:@"image/png/jpeg"];
         }
     }
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              
               NSString *result = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
               if ([result isEqualToString:@"403"] || [result isEqualToString:@"404"]) {
                   success(result);
@@ -410,10 +411,28 @@
                        success:(void (^)(id responseObject))success
                        failure:(void (^)(NSError *error))failure
 {
+    
+    NSMutableDictionary *dicPar = [[NSMutableDictionary alloc] initWithCapacity:1];
+    
+    if (parameters) {
+        [dicPar addEntriesFromDictionary:parameters];
+    }
+    [dicPar setObject:kCommApiKey forKey:@"apikey"];
+    
+    //1.拼接URL
+    NSString *totalUrl = [NSString stringWithFormat:@"%@%@",kCommServerUrl,url];
+    
+    NSLog(@"%@",totalUrl);
+    
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    //拼接URL
     
-    [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+
+    
+    
+    [manager POST:totalUrl parameters:dicPar constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         NSData *data = [[NSData alloc] initWithContentsOfFile:imgUrl];
         
         if(data != nil)
@@ -432,6 +451,43 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         DLOG(@"上传错误 %@", error.localizedDescription);
     }];
+
+}
++ (NSURLSessionUploadTask *)uploadURL:(NSString *)urlString params:(NSDictionary *)params fileData:(NSDictionary *)filesData completion:(void (^)(id, NSError *))block{
+    
+    
+    NSMutableDictionary *dicPar = [[NSMutableDictionary alloc] initWithCapacity:1];
+    
+    if (params) {
+        [dicPar addEntriesFromDictionary:params];
+    }
+    [dicPar setObject:kCommApiKey forKey:@"apikey"];
+    //1.拼接URL
+    NSString *totalUrl = [NSString stringWithFormat:@"%@%@",kCommServerUrl,urlString];
+
+    
+    NSLog(@"%@",totalUrl);
+    
+    
+    
+    AFHTTPSessionManager *af = [[AFHTTPSessionManager alloc]init];
+    NSURLSessionDataTask *uploadTask = [af POST:totalUrl parameters:dicPar constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        
+        [filesData enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            
+            [formData appendPartWithFileData:obj name:key fileName:@"hl.jpg" mimeType:@"image/jpeg"];
+        }];
+        
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        block(responseObject,nil);
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        block(nil,error);
+    }];
+    return (NSURLSessionUploadTask *)uploadTask;
+
 
 }
 

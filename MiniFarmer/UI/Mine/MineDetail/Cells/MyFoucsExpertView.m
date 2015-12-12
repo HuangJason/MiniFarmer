@@ -9,9 +9,6 @@
 #import "MyFoucsExpertView.h"
 
 @interface MyFoucsExpertView ()
-
-@property (nonatomic, strong) MineFoucsExpertCell *cell;
-
 /// 头像
 @property (weak, nonatomic) IBOutlet UIButton *headBtn;
 /// 姓名
@@ -33,54 +30,10 @@
     self.askBtn.layer.cornerRadius = 8;
     self.askBtn.layer.borderWidth = 0.5f;
     self.askBtn.layer.borderColor = [UIColor colorWithHexString:@"#0099ff"].CGColor;
-    self.headBtn.layer.cornerRadius = 31;
-    [self.headBtn setClipsToBounds:YES];
-    
-}
-
-- (void)setObject:(MineFoucsExpertCell *)cell
-{
-    if (_cell != cell)
-    {
-        _cell = cell;
-        MineExpertList *model = cell.jsonModel;
-        
-        if (model.xm.length > 0)
-        {
-            self.nameLabel.text = model.xm;
-        }
-        else
-        {
-            self.nameLabel.text = nil;
-        }
-        
-        if (model.zjlxms.length > 0)
-        {
-            self.flagLabel.text = model.zjlxms;
-        }
-        else
-        {
-            self.flagLabel.text = nil;
-        }
-        
-        if (model.sczwms.length > 0)
-        {
-            self.goodAtLabel.text = [NSString stringWithFormat:@"擅长领域： %@",model.sczwms];
-        }
-        else
-        {
-            self.goodAtLabel.text = nil;
-        }
-        
-        [self.headBtn sd_setImageWithURL:[NSURL URLWithString:model.usertx]
-                                forState:UIControlStateNormal
-                        placeholderImage:nil];
-    }
 }
 
 /// 提问按钮点击
 - (IBAction)askBtnClick:(id)sender {
-    
 }
 
 @end

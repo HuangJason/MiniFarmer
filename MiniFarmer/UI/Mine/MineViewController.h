@@ -9,7 +9,19 @@
 #import <UIKit/UIKit.h>
 
 
+typedef enum
+{
+    TypeSegment,
+    TypeNothing,
+    TypeOther
+    
+} Type;
 
+@interface UserMenuItem : NSObject
+
+@property (nonatomic, strong)NSString *title;
+@property (nonatomic, strong)NSString *subTitle;
+@end
 
 @interface MineViewController : UIViewController
 

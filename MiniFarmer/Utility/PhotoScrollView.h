@@ -10,8 +10,7 @@
 
 @interface PhotoScrollView : UIScrollView<UIScrollViewDelegate>{
 
-     UIImageView *_imageView;
-
+   UIImageView *_imageView;
 }
 
 @property(nonatomic,retain)NSURL *url;

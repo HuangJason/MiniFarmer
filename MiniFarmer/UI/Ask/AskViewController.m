@@ -122,14 +122,10 @@
 }
 
 
-- (void)addImages:(UIButton *)btn
-{
-}
-
 #pragma mark - 选择照片后的回调
 //选择完成后的回调
 - (void)photoSelect:(XDPhotoSelect *)photoSelect didFinishedWithImageArray:(NSArray *)imageArray
-{
+{    
     
 }
 

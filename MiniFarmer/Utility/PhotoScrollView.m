@@ -9,17 +9,25 @@
 #import "PhotoScrollView.h"
 #import "UIImageView+WebCache.h"
 #import "UIView+UIViewController.h"
+#import "UIImage+WebP.h"
+#import "UIImageView+HighlightedWebCache.h"
 
 
-@implementation PhotoScrollView
+@implementation PhotoScrollView{
+  
+    
+    UIImageView * imagev;
+    
 
+
+
+}
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
         
-        _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
-        _imageView.contentMode = UIViewContentModeScaleAspectFit;
-        [self addSubview:_imageView];
+       
+    
         //设置最大最小的缩放倍数
         self.maximumZoomScale = 2;
         self.minimumZoomScale = 1;
@@ -75,11 +83,24 @@
 
 - (void)setUrl:(NSURL *)url{
     _url = url;
-    [_imageView sd_setImageWithURL:_url placeholderImage:nil];
+    //[_imageView setImageWithURL:_url];
+
     
+   // [_imageView sd_setImageWithURL:_url];
     
+   // [_imageView sd_setImageWithURL:_url placeholderImage:[UIImage imageNamed:@"Sys_defalut"]];
     
+    _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    _imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self addSubview:_imageView];
+
+    [_imageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:_url]]];
     
+   // [_imageView sd_setImageWithURL:_url placeholderImage:nil];
+    
+
+    
+      
 }
 
 

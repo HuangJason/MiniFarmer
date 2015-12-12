@@ -241,7 +241,7 @@
     QuestionCellSource *tmpSou = [_sourceArr objectAtIndex:row];
     NSString *wtid = tmpSou.qInfo.qid;
     QuestionDetailViewController *quVC = [[QuestionDetailViewController alloc] initWithWtid:wtid];
-    //self.tabBarController.hidesBottomBarWhenPushed = YES;
+    self.tabBarController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:quVC animated:YES];
 }
 
@@ -275,11 +275,8 @@
     
     [self.ViewController.navigationController pushViewController:messageVC animated:YES];
      */
-    
-    
+
     StudyViewController *studyVC = [[StudyViewController alloc] init];
-
-
     self.tabBarController.hidesBottomBarWhenPushed = YES;
 
     [self.navigationController pushViewController:studyVC animated:YES];
@@ -292,9 +289,7 @@
 {
     AskSpecialistViewController *askSVC = [[AskSpecialistViewController alloc] init];
     [self.navigationController pushViewController:askSVC animated:YES];
-    
-    
-    
+
 }
 
 @end

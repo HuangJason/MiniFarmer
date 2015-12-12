@@ -8,19 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-typedef void (^TapMineSave) ();
-typedef void (^TapMineFocus) ();
-
-
 @interface MineSegmentView : UIView
-@property (weak, nonatomic) IBOutlet UIButton *mineSaveBT;
-
-@property (weak, nonatomic) IBOutlet UIButton *mineFocusBT;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *mineLineWidth;
-
-
-@property (copy, nonatomic) TapMineSave tapMineSave;
-@property (copy, nonatomic) TapMineFocus tapMineFocus;
 
 @end

@@ -10,18 +10,12 @@
 
 @implementation MineSegmentView
 
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    self.mineLineWidth.constant = kLineWidth;
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
 }
-
-- (IBAction)tapMineSave:(id)sender {
-    self.tapMineSave();
-}
-
-- (IBAction)tapMineFocus:(id)sender {
-    self.tapMineFocus();
-}
+*/
 
 @end

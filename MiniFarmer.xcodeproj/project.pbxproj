@@ -7,22 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B1BDF5F1C146C61005F4274 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BDF451C146C61005F4274 /* UMSocialLocalizable.strings */; };
-		1B1BDF601C146C61005F4274 /* libUMSocial_Sdk_4.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1BDF531C146C61005F4274 /* libUMSocial_Sdk_4.4.a */; };
-		1B1BDF611C146C61005F4274 /* UMSCommentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BDF551C146C61005F4274 /* UMSCommentDetailController.xib */; };
-		1B1BDF621C146C61005F4274 /* UMSCommentInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BDF561C146C61005F4274 /* UMSCommentInputController.xib */; };
-		1B1BDF631C146C61005F4274 /* UMSCommentInputControlleriPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BDF571C146C61005F4274 /* UMSCommentInputControlleriPad.xib */; };
-		1B1BDF641C146C61005F4274 /* UMShareEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BDF581C146C61005F4274 /* UMShareEditViewController.xib */; };
-		1B1BDF651C146C61005F4274 /* UMShareEditViewControlleriPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BDF591C146C61005F4274 /* UMShareEditViewControlleriPad.xib */; };
-		1B1BDF661C146C61005F4274 /* UMSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BDF5A1C146C61005F4274 /* UMSLoginViewController.xib */; };
-		1B1BDF671C146C61005F4274 /* UMSnsAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BDF5B1C146C61005F4274 /* UMSnsAccountViewController.xib */; };
-		1B1BDF681C146C61005F4274 /* UMSShareListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BDF5C1C146C61005F4274 /* UMSShareListController.xib */; };
-		1B1BDF691C146C61005F4274 /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BDF5D1C146C61005F4274 /* UMSocialSDKResourcesNew.bundle */; };
-		1B1BDF761C146C73005F4274 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1BDF6C1C146C73005F4274 /* libSocialQQ.a */; };
-		1B1BDF771C146C73005F4274 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1BDF6D1C146C73005F4274 /* TencentOpenAPI.framework */; };
-		1B1BDF781C146C73005F4274 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BDF6E1C146C73005F4274 /* TencentOpenApi_IOS_Bundle.bundle */; };
-		1B1BDF791C146C73005F4274 /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1BDF711C146C73005F4274 /* libSocialWechat.a */; };
-		1B1BDF7A1C146C73005F4274 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1BDF721C146C73005F4274 /* libWeChatSDK.a */; };
 		1B1BDF7C1C146EC2005F4274 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1BDF7B1C146EC2005F4274 /* Security.framework */; };
 		1B1BDF7E1C146ED8005F4274 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1BDF7D1C146ED8005F4274 /* libiconv.tbd */; };
 		1B1BDF801C146EE8005F4274 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1BDF7F1C146EE8005F4274 /* CoreGraphics.framework */; };
@@ -160,9 +144,6 @@
 		31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31FDE3971BFAB7EC00AA199F /* AboutViewController.xib */; };
 		31FDE3EA1BFB1F2100AA199F /* UITextField+CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3E91BFB1F2100AA199F /* UITextField+CustomTextField.m */; };
 		31FDE3ED1BFC10F600AA199F /* MyResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FDE3EC1BFC10F600AA199F /* MyResponseViewController.m */; };
-		7730E17E1C19C519004B6161 /* MIneExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730E17D1C19C519004B6161 /* MIneExpertViewController.m */; };
-		7730E1811C19CF21004B6161 /* MineExpertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730E1801C19CF21004B6161 /* MineExpertModel.m */; };
-		7730E1841C19DE10004B6161 /* MineInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730E1831C19DE10004B6161 /* MineInfos.m */; };
 		7751309C1C15C98A00ED5FCE /* MineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7751308D1C15C98A00ED5FCE /* MineCell.m */; };
 		7751309D1C15C98A00ED5FCE /* MineNothingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7751308F1C15C98A00ED5FCE /* MineNothingCell.m */; };
 		7751309E1C15C98A00ED5FCE /* MineSegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 775130911C15C98A00ED5FCE /* MineSegmentCell.m */; };
@@ -178,7 +159,6 @@
 		775480421C17180F00745AB0 /* MineFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 775480411C17180F00745AB0 /* MineFocusViewController.m */; };
 		775480451C17259100745AB0 /* MyFoucsExpertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 775480441C17259100745AB0 /* MyFoucsExpertView.m */; };
 		775480471C1725D300745AB0 /* MyFoucsExpertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775480461C1725D300745AB0 /* MyFoucsExpertView.xib */; };
-		77F0E1941C18775300820192 /* MineFoucsExpertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F0E1931C18775300820192 /* MineFoucsExpertCell.m */; };
 		FC37668F1BF71C2200FB2BA4 /* QuestionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */; };
 		FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3766911BF7393600FB2BA4 /* SingleImgCollectionViewCell.m */; };
 		FC940B741BFDC84E0086A4D8 /* QuestionAnsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC940B731BFDC84E0086A4D8 /* QuestionAnsModel.m */; };
@@ -264,16 +244,16 @@
 		FCC884C11BC3EBB900A1200B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC884C01BC3EBB900A1200B /* Assets.xcassets */; };
 		FCC884CF1BC3EBB900A1200B /* MiniFarmerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC884CE1BC3EBB900A1200B /* MiniFarmerTests.m */; };
 		FCC884DA1BC3EBBA00A1200B /* MiniFarmerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC884D91BC3EBBA00A1200B /* MiniFarmerUITests.m */; };
-		FCC90DB01BD3AE5B00D341DD /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC90DAF1BD3AE5B00D341DD /* QuestionCell.m */; };
-		FCCA178A1BEF116400BAE15C /* HomeMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA17891BEF116400BAE15C /* HomeMenuButton.m */; };
-		FCCA8FAD1BDD255E00B1CCF4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FA71BDD255E00B1CCF4 /* BaseViewController.m */; };
-		FCCA8FAE1BDD255E00B1CCF4 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FAA1BDD255E00B1CCF4 /* UIColor+Expanded.m */; };
-		FCCA8FAF1BDD255E00B1CCF4 /* SimpleImageTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FAC1BDD255E00B1CCF4 /* SimpleImageTitleButton.m */; };
-		FCCA8FB21BDD2BED00B1CCF4 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FB11BDD2BED00B1CCF4 /* UIViewAdditions.m */; };
-		FCCA8FB51BDD2F9E00B1CCF4 /* QuestionCellSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FB41BDD2F9E00B1CCF4 /* QuestionCellSource.m */; };
-		FCCB90611BE1B738005F1A83 /* AnswersButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB90601BE1B738005F1A83 /* AnswersButton.m */; };
-		FCCBA0301BDF4727009AF469 /* APPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBA02F1BDF4727009AF469 /* APPHelper.m */; };
-		FCCBA0341BDF6315009AF469 /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBA0331BDF6315009AF469 /* GiFHUD.m */; };
+		FCC90DB01BD3AE5B00D341DD /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC90DAF1BD3AE5B00D341DD /* QuestionCell.m */; settings = {ASSET_TAGS = (); }; };
+		FCCA178A1BEF116400BAE15C /* HomeMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA17891BEF116400BAE15C /* HomeMenuButton.m */; settings = {ASSET_TAGS = (); }; };
+		FCCA8FAD1BDD255E00B1CCF4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FA71BDD255E00B1CCF4 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FCCA8FAE1BDD255E00B1CCF4 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FAA1BDD255E00B1CCF4 /* UIColor+Expanded.m */; settings = {ASSET_TAGS = (); }; };
+		FCCA8FAF1BDD255E00B1CCF4 /* SimpleImageTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FAC1BDD255E00B1CCF4 /* SimpleImageTitleButton.m */; settings = {ASSET_TAGS = (); }; };
+		FCCA8FB21BDD2BED00B1CCF4 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FB11BDD2BED00B1CCF4 /* UIViewAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		FCCA8FB51BDD2F9E00B1CCF4 /* QuestionCellSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA8FB41BDD2F9E00B1CCF4 /* QuestionCellSource.m */; settings = {ASSET_TAGS = (); }; };
+		FCCB90611BE1B738005F1A83 /* AnswersButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB90601BE1B738005F1A83 /* AnswersButton.m */; settings = {ASSET_TAGS = (); }; };
+		FCCBA0301BDF4727009AF469 /* APPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBA02F1BDF4727009AF469 /* APPHelper.m */; settings = {ASSET_TAGS = (); }; };
+		FCCBA0341BDF6315009AF469 /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBA0331BDF6315009AF469 /* GiFHUD.m */; settings = {ASSET_TAGS = (); }; };
 		FCCBA0361BDF65B5009AF469 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCBA0351BDF65B5009AF469 /* AVFoundation.framework */; };
 		FCCBA0381BDF66F2009AF469 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCBA0371BDF66F2009AF469 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
@@ -296,6 +276,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B062F391C187EFE00BB4C95 /* ZmImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZmImageView.h; sourceTree = "<group>"; };
+		1B062F3A1C187EFE00BB4C95 /* ZmImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZmImageView.m; sourceTree = "<group>"; };
+		1B0DB3F01C1924E400116B36 /* ReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyViewController.h; sourceTree = "<group>"; };
+		1B0DB3F11C1924E400116B36 /* ReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyViewController.m; sourceTree = "<group>"; };
+		1B0DB3F31C192C8000116B36 /* AnswerInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerInputView.h; sourceTree = "<group>"; };
+		1B0DB3F41C192C8000116B36 /* AnswerInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerInputView.m; sourceTree = "<group>"; };
+		1B0DB3F61C192D6300116B36 /* AnswerInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerInputView.xib; sourceTree = "<group>"; };
 		1B1BDF461C146C61005F4274 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		1B1BDF481C146C61005F4274 /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		1B1BDF491C146C61005F4274 /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -335,6 +322,8 @@
 		1B1BDF831C146F08005F4274 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		1B1BDF851C146F16005F4274 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		1B1BDF871C146F26005F4274 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1B1DCED31C1595BA00DB54BD /* MyanswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyanswerViewController.h; sourceTree = "<group>"; };
+		1B1DCED41C1595BA00DB54BD /* MyanswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyanswerViewController.m; sourceTree = "<group>"; };
 		1B23956D1C0FE3F00096CE50 /* QusetionSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QusetionSearchViewController.h; sourceTree = "<group>"; };
 		1B23956E1C0FE3F00096CE50 /* QusetionSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QusetionSearchViewController.m; sourceTree = "<group>"; };
 		1B2395721C0FEAA70096CE50 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
@@ -381,6 +370,24 @@
 		1B97F4F11C084C5000A58D03 /* TwoclassMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoclassMode.m; sourceTree = "<group>"; };
 		1B97F4F91C085A0000A58D03 /* DiseaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiseaDetailViewController.h; sourceTree = "<group>"; };
 		1B97F4FA1C085A0000A58D03 /* DiseaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiseaDetailViewController.m; sourceTree = "<group>"; };
+		1BC52DA11C153763007A49DE /* MineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCell.h; sourceTree = "<group>"; };
+		1BC52DA21C153763007A49DE /* MineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCell.m; sourceTree = "<group>"; };
+		1BC52DA31C153763007A49DE /* MineNothingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineNothingCell.h; sourceTree = "<group>"; };
+		1BC52DA41C153763007A49DE /* MineNothingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineNothingCell.m; sourceTree = "<group>"; };
+		1BC52DA51C153763007A49DE /* MineSegmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineSegmentCell.h; sourceTree = "<group>"; };
+		1BC52DA61C153763007A49DE /* MineSegmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineSegmentCell.m; sourceTree = "<group>"; };
+		1BC52DAB1C15376D007A49DE /* HeaderLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderLoginView.h; sourceTree = "<group>"; };
+		1BC52DAC1C15376D007A49DE /* HeaderLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderLoginView.m; sourceTree = "<group>"; };
+		1BC52DAD1C15376D007A49DE /* HeaderNotLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderNotLoginView.h; sourceTree = "<group>"; };
+		1BC52DAE1C15376D007A49DE /* HeaderNotLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderNotLoginView.m; sourceTree = "<group>"; };
+		1BC52DAF1C15376D007A49DE /* HeaderNotLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderNotLoginView.xib; sourceTree = "<group>"; };
+		1BC52DB01C15376D007A49DE /* MineSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineSegmentView.h; sourceTree = "<group>"; };
+		1BC52DB11C15376D007A49DE /* MineSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineSegmentView.m; sourceTree = "<group>"; };
+		1BC52DB21C15376D007A49DE /* MineSegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineSegmentView.xib; sourceTree = "<group>"; };
+		1BC52DB81C15394C007A49DE /* QuAnswerHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuAnswerHeaderView.h; sourceTree = "<group>"; };
+		1BC52DB91C15394C007A49DE /* QuAnswerHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuAnswerHeaderView.m; sourceTree = "<group>"; };
+		1BC52DBA1C15394C007A49DE /* QuAnswerReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuAnswerReplyCell.h; sourceTree = "<group>"; };
+		1BC52DBB1C15394C007A49DE /* QuAnswerReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuAnswerReplyCell.m; sourceTree = "<group>"; };
 		1BCA80331C0BD0F5001E1285 /* DrugDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugDetailView.h; sourceTree = "<group>"; };
 		1BCA80341C0BD0F5001E1285 /* DrugDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugDetailView.m; sourceTree = "<group>"; };
 		1BCA803B1C0C2A8D001E1285 /* DieaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieaseModel.h; sourceTree = "<group>"; };
@@ -570,12 +577,6 @@
 		31FDE3E91BFB1F2100AA199F /* UITextField+CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CustomTextField.m"; sourceTree = "<group>"; };
 		31FDE3EB1BFC10F600AA199F /* MyResponseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyResponseViewController.h; sourceTree = "<group>"; };
 		31FDE3EC1BFC10F600AA199F /* MyResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyResponseViewController.m; sourceTree = "<group>"; };
-		7730E17C1C19C519004B6161 /* MIneExpertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIneExpertViewController.h; sourceTree = "<group>"; };
-		7730E17D1C19C519004B6161 /* MIneExpertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIneExpertViewController.m; sourceTree = "<group>"; };
-		7730E17F1C19CF21004B6161 /* MineExpertModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineExpertModel.h; sourceTree = "<group>"; };
-		7730E1801C19CF21004B6161 /* MineExpertModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineExpertModel.m; sourceTree = "<group>"; };
-		7730E1821C19DE10004B6161 /* MineInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineInfos.h; sourceTree = "<group>"; };
-		7730E1831C19DE10004B6161 /* MineInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineInfos.m; sourceTree = "<group>"; };
 		7751308C1C15C98A00ED5FCE /* MineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCell.h; sourceTree = "<group>"; };
 		7751308D1C15C98A00ED5FCE /* MineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCell.m; sourceTree = "<group>"; };
 		7751308E1C15C98A00ED5FCE /* MineNothingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineNothingCell.h; sourceTree = "<group>"; };
@@ -603,8 +604,6 @@
 		775480431C17259100745AB0 /* MyFoucsExpertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFoucsExpertView.h; sourceTree = "<group>"; };
 		775480441C17259100745AB0 /* MyFoucsExpertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFoucsExpertView.m; sourceTree = "<group>"; };
 		775480461C1725D300745AB0 /* MyFoucsExpertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFoucsExpertView.xib; sourceTree = "<group>"; };
-		77F0E1921C18775300820192 /* MineFoucsExpertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineFoucsExpertCell.h; sourceTree = "<group>"; };
-		77F0E1931C18775300820192 /* MineFoucsExpertCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineFoucsExpertCell.m; sourceTree = "<group>"; };
 		FC37668D1BF71C2200FB2BA4 /* QuestionDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetailModel.h; sourceTree = "<group>"; };
 		FC37668E1BF71C2200FB2BA4 /* QuestionDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailModel.m; sourceTree = "<group>"; };
 		FC3766901BF7393600FB2BA4 /* SingleImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleImgCollectionViewCell.h; sourceTree = "<group>"; };
@@ -933,6 +932,26 @@
 			path = Wechat;
 			sourceTree = "<group>";
 		};
+		1B1DCED11C1593B100DB54BD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FCC630B81BF4D70000A2B08C /* QuestionDetailViewController.h */,
+				FCC630B91BF4D70000A2B08C /* QuestionDetailViewController.m */,
+				1B1DCED31C1595BA00DB54BD /* MyanswerViewController.h */,
+				1B1DCED41C1595BA00DB54BD /* MyanswerViewController.m */,
+				1B0DB3F01C1924E400116B36 /* ReplyViewController.h */,
+				1B0DB3F11C1924E400116B36 /* ReplyViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		1B1DCED21C1593B500DB54BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		1B2395711C0FEA930096CE50 /* PhotoView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1073,6 +1092,48 @@
 			name = MyModel;
 			sourceTree = "<group>";
 		};
+		1BC52DA01C153763007A49DE /* MineCells */ = {
+			isa = PBXGroup;
+			children = (
+				1BC52DA11C153763007A49DE /* MineCell.h */,
+				1BC52DA21C153763007A49DE /* MineCell.m */,
+				1BC52DA31C153763007A49DE /* MineNothingCell.h */,
+				1BC52DA41C153763007A49DE /* MineNothingCell.m */,
+				1BC52DA51C153763007A49DE /* MineSegmentCell.h */,
+				1BC52DA61C153763007A49DE /* MineSegmentCell.m */,
+			);
+			path = MineCells;
+			sourceTree = "<group>";
+		};
+		1BC52DAA1C15376D007A49DE /* MineViews */ = {
+			isa = PBXGroup;
+			children = (
+				1BC52DAB1C15376D007A49DE /* HeaderLoginView.h */,
+				1BC52DAC1C15376D007A49DE /* HeaderLoginView.m */,
+				1BC52DAD1C15376D007A49DE /* HeaderNotLoginView.h */,
+				1BC52DAE1C15376D007A49DE /* HeaderNotLoginView.m */,
+				1BC52DAF1C15376D007A49DE /* HeaderNotLoginView.xib */,
+				1BC52DB01C15376D007A49DE /* MineSegmentView.h */,
+				1BC52DB11C15376D007A49DE /* MineSegmentView.m */,
+				1BC52DB21C15376D007A49DE /* MineSegmentView.xib */,
+			);
+			path = MineViews;
+			sourceTree = "<group>";
+		};
+		1BC52DBE1C158E60007A49DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BC52DB81C15394C007A49DE /* QuAnswerHeaderView.h */,
+				1BC52DB91C15394C007A49DE /* QuAnswerHeaderView.m */,
+				FCC630B61BF4D70000A2B08C /* QuCommonView.h */,
+				FCC630B71BF4D70000A2B08C /* QuCommonView.m */,
+				1B0DB3F31C192C8000116B36 /* AnswerInputView.h */,
+				1B0DB3F41C192C8000116B36 /* AnswerInputView.m */,
+				1B0DB3F61C192D6300116B36 /* AnswerInputView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		31399E851BF73D210052A4EB /* MineDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -1105,8 +1166,6 @@
 				7754803E1C17142800745AB0 /* MineSaveViewController.m */,
 				775480401C17180F00745AB0 /* MineFocusViewController.h */,
 				775480411C17180F00745AB0 /* MineFocusViewController.m */,
-				7730E17C1C19C519004B6161 /* MIneExpertViewController.h */,
-				7730E17D1C19C519004B6161 /* MIneExpertViewController.m */,
 			);
 			path = MineDetail;
 			sourceTree = "<group>";
@@ -1372,9 +1431,6 @@
 				318A87E71C01E982008456C1 /* MyRecipeView.h */,
 				318A87E81C01E982008456C1 /* MyRecipeView.m */,
 				318A87EA1C01E99B008456C1 /* MyRecipeView.xib */,
-				775480431C17259100745AB0 /* MyFoucsExpertView.h */,
-				775480441C17259100745AB0 /* MyFoucsExpertView.m */,
-				775480461C1725D300745AB0 /* MyFoucsExpertView.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1390,10 +1446,6 @@
 				31FDE38D1BFA250200AA199F /* SettingModel.m */,
 				3172EC481BFD93C300F7EF6D /* MyReponseModel.h */,
 				3172EC491BFD93C300F7EF6D /* MyReponseModel.m */,
-				7730E17F1C19CF21004B6161 /* MineExpertModel.h */,
-				7730E1801C19CF21004B6161 /* MineExpertModel.m */,
-				7730E1821C19DE10004B6161 /* MineInfos.h */,
-				7730E1831C19DE10004B6161 /* MineInfos.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1407,8 +1459,6 @@
 				7751308F1C15C98A00ED5FCE /* MineNothingCell.m */,
 				775130901C15C98A00ED5FCE /* MineSegmentCell.h */,
 				775130911C15C98A00ED5FCE /* MineSegmentCell.m */,
-				77F0E1921C18775300820192 /* MineFoucsExpertCell.h */,
-				77F0E1931C18775300820192 /* MineFoucsExpertCell.m */,
 			);
 			path = MineCells;
 			sourceTree = "<group>";
@@ -1506,9 +1556,8 @@
 		FCC626701BCA7A0E00943F99 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				7751308B1C15C98A00ED5FCE /* MineCells */,
-				775130921C15C98A00ED5FCE /* MineModel */,
-				775130931C15C98A00ED5FCE /* MineViews */,
+				1BC52DAA1C15376D007A49DE /* MineViews */,
+				1BC52DA01C153763007A49DE /* MineCells */,
 				31399E851BF73D210052A4EB /* MineDetail */,
 				FCC626711BCA7A0E00943F99 /* MineViewController.h */,
 				FCC626721BCA7A0E00943F99 /* MineViewController.m */,
@@ -1553,14 +1602,11 @@
 		FCC630B51BF4D70000A2B08C /* QuestionDetail */ = {
 			isa = PBXGroup;
 			children = (
-				775130A71C15D5AE00ED5FCE /* QuAnswerHeaderView.h */,
-				775130A81C15D5AE00ED5FCE /* QuAnswerHeaderView.m */,
-				775130A91C15D5AE00ED5FCE /* QuAnswerReplyCell.h */,
-				775130AA1C15D5AE00ED5FCE /* QuAnswerReplyCell.m */,
-				FCC630B61BF4D70000A2B08C /* QuCommonView.h */,
-				FCC630B71BF4D70000A2B08C /* QuCommonView.m */,
-				FCC630B81BF4D70000A2B08C /* QuestionDetailViewController.h */,
-				FCC630B91BF4D70000A2B08C /* QuestionDetailViewController.m */,
+				1BC52DBA1C15394C007A49DE /* QuAnswerReplyCell.h */,
+				1BC52DBB1C15394C007A49DE /* QuAnswerReplyCell.m */,
+				1B1DCED21C1593B500DB54BD /* Model */,
+				1B1DCED11C1593B100DB54BD /* ViewController */,
+				1BC52DBE1C158E60007A49DE /* View */,
 			);
 			path = QuestionDetail;
 			sourceTree = "<group>";
@@ -1949,6 +1995,8 @@
 		FCC90DAC1BD3AE2600D341DD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1B062F391C187EFE00BB4C95 /* ZmImageView.h */,
+				1B062F3A1C187EFE00BB4C95 /* ZmImageView.m */,
 				31399E7F1BF63D210052A4EB /* ZoomScrollView.h */,
 				31399E801BF63D210052A4EB /* ZoomScrollView.m */,
 				31EC66571BF04ABB00B8E1BC /* GCPlaceholderTextView.h */,
@@ -2140,8 +2188,9 @@
 				31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */,
 				313E981C1C05957500DC7B4F /* (null) in Resources */,
 				1B1BDF691C146C61005F4274 /* UMSocialSDKResourcesNew.bundle in Resources */,
-				775130A31C15C98A00ED5FCE /* MineSegmentView.xib in Resources */,
+				1BC52DB71C15376D007A49DE /* MineSegmentView.xib in Resources */,
 				31A0DBDF1C089F8C0017D1F0 /* AskSpecialistView.xib in Resources */,
+				1B0DB3F71C192D6300116B36 /* AnswerInputView.xib in Resources */,
 				1B1BDF671C146C61005F4274 /* UMSnsAccountViewController.xib in Resources */,
 				FCC884C11BC3EBB900A1200B /* Assets.xcassets in Resources */,
 				1B1BDF611C146C61005F4274 /* UMSCommentDetailController.xib in Resources */,
@@ -2151,7 +2200,7 @@
 				318A87EB1C01E99B008456C1 /* MyRecipeView.xib in Resources */,
 				31EC67A31BF0E4A700B8E1BC /* MWPhotoBrowser.bundle in Resources */,
 				1B1BDF781C146C73005F4274 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
-				775130A11C15C98A00ED5FCE /* HeaderNotLoginView.xib in Resources */,
+				1BC52DB51C15376D007A49DE /* HeaderNotLoginView.xib in Resources */,
 				1B1BDF651C146C61005F4274 /* UMShareEditViewControlleriPad.xib in Resources */,
 				1BEC276B1C0AFF540046F96A /* ShareView.xib in Resources */,
 				1B1BDF681C146C61005F4274 /* UMSShareListController.xib in Resources */,
@@ -2164,7 +2213,6 @@
 				1B337D741C06F27E00F2FE5B /* StudymoreCell.xib in Resources */,
 				1B6BE1791C04582200D69A2D /* SortView.xib in Resources */,
 				31FDE38A1BFA204200AA199F /* SettingAboutView.xib in Resources */,
-				775480471C1725D300745AB0 /* MyFoucsExpertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2189,7 +2237,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7730E1841C19DE10004B6161 /* MineInfos.m in Sources */,
 				FCC752931BC4E01500DE4B27 /* AFURLSessionManager.m in Sources */,
 				31A0DBD91C089F0F0017D1F0 /* MineRecipeViewController.m in Sources */,
 				FCC64BFB1BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m in Sources */,
@@ -2200,7 +2247,6 @@
 				3172EC4A1BFD93C300F7EF6D /* MyReponseModel.m in Sources */,
 				1B97F4E91C08252A00A58D03 /* StudyModel.m in Sources */,
 				FCC6F82F1BF8941400D95F7C /* (null) in Sources */,
-				7730E1811C19CF21004B6161 /* MineExpertModel.m in Sources */,
 				31EC678F1BF0E4A700B8E1BC /* MWGridViewController.m in Sources */,
 				31EC67911BF0E4A700B8E1BC /* MWPhotoBrowser.m in Sources */,
 				31EC67971BF0E4A700B8E1BC /* PSTCollectionView.m in Sources */,
@@ -2213,6 +2259,7 @@
 				31EC679C1BF0E4A700B8E1BC /* PSTCollectionViewItemKey.m in Sources */,
 				FCC74FF61BD27DAF008446ED /* QuestionInfo.m in Sources */,
 				31FDE3851BFA1FA900AA199F /* SettingQuitLoginCell.m in Sources */,
+				1B062F3B1C187EFE00BB4C95 /* ZmImageView.m in Sources */,
 				FC940B741BFDC84E0086A4D8 /* QuestionAnsModel.m in Sources */,
 				1B6BE1651C04304B00D69A2D /* UIView+UIViewController.m in Sources */,
 				1B23957B1C0FEAA70096CE50 /* PhotoCollectionView.m in Sources */,
@@ -2254,7 +2301,6 @@
 				FCC752B41BC4E01500DE4B27 /* MJRefreshGifHeader.m in Sources */,
 				31EC67AD1BF0E63C00B8E1BC /* XDPhotoSelect.m in Sources */,
 				FCCA8FB51BDD2F9E00B1CCF4 /* QuestionCellSource.m in Sources */,
-				775130AB1C15D5AE00ED5FCE /* QuAnswerHeaderView.m in Sources */,
 				31399E8C1BF73DA10052A4EB /* InvitedCodeViewController.m in Sources */,
 				FCCA178A1BEF116400BAE15C /* HomeMenuButton.m in Sources */,
 				FCC752901BC4E01500DE4B27 /* AFURLConnectionOperation.m in Sources */,
@@ -2281,6 +2327,7 @@
 				31EC66561BF0416F00B8E1BC /* BaseTextView.m in Sources */,
 				31EC67981BF0E4A700B8E1BC /* PSTCollectionViewCell.m in Sources */,
 				31A0DBC21C0899780017D1F0 /* NSString+CustomAttributeString.m in Sources */,
+				1B0DB3F51C192C8000116B36 /* AnswerInputView.m in Sources */,
 				FCC626791BCA7A0E00943F99 /* RootTabBarViewController.m in Sources */,
 				FCC630BA1BF4D70000A2B08C /* QuCommonView.m in Sources */,
 				FCC752C31BC4E01500DE4B27 /* SDWebImageManager.m in Sources */,
@@ -2290,9 +2337,11 @@
 				31EC66391BECEC6F00B8E1BC /* BaseViewController+Navigation.m in Sources */,
 				31FDE3781BFA1D0600AA199F /* SettingViewController.m in Sources */,
 				FCC752B21BC4E01500DE4B27 /* MJRefreshBackNormalFooter.m in Sources */,
+				1B0DB3F21C1924E400116B36 /* ReplyViewController.m in Sources */,
 				31EC67931BF0E4A700B8E1BC /* MWTapDetectingView.m in Sources */,
 				FCC752A21BC4E01500DE4B27 /* MASLayoutConstraint.m in Sources */,
 				31A0DBC91C0899A20017D1F0 /* MineAskQuestionCell.m in Sources */,
+				1BC52DBC1C15394C007A49DE /* QuAnswerHeaderView.m in Sources */,
 				31FDE37F1BFA1F6B00AA199F /* SettingAbountCell.m in Sources */,
 				FCC752911BC4E01500DE4B27 /* AFURLRequestSerialization.m in Sources */,
 				FCC752AA1BC4E01500DE4B27 /* MJRefreshBackFooter.m in Sources */,
@@ -2312,36 +2361,32 @@
 				FCC64BF91BCFE4FE00BF56C4 /* LeHttpService.m in Sources */,
 				1BCA80351C0BD0F5001E1285 /* DrugDetailView.m in Sources */,
 				31EC67A11BF0E4A700B8E1BC /* PSTGridLayoutRow.m in Sources */,
-				7751309E1C15C98A00ED5FCE /* MineSegmentCell.m in Sources */,
+				1BC52DA91C153763007A49DE /* MineSegmentCell.m in Sources */,
 				FCC752AE1BC4E01500DE4B27 /* MJRefreshAutoGifFooter.m in Sources */,
 				31D4FDC21BF3A5320081F64F /* MTAssetsPickerController.m in Sources */,
 				313E980F1C044E4B00DC7B4F /* (null) in Sources */,
 				FCC752CA1BC4E01500DE4B27 /* UIImageView+WebCache.m in Sources */,
-				7751309C1C15C98A00ED5FCE /* MineCell.m in Sources */,
+				1BC52DA71C153763007A49DE /* MineCell.m in Sources */,
 				FCC752991BC4E01500DE4B27 /* JSONAPI.m in Sources */,
 				FCC884B61BC3EBB900A1200B /* main.m in Sources */,
 				FCC7528C1BC4E01500DE4B27 /* AFHTTPRequestOperationManager.m in Sources */,
-				7751309D1C15C98A00ED5FCE /* MineNothingCell.m in Sources */,
+				1BC52DA81C153763007A49DE /* MineNothingCell.m in Sources */,
 				31FDE3881BFA202100AA199F /* SettingAboutView.m in Sources */,
-				775480421C17180F00745AB0 /* MineFocusViewController.m in Sources */,
 				FCC752A71BC4E01500DE4B27 /* View+MASAdditions.m in Sources */,
 				31DBC81D1BF76EF4007EDCD0 /* ConfigureBT.m in Sources */,
 				31A0DBDA1C089F0F0017D1F0 /* MineReponseTableViewController.m in Sources */,
-				7754803F1C17142800745AB0 /* MineSaveViewController.m in Sources */,
-				775130A21C15C98A00ED5FCE /* MineSegmentView.m in Sources */,
+				1BC52DB61C15376D007A49DE /* MineSegmentView.m in Sources */,
 				31EC67A01BF0E4A700B8E1BC /* PSTGridLayoutItem.m in Sources */,
 				31EC679B1BF0E4A700B8E1BC /* PSTCollectionViewFlowLayout.m in Sources */,
 				FCC752BB1BC4E01500DE4B27 /* UIView+MJExtension.m in Sources */,
 				FCC752C61BC4E01500DE4B27 /* UIImage+GIF.m in Sources */,
 				31EC679D1BF0E4A700B8E1BC /* PSTCollectionViewLayout.m in Sources */,
-				775130A61C15CE4500ED5FCE /* UserMenuItem.m in Sources */,
 				FCC626761BCA7A0E00943F99 /* AskViewController.m in Sources */,
 				31EC663E1BECECC400B8E1BC /* MiniAppEngine.m in Sources */,
 				31D4FDC91BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m in Sources */,
 				31EC66441BECF52200B8E1BC /* UIView+Toast.m in Sources */,
-				775130AC1C15D5AE00ED5FCE /* QuAnswerReplyCell.m in Sources */,
 				FCC752C81BC4E01500DE4B27 /* UIImage+WebP.m in Sources */,
-				7751309F1C15C98A00ED5FCE /* HeaderLoginView.m in Sources */,
+				1BC52DB31C15376D007A49DE /* HeaderLoginView.m in Sources */,
 				31EC66C81BF0B8B600B8E1BC /* AskSendModel.m in Sources */,
 				FCC752B11BC4E01500DE4B27 /* MJRefreshBackGifFooter.m in Sources */,
 				31EC67A21BF0E4A700B8E1BC /* PSTGridLayoutSection.m in Sources */,
@@ -2350,7 +2395,6 @@
 				1B23956F1C0FE3F00096CE50 /* QusetionSearchViewController.m in Sources */,
 				313E98031C01F81F00DC7B4F /* (null) in Sources */,
 				FCC7529D1BC4E01500DE4B27 /* JSONValueTransformer.m in Sources */,
-				775480451C17259100745AB0 /* MyFoucsExpertView.m in Sources */,
 				FCC752A01BC4E01500DE4B27 /* MASConstraint.m in Sources */,
 				31DBC8311BF78F5F007EDCD0 /* UserInfo.m in Sources */,
 				FCC752A11BC4E01500DE4B27 /* MASConstraintMaker.m in Sources */,
@@ -2368,7 +2412,6 @@
 				FCC752C71BC4E01500DE4B27 /* UIImage+MultiFormat.m in Sources */,
 				FCCA8FB21BDD2BED00B1CCF4 /* UIViewAdditions.m in Sources */,
 				31A0DBE21C089F980017D1F0 /* AskSpecialistViewController.m in Sources */,
-				77F0E1941C18775300820192 /* MineFoucsExpertCell.m in Sources */,
 				31399E811BF63D210052A4EB /* ZoomScrollView.m in Sources */,
 				31EC67951BF0E4A700B8E1BC /* DACircularProgressView.m in Sources */,
 				FCC7528F1BC4E01500DE4B27 /* AFSecurityPolicy.m in Sources */,
@@ -2377,8 +2420,9 @@
 				31DBC8201BF77029007EDCD0 /* UILabel+CustomAttributeLabel.m in Sources */,
 				1B23957A1C0FEAA70096CE50 /* PhotoViewController.m in Sources */,
 				31FDE3EA1BFB1F2100AA199F /* UITextField+CustomTextField.m in Sources */,
+				1BC52DBD1C15394C007A49DE /* QuAnswerReplyCell.m in Sources */,
 				FC3766921BF7393600FB2BA4 /* SingleImgCollectionViewCell.m in Sources */,
-				775130A01C15C98A00ED5FCE /* HeaderNotLoginView.m in Sources */,
+				1BC52DB41C15376D007A49DE /* HeaderNotLoginView.m in Sources */,
 				1B337D781C06F29F00F2FE5B /* StudydetailCell.m in Sources */,
 				FCC752AD1BC4E01500DE4B27 /* MJRefreshHeader.m in Sources */,
 				31EC66501BEF974B00B8E1BC /* ResetPasswordViewController.m in Sources */,
@@ -2392,6 +2436,7 @@
 				31FDE37C1BFA1F1C00AA199F /* MineBaseTableViewCell.m in Sources */,
 				FCC752B51BC4E01500DE4B27 /* MJRefreshNormalHeader.m in Sources */,
 				1B6BE17D1C04699D00D69A2D /* StudyViewController.m in Sources */,
+				1B1DCED51C1595BA00DB54BD /* MyanswerViewController.m in Sources */,
 				FCC752C41BC4E01500DE4B27 /* SDWebImagePrefetcher.m in Sources */,
 				FCC752921BC4E01500DE4B27 /* AFURLResponseSerialization.m in Sources */,
 				FCC7529A1BC4E01500DE4B27 /* JSONHTTPClient.m in Sources */,
@@ -2409,7 +2454,6 @@
 				FCC752B01BC4E01500DE4B27 /* MJRefreshAutoStateFooter.m in Sources */,
 				FCC7528B1BC4E01500DE4B27 /* AFHTTPRequestOperation.m in Sources */,
 				FCC752BE1BC4E01500DE4B27 /* SDImageCache.m in Sources */,
-				7730E17E1C19C519004B6161 /* MIneExpertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

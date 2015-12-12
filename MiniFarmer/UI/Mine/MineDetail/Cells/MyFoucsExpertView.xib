@@ -122,8 +122,6 @@
                     <exclude reference="6Jy-Nl-oyL"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="585-XP-ZVV"/>
-                    <exclude reference="jzu-Mf-2pi"/>
                     <exclude reference="kEn-lQ-yTg"/>
                     <exclude reference="l1v-ya-YHQ"/>
                     <exclude reference="fE3-02-YlT"/>
@@ -135,6 +133,8 @@
                     <exclude reference="zGO-jy-UHV"/>
                     <exclude reference="71P-ZR-1tY"/>
                     <exclude reference="tCj-4s-etW"/>
+                    <exclude reference="585-XP-ZVV"/>
+                    <exclude reference="jzu-Mf-2pi"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -147,8 +147,6 @@
                     <include reference="6Jy-Nl-oyL"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="585-XP-ZVV"/>
-                    <include reference="jzu-Mf-2pi"/>
                     <include reference="kEn-lQ-yTg"/>
                     <include reference="l1v-ya-YHQ"/>
                     <include reference="fE3-02-YlT"/>
@@ -160,6 +158,8 @@
                     <include reference="zGO-jy-UHV"/>
                     <include reference="71P-ZR-1tY"/>
                     <include reference="tCj-4s-etW"/>
+                    <include reference="585-XP-ZVV"/>
+                    <include reference="jzu-Mf-2pi"/>
                 </mask>
             </variation>
             <connections>
