@@ -37,7 +37,7 @@
     UIButton    *_favButton;  //点赞按钮
     UILabel     *_favCountLabel;//点赞数
     UILabel     *_lineLabelBottom;//下划线
-    
+    UIImageView *_adopSignView;
     //自己的问题
     UIButton    *_adopButton;
     
@@ -90,7 +90,13 @@
         [_adopButton addTarget:self action:@selector(adoptionAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:_adopButton];
          _adopButton.hidden = YES;
-
+        
+        //3.采纳的标志
+        _adopSignView = [UIImageView new];
+        [_adopSignView setImage:[UIImage imageNamed:@"home_question_adoptation_sign"]];
+        _adopSignView.hidden = YES;
+        [self.contentView addSubview:_adopSignView];
+        
         
         //回答内容
         _contentLabel = [UILabel new];
@@ -155,13 +161,19 @@
     NSString *timeDes = [APPHelper describeTimeWithMSec:_ansModel.hdsj];
     _timeLabel.text = timeDes;
     
+    BOOL iscn = _ansModel.iscn;
+    
+    _adopSignView.hidden =!iscn;
     
     NSURL *url = [NSURL URLWithString:ansModel.fdzp];
     
     [_contentImage sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Sys_defalut"]];
     _favCountLabel.text = _ansModel.dzcs;
-    [self addViewConstraints];
     
+   
+    
+    
+    [self addViewConstraints];
 }
 - (void)setIsSelf:(BOOL)isSelf{
    
@@ -169,8 +181,8 @@
     
     _adopButton.hidden = _isSelf;
     
-
-
+    
+    
 }
 
 + (CGFloat)headerHeightWithAnsModel:(QuestionAnsModel *)ansModel
@@ -212,13 +224,23 @@
         make.left.equalTo(_userIcon.mas_right).offset(12);
     }];
     
-    //采纳
+    //采纳按钮
     [_adopButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-12);
         make.top.equalTo(self).offset(10);
         make.size.mas_equalTo(CGSizeMake(56, 28));
     
     }];
+    //采纳的标志
+    [_adopSignView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.right.equalTo(self.mas_right);
+        make.top.equalTo(self.mas_top);
+        make.size.mas_equalTo(CGSizeMake(38, 38));
+        
+    }];
+    
+    
     
     
     //评论
@@ -332,7 +354,9 @@
     
     if (buttonIndex == 1) {//采纳
         [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet subUrl:@"?c=tw&m=save_cn" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-            
+            if ([[responseObject objectForKey:@"msg"]isEqualToString:@"success" ]) {
+                [self showWeakPromptViewWithMessage:@"采纳成功"];
+            }
             
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
         }];

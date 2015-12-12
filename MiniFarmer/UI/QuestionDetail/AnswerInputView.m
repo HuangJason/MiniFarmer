@@ -42,6 +42,7 @@
     [_send setEnabled:NO];
     [_send addTarget:self action:@selector(sendAsk:) forControlEvents:UIControlEventTouchUpInside];
     
+    
 }
 
 - (void)sendAsk:(UIButton *)button{

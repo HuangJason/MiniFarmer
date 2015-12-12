@@ -347,6 +347,7 @@
     {
         return @"";
     }
+    
     return [NSString stringWithFormat:@"%@",safeString];
 }
 

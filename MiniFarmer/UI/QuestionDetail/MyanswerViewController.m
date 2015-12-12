@@ -16,6 +16,13 @@
 #import "ZmImageView.h"
 #import "UserInfo.h"
 
+//获取图片路径的类
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <AssetsLibrary/ALAsset.h>
+#import <AssetsLibrary/ALAssetsGroup.h>
+#import <AssetsLibrary/ALAssetRepresentation.h>
+
+
 #define kPlaceHolderText @"请您尽量详细的解答是什么病虫草害和防治方法和药剂(必填)"
 
 @interface MyanswerViewController ()<XDPhotoSelectDelegate,UINavigationControllerDelegate,ZmImageViewDelegate>
@@ -32,10 +39,17 @@
 
 //存放选择图片
 @property(nonatomic,strong)NSMutableArray *arrayPhotos;
-
+@property(nonatomic,copy)NSString *imageName;
+@property(nonatomic,strong)NSData *imgData;
+@property(nonatomic,copy)NSString *path;
 @end
 
-@implementation MyanswerViewController
+@implementation MyanswerViewController{
+   
+    NSURL *pictureURL;
+    NSString *imagePath;
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -258,20 +272,26 @@
     NSString *telephoneNumber = [UserInfo shareUserInfo].userName;
     NSString *userid = [UserInfo shareUserInfo].userId;
     
-    UIImage *image = _arrayPhotos.lastObject;
+    //UIImage *image = _arrayPhotos.lastObject;
+   NSData *imgData = UIImageJPEGRepresentation(_arrayPhotos.lastObject, 0.1);
     
-    
+   // NSData *imgData = nil;
 
-    NSData *imgData = UIImageJPEGRepresentation(image, 0.5);
-   // NSData *data = UIImagePNGRepresentation(image);
+   // NSData *imgData = [NSData dataWithContentsOfFile:_path];
+   
+    
+    
+    
+    
+    
     
     NSDictionary *dic = @{
                           @"wtid":_wtid,
                           @"mobile":telephoneNumber,
                           @"userid":userid,
                           @"hdnr":_ansTextView.text
-                         //
-                                                    };
+                         
+                                    };
     //没有图片的时候
     if (imgData == nil) {
         [[SHHttpClient defaultClient]requestWithMethod:SHHttpRequestPost subUrl:@"?c=tw&m=savewthf" parameters:dic prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -281,21 +301,22 @@
         }];
 
     }else{//有图片的时候
-        NSDictionary *filedata =@{@"upfile":imgData
+        NSDictionary *fileData = @{
+                                   @"upfile":imgData
                                   };
         
-        [SHHttpClient uploadURL:@"?c=tw&m=savewthf" params:dic fileData:filedata completion:^(id result, NSError *error) {
+         
+        [SHHttpClient uploadURL:@"?c=tw&m=savewthf" params:dic fileData:fileData completion:^(id result, NSError *error) {
             
             
             if (error == nil) {
                 NSLog(@"发送成功");
             }
-            
         }];
-    
+        
+        
+         
     }
-    
-    
 }
 
 #pragma mark-----通知绑定的方法
@@ -382,7 +403,7 @@
     if (buttonIndex == 0) {
         sourceType = UIImagePickerControllerSourceTypeCamera;
     }else if(buttonIndex == 1){
-        sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }else if(buttonIndex == 2){
         return;
     }
@@ -392,10 +413,38 @@
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    ////1.关闭相册控制器
-    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    NSLog(@"%@",info);
+    
+    
     //2.取得选中的照片
     UIImage *img = info[UIImagePickerControllerOriginalImage];
+
+      //获取选中的URL
+    pictureURL = info[UIImagePickerControllerReferenceURL];
+    
+    //获取图片的名字
+    ALAssetsLibraryAssetForURLResultBlock  resultblock = ^(ALAsset *myasset)
+    {
+        ALAssetRepresentation *representation = [myasset defaultRepresentation];
+       self.imageName = [representation filename];//self.imageName是属性
+    };
+    
+    ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init] ;
+    [assetslibrary assetForURL:pictureURL
+                   resultBlock:resultblock
+                  failureBlock:nil];
+    
+    [picker dismissViewControllerAnimated:YES completion:^{
+        //获取图片的类型前的名字,将字符串切割操作
+        imagePath = [[self.imageName componentsSeparatedByString:@"."]
+                               firstObject];
+        
+        NSString *aPath=[NSString stringWithFormat:@"%@/Documents/%@.jpg",NSHomeDirectory(),imagePath];
+        _path =aPath;
+        _imgData = UIImageJPEGRepresentation(img,0.5);
+       [_imgData writeToFile:aPath atomically:YES];
+    }];
     //3.显示选中的照片
     if (_selectImgView == nil) {
         _selectImgView = [[ZmImageView alloc] initWithFrame:CGRectMake(0, 0, _imagesView.height, _imagesView.height)];
