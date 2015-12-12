@@ -279,4 +279,13 @@
     return _line2;
 }
 
+<<<<<<< HEAD
+=======
+#pragma mark - refresh
+- (void)refreshUIWithModel:(id)model
+{
+    //更新用户的信息
+}
+
+>>>>>>> parent of 07d382e... 我的页面添加数据请求
 @end
