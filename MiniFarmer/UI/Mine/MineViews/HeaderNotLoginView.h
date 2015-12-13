@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^TapLoginBT)();
+typedef void(^TapRegistBT)();
+
+
 @interface HeaderNotLoginView : UIView
+
+@property (nonatomic ,copy) TapLoginBT tapLoginBT;
+@property (nonatomic ,copy) TapRegistBT tapRegistBT;
 
 @end

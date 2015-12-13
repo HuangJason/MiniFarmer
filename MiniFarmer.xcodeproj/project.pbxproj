@@ -245,6 +245,26 @@
 		FCCBED621C1C55ED00BBEBAC /* MIneExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBED611C1C55ED00BBEBAC /* MIneExpertViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FCCBED6D1C1C565A00BBEBAC /* MineExpertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBED6A1C1C565A00BBEBAC /* MineExpertModel.m */; settings = {ASSET_TAGS = (); }; };
 		FCCBED6E1C1C565A00BBEBAC /* MineInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBED6C1C1C565A00BBEBAC /* MineInfos.m */; settings = {ASSET_TAGS = (); }; };
+		FCCF4F5E1C1DA7A200787D1E /* MineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF4F5D1C1DA7A200787D1E /* MineInfoViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FCCF4F621C1DA8C600787D1E /* MyFoucsExpertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF4F601C1DA8C600787D1E /* MyFoucsExpertView.m */; settings = {ASSET_TAGS = (); }; };
+		FCCF4F631C1DA8C600787D1E /* MyFoucsExpertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCCF4F611C1DA8C600787D1E /* MyFoucsExpertView.xib */; settings = {ASSET_TAGS = (); }; };
+		FCCF4F671C1DA95400787D1E /* UserMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF4F661C1DA95400787D1E /* UserMenuItem.m */; settings = {ASSET_TAGS = (); }; };
+		FCCF4F681C1DACC200787D1E /* HeaderLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC52DAC1C15376D007A49DE /* HeaderLoginView.m */; };
+		FCCF4F691C1DACE400787D1E /* MineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC52DA21C153763007A49DE /* MineCell.m */; };
+		FCCF4F6A1C1DACF100787D1E /* MineFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 775480411C17180F00745AB0 /* MineFocusViewController.m */; };
+		FCCF4F6B1C1DACFB00787D1E /* MineNothingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC52DA41C153763007A49DE /* MineNothingCell.m */; };
+		FCCF4F6C1C1DAD0600787D1E /* MineSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7754803E1C17142800745AB0 /* MineSaveViewController.m */; };
+		FCCF4F6D1C1DAD2200787D1E /* MineSegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC52DA61C153763007A49DE /* MineSegmentCell.m */; };
+		FCCF4F6E1C1DAD2C00787D1E /* QuAnswerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC52DB91C15394C007A49DE /* QuAnswerHeaderView.m */; };
+		FCCF4F6F1C1DAD3600787D1E /* QuAnswerReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC52DBB1C15394C007A49DE /* QuAnswerReplyCell.m */; };
+		FCCF4F701C1DAD4000787D1E /* ReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DB3F11C1924E400116B36 /* ReplyViewController.m */; };
+		FCCF4F731C1DAE8A00787D1E /* MineFocusFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF4F721C1DAE8A00787D1E /* MineFocusFriendViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FCCF4F761C1DAEF200787D1E /* MineFocusFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF4F751C1DAEF200787D1E /* MineFocusFriendCell.m */; settings = {ASSET_TAGS = (); }; };
+		FCCF4F791C1DAF2800787D1E /* MineFocusFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF4F781C1DAF2800787D1E /* MineFocusFriendModel.m */; settings = {ASSET_TAGS = (); }; };
+		FCCF4F7A1C1DAF6300787D1E /* MyanswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DCED41C1595BA00DB54BD /* MyanswerViewController.m */; };
+		FCCF4F7B1C1DB02D00787D1E /* libUMSocial_Sdk_4.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1BDF531C146C61005F4274 /* libUMSocial_Sdk_4.4.a */; };
+		FCCF4F851C1DB20000787D1E /* ZmImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B062F3A1C187EFE00BB4C95 /* ZmImageView.m */; };
+		FCCF4F871C1DB27500787D1E /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCCF4F861C1DB27500787D1E /* UMSocialSDKResourcesNew.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -780,6 +800,26 @@
 		FCCBED6A1C1C565A00BBEBAC /* MineExpertModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineExpertModel.m; sourceTree = "<group>"; };
 		FCCBED6B1C1C565A00BBEBAC /* MineInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineInfos.h; sourceTree = "<group>"; };
 		FCCBED6C1C1C565A00BBEBAC /* MineInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineInfos.m; sourceTree = "<group>"; };
+		FCCF4F5C1C1DA7A200787D1E /* MineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineInfoViewController.h; sourceTree = "<group>"; };
+		FCCF4F5D1C1DA7A200787D1E /* MineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineInfoViewController.m; sourceTree = "<group>"; };
+		FCCF4F5F1C1DA8C600787D1E /* MyFoucsExpertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFoucsExpertView.h; sourceTree = "<group>"; };
+		FCCF4F601C1DA8C600787D1E /* MyFoucsExpertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFoucsExpertView.m; sourceTree = "<group>"; };
+		FCCF4F611C1DA8C600787D1E /* MyFoucsExpertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFoucsExpertView.xib; sourceTree = "<group>"; };
+		FCCF4F651C1DA95400787D1E /* UserMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMenuItem.h; sourceTree = "<group>"; };
+		FCCF4F661C1DA95400787D1E /* UserMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMenuItem.m; sourceTree = "<group>"; };
+		FCCF4F711C1DAE8A00787D1E /* MineFocusFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineFocusFriendViewController.h; sourceTree = "<group>"; };
+		FCCF4F721C1DAE8A00787D1E /* MineFocusFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineFocusFriendViewController.m; sourceTree = "<group>"; };
+		FCCF4F741C1DAEF200787D1E /* MineFocusFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineFocusFriendCell.h; sourceTree = "<group>"; };
+		FCCF4F751C1DAEF200787D1E /* MineFocusFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineFocusFriendCell.m; sourceTree = "<group>"; };
+		FCCF4F771C1DAF2800787D1E /* MineFocusFriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineFocusFriendModel.h; sourceTree = "<group>"; };
+		FCCF4F781C1DAF2800787D1E /* MineFocusFriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineFocusFriendModel.m; sourceTree = "<group>"; };
+		FCCF4F7E1C1DB13300787D1E /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		FCCF4F7F1C1DB13300787D1E /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		FCCF4F801C1DB13300787D1E /* UMSocialQQHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
+		FCCF4F821C1DB13300787D1E /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		FCCF4F831C1DB13300787D1E /* WXApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		FCCF4F841C1DB13300787D1E /* WXApiObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		FCCF4F861C1DB27500787D1E /* UMSocialSDKResourcesNew.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = UMSocialSDKResourcesNew.bundle; path = UMSocial_Sdk_4.4/UMSocialSDKResourcesNew.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -787,6 +827,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCF4F7B1C1DB02D00787D1E /* libUMSocial_Sdk_4.4.a in Frameworks */,
 				1B1BDF881C146F26005F4274 /* libz.tbd in Frameworks */,
 				1B1BDF861C146F16005F4274 /* libstdc++.tbd in Frameworks */,
 				1B1BDF841C146F08005F4274 /* CoreTelephony.framework in Frameworks */,
@@ -1108,6 +1149,10 @@
 		31399E851BF73D210052A4EB /* MineDetail */ = {
 			isa = PBXGroup;
 			children = (
+				FCCF4F711C1DAE8A00787D1E /* MineFocusFriendViewController.h */,
+				FCCF4F721C1DAE8A00787D1E /* MineFocusFriendViewController.m */,
+				FCCF4F5C1C1DA7A200787D1E /* MineInfoViewController.h */,
+				FCCF4F5D1C1DA7A200787D1E /* MineInfoViewController.m */,
 				FCCBED601C1C55ED00BBEBAC /* MIneExpertViewController.h */,
 				FCCBED611C1C55ED00BBEBAC /* MIneExpertViewController.m */,
 				31A0DBD21C089F0F0017D1F0 /* MineAskQuestionViewController.h */,
@@ -1381,6 +1426,11 @@
 		31FDE3791BFA1EEF00AA199F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FCCF4F741C1DAEF200787D1E /* MineFocusFriendCell.h */,
+				FCCF4F751C1DAEF200787D1E /* MineFocusFriendCell.m */,
+				FCCF4F5F1C1DA8C600787D1E /* MyFoucsExpertView.h */,
+				FCCF4F601C1DA8C600787D1E /* MyFoucsExpertView.m */,
+				FCCF4F611C1DA8C600787D1E /* MyFoucsExpertView.xib */,
 				31A0DBC41C0899A20017D1F0 /* MineAskQuestionCell.h */,
 				31A0DBC51C0899A20017D1F0 /* MineAskQuestionCell.m */,
 				31A0DBC61C0899A20017D1F0 /* MineAskQuestionCell.xib */,
@@ -1411,6 +1461,8 @@
 		31FDE38B1BFA24EE00AA199F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FCCF4F771C1DAF2800787D1E /* MineFocusFriendModel.h */,
+				FCCF4F781C1DAF2800787D1E /* MineFocusFriendModel.m */,
 				FCCBED691C1C565A00BBEBAC /* MineExpertModel.h */,
 				FCCBED6A1C1C565A00BBEBAC /* MineExpertModel.m */,
 				FCCBED6B1C1C565A00BBEBAC /* MineInfos.h */,
@@ -1496,6 +1548,7 @@
 		FCC626701BCA7A0E00943F99 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				FCCF4F641C1DA95400787D1E /* MineModel */,
 				1BC52DAA1C15376D007A49DE /* MineViews */,
 				1BC52DA01C153763007A49DE /* MineCells */,
 				31399E851BF73D210052A4EB /* MineDetail */,
@@ -1865,6 +1918,8 @@
 		FCC884A81BC3EBB900A1200B = {
 			isa = PBXGroup;
 			children = (
+				FCCF4F861C1DB27500787D1E /* UMSocialSDKResourcesNew.bundle */,
+				FCCF4F7C1C1DB13300787D1E /* UMSocial_Sdk_Extra_Frameworks */,
 				1B1BDF441C146C61005F4274 /* UMSocial_Sdk_4.4 */,
 				FCCBA0371BDF66F2009AF469 /* AssetsLibrary.framework */,
 				FCCBA0351BDF65B5009AF469 /* AVFoundation.framework */,
@@ -2016,6 +2071,45 @@
 			path = GifHUD;
 			sourceTree = "<group>";
 		};
+		FCCF4F641C1DA95400787D1E /* MineModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCCF4F651C1DA95400787D1E /* UserMenuItem.h */,
+				FCCF4F661C1DA95400787D1E /* UserMenuItem.m */,
+			);
+			path = MineModel;
+			sourceTree = "<group>";
+		};
+		FCCF4F7C1C1DB13300787D1E /* UMSocial_Sdk_Extra_Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCCF4F7D1C1DB13300787D1E /* TencentOpenAPI */,
+				FCCF4F811C1DB13300787D1E /* Wechat */,
+			);
+			name = UMSocial_Sdk_Extra_Frameworks;
+			path = UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks;
+			sourceTree = "<group>";
+		};
+		FCCF4F7D1C1DB13300787D1E /* TencentOpenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				FCCF4F7E1C1DB13300787D1E /* TencentOpenAPI.framework */,
+				FCCF4F7F1C1DB13300787D1E /* TencentOpenApi_IOS_Bundle.bundle */,
+				FCCF4F801C1DB13300787D1E /* UMSocialQQHandler.h */,
+			);
+			path = TencentOpenAPI;
+			sourceTree = "<group>";
+		};
+		FCCF4F811C1DB13300787D1E /* Wechat */ = {
+			isa = PBXGroup;
+			children = (
+				FCCF4F821C1DB13300787D1E /* UMSocialWechatHandler.h */,
+				FCCF4F831C1DB13300787D1E /* WXApi.h */,
+				FCCF4F841C1DB13300787D1E /* WXApiObject.h */,
+			);
+			path = Wechat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2121,6 +2215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCF4F871C1DB27500787D1E /* UMSocialSDKResourcesNew.bundle in Resources */,
 				1BEC27B61C0B4CBE0046F96A /* DiseaseCell.xib in Resources */,
 				FCC7529E1BC4E01500DE4B27 /* Info.plist in Resources */,
 				31FDE3991BFAB7EC00AA199F /* AboutViewController.xib in Resources */,
@@ -2136,6 +2231,7 @@
 				31399E8D1BF73DA10052A4EB /* InvitedCodeViewController.xib in Resources */,
 				31A0DBCA1C0899A20017D1F0 /* MineAskQuestionCell.xib in Resources */,
 				1BEC27B11C0B34230046F96A /* StudyHeaderView.xib in Resources */,
+				FCCF4F631C1DA8C600787D1E /* MyFoucsExpertView.xib in Resources */,
 				1B337D741C06F27E00F2FE5B /* StudymoreCell.xib in Resources */,
 				1B6BE1791C04582200D69A2D /* SortView.xib in Resources */,
 				31FDE38A1BFA204200AA199F /* SettingAboutView.xib in Resources */,
@@ -2163,6 +2259,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCF4F851C1DB20000787D1E /* ZmImageView.m in Sources */,
+				FCCF4F7A1C1DAF6300787D1E /* MyanswerViewController.m in Sources */,
+				FCCF4F701C1DAD4000787D1E /* ReplyViewController.m in Sources */,
+				FCCF4F6F1C1DAD3600787D1E /* QuAnswerReplyCell.m in Sources */,
+				FCCF4F6E1C1DAD2C00787D1E /* QuAnswerHeaderView.m in Sources */,
+				FCCF4F6D1C1DAD2200787D1E /* MineSegmentCell.m in Sources */,
+				FCCF4F6C1C1DAD0600787D1E /* MineSaveViewController.m in Sources */,
+				FCCF4F6B1C1DACFB00787D1E /* MineNothingCell.m in Sources */,
+				FCCF4F6A1C1DACF100787D1E /* MineFocusViewController.m in Sources */,
+				FCCF4F691C1DACE400787D1E /* MineCell.m in Sources */,
+				FCCF4F681C1DACC200787D1E /* HeaderLoginView.m in Sources */,
 				FCC752931BC4E01500DE4B27 /* AFURLSessionManager.m in Sources */,
 				31A0DBD91C089F0F0017D1F0 /* MineRecipeViewController.m in Sources */,
 				FCC64BFB1BCFE4FE00BF56C4 /* SHJSONResponseSerializerData.m in Sources */,
@@ -2206,11 +2313,13 @@
 				FCC752BD1BC4E01500DE4B27 /* NSData+ImageContentType.m in Sources */,
 				FCC7528E1BC4E01500DE4B27 /* AFNetworkReachabilityManager.m in Sources */,
 				31EC678D1BF0E4A700B8E1BC /* MWCaptionView.m in Sources */,
+				FCCF4F621C1DA8C600787D1E /* MyFoucsExpertView.m in Sources */,
 				31EC66411BECF43700B8E1BC /* JudgeTextIsRight.m in Sources */,
 				1B6BE1711C04393A00D69A2D /* MessageViewController.m in Sources */,
 				1B6BE1601C03F4E400D69A2D /* SeachView.m in Sources */,
 				FCCBED6D1C1C565A00BBEBAC /* MineExpertModel.m in Sources */,
 				1BEC27691C0AFF460046F96A /* ShareView.m in Sources */,
+				FCCF4F731C1DAE8A00787D1E /* MineFocusFriendViewController.m in Sources */,
 				31FDE3941BFA346C00AA199F /* RecomentViewController.m in Sources */,
 				31EC66341BECEBE100B8E1BC /* YHSMSCodeButton.m in Sources */,
 				1BCA803D1C0C2A8D001E1285 /* DieaseModel.m in Sources */,
@@ -2251,6 +2360,7 @@
 				31EC66321BECEBE100B8E1BC /* LoginViewController.m in Sources */,
 				FCC630BB1BF4D70000A2B08C /* QuestionDetailViewController.m in Sources */,
 				FCCBED621C1C55ED00BBEBAC /* MIneExpertViewController.m in Sources */,
+				FCCF4F791C1DAF2800787D1E /* MineFocusFriendModel.m in Sources */,
 				1B97F4EC1C083B3300A58D03 /* DiseaPicViewController.m in Sources */,
 				31EC66561BF0416F00B8E1BC /* BaseTextView.m in Sources */,
 				31EC67981BF0E4A700B8E1BC /* PSTCollectionViewCell.m in Sources */,
@@ -2302,6 +2412,7 @@
 				FCC752BB1BC4E01500DE4B27 /* UIView+MJExtension.m in Sources */,
 				FCC752C61BC4E01500DE4B27 /* UIImage+GIF.m in Sources */,
 				31EC679D1BF0E4A700B8E1BC /* PSTCollectionViewLayout.m in Sources */,
+				FCCF4F671C1DA95400787D1E /* UserMenuItem.m in Sources */,
 				FCC626761BCA7A0E00943F99 /* AskViewController.m in Sources */,
 				31EC663E1BECECC400B8E1BC /* MiniAppEngine.m in Sources */,
 				31D4FDC91BF3A8DA0081F64F /* UIButton+MTButtonCheckMarkAnimation.m in Sources */,
@@ -2321,6 +2432,7 @@
 				313E981A1C05955300DC7B4F /* (null) in Sources */,
 				FCC7529C1BC4E01500DE4B27 /* JSONKeyMapper.m in Sources */,
 				FCCB90611BE1B738005F1A83 /* AnswersButton.m in Sources */,
+				FCCF4F761C1DAEF200787D1E /* MineFocusFriendCell.m in Sources */,
 				FCCA8FAD1BDD255E00B1CCF4 /* BaseViewController.m in Sources */,
 				FCCBED6E1C1C565A00BBEBAC /* MineInfos.m in Sources */,
 				31EC67921BF0E4A700B8E1BC /* MWTapDetectingImageView.m in Sources */,
@@ -2346,6 +2458,7 @@
 				FCC752AD1BC4E01500DE4B27 /* MJRefreshHeader.m in Sources */,
 				31EC66501BEF974B00B8E1BC /* ResetPasswordViewController.m in Sources */,
 				31FDE3981BFAB7EC00AA199F /* AboutViewController.m in Sources */,
+				FCCF4F5E1C1DA7A200787D1E /* MineInfoViewController.m in Sources */,
 				31A0DBD81C089F0F0017D1F0 /* MineAskQuestionViewController.m in Sources */,
 				FCC752B31BC4E01500DE4B27 /* MJRefreshBackStateFooter.m in Sources */,
 				1B337D7C1C06FDBA00F2FE5B /* DiseaseView.m in Sources */,

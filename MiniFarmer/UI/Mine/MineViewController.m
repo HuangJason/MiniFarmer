@@ -8,30 +8,30 @@
 
 #import "MineViewController.h"
 #import "LoginViewController.h"
+#import "RegisterViewController.h"
 #import "InvitedCodeViewController.h"
 #import "SettingViewController.h"
 #import "MyResponseViewController.h"
 #import "MineRecipeViewController.h"
+#import "MineSaveViewController.h"
+#import "MineFocusViewController.h"
+#import "MineInfoViewController.h"
 #import "HeaderLoginView.h"
 #import "HeaderNotLoginView.h"
-<<<<<<< HEAD
-=======
 #import "MineCell.h"
 #import "MineNothingCell.h"
 #import "MineSegmentCell.h"
 #import "UserMenuItem.h"
+#import "MineInfos.h"
 
 #define kSection
 
-@implementation UserMenuItem
 
-@end
-
-@interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface MineViewController ()<UITableViewDelegate,UITableViewDataSource,MineSegmentCellDelegate>
 {
     UITableView     *_tableView;
-    NSArray  *_keysArr;
-    NSMutableDictionary *_sourceDic;
+    
+    NSMutableArray *sourceArray;
 }
 
 @end
@@ -44,61 +44,151 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self commonInit];
     [self initSubviews];
+    [self requestPersonInfos];
     
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:NO];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)requestPersonInfos
+{
+    //添加loading
+    [self.view showLoadingWihtText:@"加载中..."];
+    [[SHHttpClient defaultClient] requestWithMethod:SHHttpRequestGet subUrl:@"?c=user&m=get_user_info" parameters:@{@"userid":[APPHelper safeString:[[MiniAppEngine shareMiniAppEngine] userId]],@"local_userid":@""} prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.view dismissLoading];
+        MineInfos *infos = [[MineInfos alloc] initWithDictionary:responseObject error:nil];
+        [(HeaderLoginView *)(_tableView.tableHeaderView) refreshUIWithModel:infos];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.view dismissLoading];
+        [self.view showWeakPromptViewWithMessage:@"请求个人信息失败"];
+    }];
+}
+
+
+
 - (void)commonInit
 {
-//    UserMenuItem *item1 = [UserMenuItem new];
-    
-    
-    _sourceDic = [NSMutableDictionary dictionaryWithCapacity:1];
-    _keysArr = @[@"key0",@"key1",@"key2",@"key3"];
-    
-    NSMutableArray *tmpArr0 = [NSMutableArray arrayWithCapacity:1];
+    sourceArray = [[NSMutableArray alloc] init];
     UserMenuItem *item1 = [UserMenuItem new];
-    item1.title = @"我的回答";
-    [tmpArr0 addObject:item1];
+    item1.type = TypeSegment;
+    [sourceArray addObject:item1];
     
     UserMenuItem *item2 = [UserMenuItem new];
-    item2.title = @"我的订单";
-    [tmpArr0 addObject:item2];
-    
+    item2.type = TypeNothing;
+    [sourceArray addObject:item2];
+
     UserMenuItem *item3 = [UserMenuItem new];
-    item3.title = @"我的配方";
-    [tmpArr0 addObject:item3];
-    [_sourceDic setObject:tmpArr0 forKey:_keysArr[0]];
+    item3.type = TypeOther;
+    item3.imageString = @"mine_response_btn_nm";
+    item3.title = @"我的回答";
+    [sourceArray addObject:item3];
     
-    NSMutableArray *tmpArr1 = [NSMutableArray arrayWithCapacity:1];
     UserMenuItem *item4 = [UserMenuItem new];
-    item4.title = @"我的农人币";
-    item4.subTitle = @"兑换商城正式上线";
-    [tmpArr1 addObject:item4];
-    [_sourceDic setObject:tmpArr1 forKey:_keysArr[1]];
+    item4.type = TypeOther;
+    item4.title = @"我的订单";
+    item4.imageString = @"my_money";
+    [sourceArray addObject:item4];
     
-    NSMutableArray *tmpArr2 = [NSMutableArray arrayWithCapacity:1];
     UserMenuItem *item5 = [UserMenuItem new];
-    item5.title = @"填写邀请码";
-    [tmpArr2 addObject:item5];
-    [_sourceDic setObject:tmpArr2 forKey:_keysArr[2]];
+    item5.type = TypeOther;
+    item5.title = @"我的配方";
+    item5.imageString = @"my_orderform";
+    [sourceArray addObject:item5];
     
-    NSMutableArray *tmpArr3 = [NSMutableArray arrayWithCapacity:1];
     UserMenuItem *item6 = [UserMenuItem new];
-    item6.title = @"设置";
-    [tmpArr3 addObject:item6];
-    [_sourceDic setObject:tmpArr3 forKey:_keysArr[3]];
+    item6.type = TypeNothing;
+    [sourceArray addObject:item6];
+
+    
+    UserMenuItem *item7 = [UserMenuItem new];
+    item7.type = TypeOther;
+    item7.title = @"我的农人币";
+    item7.imageString = @"my_recipe";
+    [sourceArray addObject:item7];
+    
+    UserMenuItem *item8 = [UserMenuItem new];
+    item8.type = TypeNothing;
+    
+    [sourceArray addObject:item8];
+
+    UserMenuItem *item9 = [UserMenuItem new];
+    item9.type = TypeOther;
+    item9.title = @"填写邀请码";
+    item9.imageString = @"invite_code";
+    [sourceArray addObject:item9];
+
+    UserMenuItem *item10 = [UserMenuItem new];
+    item10.type = TypeNothing;
+    
+    [sourceArray addObject:item10];
+
+
+    UserMenuItem *item11 = [UserMenuItem new];
+    item11.type = TypeOther;
+    item11.title = @"设置";
+    item11.imageString = @"setting";
+    [sourceArray addObject:item11];
+
+    
+    
 }
 
 - (void)initSubviews
 {
-    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    UIView *headerView;
+    if ([[MiniAppEngine shareMiniAppEngine] isLogin])
+    {
+        //初始化已经登录的
+        HeaderLoginView *loginView = [[HeaderLoginView alloc] initWithFrame:CGRectMake(0, 0, kScreenSizeWidth, kScreenSizeWidth * 476.0 / 750)];
+//        [self.view addSubview:loginView];
+        
+        headerView = loginView;
+    }
+    else
+    {
+        HeaderNotLoginView *notLoginView = [[[NSBundle mainBundle] loadNibNamed:@"HeaderNotLoginView" owner:self options:nil] lastObject];
+        notLoginView.frame = CGRectMake(0, 0, kScreenSizeWidth, kScreenSizeWidth * 476.0 / 750);
+//        [self.view addSubview:notLoginView];
+        __weak MineViewController *weakself = self;
+        notLoginView.tapLoginBT = ^()
+        {
+            LoginViewController *loginVC = [[LoginViewController alloc] init];
+            UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:loginVC];
+            [weakself presentViewController:naVC animated:YES completion:nil];
+        };
+        
+        notLoginView.tapRegistBT = ^()
+        {
+            RegisterViewController *registVC = [[RegisterViewController alloc] init];
+            [weakself.navigationController pushViewController:registVC animated:YES];
+        };
+        headerView = notLoginView;
+    }
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.frame = CGRectMake(0,0, kScreenSizeWidth, kScreenSizeHeight);
+    _tableView.tableHeaderView = headerView;
+    _tableView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_tableView];
 }
 
@@ -106,103 +196,129 @@
 #pragma mark- UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    if (section == 0) {
-        return 10;
+    UserMenuItem *item = sourceArray[indexPath.row];
+    if (item.type == TypeOther)
+    {
+        return [MineCell cellHeightWihtModel:nil];
     }
-    else{
-        return 9;
+    else if (item.type == TypeNothing)
+    {
+        return [MineNothingCell cellHeightWihtModel:nil];
+    }
+    else
+    {
+        return [MineSegmentCell cellHeightWihtModel:nil];
     }
 }
 
-- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_tableView.bounds), 1)];
-    return view;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 1;
-}
-
-- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_tableView.bounds), 1)];
-    return view;
-}
 
 #pragma mark- UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return _keysArr.count;
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray *rowArr = [_sourceDic objectForKey:_keysArr[section]];
-    return rowArr.count;
+    return sourceArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identify = @"mineCenter";
-    NSUInteger row = [indexPath row];
-    NSUInteger section = [indexPath section];
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    UserMenuItem *item = [sourceArray objectAtIndex:indexPath.row];
+    if (item.type == TypeNothing)
+    {
+        MineNothingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nothingCell"];
+        if (!cell)
+        {
+            cell = [[MineNothingCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"nothingCell"];
+        }
+        [cell refreshDataWithModel:item];
+        return cell;
+    }
+    else if (item.type == TypeOther)
+    {
+        MineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mineCell"];
+        if (!cell)
+        {
+            cell = [[MineCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"mineCell"];
+        }
+        [cell refreshDataWithModel:item];
+        return cell;
+    }
+    else
+    {
+        MineSegmentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mineSegmentCell"];
+        if (!cell)
+        {
+            cell = [[MineSegmentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"mineSegmentCell"];
+            cell.delegate = self;
+        }
+        [cell refreshDataWithModel:item];
+        return cell;
     }
     
-    NSArray *rowArr = [_sourceDic objectForKey:_keysArr[section]];
-    UserMenuItem *item = rowArr[row];
-    cell.textLabel.text = item.title;
-    cell.detailTextLabel.text = item.subTitle;
-    
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
    // DLOG(@"secelected section is row is %d %d",indexPath.section,indexPath.row);
-    switch (indexPath.section)
+    if (![MiniAppEngine shareMiniAppEngine].isLogin)
+    {
+        [self.view showWeakPromptViewWithMessage:@"没有登录!"];
+        return;
+    }
+    switch (indexPath.row)
     {
         case 0:
         {
-            if (indexPath.row == 0) {
+            if (indexPath.row == 2) {
+                //我的回答
                 MyResponseViewController *myVC = [[MyResponseViewController alloc] init];
                 [self.navigationController pushViewController:myVC animated:YES];
             }
-            else if (indexPath.row == 2)
-            {
-                MineRecipeViewController *myVC = [[MineRecipeViewController alloc] init];
-                [self.navigationController pushViewController:myVC animated:YES];
-            }
-
+            
+            
         }
             break;
-        case 2:
+        case 4:
+        {
+            //我的配方
+//            MineRecipeViewController *myVC = [[MineRecipeViewController alloc] init];
+//            [self.navigationController pushViewController:myVC animated:YES];
+        }
+            break;
+        case 8:
         {
             InvitedCodeViewController *invitedVC = [[InvitedCodeViewController alloc] init];
             [self.navigationController pushViewController:invitedVC animated:YES];
         }
             break;
-        case 3:
+        case 10:
         {
             SettingViewController *setVC = [[SettingViewController alloc] init];
             [self.navigationController pushViewController:setVC animated:YES];
-
+            
         }
             break;
             
         default:
             break;
+    }
+}
+
+#pragma mark - delegate
+
+- (void)mineSegmentCell:(MineSegmentCell *)cell clickMineSave:(BOOL)clickMineSave
+{
+    
+
+    //因为这里里面只有两个暂时 这么写 以后多了可能会用不上 或者用别的方案
+    if (clickMineSave)
+    {
+        MineSaveViewController *saveVC = [[MineSaveViewController alloc] init];
+        [self.navigationController pushViewController:saveVC animated:YES];    }
+    else
+    {
+        MineFocusViewController *focusVC = [[MineFocusViewController alloc] init];
+        [self.navigationController pushViewController:focusVC animated:YES];
     }
 }
 

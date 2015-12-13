@@ -7,6 +7,7 @@
 //
 
 #import "HeaderLoginView.h"
+#import "MineInfos.h"
 
 @interface HeaderLoginView ()
 
@@ -34,7 +35,7 @@
 {
     if (self = [super initWithFrame:frame])
     {
-        
+        [self addSubviews];
     }
     return self;
 }
@@ -55,68 +56,76 @@
     [self addSubview:self.line1];
     [self addSubview:self.line2];
 
+    [self.headerIconBT setBackgroundColor:[UIColor redColor]];
+    
     [self.headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
     
     [self.headerIconBT mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.headerImageView.mas_top).offset(45);
+        make.top.equalTo(self.headerImageView.mas_top).offset(25);
         make.centerX.equalTo(self.headerImageView);
         make.size.mas_equalTo(CGSizeMake(76, 76));
     }];
     
     [self.speiclistTypeBT mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.headerIconBT.mas_centerY).offset(38);
         make.centerX.equalTo(self.headerIconBT.mas_centerX);
+        make.centerY.equalTo(self.headerIconBT.mas_bottom);
+        make.size.mas_equalTo(CGSizeMake(72, 29));
     }];
     
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.speiclistTypeBT.mas_bottom).offset(24);
-        make.centerY.equalTo(self.speiclistTypeBT.mas_centerY);
-    }];
-    CGFloat dwidth = (kScreenSizeWidth - 2 * kLineWidth) / 3.0;
-    [self.nongRenMoneyCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(@(dwidth / 2.0));
-        make.top.equalTo(self.nameLabel.mas_bottom).offset(16);
+        make.top.equalTo(self.speiclistTypeBT.mas_centerY).offset(24);
+        make.centerX.equalTo(self.speiclistTypeBT.mas_centerX);
     }];
     
-    [self.nongRenMoneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.nongRenMoneyCountLabel.mas_bottom).offset(8);
-        make.centerX.equalTo(self.nongRenMoneyCountLabel.mas_centerX);
-    }];
+        [self.acceptCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.headerIconBT.mas_centerX);
+            make.top.equalTo(self.nameLabel.mas_bottom).offset(10);
+        }];
     
-    [self.acceptCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(@(dwidth + kLineWidth + dwidth / 2.0));
-        make.centerY.equalTo(self.nongRenMoneyCountLabel.mas_centerY);
-    }];
-    
-    [self.acceptLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.acceptCountLabel.mas_bottom).offset(8);
-        make.centerX.equalTo(self.acceptCountLabel.mas_centerX);
-    }];
-    
-    [self.invitedCodeCountlLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(@(2 * dwidth + 2 * kLineWidth + dwidth / 2.0));
-        make.centerY.equalTo(self.nongRenMoneyCountLabel);
-    }];
-    
-    [self.invitedCodelLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.invitedCodeCountlLabel.mas_bottom).offset(8);
-        make.centerX.equalTo(self.invitedCodeCountlLabel.mas_centerX);
-    }];
+        [self.acceptLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.acceptCountLabel.mas_bottom).offset(2);
+            make.centerX.equalTo(self.acceptCountLabel.mas_centerX);
+        }];
     
     [self.line1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@(dwidth));
+        make.right.equalTo(self.acceptCountLabel.mas_left).offset(-45);
         make.top.equalTo(self.nameLabel.mas_bottom).offset(18);
         make.size.mas_equalTo(CGSizeMake(kLineWidth, 22));
+        
     }];
     
     [self.line2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@(dwidth * 2 + kLineWidth));
+        make.left.equalTo(self.acceptCountLabel.mas_right).offset(45);
         make.top.equalTo(self.nameLabel.mas_bottom).offset(18);
         make.size.mas_equalTo(CGSizeMake(kLineWidth, 22));
-
+        
     }];
+    
+    
+    [self.nongRenMoneyCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.line1.mas_left).offset(-43);
+        make.centerY.equalTo(self.acceptCountLabel);
+    }];
+    
+    [self.nongRenMoneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.nongRenMoneyCountLabel.mas_bottom).offset(2);
+        make.centerX.equalTo(self.nongRenMoneyCountLabel.mas_centerX);
+    }];
+    
+
+    
+    [self.invitedCodeCountlLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.line2.mas_right).offset(43);
+        make.centerY.equalTo(self.acceptCountLabel);
+    }];
+    
+    [self.invitedCodelLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.invitedCodeCountlLabel.mas_bottom).offset(2);
+        make.centerX.equalTo(self.invitedCodeCountlLabel.mas_centerX);
+    }];
+    
 
 
 }
@@ -126,6 +135,7 @@
     if (!_headerImageView)
     {
         _headerImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+        [_headerImageView setImage:[UIImage imageNamed:@"mine_back_image"]];
     }
     return _headerImageView;
 }
@@ -136,7 +146,7 @@
     {
         _headerIconBT = [UIButton buttonWithType:UIButtonTypeCustom];
         _headerIconBT.layer.cornerRadius = 38;
-        _headerIconBT.layer.borderWidth = 3;
+//        _headerIconBT.layer.borderWidth = 3;
     }
     return _headerIconBT;
 }
@@ -159,6 +169,7 @@
         _nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _nameLabel.textColor = [UIColor whiteColor];
         _nameLabel.font = kTextFont(18);
+        
         [_nameLabel setShadowWithRadius:1 offset:CGSizeMake(0, 2) shaowColor:[UIColor colorWithHexString:@"333333"]];
     }
     
@@ -264,7 +275,7 @@
     if (!_line1)
     {
         _line1 = [[UIImageView alloc] initWithFrame:CGRectZero];
-        _line1 = [UIColor whiteColor];
+        _line1.backgroundColor = [UIColor whiteColor];
     }
     return _line1;
 }
@@ -274,18 +285,38 @@
     if (!_line2)
     {
         _line2 = [[UIImageView alloc] initWithFrame:CGRectZero];
-        _line2 = [UIColor whiteColor];
+        _line2.backgroundColor = [UIColor whiteColor];
     }
     return _line2;
 }
 
-<<<<<<< HEAD
-=======
 #pragma mark - refresh
 - (void)refreshUIWithModel:(id)model
 {
     //更新用户的信息
+    MineInfos *infos = (MineInfos *)model;
+    [self.headerIconBT sd_setBackgroundImageWithURL:[NSURL URLWithString:infos.usertx] forState:UIControlStateNormal placeholderImage:nil];
+    [self.speiclistTypeBT setBackgroundImage:[UIImage imageNamed:@"fujiaoshou"] forState:UIControlStateNormal];
+    
+//    nameLabel];
+//    [self addSubview:self.nongRenMoneyLabel];
+//    [self addSubview:self.nongRenMoneyCountLabel];
+//    [self addSubview:self.acceptCountLabel];
+//    [self addSubview:self.acceptLabel];
+//    [self addSubview:self.invitedCodeCountlLabel];
+//    [self addSubview:self.invitedCod
+    
+    
+    [self.nameLabel setText:infos.xm];
+    [self.nongRenMoneyLabel setText:@"农人币"];
+    [self.nongRenMoneyCountLabel setText:@"1000"];
+    
+    [self.acceptLabel setText:@"采纳数"];
+    [self.acceptCountLabel setText:@"200"];
+    
+    [self.invitedCodelLabel setText:@"邀请码"];
+    [self.invitedCodeCountlLabel setText:infos.icode.length ? infos.icode : @"无"];
+    
 }
 
->>>>>>> parent of 07d382e... 我的页面添加数据请求
 @end

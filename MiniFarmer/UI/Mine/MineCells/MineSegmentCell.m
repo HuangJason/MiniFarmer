@@ -29,6 +29,17 @@
             make.edges.equalTo(self.contentView);
             
         }];
+        __weak MineSegmentCell *weakself = self;
+        self.segmentView.tapMineSave = ^()
+        {
+            [weakself.delegate mineSegmentCell:weakself clickMineSave:YES];
+        };
+        
+        self.segmentView.tapMineFocus = ^()
+        {
+            [weakself.delegate mineSegmentCell:weakself clickMineSave:NO];
+        };
+        
     }
     return self;
 }
